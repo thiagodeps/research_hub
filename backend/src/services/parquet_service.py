@@ -7,10 +7,11 @@ from src.database.session import engine, SessionLocal
 from src.models.orm import Base
 
 class ParquetService:
+    ORIGINAL_ZIP_PATH = "uploads/original.zip"
+
     @staticmethod
     def _get_table_name_from_filename(filename: str):
-        # Example: 'articles_canonical.parquet' -> 'articles'
-        # 'research_groups_canonical.parquet' -> 'research_groups'
+        # Example: 'parquet/articles_canonical.parquet' -> 'articles'
         base = os.path.basename(filename).replace(".parquet", "")
         if base.endswith("_canonical"):
             base = base.replace("_canonical", "")
@@ -24,6 +25,11 @@ class ParquetService:
     @staticmethod
     async def import_zip(file: UploadFile):
         content = await file.read()
+        
+        # Save original zip to preserve untouched files (like graphs, jsons)
+        os.makedirs("uploads", exist_ok=True)
+        with open(ParquetService.ORIGINAL_ZIP_PATH, "wb") as f:
+            f.write(content)
         
         # Recreate tables to wipe old data before import
         Base.metadata.drop_all(bind=engine)
@@ -54,20 +60,41 @@ class ParquetService:
     def export_zip() -> io.BytesIO:
         zip_buffer = io.BytesIO()
         
-        with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as z:
-            # For every table in our database, export to parquet
-            for table_name in Base.metadata.tables.keys():
+        overwritten_files = set()
+        new_files_data = {}
+        
+        # 1. Generate new parquet data from DB for mapped tables
+        for table_name in Base.metadata.tables.keys():
+            if table_name in ["admins", "universities"]: 
+                continue # Skip internal UI tables
+                
+            try:
                 df = pd.read_sql_table(table_name, engine)
-                # We save to parquet in memory
                 pq_buffer = io.BytesIO()
                 df.to_parquet(pq_buffer, index=False)
-                # Write to zip
-                # Standardize name back to _canonical for the external pipeline
+                
                 export_name = f"{table_name}_canonical.parquet"
                 if table_name == "groups":
                     export_name = "research_groups_canonical.parquet"
-                
-                z.writestr(f"parquet/{export_name}", pq_buffer.getvalue())
+                    
+                full_path = f"parquet/{export_name}"
+                overwritten_files.add(full_path)
+                new_files_data[full_path] = pq_buffer.getvalue()
+            except Exception as e:
+                print(f"Error exporting {table_name}: {e}")
+
+        # 2. Write to the new zip file
+        with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as z:
+            # First, if we have an original zip, copy over all files we didn't overwrite
+            if os.path.exists(ParquetService.ORIGINAL_ZIP_PATH):
+                with zipfile.ZipFile(ParquetService.ORIGINAL_ZIP_PATH, "r") as oz:
+                    for item in oz.infolist():
+                        if item.filename not in overwritten_files:
+                            z.writestr(item, oz.read(item.filename))
+            
+            # Now write all our newly updated parquet files
+            for filename, data in new_files_data.items():
+                z.writestr(filename, data)
                 
         zip_buffer.seek(0)
         return zip_buffer
