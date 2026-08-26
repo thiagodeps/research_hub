@@ -1,0 +1,19 @@
+---
+import Dashboard from '../../layouts/Dashboard.astro';
+import EntityPage from '../../components/EntityPage.jsx';
+---
+
+<Dashboard>
+  <EntityPage 
+    client:load 
+    entity="groups" 
+    columns={['id', 'name', 'short_name', 'cnpq_url']} 
+    fields={[
+      { name: 'id', label: 'ID', type: 'number' },
+      { name: 'name', label: 'Nome', required: true },
+      { name: 'description', label: 'Descrição' },
+      { name: 'short_name', label: 'Sigla' },
+      { name: 'cnpq_url', label: 'URL CNPq' }
+    ]} 
+  />
+</Dashboard>
