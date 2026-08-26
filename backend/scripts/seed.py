@@ -22,10 +22,24 @@ def run_seed():
         session.add(admin)
         
         print("Seeding Universities...")
+        uni_prefixes = ["Universidade Federal de", "Universidade Estadual de", "Instituto Federal do", "Pontifícia Universidade Católica de", "Universidade de"]
+        states = ["São Paulo", "Minas Gerais", "Rio de Janeiro", "Bahia", "Paraná", "Rio Grande do Sul", "Pernambuco", "Ceará", "Pará", "Santa Catarina", "Goiás", "Maranhão", "Amazonas", "Espírito Santo", "Paraíba", "Mato Grosso", "Rio Grande do Norte", "Alagoas", "Piauí", "Distrito Federal", "Mato Grosso do Sul", "Sergipe", "Rondônia", "Tocantins", "Acre", "Amapá", "Roraima"]
+        
         for _ in range(5):
+            state = fake.random_element(elements=states)
+            prefix = fake.random_element(elements=uni_prefixes)
+            name = f"{prefix} {state}"
+            
+            # Create a realistic abbreviation based on prefix and state
+            abbr = "".join([word[0] for word in name.split() if len(word) > 2]).upper()
+            if prefix.startswith("Instituto"):
+                abbr = "IF" + state[:2].upper()
+            elif prefix.startswith("Universidade Federal"):
+                abbr = "UF" + state[:2].upper()
+                
             uni = University(
-                name=fake.company(),
-                abbreviation=fake.company_suffix().upper()
+                name=name,
+                abbreviation=abbr
             )
             session.add(uni)
             
