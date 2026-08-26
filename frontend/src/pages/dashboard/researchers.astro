@@ -1,0 +1,19 @@
+---
+import Dashboard from '../../layouts/Dashboard.astro';
+import EntityPage from '../../components/EntityPage.jsx';
+---
+
+<Dashboard>
+  <EntityPage 
+    client:load 
+    entity="researchers" 
+    columns={['id', 'name', 'email', 'lattes_id']} 
+    fields={[
+      { name: 'id', label: 'ID', type: 'number' },
+      { name: 'name', label: 'Nome', required: true },
+      { name: 'email', label: 'Email', type: 'email', required: true },
+      { name: 'lattes_id', label: 'Lattes ID' },
+      { name: 'orcid', label: 'ORCID' }
+    ]} 
+  />
+</Dashboard>

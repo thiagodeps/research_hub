@@ -26,8 +26,9 @@ class BaseRepository:
 
     def delete(self, record_id: int):
         db = get_db()
+        key = int(record_id) if str(record_id).isdigit() else record_id
         # In memory deletion
-        if self.table_name in db._data and record_id in db._data[self.table_name]:
-            del db._data[self.table_name][record_id]
+        if self.table_name in db._data and key in db._data[self.table_name]:
+            del db._data[self.table_name][key]
             return True
         return False

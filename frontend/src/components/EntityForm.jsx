@@ -3,8 +3,12 @@ import React, { useState } from 'react';
 export default function EntityForm({ initialData = {}, fields, onSubmit, onCancel }) {
   const [data, setData] = useState(initialData);
 
-  const handleChange = (name, value) => {
-    setData(prev => ({ ...prev, [name]: value }));
+  const handleChange = (name, value, type) => {
+    let parsedValue = value;
+    if (type === 'number' && value !== '') {
+      parsedValue = Number(value);
+    }
+    setData(prev => ({ ...prev, [name]: parsedValue }));
   };
 
   const handleSubmit = (e) => {
@@ -22,7 +26,7 @@ export default function EntityForm({ initialData = {}, fields, onSubmit, onCance
             <input 
               type={f.type || 'text'} 
               value={data[f.name] || ''} 
-              onChange={e => handleChange(f.name, e.target.value)}
+              onChange={e => handleChange(f.name, e.target.value, f.type)}
               required={f.required}
               className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             />
