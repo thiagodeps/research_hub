@@ -1,0 +1,97 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Hilário Tomaz Alves de Oliveira",
+  "lattes_id": "8980213630090119",
+  "artigos_com_doi": 5,
+  "encontrados_openalex": 5,
+  "citacoes_total": 86,
+  "h_index": 3,
+  "g_index": 5,
+  "m_index": 0.3,
+  "idade_academica": 10,
+  "citacoes_por_artigo": 17.2,
+  "citacoes_mediana": 4,
+  "artigos_fracionados": 0.83,
+  "citacoes_fracionadas": 12.8,
+  "i10": 2,
+  "mais_citado": 58,
+  "fwci_medio": 3.53,
+  "fwci_mediana": 1.11,
+  "fwci_antigo": 7.05,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 2,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 18,
+  "momentum_pct": 21,
+  "citacoes_por_ano": {
+    "2017": 6,
+    "2018": 7,
+    "2019": 12,
+    "2020": 14,
+    "2021": 12,
+    "2022": 9,
+    "2023": 8,
+    "2024": 4,
+    "2025": 12,
+    "2026": 2
+  },
+  "artigo_ascensao": {
+    "titulo": "Assessing shallow sentence scoring techniques and combinations for single and multi-document summarization",
+    "ano": 2016,
+    "recent_2a": 10,
+    "citacoes": 58,
+    "share_recente_pct": 17,
+    "fwci": 11.8865,
+    "doi": "10.1016/j.eswa.2016.08.030"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Assessing shallow sentence scoring techniques and combinations for single and multi-docume",
+      "ano": 2016,
+      "citacoes": 58,
+      "fwci": 11.8865,
+      "percentil": 96,
+      "recent_2a": 10,
+      "doi": "10.1016/j.eswa.2016.08.030"
+    },
+    {
+      "titulo": "Automatic cohesive summarization with pronominal anaphora resolution",
+      "ano": 2018,
+      "citacoes": 24,
+      "fwci": 2.2227,
+      "percentil": 90,
+      "recent_2a": 4,
+      "doi": "10.1016/j.csl.2018.05.004"
+    },
+    {
+      "titulo": "A benchmark dataset of narrative student essays with multi-competency grades for automatic",
+      "ano": 2025,
+      "citacoes": 4,
+      "fwci": null,
+      "percentil": null,
+      "recent_2a": 4,
+      "doi": "10.1016/j.dib.2025.111526"
+    },
+    {
+      "titulo": "Brazilian Portuguese Image Captioning with Transformers: A Study on Cross-Native-Translate",
+      "ano": 2026,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.5753/jbcs.2026.5857"
+    },
+    {
+      "titulo": "Large Language Models for chatbot applications handling sensitive information",
+      "ano": 2025,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.1016/j.eswa.2025.130145"
+    }
+  ],
+  "rank": 21
+}

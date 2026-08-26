@@ -1,0 +1,70 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Rafael Peixoto Derenzi Vivacqua",
+  "lattes_id": "9741308000396752",
+  "artigos_com_doi": 2,
+  "encontrados_openalex": 2,
+  "citacoes_total": 185,
+  "h_index": 2,
+  "g_index": 2,
+  "m_index": 0.22,
+  "idade_academica": 9,
+  "citacoes_por_artigo": 92.5,
+  "citacoes_mediana": 92.5,
+  "artigos_fracionados": 0.53,
+  "citacoes_fracionadas": 44.9,
+  "i10": 2,
+  "mais_citado": 126,
+  "fwci_medio": 113.74,
+  "fwci_mediana": 113.74,
+  "fwci_antigo": 113.74,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 2,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 26,
+  "momentum_pct": 14,
+  "citacoes_por_ano": {
+    "2017": 2,
+    "2018": 24,
+    "2019": 30,
+    "2020": 35,
+    "2021": 31,
+    "2022": 21,
+    "2023": 16,
+    "2024": 14,
+    "2025": 10,
+    "2026": 2
+  },
+  "artigo_ascensao": {
+    "titulo": "Self-Localization Based on Visual Lane Marking Maps: An Accurate Low-Cost Approach for Autonomous Driving",
+    "ano": 2017,
+    "recent_2a": 18,
+    "citacoes": 126,
+    "share_recente_pct": 14,
+    "fwci": 222.8866,
+    "doi": "10.1109/tits.2017.2752461"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Self-Localization Based on Visual Lane Marking Maps: An Accurate Low-Cost Approach for Aut",
+      "ano": 2017,
+      "citacoes": 126,
+      "fwci": 222.8866,
+      "percentil": 90,
+      "recent_2a": 18,
+      "doi": "10.1109/tits.2017.2752461"
+    },
+    {
+      "titulo": "A Low Cost Sensors Approach for Accurate Vehicle Localization and Autonomous Driving Appli",
+      "ano": 2017,
+      "citacoes": 59,
+      "fwci": 4.5838,
+      "percentil": 90,
+      "recent_2a": 8,
+      "doi": "10.3390/s17102359"
+    }
+  ],
+  "rank": 10
+}

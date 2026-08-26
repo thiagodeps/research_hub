@@ -1,0 +1,100 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Cassius Zanetti Resende",
+  "lattes_id": "4261626566157032",
+  "artigos_com_doi": 5,
+  "encontrados_openalex": 5,
+  "citacoes_total": 68,
+  "h_index": 4,
+  "g_index": 5,
+  "m_index": 0.31,
+  "idade_academica": 13,
+  "citacoes_por_artigo": 13.6,
+  "citacoes_mediana": 10,
+  "artigos_fracionados": 1.58,
+  "citacoes_fracionadas": 21.8,
+  "i10": 3,
+  "mais_citado": 40,
+  "fwci_medio": 2.03,
+  "fwci_mediana": 1.23,
+  "fwci_antigo": null,
+  "fwci_recente": 0.66,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 17,
+  "momentum_pct": 25,
+  "citacoes_por_ano": {
+    "2013": 1,
+    "2014": 1,
+    "2015": 7,
+    "2016": 2,
+    "2017": 6,
+    "2019": 4,
+    "2020": 7,
+    "2021": 11,
+    "2022": 8,
+    "2023": 4,
+    "2024": 4,
+    "2025": 12,
+    "2026": 1
+  },
+  "artigo_ascensao": {
+    "titulo": "Predicting diabetic retinopathy stage using Siamese Convolutional Neural Network",
+    "ano": 2024,
+    "recent_2a": 10,
+    "citacoes": 10,
+    "share_recente_pct": 100,
+    "fwci": 2.5586,
+    "doi": "10.1080/21681163.2023.2297017"
+  },
+  "top_artigos": [
+    {
+      "titulo": "A nonlinear trajectory tracking controller for mobile robots with velocity limitation via ",
+      "ano": 2013,
+      "citacoes": 40,
+      "fwci": 5.7011,
+      "percentil": 89,
+      "recent_2a": 5,
+      "doi": "10.1016/j.conengprac.2013.05.012"
+    },
+    {
+      "titulo": "Estimation and prediction of motor load torque applied to electrical submersible pumps",
+      "ano": 2018,
+      "citacoes": 12,
+      "fwci": 1.2327,
+      "percentil": 89,
+      "recent_2a": 2,
+      "doi": "10.1016/j.conengprac.2018.11.019"
+    },
+    {
+      "titulo": "Predicting diabetic retinopathy stage using Siamese Convolutional Neural Network",
+      "ano": 2024,
+      "citacoes": 10,
+      "fwci": 2.5586,
+      "percentil": 94,
+      "recent_2a": 10,
+      "doi": "10.1080/21681163.2023.2297017"
+    },
+    {
+      "titulo": "A Path-Following Controller for Guiding a Single Robot or a Multi-robot System",
+      "ano": 2021,
+      "citacoes": 6,
+      "fwci": 0.6586,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1007/s40313-021-00725-w"
+    },
+    {
+      "titulo": "ESTIMAÇÃO DE IRRADIÂNCIA E TEMPERATURA EM UM SISTEMA FOTOVOLTAICO TÍPICO",
+      "ano": 2022,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.29367/issn.1809-3957.17.2022.193.70"
+    }
+  ],
+  "rank": 25
+}

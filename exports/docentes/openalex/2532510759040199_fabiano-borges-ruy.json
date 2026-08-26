@@ -1,0 +1,98 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Fabiano Borges Ruy",
+  "lattes_id": "2532510759040199",
+  "artigos_com_doi": 6,
+  "encontrados_openalex": 5,
+  "citacoes_total": 65,
+  "h_index": 2,
+  "g_index": 5,
+  "m_index": 0.22,
+  "idade_academica": 9,
+  "citacoes_por_artigo": 13.0,
+  "citacoes_mediana": 1,
+  "artigos_fracionados": 1.28,
+  "citacoes_fracionadas": 13.4,
+  "i10": 1,
+  "mais_citado": 61,
+  "fwci_medio": 1.51,
+  "fwci_mediana": 0.31,
+  "fwci_antigo": 2.74,
+  "fwci_recente": 0.31,
+  "fwci_delta": -2.43,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 9,
+  "momentum_pct": 14,
+  "citacoes_por_ano": {
+    "2015": 1,
+    "2017": 2,
+    "2018": 8,
+    "2019": 7,
+    "2020": 7,
+    "2021": 10,
+    "2022": 9,
+    "2023": 10,
+    "2024": 2,
+    "2025": 5,
+    "2026": 2
+  },
+  "artigo_ascensao": {
+    "titulo": "From reference ontologies to ontology patterns and back",
+    "ano": 2017,
+    "recent_2a": 8,
+    "citacoes": 61,
+    "share_recente_pct": 13,
+    "fwci": 5.4751,
+    "doi": "10.1016/j.datak.2017.03.004"
+  },
+  "top_artigos": [
+    {
+      "titulo": "From reference ontologies to ontology patterns and back",
+      "ano": 2017,
+      "citacoes": 61,
+      "fwci": 5.4751,
+      "percentil": 89,
+      "recent_2a": 8,
+      "doi": "10.1016/j.datak.2017.03.004"
+    },
+    {
+      "titulo": "Knowledge-based Support to Process Integration in ODE",
+      "ano": 2018,
+      "citacoes": 2,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.19153/cleiej.7.1.3"
+    },
+    {
+      "titulo": "Preliminary Panoramic View of Continuous Software Engineering Adoption in Brazilian Organi",
+      "ano": 2025,
+      "citacoes": 1,
+      "fwci": 1.7628,
+      "percentil": 91,
+      "recent_2a": 1,
+      "doi": "10.5753/jserd.2025.3807"
+    },
+    {
+      "titulo": "Imposto de renda e previdência privada: benefícios fiscais e tributação regressiva",
+      "ano": 2023,
+      "citacoes": 1,
+      "fwci": 0.3091,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.5007/2175-8077.2022.e79488"
+    },
+    {
+      "titulo": "Apoio na adoção da Lei Geral de Proteção de Dados Pessoais por meio de anotações semântica",
+      "ano": 2025,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.1590/1808-5245.31.139608"
+    }
+  ],
+  "rank": 28
+}

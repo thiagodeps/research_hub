@@ -1,0 +1,123 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Adelson Pereira do Nascimento",
+  "lattes_id": "1472669413938036",
+  "artigos_com_doi": 8,
+  "encontrados_openalex": 8,
+  "citacoes_total": 35,
+  "h_index": 3,
+  "g_index": 5,
+  "m_index": 0.27,
+  "idade_academica": 11,
+  "citacoes_por_artigo": 4.4,
+  "citacoes_mediana": 2.0,
+  "artigos_fracionados": 2.17,
+  "citacoes_fracionadas": 9.6,
+  "i10": 1,
+  "mais_citado": 14,
+  "fwci_medio": 0.57,
+  "fwci_mediana": 0.34,
+  "fwci_antigo": 0.63,
+  "fwci_recente": 0.31,
+  "fwci_delta": -0.32,
+  "artigos_top10pct": 2,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 15,
+  "momentum_pct": 43,
+  "citacoes_por_ano": {
+    "2018": 1,
+    "2019": 2,
+    "2020": 2,
+    "2021": 2,
+    "2022": 6,
+    "2023": 7,
+    "2024": 6,
+    "2025": 6,
+    "2026": 3
+  },
+  "artigo_ascensao": {
+    "titulo": "Practices and mechanisms for increasing supply chain resilience: the supply chain resilience sheaf",
+    "ano": 2021,
+    "recent_2a": 8,
+    "citacoes": 14,
+    "share_recente_pct": 57,
+    "fwci": 1.9422,
+    "doi": "10.1108/crr-12-2020-0035"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Practices and mechanisms for increasing supply chain resilience: the supply chain resilien",
+      "ano": 2021,
+      "citacoes": 14,
+      "fwci": 1.9422,
+      "percentil": 89,
+      "recent_2a": 8,
+      "doi": "10.1108/crr-12-2020-0035"
+    },
+    {
+      "titulo": "The risk mentality in organizations: an analysis of inserting risk management in ISO 9001 ",
+      "ano": 2020,
+      "citacoes": 9,
+      "fwci": 1.0344,
+      "percentil": 94,
+      "recent_2a": 4,
+      "doi": "10.1590/0104-530x4043-20"
+    },
+    {
+      "titulo": "Pontos de transição: a escalada rumo à maturidade de Sistemas de Gestão da Qualidade",
+      "ano": 2016,
+      "citacoes": 6,
+      "fwci": 0.8842,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1590/0104-530x2222-15"
+    },
+    {
+      "titulo": "A estratégia da qualidade ou a qualidade da estratégia? Uma avaliação da adoção da gestão ",
+      "ano": 2017,
+      "citacoes": 2,
+      "fwci": 0.3773,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.20985/1980-5160.2017.v12n1.1138"
+    },
+    {
+      "titulo": "Idade Versus Maturidade: Uma Pesquisa Empírica sobre Sistemas de Gestão da Qualidade",
+      "ano": 2015,
+      "citacoes": 2,
+      "fwci": 0.0,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.7177/sg.2015.v10.n1.a9"
+    },
+    {
+      "titulo": "Imposto de renda e previdência privada: benefícios fiscais e tributação regressiva",
+      "ano": 2023,
+      "citacoes": 1,
+      "fwci": 0.3091,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.5007/2175-8077.2022.e79488"
+    },
+    {
+      "titulo": "Work as management in an environment governed by standards: a study of situations in the s",
+      "ano": 2021,
+      "citacoes": 1,
+      "fwci": 0.0,
+      "percentil": 94,
+      "recent_2a": 1,
+      "doi": "10.1590/0104-530x5175-20"
+    },
+    {
+      "titulo": "A RELAÇÃO ENTRE A PERCEPÇÃO DE PRÁTICAS DE RESPONSABILIDADE SOCIAL CORPORATIVA E A INTENÇÃ",
+      "ano": 2016,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.1590/1413-2311.01116.62787"
+    }
+  ],
+  "rank": 38
+}

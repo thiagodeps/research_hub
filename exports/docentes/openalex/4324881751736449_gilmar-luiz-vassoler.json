@@ -1,0 +1,69 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Gilmar Luiz Vassoler",
+  "lattes_id": "4324881751736449",
+  "artigos_com_doi": 3,
+  "encontrados_openalex": 2,
+  "citacoes_total": 62,
+  "h_index": 2,
+  "g_index": 2,
+  "m_index": 0.22,
+  "idade_academica": 9,
+  "citacoes_por_artigo": 31.0,
+  "citacoes_mediana": 31.0,
+  "artigos_fracionados": 0.31,
+  "citacoes_fracionadas": 9.6,
+  "i10": 2,
+  "mais_citado": 32,
+  "fwci_medio": 3.52,
+  "fwci_mediana": 3.52,
+  "fwci_antigo": 3.52,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 10,
+  "momentum_pct": 16,
+  "citacoes_por_ano": {
+    "2018": 4,
+    "2019": 8,
+    "2020": 14,
+    "2021": 8,
+    "2022": 14,
+    "2023": 4,
+    "2024": 7,
+    "2025": 2,
+    "2026": 1
+  },
+  "artigo_ascensao": {
+    "titulo": "KeySFC: Traffic steering using strict source routing for dynamic and efficient network orchestration",
+    "ano": 2019,
+    "recent_2a": 8,
+    "citacoes": 30,
+    "share_recente_pct": 27,
+    "fwci": 3.048,
+    "doi": "10.1016/j.comnet.2019.106975"
+  },
+  "top_artigos": [
+    {
+      "titulo": "VirtPhy: Fully Programmable NFV Orchestration Architecture for Edge Data Centers",
+      "ano": 2017,
+      "citacoes": 32,
+      "fwci": 3.9911,
+      "percentil": 89,
+      "recent_2a": 2,
+      "doi": "10.1109/tnsm.2017.2756062"
+    },
+    {
+      "titulo": "KeySFC: Traffic steering using strict source routing for dynamic and efficient network orc",
+      "ano": 2019,
+      "citacoes": 30,
+      "fwci": 3.048,
+      "percentil": 94,
+      "recent_2a": 8,
+      "doi": "10.1016/j.comnet.2019.106975"
+    }
+  ],
+  "rank": 30
+}

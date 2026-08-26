@@ -1,0 +1,123 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Jefferson Oliveira Andrade",
+  "lattes_id": "7138275599443632",
+  "artigos_com_doi": 15,
+  "encontrados_openalex": 15,
+  "citacoes_total": 18,
+  "h_index": 3,
+  "g_index": 4,
+  "m_index": 0.21,
+  "idade_academica": 14,
+  "citacoes_por_artigo": 1.2,
+  "citacoes_mediana": 0,
+  "artigos_fracionados": 4.02,
+  "citacoes_fracionadas": 5.9,
+  "i10": 1,
+  "mais_citado": 10,
+  "fwci_medio": 0.11,
+  "fwci_mediana": 0.0,
+  "fwci_antigo": 0.13,
+  "fwci_recente": 0.0,
+  "fwci_delta": -0.13,
+  "artigos_top10pct": 3,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 9,
+  "momentum_pct": 50,
+  "citacoes_por_ano": {
+    "2015": 1,
+    "2017": 1,
+    "2019": 1,
+    "2021": 1,
+    "2022": 2,
+    "2023": 3,
+    "2024": 3,
+    "2025": 5,
+    "2026": 1
+  },
+  "artigo_ascensao": {
+    "titulo": "Eye Movements Biometrics: A Bibliometric Analysis from 2004 to 2019",
+    "ano": 2020,
+    "recent_2a": 6,
+    "citacoes": 10,
+    "share_recente_pct": 60,
+    "fwci": 0.5465,
+    "doi": "10.5120/ijca2020920243"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Eye Movements Biometrics: A Bibliometric Analysis from 2004 to 2019",
+      "ano": 2020,
+      "citacoes": 10,
+      "fwci": 0.5465,
+      "percentil": 89,
+      "recent_2a": 6,
+      "doi": "10.5120/ijca2020920243"
+    },
+    {
+      "titulo": "Texture Classification of Sea Turtle Shell Based on Color Features: Color Histograms and C",
+      "ano": 2018,
+      "citacoes": 3,
+      "fwci": 0.1309,
+      "percentil": 90,
+      "recent_2a": 0,
+      "doi": "10.5121/ijaia.2018.9205"
+    },
+    {
+      "titulo": "Efficient Multi-Valued Bounded Model Checking for LTL over Quasi-Boolean Algebras",
+      "ano": 2012,
+      "citacoes": 3,
+      "fwci": 0.3247,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1587/transinf.e95.d.1355"
+    },
+    {
+      "titulo": "Pipeline for Multivariate Time Series Forecasting of Gas Consumption in Pelletization Proc",
+      "ano": 2025,
+      "citacoes": 1,
+      "fwci": 0.5553,
+      "percentil": 91,
+      "recent_2a": 1,
+      "doi": "10.19153/cleiej.28.3.2"
+    },
+    {
+      "titulo": "Automatic Musical Transcription Applying Fine-Tuning by Composer in Neural Networks for th",
+      "ano": 2022,
+      "citacoes": 1,
+      "fwci": 0.1486,
+      "percentil": 90,
+      "recent_2a": 1,
+      "doi": "10.14445/22315381/ijett-v70i12p231"
+    },
+    {
+      "titulo": "Previsão de Vazão de Rios usando Rede Perceptron Multi-Camada Otimizada por Neural Archite",
+      "ano": 2025,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.56762/tecnia.v10i2.1697"
+    },
+    {
+      "titulo": "Influenciadores do uso de tecnologia computacional da aprendizagem: uma breve descrição da",
+      "ano": 2023,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.55905/cuadv15n2-024"
+    },
+    {
+      "titulo": "Deep Learning with Spectrogram Image of Eye Movement for Biometrics",
+      "ano": 2022,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.1504/ijbm.2023.10052380"
+    }
+  ],
+  "rank": 44
+}

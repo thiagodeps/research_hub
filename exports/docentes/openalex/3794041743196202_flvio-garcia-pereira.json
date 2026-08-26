@@ -1,0 +1,129 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Flávio Garcia Pereira",
+  "lattes_id": "3794041743196202",
+  "artigos_com_doi": 9,
+  "encontrados_openalex": 9,
+  "citacoes_total": 65,
+  "h_index": 3,
+  "g_index": 8,
+  "m_index": 0.17,
+  "idade_academica": 18,
+  "citacoes_por_artigo": 7.2,
+  "citacoes_mediana": 3,
+  "artigos_fracionados": 2.25,
+  "citacoes_fracionadas": 16.4,
+  "i10": 2,
+  "mais_citado": 27,
+  "fwci_medio": 1.03,
+  "fwci_mediana": 0.43,
+  "fwci_antigo": 0.28,
+  "fwci_recente": 0.62,
+  "fwci_delta": 0.34,
+  "artigos_top10pct": 4,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 11,
+  "momentum_pct": 17,
+  "citacoes_por_ano": {
+    "2012": 1,
+    "2013": 4,
+    "2014": 3,
+    "2015": 6,
+    "2016": 6,
+    "2017": 4,
+    "2018": 1,
+    "2019": 9,
+    "2020": 6,
+    "2021": 1,
+    "2022": 3,
+    "2023": 5,
+    "2024": 4,
+    "2025": 6,
+    "2026": 1
+  },
+  "artigo_ascensao": {
+    "titulo": "Surface-Enhanced Raman Scattering Combined with Machine Learning for Rapid and Sensitive Detection of Anti-SARS-CoV-2 Ig",
+    "ano": 2024,
+    "recent_2a": 5,
+    "citacoes": 5,
+    "share_recente_pct": 100,
+    "fwci": 1.4588,
+    "doi": "10.3390/bios14110523"
+  },
+  "top_artigos": [
+    {
+      "titulo": "An approach to avoid obstacles in mobile robot navigation: the tangential escape",
+      "ano": 2008,
+      "citacoes": 27,
+      "fwci": 1.9375,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1590/s0103-17592008000400003"
+    },
+    {
+      "titulo": "Human–Robot Interaction and Cooperation Through People Detection and Gesture Recognition",
+      "ano": 2013,
+      "citacoes": 23,
+      "fwci": 4.0474,
+      "percentil": 89,
+      "recent_2a": 5,
+      "doi": "10.1007/s40313-013-0040-3"
+    },
+    {
+      "titulo": "Surface-Enhanced Raman Scattering Combined with Machine Learning for Rapid and Sensitive D",
+      "ano": 2024,
+      "citacoes": 5,
+      "fwci": 1.4588,
+      "percentil": 97,
+      "recent_2a": 5,
+      "doi": "10.3390/bios14110523"
+    },
+    {
+      "titulo": "A Hybrid Model based on Genetic Algorithm and Space-Filling Curve applied to Optimization ",
+      "ano": 2018,
+      "citacoes": 3,
+      "fwci": 0.4288,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.4316/aece.2018.03007"
+    },
+    {
+      "titulo": "Texture Classification of Sea Turtle Shell Based on Color Features: Color Histograms and C",
+      "ano": 2018,
+      "citacoes": 3,
+      "fwci": 0.1309,
+      "percentil": 90,
+      "recent_2a": 0,
+      "doi": "10.5121/ijaia.2018.9205"
+    },
+    {
+      "titulo": "Kit Didático de Transmissão de Veículos Híbridos",
+      "ano": 2023,
+      "citacoes": 2,
+      "fwci": 0.145,
+      "percentil": 94,
+      "recent_2a": 0,
+      "doi": "10.18618/rep.2023.1.0028"
+    },
+    {
+      "titulo": "MÁQUINA DE VETORES DE SUPORTE PARA CLASSIFICAÇÃO DE ANOMALIAS EM TRILHO A PARTIR DE CARACT",
+      "ano": 2023,
+      "citacoes": 1,
+      "fwci": 1.0918,
+      "percentil": 90,
+      "recent_2a": 1,
+      "doi": "10.36524/ric.v9i1.1830"
+    },
+    {
+      "titulo": "RECONHECIMENTO FACIAL BASEADO EM HOG E PCA: UMA COMPARAÇÃO QUANTO À INVARIÂNCIA À ILUMINAÇ",
+      "ano": 2015,
+      "citacoes": 1,
+      "fwci": 0.0,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.36524/ric.v1i1.236"
+    }
+  ],
+  "rank": 29
+}

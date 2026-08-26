@@ -1,0 +1,54 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Jefferson Ribeiro de Lima",
+  "lattes_id": "8645994745413313",
+  "artigos_com_doi": 2,
+  "encontrados_openalex": 1,
+  "citacoes_total": 11,
+  "h_index": 1,
+  "g_index": 1,
+  "m_index": 0.5,
+  "idade_academica": 2,
+  "citacoes_por_artigo": 11.0,
+  "citacoes_mediana": 11,
+  "artigos_fracionados": 0.5,
+  "citacoes_fracionadas": 5.5,
+  "i10": 1,
+  "mais_citado": 11,
+  "fwci_medio": 9.27,
+  "fwci_mediana": 9.27,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 11,
+  "momentum_pct": 100,
+  "citacoes_por_ano": {
+    "2024": 1,
+    "2025": 4,
+    "2026": 6
+  },
+  "artigo_ascensao": {
+    "titulo": "As dificuldades enfrentadas pelos estudantes na aprendizagem de programação de computadores: Uma Revisão Sistemática da ",
+    "ano": 2024,
+    "recent_2a": 11,
+    "citacoes": 11,
+    "share_recente_pct": 100,
+    "fwci": 9.2666,
+    "doi": "10.22456/1679-1916.141538"
+  },
+  "top_artigos": [
+    {
+      "titulo": "As dificuldades enfrentadas pelos estudantes na aprendizagem de programação de computadore",
+      "ano": 2024,
+      "citacoes": 11,
+      "fwci": 9.2666,
+      "percentil": 90,
+      "recent_2a": 11,
+      "doi": "10.22456/1679-1916.141538"
+    }
+  ],
+  "rank": 48
+}

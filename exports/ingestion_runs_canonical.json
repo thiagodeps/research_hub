@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "source_system": "sigpesq_project_files",
+        "flow_name": "Enrich SigPesq Projects",
+        "status": "success",
+        "input_snapshot_hash": null,
+        "notes": null,
+        "started_at": "2026-08-26T13:12:44",
+        "finished_at": "2026-08-26T13:12:51.565800",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    }
+]

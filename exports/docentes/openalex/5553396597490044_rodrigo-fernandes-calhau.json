@@ -1,0 +1,63 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Rodrigo Fernandes Calhau",
+  "lattes_id": "5553396597490044",
+  "artigos_com_doi": 2,
+  "encontrados_openalex": 2,
+  "citacoes_total": 18,
+  "h_index": 2,
+  "g_index": 2,
+  "m_index": 0.5,
+  "idade_academica": 4,
+  "citacoes_por_artigo": 9.0,
+  "citacoes_mediana": 9.0,
+  "artigos_fracionados": 0.58,
+  "citacoes_fracionadas": 4.8,
+  "i10": 1,
+  "mais_citado": 14,
+  "fwci_medio": 3.26,
+  "fwci_mediana": 3.26,
+  "fwci_antigo": null,
+  "fwci_recente": 3.26,
+  "fwci_delta": null,
+  "artigos_top10pct": 2,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 18,
+  "momentum_pct": 100,
+  "citacoes_por_ano": {
+    "2024": 4,
+    "2025": 9,
+    "2026": 5
+  },
+  "artigo_ascensao": {
+    "titulo": "Modeling competences in enterprise architecture: from knowledge, skills, and attitudes to organizational capabilities",
+    "ano": 2024,
+    "recent_2a": 14,
+    "citacoes": 14,
+    "share_recente_pct": 100,
+    "fwci": 5.8932,
+    "doi": "10.1007/s10270-024-01151-7"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Modeling competences in enterprise architecture: from knowledge, skills, and attitudes to ",
+      "ano": 2024,
+      "citacoes": 14,
+      "fwci": 5.8932,
+      "percentil": 96,
+      "recent_2a": 14,
+      "doi": "10.1007/s10270-024-01151-7"
+    },
+    {
+      "titulo": "First step climbing the Stairway to Heaven Model - Results from a Case Study in Industry",
+      "ano": 2022,
+      "citacoes": 4,
+      "fwci": 0.6333,
+      "percentil": 90,
+      "recent_2a": 4,
+      "doi": "10.5753/jserd.2021.1992"
+    }
+  ],
+  "rank": 45
+}

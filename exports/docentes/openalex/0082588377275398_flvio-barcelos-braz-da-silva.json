@@ -1,0 +1,98 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Flávio Barcelos Braz da Silva",
+  "lattes_id": "0082588377275398",
+  "artigos_com_doi": 5,
+  "encontrados_openalex": 5,
+  "citacoes_total": 38,
+  "h_index": 3,
+  "g_index": 5,
+  "m_index": 0.25,
+  "idade_academica": 12,
+  "citacoes_por_artigo": 7.6,
+  "citacoes_mediana": 6,
+  "artigos_fracionados": 0.99,
+  "citacoes_fracionadas": 6.6,
+  "i10": 1,
+  "mais_citado": 22,
+  "fwci_medio": 0.24,
+  "fwci_mediana": 0.24,
+  "fwci_antigo": null,
+  "fwci_recente": 0.06,
+  "fwci_delta": null,
+  "artigos_top10pct": 0,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 13,
+  "momentum_pct": 34,
+  "citacoes_por_ano": {
+    "2015": 2,
+    "2016": 1,
+    "2017": 1,
+    "2019": 4,
+    "2020": 2,
+    "2021": 2,
+    "2022": 7,
+    "2023": 6,
+    "2024": 4,
+    "2025": 4,
+    "2026": 5
+  },
+  "artigo_ascensao": {
+    "titulo": "Measured and forecasted weather and power dataset for management of an island and grid-connected microgrid",
+    "ano": 2021,
+    "recent_2a": 11,
+    "citacoes": 22,
+    "share_recente_pct": 50,
+    "fwci": null,
+    "doi": "10.1016/j.dib.2021.107513"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Measured and forecasted weather and power dataset for management of an island and grid-con",
+      "ano": 2021,
+      "citacoes": 22,
+      "fwci": null,
+      "percentil": null,
+      "recent_2a": 11,
+      "doi": "10.1016/j.dib.2021.107513"
+    },
+    {
+      "titulo": "A novel induction motor starting method using superconduction",
+      "ano": 2014,
+      "citacoes": 9,
+      "fwci": 0.3501,
+      "percentil": 89,
+      "recent_2a": 2,
+      "doi": "10.1016/j.physc.2014.10.015"
+    },
+    {
+      "titulo": "Starting Current Limitation Method Using HTS for Induction Motors",
+      "ano": 2014,
+      "citacoes": 6,
+      "fwci": 0.488,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1007/s10948-014-2853-0"
+    },
+    {
+      "titulo": "VALIDATION OF PHOTOVOLTAIC MODEL FOR APPLICATION IN A DISTRIBUTED ENERGY SOURCE USING WEAT",
+      "ano": 2023,
+      "citacoes": 1,
+      "fwci": 0.126,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.56083/rcv3n6-096"
+    },
+    {
+      "titulo": "Inversores de frequência em sistemas U.P.S e armazenamento de energia",
+      "ano": 2022,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.53660/clm-725-770"
+    }
+  ],
+  "rank": 37
+}

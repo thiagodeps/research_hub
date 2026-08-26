@@ -1,0 +1,3148 @@
+[
+    {
+        "id": 1,
+        "name": "Educação",
+        "campus": {
+            "id": 2,
+            "name": "Vitória"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Interdisciplinar",
+        "campus": {
+            "id": 7,
+            "name": "Guarapari"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Engenharia Civil",
+        "campus": {
+            "id": 20,
+            "name": "Nova Venécia"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Engenharia Mecânica",
+        "campus": {
+            "id": 21,
+            "name": "Aracruz"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Recursos Florestais e Engenharia Florestal",
+        "campus": {
+            "id": 5,
+            "name": "Alegre"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Engenharia Elétrica",
+        "campus": {
+            "id": 2,
+            "name": "Vitória"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Zootecnia",
+        "campus": {
+            "id": 3,
+            "name": "Itapina"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Geografia",
+        "campus": {
+            "id": 19,
+            "name": "Ibatiba"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Arquitetura e Urbanismo",
+        "campus": {
+            "id": 4,
+            "name": "Colatina"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Química",
+        "campus": {
+            "id": 1,
+            "name": "Vila Velha"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Biologia Geral",
+        "campus": {
+            "id": 7,
+            "name": "Guarapari"
+        }
+    },
+    {
+        "id": 12,
+        "name": "Farmácia",
+        "campus": {
+            "id": 1,
+            "name": "Vila Velha"
+        }
+    },
+    {
+        "id": 13,
+        "name": "Ecologia",
+        "campus": {
+            "id": 5,
+            "name": "Alegre"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Microbiologia",
+        "campus": {
+            "id": 2,
+            "name": "Vitória"
+        }
+    },
+    {
+        "id": 15,
+        "name": "Ciência e Tecnologia de Alimentos",
+        "campus": {
+            "id": 8,
+            "name": "Venda Nova do Imigrante"
+        }
+    },
+    {
+        "id": 16,
+        "name": "Engenharia de Materiais e Metalúrgica",
+        "campus": {
+            "id": 2,
+            "name": "Vitória"
+        }
+    },
+    {
+        "id": 17,
+        "name": "Administração",
+        "campus": {
+            "id": 15,
+            "name": "Viana"
+        }
+    },
+    {
+        "id": 18,
+        "name": "Engenharia de Transportes",
+        "campus": {
+            "id": 13,
+            "name": "Cariacica"
+        }
+    },
+    {
+        "id": 19,
+        "name": "Medicina Veterinária",
+        "campus": {
+            "id": 3,
+            "name": "Itapina"
+        }
+    },
+    {
+        "id": 20,
+        "name": "Engenharia de Produção",
+        "campus": {
+            "id": 13,
+            "name": "Cariacica"
+        }
+    },
+    {
+        "id": 21,
+        "name": "Engenharia Química",
+        "campus": {
+            "id": 1,
+            "name": "Vila Velha"
+        }
+    },
+    {
+        "id": 22,
+        "name": "Desenho Industrial",
+        "campus": {
+            "id": 11,
+            "name": "Cefor"
+        }
+    },
+    {
+        "id": 23,
+        "name": "História",
+        "campus": {
+            "id": 2,
+            "name": "Vitória"
+        }
+    },
+    {
+        "id": 24,
+        "name": "Ciências Ambientais",
+        "campus": {
+            "id": 14,
+            "name": "Linhares"
+        }
+    },
+    {
+        "id": 25,
+        "name": "Recursos Pesqueiros e Engenharia de Pesca",
+        "campus": {
+            "id": 12,
+            "name": "Piúma"
+        }
+    },
+    {
+        "id": 26,
+        "name": "Ensino",
+        "campus": {
+            "id": 20,
+            "name": "Nova Venécia"
+        }
+    },
+    {
+        "id": 27,
+        "name": "Filosofia",
+        "campus": {
+            "id": 7,
+            "name": "Guarapari"
+        }
+    },
+    {
+        "id": 28,
+        "name": "Engenharia Agrícola",
+        "campus": {
+            "id": 16,
+            "name": "Santa Teresa"
+        }
+    },
+    {
+        "id": 29,
+        "name": "Ciência da Computação",
+        "campus": {
+            "id": 9,
+            "name": "Cachoeiro de Itapemirim"
+        }
+    },
+    {
+        "id": 30,
+        "name": "Letras",
+        "campus": {
+            "id": 2,
+            "name": "Vitória"
+        }
+    },
+    {
+        "id": 31,
+        "name": "Geociências",
+        "campus": {
+            "id": 9,
+            "name": "Cachoeiro de Itapemirim"
+        }
+    },
+    {
+        "id": 32,
+        "name": "Linguística",
+        "campus": {
+            "id": 17,
+            "name": "Centro-Serrano"
+        }
+    },
+    {
+        "id": 33,
+        "name": "Agronomia",
+        "campus": {
+            "id": 5,
+            "name": "Alegre"
+        }
+    },
+    {
+        "id": 34,
+        "name": "Engenharia de Minas",
+        "campus": {
+            "id": 9,
+            "name": "Cachoeiro de Itapemirim"
+        }
+    },
+    {
+        "id": 35,
+        "name": "Educação Física",
+        "campus": {
+            "id": 12,
+            "name": "Piúma"
+        }
+    },
+    {
+        "id": 36,
+        "name": "Probabilidade e Estatística",
+        "campus": {
+            "id": 5,
+            "name": "Alegre"
+        }
+    },
+    {
+        "id": 37,
+        "name": "Engenharia Sanitária",
+        "campus": {
+            "id": 2,
+            "name": "Vitória"
+        }
+    },
+    {
+        "id": 38,
+        "name": "Engenharia Biomédica",
+        "campus": {
+            "id": 10,
+            "name": "São Mateus"
+        }
+    },
+    {
+        "id": 39,
+        "name": "Antropologia",
+        "campus": {
+            "id": 12,
+            "name": "Piúma"
+        }
+    },
+    {
+        "id": 40,
+        "name": "Física",
+        "campus": {
+            "id": 13,
+            "name": "Cariacica"
+        }
+    },
+    {
+        "id": 41,
+        "name": "Artes",
+        "campus": {
+            "id": 22,
+            "name": "Montanha"
+        }
+    },
+    {
+        "id": 42,
+        "name": "Matemática",
+        "campus": {
+            "id": 13,
+            "name": "Cariacica"
+        }
+    },
+    {
+        "id": 43,
+        "name": "Bioquímica",
+        "campus": {
+            "id": 1,
+            "name": "Vila Velha"
+        }
+    },
+    {
+        "id": 44,
+        "name": "Planejamento Urbano e Regional",
+        "campus": {
+            "id": 17,
+            "name": "Centro-Serrano"
+        }
+    },
+    {
+        "id": 45,
+        "name": "Outros",
+        "campus": {
+            "id": 13,
+            "name": "Cariacica"
+        }
+    },
+    {
+        "id": 46,
+        "name": "Sociologia",
+        "campus": {
+            "id": 9,
+            "name": "Cachoeiro de Itapemirim"
+        }
+    },
+    {
+        "id": 47,
+        "name": "Ciência da Informação",
+        "campus": {
+            "id": 17,
+            "name": "Centro-Serrano"
+        }
+    },
+    {
+        "id": 48,
+        "name": "Psicologia",
+        "campus": {
+            "id": 8,
+            "name": "Venda Nova do Imigrante"
+        }
+    },
+    {
+        "id": 49,
+        "name": "Astronomia",
+        "campus": {
+            "id": 7,
+            "name": "Guarapari"
+        }
+    },
+    {
+        "id": 50,
+        "name": "Saúde Coletiva",
+        "campus": {
+            "id": 2,
+            "name": "Vitória"
+        }
+    },
+    {
+        "id": 51,
+        "name": "Oceanografia",
+        "campus": {
+            "id": 12,
+            "name": "Piúma"
+        }
+    },
+    {
+        "id": 52,
+        "name": "Processo",
+        "campus": null
+    },
+    {
+        "id": 53,
+        "name": "Metodologias Ágeis",
+        "campus": null
+    },
+    {
+        "id": 54,
+        "name": "Prototipação",
+        "campus": null
+    },
+    {
+        "id": 55,
+        "name": "Design Sprint",
+        "campus": null
+    },
+    {
+        "id": 56,
+        "name": "Design Thinking",
+        "campus": null
+    },
+    {
+        "id": 57,
+        "name": "Validação",
+        "campus": null
+    },
+    {
+        "id": 58,
+        "name": "Meteorologia",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 59,
+        "name": "Energia Renovável",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 60,
+        "name": "Datalogger",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 61,
+        "name": "Telemetria",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 62,
+        "name": "clima",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 63,
+        "name": "Gestão Ambiental",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 64,
+        "name": "Procedência mineral",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 65,
+        "name": "Cadeia de suprimentos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 66,
+        "name": "Rastreabilidade mineral",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 67,
+        "name": "Contrato inteligente",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 68,
+        "name": "Desenvolvimento Sustentável",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 69,
+        "name": "Séries Temporais multivariadas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 70,
+        "name": "redes neurais profundas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 71,
+        "name": "sustentabilidade na siderurgia",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 72,
+        "name": "Correias transportadoras",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 73,
+        "name": "rasgos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 74,
+        "name": "furos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 75,
+        "name": "desalinhamento",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 76,
+        "name": "desgaste",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 77,
+        "name": "visão computacional",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 78,
+        "name": "capacitância",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 79,
+        "name": "Prédios inteligentes",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 80,
+        "name": "Robótica educacional",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 81,
+        "name": "robótica",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 82,
+        "name": "inteligência artificial",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 83,
+        "name": "kits educativos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 84,
+        "name": "ensino a distância",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 85,
+        "name": "mobilidade elétrica",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 86,
+        "name": "veículos elétricos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 87,
+        "name": "Processo de Software",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 88,
+        "name": "Melhoria de Processos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 89,
+        "name": "Métodos Ágeis",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 90,
+        "name": "Qualidade de Software",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 91,
+        "name": "Equipes Distribuídas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 92,
+        "name": "Software Livre",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 93,
+        "name": "Linguagem Python",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 94,
+        "name": "Jogos Pedagógicos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 95,
+        "name": "Câmaras, supervisão",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 96,
+        "name": "Análise de Raio X",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 97,
+        "name": "Redes Neurais Convolucionais.",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 98,
+        "name": "tomografia de coerência óptica",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 99,
+        "name": "processamento de imagens",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 100,
+        "name": "segmentação semântica",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 101,
+        "name": "detecção de anomalias",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 102,
+        "name": "IA explicável",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 103,
+        "name": "Manufatura aditiva",
+        "campus": null
+    },
+    {
+        "id": 104,
+        "name": "Modelagem 3D",
+        "campus": null
+    },
+    {
+        "id": 105,
+        "name": "Máquinas Elétricas",
+        "campus": null
+    },
+    {
+        "id": 106,
+        "name": "Válvulas de Controle e  Bombas",
+        "campus": null
+    },
+    {
+        "id": 107,
+        "name": "Ensino em Engenharias",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 108,
+        "name": "Ensino-aprendizagem",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 109,
+        "name": "Laboratório Maker",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 110,
+        "name": "Metodologias Ativas de Ensino",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 111,
+        "name": "Cultura Maker",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 112,
+        "name": "COMPUTAÇÃO AFETIVA",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 113,
+        "name": "RECONHECIMENTO DE EXPRESSÕES FACIAIS",
+        "campus": null
+    },
+    {
+        "id": 114,
+        "name": "APRENDIZADO DE MÁQUINA",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 115,
+        "name": "TRANSFERÊNCIA DE APRENDIZADO",
+        "campus": null
+    },
+    {
+        "id": 116,
+        "name": "SAÚDE MENTAL",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 117,
+        "name": "BPM",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 118,
+        "name": "Automação de Processos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 119,
+        "name": "Recomendação",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 120,
+        "name": "Chabots",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 121,
+        "name": "PLC",
+        "campus": null
+    },
+    {
+        "id": 122,
+        "name": "SCADA",
+        "campus": null
+    },
+    {
+        "id": 123,
+        "name": "Machine Learning",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 124,
+        "name": "Aquisição de dados",
+        "campus": null
+    },
+    {
+        "id": 125,
+        "name": "Convertedor LD",
+        "campus": null
+    },
+    {
+        "id": 126,
+        "name": "Laboratório Multiusuário",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 127,
+        "name": "Microrrede",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 128,
+        "name": "Transição Energética",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 129,
+        "name": "Sustentabilidade",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 130,
+        "name": "Siderurgia",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 131,
+        "name": "Descarbonização",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 132,
+        "name": "Ligas de aço",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 133,
+        "name": "Etapas de Fabricação.",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 134,
+        "name": "Estoicismo",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 135,
+        "name": "Hierarquia de gênero",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 136,
+        "name": "Culto da performance",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 137,
+        "name": "Masculinismo",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 138,
+        "name": "Desempenho",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 139,
+        "name": "Justiça social",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 140,
+        "name": "Processamento de Linguagem Natural",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 141,
+        "name": "Correção Automática de Redações",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 142,
+        "name": "Correção Gramatical Automática",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 143,
+        "name": "Agentes",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 144,
+        "name": "Acessibilidade",
+        "campus": null
+    },
+    {
+        "id": 145,
+        "name": "Responsividade",
+        "campus": null
+    },
+    {
+        "id": 146,
+        "name": "Engenharia de Software",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 147,
+        "name": "Denúncia de Violência",
+        "campus": null
+    },
+    {
+        "id": 148,
+        "name": "Pessoa Idosa",
+        "campus": null
+    },
+    {
+        "id": 149,
+        "name": "Gestão de Denúncia",
+        "campus": null
+    },
+    {
+        "id": 150,
+        "name": "Software web e mobile",
+        "campus": null
+    },
+    {
+        "id": 151,
+        "name": "Otimização",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 152,
+        "name": "Laminador de Tirar a quente",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 153,
+        "name": "Manutenção Preditiva. Análise de Vibração",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 154,
+        "name": "Diagnóstico de Falhas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 155,
+        "name": "Framework Python",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 156,
+        "name": "Processamento de Sinais",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 157,
+        "name": "Curva I-V",
+        "campus": null
+    },
+    {
+        "id": 158,
+        "name": "Eficiência Energética",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 159,
+        "name": "Painéis Fotovoltaicos",
+        "campus": null
+    },
+    {
+        "id": 160,
+        "name": "Usina Fotovoltaica",
+        "campus": null
+    },
+    {
+        "id": 161,
+        "name": "Análise de Desempenho",
+        "campus": null
+    },
+    {
+        "id": 162,
+        "name": "Medição de Tensão",
+        "campus": null
+    },
+    {
+        "id": 163,
+        "name": "Corrente e tensão",
+        "campus": null
+    },
+    {
+        "id": 164,
+        "name": "Eletrocardiografia",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 165,
+        "name": "Aprendizado Profundo",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 166,
+        "name": "Cardiologia",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 167,
+        "name": "Transformação Digital",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 168,
+        "name": "Fontes de Energia Renováveis",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 169,
+        "name": "Digitalização do Setor Elétrico",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 170,
+        "name": "Aplicativo",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 171,
+        "name": "Agentes Inteligentes",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 172,
+        "name": "Softwares",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 173,
+        "name": "Hidroponia",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 174,
+        "name": "IA",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 175,
+        "name": "Instrumentação",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 176,
+        "name": "Autônomo",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 177,
+        "name": "KITS DIDÁTICOS",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 178,
+        "name": "ENSINO DE ENGENHARIA",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 179,
+        "name": "AULAS PRÁTICAS",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 180,
+        "name": "CONTROLE E AUTOMAÇÃO",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 181,
+        "name": "deep learning",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 182,
+        "name": "convolutional neural network",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 183,
+        "name": "patologias coluna vertebral",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 184,
+        "name": "ressonância magnética nuclear",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 185,
+        "name": "YOLOv12",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 186,
+        "name": "U-Net",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 187,
+        "name": "Redes Neurais",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 188,
+        "name": "Manipulação de Imagens",
+        "campus": null
+    },
+    {
+        "id": 189,
+        "name": "Deepfake Detection",
+        "campus": null
+    },
+    {
+        "id": 190,
+        "name": "Sensoriamento Térmico",
+        "campus": null
+    },
+    {
+        "id": 191,
+        "name": "Robótica Móvel",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 192,
+        "name": "Análise de Imagens",
+        "campus": null
+    },
+    {
+        "id": 193,
+        "name": "Inspeção Automatizada",
+        "campus": null
+    },
+    {
+        "id": 194,
+        "name": "Tecnologias de Apoio ao Resgate",
+        "campus": null
+    },
+    {
+        "id": 195,
+        "name": "Chatbots",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 196,
+        "name": "Image Captioning",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 197,
+        "name": "Imagens radiográficas.",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 198,
+        "name": "Agricultura de Precisão",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 199,
+        "name": "Metrologia Dimensional",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 200,
+        "name": "Simulação Computacional",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 201,
+        "name": "Impressão 3D",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 202,
+        "name": "Indústria 4.0",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 203,
+        "name": "Agricultura 4.0",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 204,
+        "name": "EXPERIMENTOS DIDÁTICOS",
+        "campus": null
+    },
+    {
+        "id": 205,
+        "name": "ELETROMAGNETISMO",
+        "campus": null
+    },
+    {
+        "id": 206,
+        "name": "ONDULATÓRIA",
+        "campus": null
+    },
+    {
+        "id": 207,
+        "name": "ELÉTRICA E ELETRÔNICA",
+        "campus": null
+    },
+    {
+        "id": 208,
+        "name": "PROGRAMAÇÃO COMPUTACIONAL",
+        "campus": null
+    },
+    {
+        "id": 209,
+        "name": "Câncer de mama",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 210,
+        "name": "Pré-diagnóstico Clínico",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 211,
+        "name": "Diagnóstico Interpretável",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 212,
+        "name": "automatização",
+        "campus": null
+    },
+    {
+        "id": 213,
+        "name": "Dispositivos da Internet das Coisas (IoT)",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 214,
+        "name": "Fabricas Inteligentes",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 215,
+        "name": "Python",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 216,
+        "name": "Aplicações Web",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 217,
+        "name": "OPC UA",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 218,
+        "name": "Automação",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 219,
+        "name": "Módulos didáticos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 220,
+        "name": "Instalações elétricas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 221,
+        "name": "Formação continuada de professores",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 222,
+        "name": "Ciência de Dados",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 223,
+        "name": "Mineração de Dados Educacionais",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 224,
+        "name": "Learning Analytics",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 225,
+        "name": "Políticas públicas em educação.",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 226,
+        "name": "gestão do mestrado",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 227,
+        "name": "Redações do ENEM",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 228,
+        "name": "Modelos de Linguagem (LLMs)",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 229,
+        "name": "Correção Gramatical",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 230,
+        "name": "Aderência ao Tema",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 231,
+        "name": "Ataques de negação de serviço",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 232,
+        "name": "eBPF/XDP",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 233,
+        "name": "Controle",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 234,
+        "name": "Estratégias de controle",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 235,
+        "name": "Navegação autônoma",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 236,
+        "name": "Sistemas embarcados",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 237,
+        "name": "Análise experimental",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 238,
+        "name": "desempenho de sistemas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 239,
+        "name": "sumô de robôs",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 240,
+        "name": "futebol de robôs",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 241,
+        "name": "Energia Elétrica",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 242,
+        "name": "Energia Fotovoltaica",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 243,
+        "name": "Sistemas inteligentes",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 244,
+        "name": "Educação Financeira",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 245,
+        "name": "Inovação Social",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 246,
+        "name": "Inclusão Socioeconômica.",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 247,
+        "name": "Espaço inteligente",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 248,
+        "name": "Porteiro Digiral",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 249,
+        "name": "Modelagem Conceitual",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 250,
+        "name": "Controle de Acesso",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 251,
+        "name": "Segurança Digiral",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 252,
+        "name": "Laboratórios multiusuários",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 253,
+        "name": "IoT",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 254,
+        "name": "RFID",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 255,
+        "name": "Gestão de recursos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 256,
+        "name": "Visual Question Answering",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 257,
+        "name": "Mineração e Siderurgia Inteligentes",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 258,
+        "name": "Sustentabilidade Industrial",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 259,
+        "name": "PINNs (Physics-Informed Neural Networks)",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 260,
+        "name": "Datacenter",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 261,
+        "name": "Tecnologia assistiva",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 262,
+        "name": "Educação inclusiva",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 263,
+        "name": "Ensino de Ciências",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 264,
+        "name": "Metodologias Ativas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 265,
+        "name": "MODELOS DE FUNDAÇÃO",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 266,
+        "name": "MODELOS DE VISÃO E LINGUAGEM",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 267,
+        "name": "Avaliação Pedagógica",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 268,
+        "name": "PNLD",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 269,
+        "name": "IA Neuro-Simbólica",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 270,
+        "name": "Confiabilidade (Trustworthiness)",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 271,
+        "name": "Verificação Formal",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 272,
+        "name": "Métodos Formais",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 273,
+        "name": "Lógica Formal",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 274,
+        "name": "Segurança em IA",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 275,
+        "name": "Manutenção Preditiva",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 276,
+        "name": "Análise de Vibração",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 277,
+        "name": "Tecnologia Educacional\nPlataforma SaaS\nMicrolearning\nOrquestração de Ambientes Computacionais\nAprendizagem Baseada em Projetos (PBL)\nMonitoramento de Egressos",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 278,
+        "name": "Briquetadeira",
+        "campus": null
+    },
+    {
+        "id": 279,
+        "name": "Classificador.",
+        "campus": null
+    },
+    {
+        "id": 280,
+        "name": "Revolta do Queimado",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 281,
+        "name": "Affonso Cláudio",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 282,
+        "name": "Memória",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 283,
+        "name": "Finanças Comportamentais",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 284,
+        "name": "Extensão Universitária",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 285,
+        "name": "Endividamento.",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 286,
+        "name": "Educação do Campo\nRegime de Alternância\nPolíticas Públicas Educacionais\nDesenvolvimento Rural Sustentável\nInternacionalização da Educação\nCooperação Interinstitucional\nEducação Profissional e Tecnológica\nMetodologias Ativas de Aprendizagem",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 287,
+        "name": "Inteligência Artificial Generativa",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 288,
+        "name": "Recuperação de Informação",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 289,
+        "name": "Modelos Multimodais",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 290,
+        "name": "ODS 16",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 291,
+        "name": "Segurança da Informação",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 292,
+        "name": "Autenticação de Mídia",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 293,
+        "name": "Mídia Sintética",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 294,
+        "name": "Redes programáveis",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 295,
+        "name": "Plano de dados",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 296,
+        "name": "Virtualização Redes Definidas por Software",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 297,
+        "name": "Ciência de Dados Intensiva",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 298,
+        "name": "Super App",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 299,
+        "name": "Cidadania Digital",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 300,
+        "name": "Governo Móvel",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 301,
+        "name": "Microsserviços",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 302,
+        "name": "React Native",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 303,
+        "name": "Golang",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 304,
+        "name": "logísitca",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 305,
+        "name": "carro torpedo",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 306,
+        "name": "ELETRODOS DE FORNOS DE FERROLIGAS Inteligência artificial",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 307,
+        "name": "Text-to-SQL. Large Language Model. Inteligência Artificial.",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 308,
+        "name": "Educação de Jovens e Adultos",
+        "campus": null
+    },
+    {
+        "id": 309,
+        "name": "Trabalhadores Terceirizados",
+        "campus": null
+    },
+    {
+        "id": 310,
+        "name": "Busca Ativa",
+        "campus": null
+    },
+    {
+        "id": 311,
+        "name": "Invisibilidade Social",
+        "campus": null
+    },
+    {
+        "id": 312,
+        "name": "Educação Profissional e Tecnológica",
+        "campus": null
+    },
+    {
+        "id": 313,
+        "name": "Programa Certifica.",
+        "campus": null
+    },
+    {
+        "id": 314,
+        "name": "sistemas elétricos de potência",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 315,
+        "name": "gerenciamento energético",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 316,
+        "name": "internet das coisas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 317,
+        "name": "controle preditivo",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 318,
+        "name": "Catarata",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 319,
+        "name": "Saúde Pública.",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 320,
+        "name": "Sensores",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 321,
+        "name": "Otimização Processual",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 322,
+        "name": "Processo Jurídico",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 323,
+        "name": "Large Language Model",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 324,
+        "name": "Energias Renováveis",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 325,
+        "name": "Geração Distribuída",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 326,
+        "name": "Conversão de Energia",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 327,
+        "name": "Estação Meteorológica",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 328,
+        "name": "Energia Eólica",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 329,
+        "name": "Esteira",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 330,
+        "name": "defeitos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 331,
+        "name": "Data Center",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 332,
+        "name": "IA generativa",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 333,
+        "name": "Data Center container",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 334,
+        "name": "biotecnologia",
+        "campus": null
+    },
+    {
+        "id": 335,
+        "name": "nanotecnologia e saúde humana",
+        "campus": null
+    },
+    {
+        "id": 336,
+        "name": "com ênfase em soluções inovadoras\nvoltadas ao suporte ou tratamento de condições neurológicas e doenças crônicas",
+        "campus": null
+    },
+    {
+        "id": 337,
+        "name": "a partir\nda interação eixo intestino-cérebro",
+        "campus": null
+    },
+    {
+        "id": 338,
+        "name": "Incêndios florestais",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 339,
+        "name": "queimadas",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 340,
+        "name": "sensoriamento remoto",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 341,
+        "name": "geoprocessamento",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 342,
+        "name": "áreas queimadas",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 343,
+        "name": "focos de calor",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 344,
+        "name": "Google Earth Engine",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 345,
+        "name": "MapBiomas Paraguai",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 346,
+        "name": "produção agrícola",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 347,
+        "name": "perdas econômicas",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 348,
+        "name": "vulnerabilidade ambiental",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 349,
+        "name": "sazonalidade climática",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 350,
+        "name": "Plurilinguismo Crítico",
+        "campus": null
+    },
+    {
+        "id": 351,
+        "name": "Identidade Linguística",
+        "campus": null
+    },
+    {
+        "id": 352,
+        "name": "Educação Decolonial",
+        "campus": null
+    },
+    {
+        "id": 353,
+        "name": "Translanguaging",
+        "campus": null
+    },
+    {
+        "id": 354,
+        "name": "Métodos Mistos",
+        "campus": null
+    },
+    {
+        "id": 355,
+        "name": "Instituto Federal do Espírito Santo.",
+        "campus": null
+    },
+    {
+        "id": 356,
+        "name": "Povos Indígenas\nRio Doce\nDesastre de Mariana\nReparação Integral\nEstudos de Impacto de Danos (EIDs)\nConsulta Livre",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 357,
+        "name": "Prévia e Informada (CLPI)\nConvenção 169 da OIT\nJustiça Socioambiental\nTerritórios Tradicionais\nSegurança Hídrica",
+        "campus": {
+            "id": 18,
+            "name": "Presidente Kennedy"
+        }
+    },
+    {
+        "id": 358,
+        "name": "Comunicação",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 359,
+        "name": "Estudos comparatistas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 360,
+        "name": "Educação no campo",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 361,
+        "name": "Política e sociedade",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 362,
+        "name": "Sistemas Analógicos e Digitais",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 363,
+        "name": "Ciências dos Materiais aplicada a Engenharia",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 364,
+        "name": "Dispositivos e Sistemas ópticos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 365,
+        "name": "Inteligência Artificial Aplicada",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 366,
+        "name": "Robótica Aplicada",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 367,
+        "name": "Visão Computacional Aplicada",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 368,
+        "name": "Controle e automação Industrial",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 369,
+        "name": "Sistemas Embarcados e Internet das Coisas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 370,
+        "name": "Análise e Projeto de Sistemas de Controle Avançado",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 371,
+        "name": "Automação de Sistemas Elétricos e Smart Grid.",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 372,
+        "name": "Ciência de dados aplicada ao gerenciamento de energia",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 373,
+        "name": "Conversores Eletrônicos de Potência",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 374,
+        "name": "Fontes Renovaveis de Energia",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 375,
+        "name": "Mobilidade Elétrica Eficiente",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 376,
+        "name": "Modelagem, Otimização e Controle de Processos Químicos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 377,
+        "name": "Ensino de Tecnologias Laboratório Maker",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 378,
+        "name": "Práticas pedagógicas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 379,
+        "name": "redes de comunicação e otimização",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 380,
+        "name": "Estado e políticas públicas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 381,
+        "name": "Formação de Professores",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 382,
+        "name": "Aprendizado de Máquinas",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 383,
+        "name": "Computação Orientada a Serviços",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 384,
+        "name": "Gerência de Processos de Negócio",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 385,
+        "name": "Integração de Sistemas de Informação",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 386,
+        "name": "Inteligência Computacional",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 387,
+        "name": "Integração Semântica",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 388,
+        "name": "Ontologias",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 389,
+        "name": "A experimentação e o ensino de física",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 390,
+        "name": "Estudos em Ensino de Física",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 391,
+        "name": "Modelagem, sistemas computacionais e automação",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 392,
+        "name": "Algoritmos Genéticos e Evolucionários",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 393,
+        "name": "Automação Residencial e Casas Inteligentes",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 394,
+        "name": "Indústria 4.0 e Manufatura Digital",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 395,
+        "name": "Internet das Coisas - IoT",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 396,
+        "name": "Predição em Séries Temporais",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 397,
+        "name": "Processamento Digital de Imagens e Visão Computacional",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 398,
+        "name": "Redes Neurais Convolucionais",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 399,
+        "name": "Robótica de Reabilitação",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 400,
+        "name": "Robótica e Automação Aplicada",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 401,
+        "name": "Simulação Computacional e Métodos Numéricos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 402,
+        "name": "Sustentabilidade e Gestão de Resíduos Tecnológicos",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 403,
+        "name": "Análise de dados",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 404,
+        "name": "Sistemas de Controle",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 405,
+        "name": "Estatística Aplicada e Ciência de Dados",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 406,
+        "name": "Analise e Reconhecimento de Padrões",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 407,
+        "name": "Bancos de Dados",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 408,
+        "name": "Bioinformática",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 409,
+        "name": "Blockchain",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 410,
+        "name": "Desenvolvimento de Jogos Digitais",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 411,
+        "name": "Informática na Educação",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 412,
+        "name": "otimização em logística",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 413,
+        "name": "Técnicas de Computação",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 414,
+        "name": "Estratégias, Organizações, Empreendedorismo",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 415,
+        "name": "Inovação, Inteligência Competitiva e Gestão",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    }
+]

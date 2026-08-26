@@ -1,0 +1,126 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Sérgio Nery Simões",
+  "lattes_id": "0723238551725187",
+  "artigos_com_doi": 12,
+  "encontrados_openalex": 12,
+  "citacoes_total": 251,
+  "h_index": 7,
+  "g_index": 12,
+  "m_index": 0.64,
+  "idade_academica": 11,
+  "citacoes_por_artigo": 20.9,
+  "citacoes_mediana": 14.5,
+  "artigos_fracionados": 1.28,
+  "citacoes_fracionadas": 30.5,
+  "i10": 7,
+  "mais_citado": 105,
+  "fwci_medio": 1.6,
+  "fwci_mediana": 1.03,
+  "fwci_antigo": 1.32,
+  "fwci_recente": 1.03,
+  "fwci_delta": -0.29,
+  "artigos_top10pct": 7,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 73,
+  "momentum_pct": 29,
+  "citacoes_por_ano": {
+    "2015": 1,
+    "2016": 4,
+    "2017": 4,
+    "2018": 9,
+    "2019": 9,
+    "2020": 29,
+    "2021": 40,
+    "2022": 44,
+    "2023": 38,
+    "2024": 26,
+    "2025": 27,
+    "2026": 20
+  },
+  "artigo_ascensao": {
+    "titulo": "ACE2 Interaction Networks in COVID-19: A Physiological Framework for Prediction of Outcome in Patients with Cardiovascul",
+    "ano": 2020,
+    "recent_2a": 24,
+    "citacoes": 105,
+    "share_recente_pct": 23,
+    "fwci": 2.2149,
+    "doi": "10.3390/jcm9113743"
+  },
+  "top_artigos": [
+    {
+      "titulo": "ACE2 Interaction Networks in COVID-19: A Physiological Framework for Prediction of Outcome",
+      "ano": 2020,
+      "citacoes": 105,
+      "fwci": 2.2149,
+      "percentil": 98,
+      "recent_2a": 24,
+      "doi": "10.3390/jcm9113743"
+    },
+    {
+      "titulo": "Thrombosis-related circulating miR-16-5p is associated with disease severity in patients h",
+      "ano": 2022,
+      "citacoes": 30,
+      "fwci": 1.8869,
+      "percentil": 89,
+      "recent_2a": 20,
+      "doi": "10.1080/15476286.2022.2100629"
+    },
+    {
+      "titulo": "Assessment of complementarity of WGCNA and NERI results for identification of modules asso",
+      "ano": 2019,
+      "citacoes": 30,
+      "fwci": 1.7515,
+      "percentil": 94,
+      "recent_2a": 5,
+      "doi": "10.1371/journal.pone.0210431"
+    },
+    {
+      "titulo": "An integrative approach to investigate the respective roles of single-nucleotide variants ",
+      "ano": 2016,
+      "citacoes": 26,
+      "fwci": 0.8891,
+      "percentil": 89,
+      "recent_2a": 7,
+      "doi": "10.1038/srep22851"
+    },
+    {
+      "titulo": "Identifying dense subgraphs in protein–protein interaction network for gene selection from",
+      "ano": 2015,
+      "citacoes": 20,
+      "fwci": 1.2388,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1007/s13721-015-0104-3"
+    },
+    {
+      "titulo": "NERI: network-medicine based integrative approach for disease gene prioritization by relat",
+      "ano": 2015,
+      "citacoes": 19,
+      "fwci": 0.6882,
+      "percentil": 90,
+      "recent_2a": 0,
+      "doi": "10.1186/1471-2105-16-s19-s9"
+    },
+    {
+      "titulo": "Maternal immune response during pregnancy and neurodevelopmental outcomes: A longitudinal ",
+      "ano": 2024,
+      "citacoes": 10,
+      "fwci": 1.1697,
+      "percentil": 95,
+      "recent_2a": 10,
+      "doi": "10.1016/j.bbih.2024.100832"
+    },
+    {
+      "titulo": "Integrative Variation Analysis Reveals that a Complex Genotype May Specify Phenotype in Si",
+      "ano": 2017,
+      "citacoes": 6,
+      "fwci": 0.6113,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1371/journal.pone.0170386"
+    }
+  ],
+  "rank": 6
+}

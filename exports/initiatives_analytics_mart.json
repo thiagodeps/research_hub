@@ -1,0 +1,1556 @@
+{
+    "campus": null,
+    "campuses": [
+        {
+            "name": "Serra",
+            "count": 63
+        },
+        {
+            "name": "Presidente Kennedy",
+            "count": 5
+        }
+    ],
+    "summary": {
+        "total_projects": 4122,
+        "active_projects": 547,
+        "total_participants": 3614
+    },
+    "evolution": [
+        {
+            "year": "1988",
+            "start": 1,
+            "end": 0,
+            "researchers": 3,
+            "students": 0
+        },
+        {
+            "year": "1989",
+            "start": 0,
+            "end": 0,
+            "researchers": 3,
+            "students": 0
+        },
+        {
+            "year": "1990",
+            "start": 0,
+            "end": 1,
+            "researchers": 3,
+            "students": 0
+        },
+        {
+            "year": "1991",
+            "start": 1,
+            "end": 0,
+            "researchers": 3,
+            "students": 0
+        },
+        {
+            "year": "1992",
+            "start": 0,
+            "end": 1,
+            "researchers": 3,
+            "students": 0
+        },
+        {
+            "year": "1993",
+            "start": 0,
+            "end": 0,
+            "researchers": 0,
+            "students": 0
+        },
+        {
+            "year": "1994",
+            "start": 1,
+            "end": 1,
+            "researchers": 4,
+            "students": 0
+        },
+        {
+            "year": "1995",
+            "start": 0,
+            "end": 0,
+            "researchers": 0,
+            "students": 0
+        },
+        {
+            "year": "1996",
+            "start": 0,
+            "end": 0,
+            "researchers": 0,
+            "students": 0
+        },
+        {
+            "year": "1997",
+            "start": 0,
+            "end": 0,
+            "researchers": 0,
+            "students": 0
+        },
+        {
+            "year": "1998",
+            "start": 0,
+            "end": 0,
+            "researchers": 0,
+            "students": 0
+        },
+        {
+            "year": "1999",
+            "start": 1,
+            "end": 0,
+            "researchers": 4,
+            "students": 0
+        },
+        {
+            "year": "2000",
+            "start": 1,
+            "end": 2,
+            "researchers": 4,
+            "students": 0
+        },
+        {
+            "year": "2001",
+            "start": 13,
+            "end": 9,
+            "researchers": 20,
+            "students": 8
+        },
+        {
+            "year": "2002",
+            "start": 10,
+            "end": 9,
+            "researchers": 30,
+            "students": 7
+        },
+        {
+            "year": "2003",
+            "start": 12,
+            "end": 7,
+            "researchers": 49,
+            "students": 5
+        },
+        {
+            "year": "2004",
+            "start": 33,
+            "end": 30,
+            "researchers": 68,
+            "students": 25
+        },
+        {
+            "year": "2005",
+            "start": 31,
+            "end": 36,
+            "researchers": 70,
+            "students": 26
+        },
+        {
+            "year": "2006",
+            "start": 50,
+            "end": 47,
+            "researchers": 55,
+            "students": 41
+        },
+        {
+            "year": "2007",
+            "start": 44,
+            "end": 38,
+            "researchers": 65,
+            "students": 30
+        },
+        {
+            "year": "2008",
+            "start": 81,
+            "end": 79,
+            "researchers": 86,
+            "students": 67
+        },
+        {
+            "year": "2009",
+            "start": 87,
+            "end": 79,
+            "researchers": 98,
+            "students": 63
+        },
+        {
+            "year": "2010",
+            "start": 119,
+            "end": 110,
+            "researchers": 133,
+            "students": 90
+        },
+        {
+            "year": "2011",
+            "start": 107,
+            "end": 100,
+            "researchers": 156,
+            "students": 78
+        },
+        {
+            "year": "2012",
+            "start": 113,
+            "end": 106,
+            "researchers": 166,
+            "students": 89
+        },
+        {
+            "year": "2013",
+            "start": 149,
+            "end": 137,
+            "researchers": 197,
+            "students": 113
+        },
+        {
+            "year": "2014",
+            "start": 165,
+            "end": 150,
+            "researchers": 236,
+            "students": 120
+        },
+        {
+            "year": "2015",
+            "start": 179,
+            "end": 155,
+            "researchers": 224,
+            "students": 125
+        },
+        {
+            "year": "2016",
+            "start": 179,
+            "end": 155,
+            "researchers": 248,
+            "students": 141
+        },
+        {
+            "year": "2017",
+            "start": 218,
+            "end": 206,
+            "researchers": 242,
+            "students": 180
+        },
+        {
+            "year": "2018",
+            "start": 202,
+            "end": 185,
+            "researchers": 286,
+            "students": 171
+        },
+        {
+            "year": "2019",
+            "start": 231,
+            "end": 219,
+            "researchers": 331,
+            "students": 185
+        },
+        {
+            "year": "2020",
+            "start": 247,
+            "end": 180,
+            "researchers": 385,
+            "students": 193
+        },
+        {
+            "year": "2021",
+            "start": 275,
+            "end": 302,
+            "researchers": 463,
+            "students": 261
+        },
+        {
+            "year": "2022",
+            "start": 264,
+            "end": 219,
+            "researchers": 503,
+            "students": 273
+        },
+        {
+            "year": "2023",
+            "start": 409,
+            "end": 328,
+            "researchers": 534,
+            "students": 435
+        },
+        {
+            "year": "2024",
+            "start": 333,
+            "end": 256,
+            "researchers": 557,
+            "students": 434
+        },
+        {
+            "year": "2025",
+            "start": 412,
+            "end": 293,
+            "researchers": 536,
+            "students": 661
+        },
+        {
+            "year": "2026",
+            "start": 145,
+            "end": 243,
+            "researchers": 518,
+            "students": 573
+        },
+        {
+            "year": "2027",
+            "start": 0,
+            "end": 67,
+            "researchers": 416,
+            "students": 477
+        },
+        {
+            "year": "2028",
+            "start": 0,
+            "end": 14,
+            "researchers": 398,
+            "students": 324
+        },
+        {
+            "year": "2029",
+            "start": 0,
+            "end": 8,
+            "researchers": 393,
+            "students": 296
+        }
+    ],
+    "team_composition": {
+        "researchers": 998,
+        "students": 2616
+    },
+    "knowledge_areas": [
+        {
+            "name": "inteligência artificial",
+            "count": 16
+        },
+        {
+            "name": "visão computacional",
+            "count": 11
+        },
+        {
+            "name": "APRENDIZADO DE MÁQUINA",
+            "count": 5
+        },
+        {
+            "name": "robótica",
+            "count": 4
+        },
+        {
+            "name": "Processamento de Linguagem Natural",
+            "count": 4
+        },
+        {
+            "name": "Eficiência Energética",
+            "count": 4
+        },
+        {
+            "name": "Transformação Digital",
+            "count": 4
+        },
+        {
+            "name": "Redes Neurais Convolucionais.",
+            "count": 3
+        },
+        {
+            "name": "Machine Learning",
+            "count": 3
+        },
+        {
+            "name": "Transição Energética",
+            "count": 3
+        },
+        {
+            "name": "Agentes Inteligentes",
+            "count": 3
+        },
+        {
+            "name": "Impressão 3D",
+            "count": 3
+        },
+        {
+            "name": "Indústria 4.0",
+            "count": 3
+        },
+        {
+            "name": "Sistemas inteligentes",
+            "count": 3
+        },
+        {
+            "name": "Prototipação",
+            "count": 2
+        },
+        {
+            "name": "Correias transportadoras",
+            "count": 2
+        },
+        {
+            "name": "processamento de imagens",
+            "count": 2
+        },
+        {
+            "name": "detecção de anomalias",
+            "count": 2
+        },
+        {
+            "name": "Cultura Maker",
+            "count": 2
+        },
+        {
+            "name": "COMPUTAÇÃO AFETIVA",
+            "count": 2
+        },
+        {
+            "name": "SAÚDE MENTAL",
+            "count": 2
+        },
+        {
+            "name": "Microrrede",
+            "count": 2
+        },
+        {
+            "name": "Sustentabilidade",
+            "count": 2
+        },
+        {
+            "name": "Siderurgia",
+            "count": 2
+        },
+        {
+            "name": "Correção Automática de Redações",
+            "count": 2
+        },
+        {
+            "name": "Otimização",
+            "count": 2
+        },
+        {
+            "name": "Processamento de Sinais",
+            "count": 2
+        },
+        {
+            "name": "Instrumentação",
+            "count": 2
+        },
+        {
+            "name": "deep learning",
+            "count": 2
+        },
+        {
+            "name": "Redes Neurais",
+            "count": 2
+        },
+        {
+            "name": "Robótica Móvel",
+            "count": 2
+        },
+        {
+            "name": "Chatbots",
+            "count": 2
+        },
+        {
+            "name": "Image Captioning",
+            "count": 2
+        },
+        {
+            "name": "Imagens radiográficas.",
+            "count": 2
+        },
+        {
+            "name": "Automação",
+            "count": 2
+        },
+        {
+            "name": "Ciência de Dados",
+            "count": 2
+        },
+        {
+            "name": "Controle",
+            "count": 2
+        },
+        {
+            "name": "Sistemas embarcados",
+            "count": 2
+        },
+        {
+            "name": "Energia Fotovoltaica",
+            "count": 2
+        },
+        {
+            "name": "Educação Financeira",
+            "count": 2
+        },
+        {
+            "name": "Inovação Social",
+            "count": 2
+        },
+        {
+            "name": "IoT",
+            "count": 2
+        },
+        {
+            "name": "Processo",
+            "count": 1
+        },
+        {
+            "name": "Metodologias Ágeis",
+            "count": 1
+        },
+        {
+            "name": "Design Sprint",
+            "count": 1
+        },
+        {
+            "name": "Design Thinking",
+            "count": 1
+        },
+        {
+            "name": "Validação",
+            "count": 1
+        },
+        {
+            "name": "Meteorologia",
+            "count": 1
+        },
+        {
+            "name": "Energia Renovável",
+            "count": 1
+        },
+        {
+            "name": "Datalogger",
+            "count": 1
+        },
+        {
+            "name": "Telemetria",
+            "count": 1
+        },
+        {
+            "name": "clima",
+            "count": 1
+        },
+        {
+            "name": "Gestão Ambiental",
+            "count": 1
+        },
+        {
+            "name": "Procedência mineral",
+            "count": 1
+        },
+        {
+            "name": "Cadeia de suprimentos",
+            "count": 1
+        },
+        {
+            "name": "Rastreabilidade mineral",
+            "count": 1
+        },
+        {
+            "name": "Contrato inteligente",
+            "count": 1
+        },
+        {
+            "name": "Desenvolvimento Sustentável",
+            "count": 1
+        },
+        {
+            "name": "Séries Temporais multivariadas",
+            "count": 1
+        },
+        {
+            "name": "redes neurais profundas",
+            "count": 1
+        },
+        {
+            "name": "sustentabilidade na siderurgia",
+            "count": 1
+        },
+        {
+            "name": "rasgos",
+            "count": 1
+        },
+        {
+            "name": "furos",
+            "count": 1
+        },
+        {
+            "name": "desalinhamento",
+            "count": 1
+        },
+        {
+            "name": "desgaste",
+            "count": 1
+        },
+        {
+            "name": "capacitância",
+            "count": 1
+        },
+        {
+            "name": "Prédios inteligentes",
+            "count": 1
+        },
+        {
+            "name": "Robótica educacional",
+            "count": 1
+        },
+        {
+            "name": "kits educativos",
+            "count": 1
+        },
+        {
+            "name": "ensino a distância",
+            "count": 1
+        },
+        {
+            "name": "mobilidade elétrica",
+            "count": 1
+        },
+        {
+            "name": "veículos elétricos",
+            "count": 1
+        },
+        {
+            "name": "Processo de Software",
+            "count": 1
+        },
+        {
+            "name": "Melhoria de Processos",
+            "count": 1
+        },
+        {
+            "name": "Métodos Ágeis",
+            "count": 1
+        },
+        {
+            "name": "Qualidade de Software",
+            "count": 1
+        },
+        {
+            "name": "Equipes Distribuídas",
+            "count": 1
+        },
+        {
+            "name": "Software Livre",
+            "count": 1
+        },
+        {
+            "name": "Linguagem Python",
+            "count": 1
+        },
+        {
+            "name": "Jogos Pedagógicos",
+            "count": 1
+        },
+        {
+            "name": "Câmaras, supervisão",
+            "count": 1
+        },
+        {
+            "name": "Análise de Raio X",
+            "count": 1
+        },
+        {
+            "name": "tomografia de coerência óptica",
+            "count": 1
+        },
+        {
+            "name": "segmentação semântica",
+            "count": 1
+        },
+        {
+            "name": "IA explicável",
+            "count": 1
+        },
+        {
+            "name": "Manufatura aditiva",
+            "count": 1
+        },
+        {
+            "name": "Modelagem 3D",
+            "count": 1
+        },
+        {
+            "name": "Educação",
+            "count": 1
+        },
+        {
+            "name": "Máquinas Elétricas",
+            "count": 1
+        },
+        {
+            "name": "Válvulas de Controle e  Bombas",
+            "count": 1
+        },
+        {
+            "name": "Ensino em Engenharias",
+            "count": 1
+        },
+        {
+            "name": "Ensino-aprendizagem",
+            "count": 1
+        },
+        {
+            "name": "Laboratório Maker",
+            "count": 1
+        },
+        {
+            "name": "Metodologias Ativas de Ensino",
+            "count": 1
+        },
+        {
+            "name": "RECONHECIMENTO DE EXPRESSÕES FACIAIS",
+            "count": 1
+        },
+        {
+            "name": "TRANSFERÊNCIA DE APRENDIZADO",
+            "count": 1
+        },
+        {
+            "name": "BPM",
+            "count": 1
+        },
+        {
+            "name": "Automação de Processos",
+            "count": 1
+        },
+        {
+            "name": "Recomendação",
+            "count": 1
+        },
+        {
+            "name": "Chabots",
+            "count": 1
+        },
+        {
+            "name": "PLC",
+            "count": 1
+        },
+        {
+            "name": "SCADA",
+            "count": 1
+        },
+        {
+            "name": "Aquisição de dados",
+            "count": 1
+        },
+        {
+            "name": "Convertedor LD",
+            "count": 1
+        },
+        {
+            "name": "Laboratório Multiusuário",
+            "count": 1
+        },
+        {
+            "name": "Descarbonização",
+            "count": 1
+        },
+        {
+            "name": "Ligas de aço",
+            "count": 1
+        },
+        {
+            "name": "Etapas de Fabricação.",
+            "count": 1
+        },
+        {
+            "name": "Estoicismo",
+            "count": 1
+        },
+        {
+            "name": "Hierarquia de gênero",
+            "count": 1
+        },
+        {
+            "name": "Culto da performance",
+            "count": 1
+        },
+        {
+            "name": "Masculinismo",
+            "count": 1
+        },
+        {
+            "name": "Desempenho",
+            "count": 1
+        },
+        {
+            "name": "Justiça social",
+            "count": 1
+        },
+        {
+            "name": "Correção Gramatical Automática",
+            "count": 1
+        },
+        {
+            "name": "Agentes",
+            "count": 1
+        },
+        {
+            "name": "Acessibilidade",
+            "count": 1
+        },
+        {
+            "name": "Responsividade",
+            "count": 1
+        },
+        {
+            "name": "Engenharia de Software",
+            "count": 1
+        },
+        {
+            "name": "Denúncia de Violência",
+            "count": 1
+        },
+        {
+            "name": "Pessoa Idosa",
+            "count": 1
+        },
+        {
+            "name": "Gestão de Denúncia",
+            "count": 1
+        },
+        {
+            "name": "Software web e mobile",
+            "count": 1
+        },
+        {
+            "name": "Laminador de Tirar a quente",
+            "count": 1
+        },
+        {
+            "name": "Manutenção Preditiva. Análise de Vibração",
+            "count": 1
+        },
+        {
+            "name": "Diagnóstico de Falhas",
+            "count": 1
+        },
+        {
+            "name": "Framework Python",
+            "count": 1
+        },
+        {
+            "name": "Manutenção Preditiva",
+            "count": 1
+        },
+        {
+            "name": "Análise de Vibração",
+            "count": 1
+        },
+        {
+            "name": "Curva I-V",
+            "count": 1
+        },
+        {
+            "name": "Painéis Fotovoltaicos",
+            "count": 1
+        },
+        {
+            "name": "Usina Fotovoltaica",
+            "count": 1
+        },
+        {
+            "name": "Análise de Desempenho",
+            "count": 1
+        },
+        {
+            "name": "Medição de Tensão",
+            "count": 1
+        },
+        {
+            "name": "Corrente e tensão",
+            "count": 1
+        },
+        {
+            "name": "Eletrocardiografia",
+            "count": 1
+        },
+        {
+            "name": "Aprendizado Profundo",
+            "count": 1
+        },
+        {
+            "name": "Cardiologia",
+            "count": 1
+        },
+        {
+            "name": "Fontes de Energia Renováveis",
+            "count": 1
+        },
+        {
+            "name": "Digitalização do Setor Elétrico",
+            "count": 1
+        },
+        {
+            "name": "Aplicativo",
+            "count": 1
+        },
+        {
+            "name": "Softwares",
+            "count": 1
+        },
+        {
+            "name": "Hidroponia",
+            "count": 1
+        },
+        {
+            "name": "IA",
+            "count": 1
+        },
+        {
+            "name": "Autônomo",
+            "count": 1
+        },
+        {
+            "name": "KITS DIDÁTICOS",
+            "count": 1
+        },
+        {
+            "name": "ENSINO DE ENGENHARIA",
+            "count": 1
+        },
+        {
+            "name": "AULAS PRÁTICAS",
+            "count": 1
+        },
+        {
+            "name": "CONTROLE E AUTOMAÇÃO",
+            "count": 1
+        },
+        {
+            "name": "convolutional neural network",
+            "count": 1
+        },
+        {
+            "name": "patologias coluna vertebral",
+            "count": 1
+        },
+        {
+            "name": "ressonância magnética nuclear",
+            "count": 1
+        },
+        {
+            "name": "YOLOv12",
+            "count": 1
+        },
+        {
+            "name": "U-Net",
+            "count": 1
+        },
+        {
+            "name": "Manipulação de Imagens",
+            "count": 1
+        },
+        {
+            "name": "Deepfake Detection",
+            "count": 1
+        },
+        {
+            "name": "Sensoriamento Térmico",
+            "count": 1
+        },
+        {
+            "name": "Análise de Imagens",
+            "count": 1
+        },
+        {
+            "name": "Inspeção Automatizada",
+            "count": 1
+        },
+        {
+            "name": "Tecnologias de Apoio ao Resgate",
+            "count": 1
+        },
+        {
+            "name": "Agricultura de Precisão",
+            "count": 1
+        },
+        {
+            "name": "Metrologia Dimensional",
+            "count": 1
+        },
+        {
+            "name": "Simulação Computacional",
+            "count": 1
+        },
+        {
+            "name": "Agricultura 4.0",
+            "count": 1
+        },
+        {
+            "name": "EXPERIMENTOS DIDÁTICOS",
+            "count": 1
+        },
+        {
+            "name": "ELETROMAGNETISMO",
+            "count": 1
+        },
+        {
+            "name": "ONDULATÓRIA",
+            "count": 1
+        },
+        {
+            "name": "ELÉTRICA E ELETRÔNICA",
+            "count": 1
+        },
+        {
+            "name": "PROGRAMAÇÃO COMPUTACIONAL",
+            "count": 1
+        },
+        {
+            "name": "Câncer de mama",
+            "count": 1
+        },
+        {
+            "name": "Pré-diagnóstico Clínico",
+            "count": 1
+        },
+        {
+            "name": "Diagnóstico Interpretável",
+            "count": 1
+        },
+        {
+            "name": "automatização",
+            "count": 1
+        },
+        {
+            "name": "Dispositivos da Internet das Coisas (IoT)",
+            "count": 1
+        },
+        {
+            "name": "Fabricas Inteligentes",
+            "count": 1
+        },
+        {
+            "name": "Python",
+            "count": 1
+        },
+        {
+            "name": "Aplicações Web",
+            "count": 1
+        },
+        {
+            "name": "OPC UA",
+            "count": 1
+        },
+        {
+            "name": "Módulos didáticos",
+            "count": 1
+        },
+        {
+            "name": "Instalações elétricas",
+            "count": 1
+        },
+        {
+            "name": "Ensino",
+            "count": 1
+        },
+        {
+            "name": "Formação continuada de professores",
+            "count": 1
+        },
+        {
+            "name": "Mineração de Dados Educacionais",
+            "count": 1
+        },
+        {
+            "name": "Learning Analytics",
+            "count": 1
+        },
+        {
+            "name": "Políticas públicas em educação.",
+            "count": 1
+        },
+        {
+            "name": "gestão do mestrado",
+            "count": 1
+        },
+        {
+            "name": "Redações do ENEM",
+            "count": 1
+        },
+        {
+            "name": "Modelos de Linguagem (LLMs)",
+            "count": 1
+        },
+        {
+            "name": "Correção Gramatical",
+            "count": 1
+        },
+        {
+            "name": "Aderência ao Tema",
+            "count": 1
+        },
+        {
+            "name": "Ataques de negação de serviço",
+            "count": 1
+        },
+        {
+            "name": "eBPF/XDP",
+            "count": 1
+        },
+        {
+            "name": "Estratégias de controle",
+            "count": 1
+        },
+        {
+            "name": "Navegação autônoma",
+            "count": 1
+        },
+        {
+            "name": "Análise experimental",
+            "count": 1
+        },
+        {
+            "name": "desempenho de sistemas",
+            "count": 1
+        },
+        {
+            "name": "sumô de robôs",
+            "count": 1
+        },
+        {
+            "name": "futebol de robôs",
+            "count": 1
+        },
+        {
+            "name": "Energia Elétrica",
+            "count": 1
+        },
+        {
+            "name": "Inclusão Socioeconômica.",
+            "count": 1
+        },
+        {
+            "name": "Espaço inteligente",
+            "count": 1
+        },
+        {
+            "name": "Porteiro Digiral",
+            "count": 1
+        },
+        {
+            "name": "Modelagem Conceitual",
+            "count": 1
+        },
+        {
+            "name": "Controle de Acesso",
+            "count": 1
+        },
+        {
+            "name": "Segurança Digiral",
+            "count": 1
+        },
+        {
+            "name": "Laboratórios multiusuários",
+            "count": 1
+        },
+        {
+            "name": "RFID",
+            "count": 1
+        },
+        {
+            "name": "Gestão de recursos",
+            "count": 1
+        },
+        {
+            "name": "Visual Question Answering",
+            "count": 1
+        },
+        {
+            "name": "Mineração e Siderurgia Inteligentes",
+            "count": 1
+        },
+        {
+            "name": "Sustentabilidade Industrial",
+            "count": 1
+        },
+        {
+            "name": "PINNs (Physics-Informed Neural Networks)",
+            "count": 1
+        },
+        {
+            "name": "Datacenter",
+            "count": 1
+        },
+        {
+            "name": "Tecnologia assistiva",
+            "count": 1
+        },
+        {
+            "name": "Educação inclusiva",
+            "count": 1
+        },
+        {
+            "name": "Ensino de Ciências",
+            "count": 1
+        },
+        {
+            "name": "Metodologias Ativas",
+            "count": 1
+        },
+        {
+            "name": "MODELOS DE FUNDAÇÃO",
+            "count": 1
+        },
+        {
+            "name": "MODELOS DE VISÃO E LINGUAGEM",
+            "count": 1
+        },
+        {
+            "name": "Avaliação Pedagógica",
+            "count": 1
+        },
+        {
+            "name": "PNLD",
+            "count": 1
+        },
+        {
+            "name": "IA Neuro-Simbólica",
+            "count": 1
+        },
+        {
+            "name": "Confiabilidade (Trustworthiness)",
+            "count": 1
+        },
+        {
+            "name": "Verificação Formal",
+            "count": 1
+        },
+        {
+            "name": "Métodos Formais",
+            "count": 1
+        },
+        {
+            "name": "Lógica Formal",
+            "count": 1
+        },
+        {
+            "name": "Segurança em IA",
+            "count": 1
+        },
+        {
+            "name": "Tecnologia Educacional\nPlataforma SaaS\nMicrolearning\nOrquestração de Ambientes Computacionais\nAprendizagem Baseada em Projetos (PBL)\nMonitoramento de Egressos",
+            "count": 1
+        },
+        {
+            "name": "Briquetadeira",
+            "count": 1
+        },
+        {
+            "name": "Classificador.",
+            "count": 1
+        },
+        {
+            "name": "Revolta do Queimado",
+            "count": 1
+        },
+        {
+            "name": "Affonso Cláudio",
+            "count": 1
+        },
+        {
+            "name": "História",
+            "count": 1
+        },
+        {
+            "name": "Memória",
+            "count": 1
+        },
+        {
+            "name": "Finanças Comportamentais",
+            "count": 1
+        },
+        {
+            "name": "Extensão Universitária",
+            "count": 1
+        },
+        {
+            "name": "Endividamento.",
+            "count": 1
+        },
+        {
+            "name": "Educação do Campo\nRegime de Alternância\nPolíticas Públicas Educacionais\nDesenvolvimento Rural Sustentável\nInternacionalização da Educação\nCooperação Interinstitucional\nEducação Profissional e Tecnológica\nMetodologias Ativas de Aprendizagem",
+            "count": 1
+        },
+        {
+            "name": "Inteligência Artificial Generativa",
+            "count": 1
+        },
+        {
+            "name": "Recuperação de Informação",
+            "count": 1
+        },
+        {
+            "name": "Modelos Multimodais",
+            "count": 1
+        },
+        {
+            "name": "ODS 16",
+            "count": 1
+        },
+        {
+            "name": "Segurança da Informação",
+            "count": 1
+        },
+        {
+            "name": "Autenticação de Mídia",
+            "count": 1
+        },
+        {
+            "name": "Mídia Sintética",
+            "count": 1
+        },
+        {
+            "name": "Redes programáveis",
+            "count": 1
+        },
+        {
+            "name": "Plano de dados",
+            "count": 1
+        },
+        {
+            "name": "Virtualização Redes Definidas por Software",
+            "count": 1
+        },
+        {
+            "name": "Ciência de Dados Intensiva",
+            "count": 1
+        },
+        {
+            "name": "Super App",
+            "count": 1
+        },
+        {
+            "name": "Cidadania Digital",
+            "count": 1
+        },
+        {
+            "name": "Governo Móvel",
+            "count": 1
+        },
+        {
+            "name": "Microsserviços",
+            "count": 1
+        },
+        {
+            "name": "React Native",
+            "count": 1
+        },
+        {
+            "name": "Golang",
+            "count": 1
+        },
+        {
+            "name": "logísitca",
+            "count": 1
+        },
+        {
+            "name": "carro torpedo",
+            "count": 1
+        },
+        {
+            "name": "ELETRODOS DE FORNOS DE FERROLIGAS Inteligência artificial",
+            "count": 1
+        },
+        {
+            "name": "Text-to-SQL. Large Language Model. Inteligência Artificial.",
+            "count": 1
+        },
+        {
+            "name": "Educação de Jovens e Adultos",
+            "count": 1
+        },
+        {
+            "name": "Trabalhadores Terceirizados",
+            "count": 1
+        },
+        {
+            "name": "Busca Ativa",
+            "count": 1
+        },
+        {
+            "name": "Invisibilidade Social",
+            "count": 1
+        },
+        {
+            "name": "Educação Profissional e Tecnológica",
+            "count": 1
+        },
+        {
+            "name": "Programa Certifica.",
+            "count": 1
+        },
+        {
+            "name": "sistemas elétricos de potência",
+            "count": 1
+        },
+        {
+            "name": "gerenciamento energético",
+            "count": 1
+        },
+        {
+            "name": "internet das coisas",
+            "count": 1
+        },
+        {
+            "name": "controle preditivo",
+            "count": 1
+        },
+        {
+            "name": "Catarata",
+            "count": 1
+        },
+        {
+            "name": "Saúde Pública.",
+            "count": 1
+        },
+        {
+            "name": "Sensores",
+            "count": 1
+        },
+        {
+            "name": "Otimização Processual",
+            "count": 1
+        },
+        {
+            "name": "Processo Jurídico",
+            "count": 1
+        },
+        {
+            "name": "Large Language Model",
+            "count": 1
+        },
+        {
+            "name": "Energias Renováveis",
+            "count": 1
+        },
+        {
+            "name": "Geração Distribuída",
+            "count": 1
+        },
+        {
+            "name": "Conversão de Energia",
+            "count": 1
+        },
+        {
+            "name": "Estação Meteorológica",
+            "count": 1
+        },
+        {
+            "name": "Energia Eólica",
+            "count": 1
+        },
+        {
+            "name": "Esteira",
+            "count": 1
+        },
+        {
+            "name": "defeitos",
+            "count": 1
+        },
+        {
+            "name": "Data Center",
+            "count": 1
+        },
+        {
+            "name": "IA generativa",
+            "count": 1
+        },
+        {
+            "name": "Data Center container",
+            "count": 1
+        },
+        {
+            "name": "biotecnologia",
+            "count": 1
+        },
+        {
+            "name": "nanotecnologia e saúde humana",
+            "count": 1
+        },
+        {
+            "name": "com ênfase em soluções inovadoras\nvoltadas ao suporte ou tratamento de condições neurológicas e doenças crônicas",
+            "count": 1
+        },
+        {
+            "name": "a partir\nda interação eixo intestino-cérebro",
+            "count": 1
+        },
+        {
+            "name": "Incêndios florestais",
+            "count": 1
+        },
+        {
+            "name": "queimadas",
+            "count": 1
+        },
+        {
+            "name": "sensoriamento remoto",
+            "count": 1
+        },
+        {
+            "name": "geoprocessamento",
+            "count": 1
+        },
+        {
+            "name": "áreas queimadas",
+            "count": 1
+        },
+        {
+            "name": "focos de calor",
+            "count": 1
+        },
+        {
+            "name": "Google Earth Engine",
+            "count": 1
+        },
+        {
+            "name": "MapBiomas Paraguai",
+            "count": 1
+        },
+        {
+            "name": "produção agrícola",
+            "count": 1
+        },
+        {
+            "name": "perdas econômicas",
+            "count": 1
+        },
+        {
+            "name": "vulnerabilidade ambiental",
+            "count": 1
+        },
+        {
+            "name": "sazonalidade climática",
+            "count": 1
+        },
+        {
+            "name": "Plurilinguismo Crítico",
+            "count": 1
+        },
+        {
+            "name": "Identidade Linguística",
+            "count": 1
+        },
+        {
+            "name": "Educação Decolonial",
+            "count": 1
+        },
+        {
+            "name": "Translanguaging",
+            "count": 1
+        },
+        {
+            "name": "Métodos Mistos",
+            "count": 1
+        },
+        {
+            "name": "Instituto Federal do Espírito Santo.",
+            "count": 1
+        },
+        {
+            "name": "Povos Indígenas\nRio Doce\nDesastre de Mariana\nReparação Integral\nEstudos de Impacto de Danos (EIDs)\nConsulta Livre",
+            "count": 1
+        },
+        {
+            "name": "Prévia e Informada (CLPI)\nConvenção 169 da OIT\nJustiça Socioambiental\nTerritórios Tradicionais\nSegurança Hídrica",
+            "count": 1
+        }
+    ]
+}

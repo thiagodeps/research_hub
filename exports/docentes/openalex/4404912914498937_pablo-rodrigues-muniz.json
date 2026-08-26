@@ -1,0 +1,127 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Pablo Rodrigues Muniz",
+  "lattes_id": "4404912914498937",
+  "artigos_com_doi": 26,
+  "encontrados_openalex": 24,
+  "citacoes_total": 170,
+  "h_index": 7,
+  "g_index": 12,
+  "m_index": 0.54,
+  "idade_academica": 13,
+  "citacoes_por_artigo": 7.1,
+  "citacoes_mediana": 3.5,
+  "artigos_fracionados": 7.0,
+  "citacoes_fracionadas": 47.1,
+  "i10": 6,
+  "mais_citado": 54,
+  "fwci_medio": 3.35,
+  "fwci_mediana": 0.25,
+  "fwci_antigo": 0.16,
+  "fwci_recente": 0.27,
+  "fwci_delta": 0.11,
+  "artigos_top10pct": 8,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 43,
+  "momentum_pct": 25,
+  "citacoes_por_ano": {
+    "2014": 1,
+    "2015": 3,
+    "2016": 2,
+    "2017": 8,
+    "2018": 9,
+    "2019": 13,
+    "2020": 14,
+    "2021": 19,
+    "2022": 28,
+    "2023": 30,
+    "2024": 17,
+    "2025": 19,
+    "2026": 7
+  },
+  "artigo_ascensao": {
+    "titulo": "Influence of Field of View of Thermal Imagers and Angle of View on Temperature Measurements by Infrared Thermovision",
+    "ano": 2013,
+    "recent_2a": 14,
+    "citacoes": 54,
+    "share_recente_pct": 26,
+    "fwci": 33.2611,
+    "doi": "10.1109/jsen.2013.2287003"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Influence of Field of View of Thermal Imagers and Angle of View on Temperature Measurement",
+      "ano": 2013,
+      "citacoes": 54,
+      "fwci": 33.2611,
+      "percentil": 89,
+      "recent_2a": 14,
+      "doi": "10.1109/jsen.2013.2287003"
+    },
+    {
+      "titulo": "Handy method to estimate uncertainty of temperature measurement by infrared thermography",
+      "ano": 2014,
+      "citacoes": 29,
+      "fwci": 39.5077,
+      "percentil": 90,
+      "recent_2a": 3,
+      "doi": "10.1117/1.oe.53.7.074101"
+    },
+    {
+      "titulo": "Thermographic analysis of parallelly cables: A method to avoid misdiagnosis",
+      "ano": 2016,
+      "citacoes": 14,
+      "fwci": 1.7504,
+      "percentil": 89,
+      "recent_2a": 3,
+      "doi": "10.1016/j.applthermaleng.2016.05.072"
+    },
+    {
+      "titulo": "Recognition of Human Face Regions under Adverse Conditions—Face Masks and Glasses—In Therm",
+      "ano": 2022,
+      "citacoes": 11,
+      "fwci": 1.4464,
+      "percentil": 94,
+      "recent_2a": 5,
+      "doi": "10.3390/machines10010043"
+    },
+    {
+      "titulo": "Non-contact measurement of angle of view between the inspected surface and the thermal ima",
+      "ano": 2015,
+      "citacoes": 11,
+      "fwci": 0.3059,
+      "percentil": 89,
+      "recent_2a": 4,
+      "doi": "10.1016/j.infrared.2015.07.009"
+    },
+    {
+      "titulo": "Prospects of life estimation of low voltage electrical cables insulated by PVC by emissivi",
+      "ano": 2017,
+      "citacoes": 10,
+      "fwci": 0.2259,
+      "percentil": 90,
+      "recent_2a": 2,
+      "doi": "10.1109/tdei.2017.006868"
+    },
+    {
+      "titulo": "Performance of photovoltaic generators under superficial dust deposition on their modules ",
+      "ano": 2020,
+      "citacoes": 7,
+      "fwci": 0.3096,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.4025/actascitechnol.v43i1.50101"
+    },
+    {
+      "titulo": "Economic Analysis of Vegetable-Oil-Filled Power Transformers in Brazilian Energy Distribut",
+      "ano": 2021,
+      "citacoes": 6,
+      "fwci": 0.4043,
+      "percentil": 89,
+      "recent_2a": 2,
+      "doi": "10.1007/s40313-021-00730-z"
+    }
+  ],
+  "rank": 11
+}

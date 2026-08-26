@@ -1,0 +1,129 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Marco Antonio de Souza Leite Cuadros",
+  "lattes_id": "8629256330944049",
+  "artigos_com_doi": 28,
+  "encontrados_openalex": 28,
+  "citacoes_total": 402,
+  "h_index": 10,
+  "g_index": 20,
+  "m_index": 0.67,
+  "idade_academica": 15,
+  "citacoes_por_artigo": 14.4,
+  "citacoes_mediana": 5.0,
+  "artigos_fracionados": 6.05,
+  "citacoes_fracionadas": 92.0,
+  "i10": 11,
+  "mais_citado": 99,
+  "fwci_medio": 1.19,
+  "fwci_mediana": 0.66,
+  "fwci_antigo": 0.97,
+  "fwci_recente": 0.37,
+  "fwci_delta": -0.6,
+  "artigos_top10pct": 12,
+  "artigos_top1pct": 1,
+  "citacoes_recentes_2a": 189,
+  "momentum_pct": 47,
+  "citacoes_por_ano": {
+    "2012": 1,
+    "2013": 6,
+    "2014": 11,
+    "2015": 9,
+    "2016": 16,
+    "2017": 4,
+    "2018": 15,
+    "2019": 5,
+    "2020": 18,
+    "2021": 17,
+    "2022": 40,
+    "2023": 71,
+    "2024": 75,
+    "2025": 78,
+    "2026": 36
+  },
+  "artigo_ascensao": {
+    "titulo": "Soft Actor-Critic for Navigation of Mobile Robots",
+    "ano": 2021,
+    "recent_2a": 61,
+    "citacoes": 99,
+    "share_recente_pct": 62,
+    "fwci": 7.5416,
+    "doi": "10.1007/s10846-021-01367-5"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Soft Actor-Critic for Navigation of Mobile Robots",
+      "ano": 2021,
+      "citacoes": 99,
+      "fwci": 7.5416,
+      "percentil": 89,
+      "recent_2a": 61,
+      "doi": "10.1007/s10846-021-01367-5"
+    },
+    {
+      "titulo": "Mobile Robot Navigation Using an Object Recognition Software with RGBD Images and the YOLO",
+      "ano": 2019,
+      "citacoes": 90,
+      "fwci": 3.0523,
+      "percentil": 99,
+      "recent_2a": 46,
+      "doi": "10.1080/08839514.2019.1684778"
+    },
+    {
+      "titulo": "Improved stiction compensation in pneumatic control valves",
+      "ano": 2011,
+      "citacoes": 43,
+      "fwci": 5.2503,
+      "percentil": 89,
+      "recent_2a": 3,
+      "doi": "10.1016/j.compchemeng.2011.09.006"
+    },
+    {
+      "titulo": "Novel Model-Free Approach for Stiction Compensation in Control Valves",
+      "ano": 2012,
+      "citacoes": 34,
+      "fwci": 4.126,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1021/ie2015262"
+    },
+    {
+      "titulo": "Deep Deterministic Policy Gradient for Navigation of Mobile Robots",
+      "ano": 2020,
+      "citacoes": 21,
+      "fwci": 0.8128,
+      "percentil": 89,
+      "recent_2a": 15,
+      "doi": "10.3233/jifs-191711"
+    },
+    {
+      "titulo": "Analysis of Local Trajectory Planners for Mobile Robot with Robot Operating System",
+      "ano": 2021,
+      "citacoes": 20,
+      "fwci": 1.6494,
+      "percentil": 94,
+      "recent_2a": 9,
+      "doi": "10.1109/tla.2022.9662177"
+    },
+    {
+      "titulo": "Expert system for early sign stuck pipe detection: Feature engineering and fuzzy logic app",
+      "ano": 2023,
+      "citacoes": 14,
+      "fwci": 1.606,
+      "percentil": 98,
+      "recent_2a": 14,
+      "doi": "10.1016/j.engappai.2023.107229"
+    },
+    {
+      "titulo": "Article Users Activity Gesture Recognition on Kinect Sensor Using Convolutional Neural Net",
+      "ano": 2019,
+      "citacoes": 13,
+      "fwci": 1.1186,
+      "percentil": 94,
+      "recent_2a": 0,
+      "doi": "10.4114/intartif.vol22iss63pp121-134"
+    }
+  ],
+  "rank": 4
+}

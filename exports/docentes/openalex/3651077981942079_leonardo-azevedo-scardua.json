@@ -1,0 +1,119 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Leonardo Azevedo Scardua",
+  "lattes_id": "3651077981942079",
+  "artigos_com_doi": 7,
+  "encontrados_openalex": 7,
+  "citacoes_total": 99,
+  "h_index": 5,
+  "g_index": 7,
+  "m_index": 0.21,
+  "idade_academica": 24,
+  "citacoes_por_artigo": 14.1,
+  "citacoes_mediana": 8,
+  "artigos_fracionados": 2.83,
+  "citacoes_fracionadas": 45.3,
+  "i10": 3,
+  "mais_citado": 53,
+  "fwci_medio": 1.87,
+  "fwci_mediana": 1.01,
+  "fwci_antigo": 4.49,
+  "fwci_recente": 1.56,
+  "fwci_delta": -2.93,
+  "artigos_top10pct": 2,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 27,
+  "momentum_pct": 27,
+  "citacoes_por_ano": {
+    "2012": 1,
+    "2013": 1,
+    "2014": 2,
+    "2016": 1,
+    "2017": 9,
+    "2018": 12,
+    "2019": 12,
+    "2020": 8,
+    "2021": 9,
+    "2022": 8,
+    "2023": 4,
+    "2024": 8,
+    "2025": 12,
+    "2026": 7
+  },
+  "artigo_ascensao": {
+    "titulo": "Complete offline tuning of the unscented Kalman filter",
+    "ano": 2017,
+    "recent_2a": 17,
+    "citacoes": 53,
+    "share_recente_pct": 32,
+    "fwci": 4.5626,
+    "doi": "10.1016/j.automatica.2017.01.008"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Complete offline tuning of the unscented Kalman filter",
+      "ano": 2017,
+      "citacoes": 53,
+      "fwci": 4.5626,
+      "percentil": 96,
+      "recent_2a": 17,
+      "doi": "10.1016/j.automatica.2017.01.008"
+    },
+    {
+      "titulo": "Optimal control of ship unloaders using reinforcement learning",
+      "ano": 2002,
+      "citacoes": 19,
+      "fwci": 0.0,
+      "percentil": 89,
+      "recent_2a": 3,
+      "doi": "10.1016/s1474-0346(03)00002-8"
+    },
+    {
+      "titulo": "Automatic Tuning of the Unscented Kalman Filter and the Blind Tricyclist Problem: An Optim",
+      "ano": 2016,
+      "citacoes": 13,
+      "fwci": 4.4164,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1109/mcs.2016.2535912"
+    },
+    {
+      "titulo": "Particle-Based Tuning of the Unscented Kalman Filter",
+      "ano": 2015,
+      "citacoes": 8,
+      "fwci": 1.0115,
+      "percentil": 89,
+      "recent_2a": 2,
+      "doi": "10.1007/s40313-015-0223-1"
+    },
+    {
+      "titulo": "Predicting Temperatures Inside a Steel Slab Reheating Furnace Using Neural Networks",
+      "ano": 2025,
+      "citacoes": 5,
+      "fwci": 3.116,
+      "percentil": 91,
+      "recent_2a": 5,
+      "doi": "10.1109/tia.2025.3535838"
+    },
+    {
+      "titulo": "Controle ótimo de descarregadores de navios utilizando aprendizado por reforço",
+      "ano": 2003,
+      "citacoes": 1,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.1590/s0103-17592003000400004"
+    },
+    {
+      "titulo": "Uso de Redes Neurais Artificiais para classificação de propostas dependentes e independent",
+      "ano": 2023,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.53660/360.prw907c"
+    }
+  ],
+  "rank": 18
+}

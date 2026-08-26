@@ -1,0 +1,126 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Reginaldo Barbosa Nunes",
+  "lattes_id": "0301147577506989",
+  "artigos_com_doi": 18,
+  "encontrados_openalex": 17,
+  "citacoes_total": 105,
+  "h_index": 6,
+  "g_index": 10,
+  "m_index": 0.5,
+  "idade_academica": 12,
+  "citacoes_por_artigo": 6.2,
+  "citacoes_mediana": 4,
+  "artigos_fracionados": 4.03,
+  "citacoes_fracionadas": 20.4,
+  "i10": 4,
+  "mais_citado": 25,
+  "fwci_medio": 0.52,
+  "fwci_mediana": 0.5,
+  "fwci_antigo": 0.34,
+  "fwci_recente": 0.04,
+  "fwci_delta": -0.3,
+  "artigos_top10pct": 6,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 25,
+  "momentum_pct": 24,
+  "citacoes_por_ano": {
+    "2015": 5,
+    "2016": 6,
+    "2017": 12,
+    "2018": 8,
+    "2019": 11,
+    "2020": 3,
+    "2021": 8,
+    "2022": 13,
+    "2023": 14,
+    "2024": 13,
+    "2025": 10,
+    "2026": 2
+  },
+  "artigo_ascensao": {
+    "titulo": "Recognition of Human Face Regions under Adverse Conditions—Face Masks and Glasses—In Thermographic Sanitary Barriers thr",
+    "ano": 2022,
+    "recent_2a": 5,
+    "citacoes": 11,
+    "share_recente_pct": 45,
+    "fwci": 1.4464,
+    "doi": "10.3390/machines10010043"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Experimental validation of a constant-envelope OFDM system for optical direct-detection",
+      "ano": 2014,
+      "citacoes": 25,
+      "fwci": 1.4004,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1016/j.yofte.2014.03.003"
+    },
+    {
+      "titulo": "Impact of Optical Power in the Guard-Band Reduction of an Optimized DDO-OFDM System",
+      "ano": 2015,
+      "citacoes": 22,
+      "fwci": 0.8037,
+      "percentil": 89,
+      "recent_2a": 4,
+      "doi": "10.1109/jlt.2015.2481085"
+    },
+    {
+      "titulo": "Recognition of Human Face Regions under Adverse Conditions—Face Masks and Glasses—In Therm",
+      "ano": 2022,
+      "citacoes": 11,
+      "fwci": 1.4464,
+      "percentil": 94,
+      "recent_2a": 5,
+      "doi": "10.3390/machines10010043"
+    },
+    {
+      "titulo": "Transmission of CE-OFDM Signals Over MMF Links Using Directly Modulated 850-nm VCSELs",
+      "ano": 2015,
+      "citacoes": 11,
+      "fwci": 1.4467,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1109/lpt.2014.2370643"
+    },
+    {
+      "titulo": "Increasing the Spectral Efficiency of DDO-CE-OFDM Systems by Multi-Objective Optimization",
+      "ano": 2019,
+      "citacoes": 9,
+      "fwci": 0.558,
+      "percentil": 90,
+      "recent_2a": 1,
+      "doi": "10.1109/jlt.2019.2898945"
+    },
+    {
+      "titulo": "Experimental Demonstration of a 33.5-Gb/s OFDM-Based PON With Subcarrier Pre-Emphasis",
+      "ano": 2016,
+      "citacoes": 9,
+      "fwci": 0.8836,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1109/lpt.2016.2515060"
+    },
+    {
+      "titulo": "A MAC layer protocol for a bandwidth scalable OFDMA PON architecture",
+      "ano": 2017,
+      "citacoes": 6,
+      "fwci": 0.0,
+      "percentil": 89,
+      "recent_2a": 3,
+      "doi": "10.1016/j.comcom.2017.01.016"
+    },
+    {
+      "titulo": "Understanding Business Models in the Brazilian Context of Electric Mobility: A Proposed Fr",
+      "ano": 2024,
+      "citacoes": 4,
+      "fwci": 0.4961,
+      "percentil": 95,
+      "recent_2a": 4,
+      "doi": "10.3390/urbansci8030092"
+    }
+  ],
+  "rank": 17
+}

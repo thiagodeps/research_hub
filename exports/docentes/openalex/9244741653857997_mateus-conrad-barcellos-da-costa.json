@@ -1,0 +1,45 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Mateus Conrad Barcellos da Costa",
+  "lattes_id": "9244741653857997",
+  "artigos_com_doi": 2,
+  "encontrados_openalex": 1,
+  "citacoes_total": 3,
+  "h_index": 1,
+  "g_index": 1,
+  "m_index": 0.12,
+  "idade_academica": 8,
+  "citacoes_por_artigo": 3.0,
+  "citacoes_mediana": 3,
+  "artigos_fracionados": 0.17,
+  "citacoes_fracionadas": 0.5,
+  "i10": 0,
+  "mais_citado": 3,
+  "fwci_medio": 0.13,
+  "fwci_mediana": 0.13,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 0,
+  "momentum_pct": 0,
+  "citacoes_por_ano": {
+    "2019": 1,
+    "2023": 2
+  },
+  "artigo_ascensao": null,
+  "top_artigos": [
+    {
+      "titulo": "Texture Classification of Sea Turtle Shell Based on Color Features: Color Histograms and C",
+      "ano": 2018,
+      "citacoes": 3,
+      "fwci": 0.1309,
+      "percentil": 90,
+      "recent_2a": 0,
+      "doi": "10.5121/ijaia.2018.9205"
+    }
+  ],
+  "rank": 53
+}

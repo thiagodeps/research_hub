@@ -1,0 +1,59 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Rosiane Ribeiro Rocha",
+  "lattes_id": "7769380471199102",
+  "artigos_com_doi": 1,
+  "encontrados_openalex": 1,
+  "citacoes_total": 20,
+  "h_index": 1,
+  "g_index": 1,
+  "m_index": 0.12,
+  "idade_academica": 8,
+  "citacoes_por_artigo": 20.0,
+  "citacoes_mediana": 20,
+  "artigos_fracionados": 0.33,
+  "citacoes_fracionadas": 6.7,
+  "i10": 1,
+  "mais_citado": 20,
+  "fwci_medio": 1.03,
+  "fwci_mediana": 1.03,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 6,
+  "momentum_pct": 30,
+  "citacoes_por_ano": {
+    "2019": 2,
+    "2020": 3,
+    "2021": 2,
+    "2022": 3,
+    "2023": 4,
+    "2024": 2,
+    "2025": 2,
+    "2026": 2
+  },
+  "artigo_ascensao": {
+    "titulo": "Partitioning for distributed model predictive control of nonlinear processes",
+    "ano": 2018,
+    "recent_2a": 6,
+    "citacoes": 20,
+    "share_recente_pct": 30,
+    "fwci": 1.028,
+    "doi": "10.1016/j.cherd.2018.09.003"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Partitioning for distributed model predictive control of nonlinear processes",
+      "ano": 2018,
+      "citacoes": 20,
+      "fwci": 1.028,
+      "percentil": 93,
+      "recent_2a": 6,
+      "doi": "10.1016/j.cherd.2018.09.003"
+    }
+  ],
+  "rank": 42
+}

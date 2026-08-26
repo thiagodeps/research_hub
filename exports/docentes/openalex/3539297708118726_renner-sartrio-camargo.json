@@ -1,0 +1,87 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Renner Sartório Camargo",
+  "lattes_id": "3539297708118726",
+  "artigos_com_doi": 4,
+  "encontrados_openalex": 4,
+  "citacoes_total": 55,
+  "h_index": 4,
+  "g_index": 4,
+  "m_index": 0.5,
+  "idade_academica": 8,
+  "citacoes_por_artigo": 13.8,
+  "citacoes_mediana": 12.5,
+  "artigos_fracionados": 0.85,
+  "citacoes_fracionadas": 12.1,
+  "i10": 3,
+  "mais_citado": 21,
+  "fwci_medio": 1.0,
+  "fwci_mediana": 0.91,
+  "fwci_antigo": 1.17,
+  "fwci_recente": 0.83,
+  "fwci_delta": -0.34,
+  "artigos_top10pct": 2,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 20,
+  "momentum_pct": 36,
+  "citacoes_por_ano": {
+    "2018": 3,
+    "2019": 2,
+    "2020": 3,
+    "2021": 10,
+    "2022": 9,
+    "2023": 8,
+    "2024": 8,
+    "2025": 8,
+    "2026": 4
+  },
+  "artigo_ascensao": {
+    "titulo": "Novel multilevel STATCOM for power system stability enhancement on DFIG-based wind farms",
+    "ano": 2021,
+    "recent_2a": 13,
+    "citacoes": 21,
+    "share_recente_pct": 62,
+    "fwci": 1.0511,
+    "doi": "10.1016/j.epsr.2021.107316"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Novel multilevel STATCOM for power system stability enhancement on DFIG-based wind farms",
+      "ano": 2021,
+      "citacoes": 21,
+      "fwci": 1.0511,
+      "percentil": 96,
+      "recent_2a": 13,
+      "doi": "10.1016/j.epsr.2021.107316"
+    },
+    {
+      "titulo": "Design and Analysis Methodology for Modular Multilevel Converters (MMC)",
+      "ano": 2018,
+      "citacoes": 15,
+      "fwci": 1.5713,
+      "percentil": 94,
+      "recent_2a": 0,
+      "doi": "10.1109/tla.2018.8362144"
+    },
+    {
+      "titulo": "A Novel Cascaded Multilevel Converter Topology Based on Three-Phase Cells—CHB-SDC",
+      "ano": 2020,
+      "citacoes": 10,
+      "fwci": 0.7714,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.3390/en13184789"
+    },
+    {
+      "titulo": "Model-Based Predictive Control with Graph Theory Approach Applied to Multilevel Back-to-Ba",
+      "ano": 2022,
+      "citacoes": 9,
+      "fwci": 0.5991,
+      "percentil": 89,
+      "recent_2a": 6,
+      "doi": "10.3390/electronics11111711"
+    }
+  ],
+  "rank": 32
+}

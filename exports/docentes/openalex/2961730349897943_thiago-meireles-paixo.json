@@ -1,0 +1,122 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Thiago Meireles Paixão",
+  "lattes_id": "2961730349897943",
+  "artigos_com_doi": 19,
+  "encontrados_openalex": 19,
+  "citacoes_total": 195,
+  "h_index": 8,
+  "g_index": 13,
+  "m_index": 1.0,
+  "idade_academica": 8,
+  "citacoes_por_artigo": 10.3,
+  "citacoes_mediana": 4,
+  "artigos_fracionados": 3.05,
+  "citacoes_fracionadas": 24.5,
+  "i10": 7,
+  "mais_citado": 53,
+  "fwci_medio": 2.32,
+  "fwci_mediana": 0.74,
+  "fwci_antigo": 0.98,
+  "fwci_recente": 0.74,
+  "fwci_delta": -0.24,
+  "artigos_top10pct": 9,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 75,
+  "momentum_pct": 38,
+  "citacoes_por_ano": {
+    "2019": 15,
+    "2020": 40,
+    "2021": 27,
+    "2022": 18,
+    "2023": 20,
+    "2024": 24,
+    "2025": 29,
+    "2026": 22
+  },
+  "artigo_ascensao": {
+    "titulo": "Cross-domain object detection using unsupervised image translation",
+    "ano": 2021,
+    "recent_2a": 20,
+    "citacoes": 26,
+    "share_recente_pct": 77,
+    "fwci": 1.2804,
+    "doi": "10.1016/j.eswa.2021.116334"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Self-driving cars: A survey",
+      "ano": 2020,
+      "citacoes": 53,
+      "fwci": 3.5029,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1016/j.eswa.2020.113816"
+    },
+    {
+      "titulo": "Handling pedestrians in self-driving cars using image tracking and alternative path genera",
+      "ano": 2019,
+      "citacoes": 31,
+      "fwci": 1.9381,
+      "percentil": 94,
+      "recent_2a": 10,
+      "doi": "10.1016/j.cag.2019.08.004"
+    },
+    {
+      "titulo": "Cross-domain object detection using unsupervised image translation",
+      "ano": 2021,
+      "citacoes": 26,
+      "fwci": 1.2804,
+      "percentil": 89,
+      "recent_2a": 20,
+      "doi": "10.1016/j.eswa.2021.116334"
+    },
+    {
+      "titulo": "Exploring Character Shapes for Unsupervised Reconstruction of Strip-Shredded Text Document",
+      "ano": 2018,
+      "citacoes": 16,
+      "fwci": 0.7362,
+      "percentil": 89,
+      "recent_2a": 4,
+      "doi": "10.1109/tifs.2018.2885253"
+    },
+    {
+      "titulo": "Deep traffic light detection by overlaying synthetic context on arbitrary natural images",
+      "ano": 2020,
+      "citacoes": 15,
+      "fwci": 0.783,
+      "percentil": 89,
+      "recent_2a": 7,
+      "doi": "10.1016/j.cag.2020.09.012"
+    },
+    {
+      "titulo": "Self-supervised deep reconstruction of mixed strip-shredded text documents",
+      "ano": 2020,
+      "citacoes": 14,
+      "fwci": 1.1745,
+      "percentil": 90,
+      "recent_2a": 2,
+      "doi": "10.1016/j.patcog.2020.107535"
+    },
+    {
+      "titulo": "Deep traffic sign detection and recognition without target domain real images",
+      "ano": 2022,
+      "citacoes": 11,
+      "fwci": 0.7369,
+      "percentil": 89,
+      "recent_2a": 7,
+      "doi": "10.1007/s00138-022-01302-0"
+    },
+    {
+      "titulo": "Depression and Anxiety Screening for Pregnant Women via Free Conversational Speech in Natu",
+      "ano": 2025,
+      "citacoes": 8,
+      "fwci": 18.2523,
+      "percentil": 95,
+      "recent_2a": 8,
+      "doi": "10.1109/access.2025.3552659"
+    }
+  ],
+  "rank": 9
+}

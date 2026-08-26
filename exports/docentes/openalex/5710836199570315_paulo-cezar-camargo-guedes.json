@@ -1,0 +1,44 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Paulo Cezar Camargo Guedes",
+  "lattes_id": "5710836199570315",
+  "artigos_com_doi": 1,
+  "encontrados_openalex": 1,
+  "citacoes_total": 1,
+  "h_index": 1,
+  "g_index": 1,
+  "m_index": 0.09,
+  "idade_academica": 11,
+  "citacoes_por_artigo": 1.0,
+  "citacoes_mediana": 1,
+  "artigos_fracionados": 1.0,
+  "citacoes_fracionadas": 1.0,
+  "i10": 0,
+  "mais_citado": 1,
+  "fwci_medio": 0.0,
+  "fwci_mediana": 0.0,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 0,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 0,
+  "momentum_pct": 0,
+  "citacoes_por_ano": {
+    "2020": 1
+  },
+  "artigo_ascensao": null,
+  "top_artigos": [
+    {
+      "titulo": "APLICAÇÃO DO SOFTWARE GEOGEBRA AO ENSINO DA GEOMETRIA ANALÍTICA",
+      "ano": 2015,
+      "citacoes": 1,
+      "fwci": 0.0,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.5902/2179460x14555"
+    }
+  ],
+  "rank": 58
+}

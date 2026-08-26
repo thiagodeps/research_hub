@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Espanhol",
+        "campus": null
+    },
+    {
+        "id": 2,
+        "name": "Inglês",
+        "campus": null
+    },
+    {
+        "id": 3,
+        "name": "Português",
+        "campus": null
+    },
+    {
+        "id": 4,
+        "name": "Alemão",
+        "campus": null
+    },
+    {
+        "id": 5,
+        "name": "Francês",
+        "campus": null
+    },
+    {
+        "id": 6,
+        "name": "Latim",
+        "campus": null
+    },
+    {
+        "id": 7,
+        "name": "Italiano",
+        "campus": null
+    },
+    {
+        "id": 8,
+        "name": "Japonês",
+        "campus": null
+    }
+]

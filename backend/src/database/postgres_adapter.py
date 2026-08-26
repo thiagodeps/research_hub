@@ -1,12 +1,17 @@
 from src.database.session import SessionLocal
-from src.models.orm import Admin, University, Researcher
+from src.models.orm import Admin, University, Researcher, Article, ResearchGroup, Initiative, Advisorship, Award
 
 class DatabasePostgresAdapter:
     def __init__(self):
         self.models = {
             "admins": Admin,
             "universities": University,
-            "researchers": Researcher
+            "researchers": Researcher,
+            "articles": Article,
+            "groups": ResearchGroup,
+            "initiatives": Initiative,
+            "advisorships": Advisorship,
+            "awards": Award
         }
 
     def _get_model(self, table: str):

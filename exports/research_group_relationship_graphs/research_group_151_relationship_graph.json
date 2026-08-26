@@ -1,0 +1,54 @@
+{
+    "metadata": {
+        "generated_at": "2026-08-26T13:14:57.067375+00:00",
+        "sources": {
+            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
+        },
+        "scope": {
+            "type": "research_group",
+            "research_group": {
+                "id": 151,
+                "name": "Grupo de Pesquisa Educação e Sociedade",
+                "short_name": null,
+                "member_count": 0,
+                "expanded_node_count": 0,
+                "advisorship_neighbor_count": 0
+            }
+        },
+        "weight_definition": "Each edge weight equals the total number of relationship evidences between two people. Every shared initiative, shared research group, and advisorship adds 1 to the edge weight.",
+        "relation_types": {
+            "initiative": "People who appear together in the same initiative team.",
+            "research_group": "People who belong to the same research group.",
+            "advisorship": "Supervisor and student connected by an advisorship."
+        }
+    },
+    "graph_stats": {
+        "nodes": 0,
+        "edges": 0,
+        "isolated_nodes": 0,
+        "connected_components": 0,
+        "largest_component_size": 0,
+        "relation_event_totals": {
+            "initiative": 0,
+            "research_group": 0,
+            "advisorship": 0
+        },
+        "edge_relation_presence": {
+            "initiative": 0,
+            "research_group": 0,
+            "advisorship": 0
+        },
+        "classification_distribution": {},
+        "top_people_by_weighted_degree": []
+    },
+    "graph": {
+        "directed": false,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [],
+        "edges": []
+    }
+}

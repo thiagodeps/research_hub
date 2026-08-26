@@ -1,0 +1,129 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Luiz Alberto Pinto",
+  "lattes_id": "3550111932609658",
+  "artigos_com_doi": 8,
+  "encontrados_openalex": 8,
+  "citacoes_total": 52,
+  "h_index": 4,
+  "g_index": 7,
+  "m_index": 0.25,
+  "idade_academica": 16,
+  "citacoes_por_artigo": 6.5,
+  "citacoes_mediana": 4.0,
+  "artigos_fracionados": 2.24,
+  "citacoes_fracionadas": 13.9,
+  "i10": 2,
+  "mais_citado": 19,
+  "fwci_medio": 1.23,
+  "fwci_mediana": 0.0,
+  "fwci_antigo": 2.76,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 3,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 6,
+  "momentum_pct": 12,
+  "citacoes_por_ano": {
+    "2012": 6,
+    "2013": 2,
+    "2014": 4,
+    "2015": 5,
+    "2016": 3,
+    "2017": 3,
+    "2018": 1,
+    "2019": 3,
+    "2020": 2,
+    "2021": 2,
+    "2022": 4,
+    "2023": 3,
+    "2024": 1,
+    "2025": 4,
+    "2026": 1
+  },
+  "artigo_ascensao": {
+    "titulo": "Bone age estimation from carpal radiography images using deep learning",
+    "ano": 2020,
+    "recent_2a": 3,
+    "citacoes": 7,
+    "share_recente_pct": 43,
+    "fwci": 5.5144,
+    "doi": "10.1111/exsy.12584"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Ensemble wavelet modelling for determination of wheat and gasoline properties by near and ",
+      "ano": 2010,
+      "citacoes": 19,
+      "fwci": 2.7013,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1016/j.aca.2010.09.039"
+    },
+    {
+      "titulo": "Multi-core computation in chemometrics: case studies of voltammetric and NIR spectrometric",
+      "ano": 2010,
+      "citacoes": 16,
+      "fwci": 1.6149,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1590/s0103-50532010000900005"
+    },
+    {
+      "titulo": "Bone age estimation from carpal radiography images using deep learning",
+      "ano": 2020,
+      "citacoes": 7,
+      "fwci": 5.5144,
+      "percentil": 90,
+      "recent_2a": 3,
+      "doi": "10.1111/exsy.12584"
+    },
+    {
+      "titulo": "Influence of wavelet transform settings on NIR and MIR spectrometric analyses of diesel, g",
+      "ano": 2011,
+      "citacoes": 7,
+      "fwci": 0.0,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1590/s0103-50532011000100025"
+    },
+    {
+      "titulo": "Cardiac arrhythmia diagnosis applying machine learning techniques",
+      "ano": 2022,
+      "citacoes": 1,
+      "fwci": 0.0,
+      "percentil": 95,
+      "recent_2a": 1,
+      "doi": "10.34119/bjhrv5n5-238"
+    },
+    {
+      "titulo": "An Active Search Method for Finding Objects with Near-Optimal Property Values within a Giv",
+      "ano": 2016,
+      "citacoes": 1,
+      "fwci": 0.0,
+      "percentil": 91,
+      "recent_2a": 1,
+      "doi": "10.5935/0103-5053.20160014"
+    },
+    {
+      "titulo": "RECONHECIMENTO FACIAL BASEADO EM HOG E PCA: UMA COMPARAÇÃO QUANTO À INVARIÂNCIA À ILUMINAÇ",
+      "ano": 2015,
+      "citacoes": 1,
+      "fwci": 0.0,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.36524/ric.v1i1.236"
+    },
+    {
+      "titulo": "Combination of Models Obtained by Regression in the Wavelet Domain",
+      "ano": 2010,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.5540/tema.2010.011.01.0077"
+    }
+  ],
+  "rank": 33
+}

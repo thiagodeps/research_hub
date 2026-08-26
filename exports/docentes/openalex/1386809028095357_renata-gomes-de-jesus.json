@@ -1,0 +1,127 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Renata Gomes de Jesus",
+  "lattes_id": "1386809028095357",
+  "artigos_com_doi": 8,
+  "encontrados_openalex": 8,
+  "citacoes_total": 48,
+  "h_index": 4,
+  "g_index": 6,
+  "m_index": 0.2,
+  "idade_academica": 20,
+  "citacoes_por_artigo": 6.0,
+  "citacoes_mediana": 4.5,
+  "artigos_fracionados": 3.83,
+  "citacoes_fracionadas": 26.0,
+  "i10": 3,
+  "mais_citado": 17,
+  "fwci_medio": 0.93,
+  "fwci_mediana": 0.52,
+  "fwci_antigo": 0.47,
+  "fwci_recente": 0.0,
+  "fwci_delta": -0.47,
+  "artigos_top10pct": 2,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 9,
+  "momentum_pct": 19,
+  "citacoes_por_ano": {
+    "2012": 3,
+    "2015": 1,
+    "2016": 3,
+    "2017": 1,
+    "2018": 1,
+    "2019": 4,
+    "2020": 8,
+    "2021": 4,
+    "2022": 6,
+    "2023": 4,
+    "2024": 4,
+    "2025": 2,
+    "2026": 3
+  },
+  "artigo_ascensao": {
+    "titulo": "Percepção de políticas de gestão de pessoas e comprometimento organizacional: o papel mediador da percepção de justiça o",
+    "ano": 2015,
+    "recent_2a": 4,
+    "citacoes": 17,
+    "share_recente_pct": 24,
+    "fwci": 2.5388,
+    "doi": "10.18089/tms.2015.11226"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Percepção de políticas de gestão de pessoas e comprometimento organizacional: o papel medi",
+      "ano": 2015,
+      "citacoes": 17,
+      "fwci": 2.5388,
+      "percentil": 89,
+      "recent_2a": 4,
+      "doi": "10.18089/tms.2015.11226"
+    },
+    {
+      "titulo": "JUSTIÇA ORGANIZACIONAL PERCEBIDA POR PROFESSORES DOS ENSINOS BÁSICO, TÉCNICO E TECNOLÓGICO",
+      "ano": 2014,
+      "citacoes": 11,
+      "fwci": 2.5077,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1590/1678-69712014/administracao.v15n6p172-200"
+    },
+    {
+      "titulo": "IMPLEMENTATION OF ERP SYSTEMS: TECNOLOGY AND PEOPLE IN SAP R/3 IMPLEMENTATION",
+      "ano": 2006,
+      "citacoes": 10,
+      "fwci": 1.3439,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.4301/s1807-17752006000300004"
+    },
+    {
+      "titulo": "Adaptation and obtainment of evidence for the validity of the “Scale of Perceived Sacrific",
+      "ano": 2016,
+      "citacoes": 8,
+      "fwci": 0.9494,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1016/j.rausp.2016.10.002"
+    },
+    {
+      "titulo": "Panorama do consumo energético na produção brasileira de minério de ferro no Quadrilátero ",
+      "ano": 2022,
+      "citacoes": 1,
+      "fwci": 0.0995,
+      "percentil": 91,
+      "recent_2a": 1,
+      "doi": "10.21712/lajer.2021.v8.n2.p37-48"
+    },
+    {
+      "titulo": "Processo licitatório tipo menor preço e eficiência em compras públicas: um estudo de caso",
+      "ano": 2018,
+      "citacoes": 1,
+      "fwci": 0.0,
+      "percentil": 91,
+      "recent_2a": 1,
+      "doi": "10.18265/1517-03062015v1n41p24-38"
+    },
+    {
+      "titulo": "Employee career adaptability after an extreme event in a mining company",
+      "ano": 2025,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.1590/1678-6971/eramg250073"
+    },
+    {
+      "titulo": "Diagnóstico da energia elétrica na extração de rochas ornamentais no estado do Espírito Sa",
+      "ano": 2022,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.21712/lajer.2021.v8.n2.p27-36"
+    }
+  ],
+  "rank": 34
+}

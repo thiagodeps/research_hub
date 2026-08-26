@@ -1,0 +1,121 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Gustavo Maia de Almeida",
+  "lattes_id": "2650921349694794",
+  "artigos_com_doi": 19,
+  "encontrados_openalex": 19,
+  "citacoes_total": 67,
+  "h_index": 5,
+  "g_index": 8,
+  "m_index": 0.71,
+  "idade_academica": 7,
+  "citacoes_por_artigo": 3.5,
+  "citacoes_mediana": 1,
+  "artigos_fracionados": 4.33,
+  "citacoes_fracionadas": 13.2,
+  "i10": 4,
+  "mais_citado": 14,
+  "fwci_medio": 0.53,
+  "fwci_mediana": 0.14,
+  "fwci_antigo": null,
+  "fwci_recente": 0.12,
+  "fwci_delta": null,
+  "artigos_top10pct": 9,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 46,
+  "momentum_pct": 69,
+  "citacoes_por_ano": {
+    "2020": 1,
+    "2021": 1,
+    "2022": 7,
+    "2023": 12,
+    "2024": 17,
+    "2025": 15,
+    "2026": 14
+  },
+  "artigo_ascensao": {
+    "titulo": "Expert system for early sign stuck pipe detection: Feature engineering and fuzzy logic approach",
+    "ano": 2023,
+    "recent_2a": 14,
+    "citacoes": 14,
+    "share_recente_pct": 100,
+    "fwci": 1.606,
+    "doi": "10.1016/j.engappai.2023.107229"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Expert system for early sign stuck pipe detection: Feature engineering and fuzzy logic app",
+      "ano": 2023,
+      "citacoes": 14,
+      "fwci": 1.606,
+      "percentil": 98,
+      "recent_2a": 14,
+      "doi": "10.1016/j.engappai.2023.107229"
+    },
+    {
+      "titulo": "Recognition of Human Face Regions under Adverse Conditions—Face Masks and Glasses—In Therm",
+      "ano": 2022,
+      "citacoes": 11,
+      "fwci": 1.4464,
+      "percentil": 94,
+      "recent_2a": 5,
+      "doi": "10.3390/machines10010043"
+    },
+    {
+      "titulo": "Fuzzy logic in auto-tuning of fractional PID and backstepping tracking control of a differ",
+      "ano": 2019,
+      "citacoes": 11,
+      "fwci": 0.6574,
+      "percentil": 89,
+      "recent_2a": 4,
+      "doi": "10.3233/jifs-181431"
+    },
+    {
+      "titulo": "A Model-Based Predictive Controller of the Level of Steel in the Mold with Disturbances Us",
+      "ano": 2021,
+      "citacoes": 10,
+      "fwci": 0.9878,
+      "percentil": 91,
+      "recent_2a": 5,
+      "doi": "10.3390/met11091458"
+    },
+    {
+      "titulo": "Iron ore pellets measurement using deep learning based on YOLACT",
+      "ano": 2024,
+      "citacoes": 6,
+      "fwci": 0.7011,
+      "percentil": 89,
+      "recent_2a": 5,
+      "doi": "10.1007/s00521-024-09832-6"
+    },
+    {
+      "titulo": "Predicting Temperatures Inside a Steel Slab Reheating Furnace Using Neural Networks",
+      "ano": 2025,
+      "citacoes": 5,
+      "fwci": 3.116,
+      "percentil": 91,
+      "recent_2a": 5,
+      "doi": "10.1109/tia.2025.3535838"
+    },
+    {
+      "titulo": "Self-tuning regulatory controller of cyclical disturbances using data-driven frequency est",
+      "ano": 2023,
+      "citacoes": 5,
+      "fwci": 0.5721,
+      "percentil": 94,
+      "recent_2a": 5,
+      "doi": "10.1016/j.engappai.2023.106987"
+    },
+    {
+      "titulo": "Algoritmo de Deep Learning baseado na rede neural YOLOv5 para classificação dermastoscópic",
+      "ano": 2022,
+      "citacoes": 2,
+      "fwci": 0.6373,
+      "percentil": 94,
+      "recent_2a": 0,
+      "doi": "10.53660/clm-669-728"
+    }
+  ],
+  "rank": 26
+}

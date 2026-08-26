@@ -1,0 +1,125 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Marcos Paulo Kohler Caldas",
+  "lattes_id": "6499650719150590",
+  "artigos_com_doi": 8,
+  "encontrados_openalex": 8,
+  "citacoes_total": 298,
+  "h_index": 4,
+  "g_index": 8,
+  "m_index": 0.36,
+  "idade_academica": 11,
+  "citacoes_por_artigo": 37.2,
+  "citacoes_mediana": 10.0,
+  "artigos_fracionados": 1.5,
+  "citacoes_fracionadas": 52.2,
+  "i10": 4,
+  "mais_citado": 219,
+  "fwci_medio": 3.15,
+  "fwci_mediana": 0.99,
+  "fwci_antigo": 0.14,
+  "fwci_recente": 2.48,
+  "fwci_delta": 2.34,
+  "artigos_top10pct": 3,
+  "artigos_top1pct": 1,
+  "citacoes_recentes_2a": 65,
+  "momentum_pct": 22,
+  "citacoes_por_ano": {
+    "2016": 12,
+    "2017": 19,
+    "2018": 19,
+    "2019": 27,
+    "2020": 18,
+    "2021": 31,
+    "2022": 32,
+    "2023": 75,
+    "2024": 39,
+    "2025": 16,
+    "2026": 10
+  },
+  "artigo_ascensao": {
+    "titulo": "Printed circuit board recycling: Physical processing and copper extraction by selective leaching",
+    "ano": 2015,
+    "recent_2a": 28,
+    "citacoes": 219,
+    "share_recente_pct": 13,
+    "fwci": 17.5289,
+    "doi": "10.1016/j.wasman.2015.08.030"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Printed circuit board recycling: Physical processing and copper extraction by selective le",
+      "ano": 2015,
+      "citacoes": 219,
+      "fwci": 17.5289,
+      "percentil": 99,
+      "recent_2a": 28,
+      "doi": "10.1016/j.wasman.2015.08.030"
+    },
+    {
+      "titulo": "Synthesis of Ag nanoparticles from waste printed circuit board",
+      "ano": 2021,
+      "citacoes": 30,
+      "fwci": 2.9464,
+      "percentil": 89,
+      "recent_2a": 16,
+      "doi": "10.1016/j.jece.2021.106845"
+    },
+    {
+      "titulo": "Recovering metals from motherboard and memory board waste through sulfuric leaching",
+      "ano": 2021,
+      "citacoes": 26,
+      "fwci": 2.475,
+      "percentil": 94,
+      "recent_2a": 14,
+      "doi": "10.1016/j.jece.2021.106789"
+    },
+    {
+      "titulo": "RECOVERY OF COPPER AND SILVER OF PRINTED CIRCUIT BOARDS FROM OBSOLETE COMPUTERS BY ONE-STE",
+      "ano": 2021,
+      "citacoes": 17,
+      "fwci": 1.6344,
+      "percentil": 91,
+      "recent_2a": 6,
+      "doi": "10.31025/2611-4135/2021.14056"
+    },
+    {
+      "titulo": "RECICLAGEM DE PLACAS DE CIRCUITO IMPRESSO VISANDO RECUPERAÇÃO DE PRATA: ESTUDO DE UMA ROTA",
+      "ano": 2015,
+      "citacoes": 3,
+      "fwci": 0.3542,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.4322/2176-1523.0850"
+    },
+    {
+      "titulo": "PRINTED CIRCUIT BOARD RECYCLING: PHYSICOCHEMICAL AND ECONOMIC ANALYSIS OF METALS",
+      "ano": 2019,
+      "citacoes": 2,
+      "fwci": 0.1429,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.4322/2176-1523.20191748"
+    },
+    {
+      "titulo": "CHEMICAL AND PHISICAL CHARACTERIZATION OF MEMORY BOARDS FROM OBSOLETE COMPUTERS THROUGH OP",
+      "ano": 2019,
+      "citacoes": 1,
+      "fwci": 0.1429,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.4322/2176-1523.20191741"
+    },
+    {
+      "titulo": "PLACAS DE CIRCUITO IMPRESSO: CARACTERIZAÇÃO E VALOR AGREGADO",
+      "ano": 2019,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.4322/2176-1523.20191722"
+    }
+  ],
+  "rank": 5
+}

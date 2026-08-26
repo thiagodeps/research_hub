@@ -1,0 +1,144 @@
+{
+    "metadata": {
+        "generated_at": "2026-08-26T13:14:56.685358+00:00",
+        "sources": {
+            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
+        },
+        "scope": {
+            "type": "research_group",
+            "research_group": {
+                "id": 85,
+                "name": "Grupo de Apoio ao Ensino de Eletrônica",
+                "short_name": "GAEE",
+                "member_count": 1,
+                "expanded_node_count": 3,
+                "advisorship_neighbor_count": 2
+            }
+        },
+        "weight_definition": "Each edge weight equals the total number of relationship evidences between two people. Every shared initiative, shared research group, and advisorship adds 1 to the edge weight.",
+        "relation_types": {
+            "initiative": "People who appear together in the same initiative team.",
+            "research_group": "People who belong to the same research group.",
+            "advisorship": "Supervisor and student connected by an advisorship."
+        }
+    },
+    "graph_stats": {
+        "nodes": 3,
+        "edges": 2,
+        "isolated_nodes": 0,
+        "connected_components": 1,
+        "largest_component_size": 3,
+        "relation_event_totals": {
+            "initiative": 3,
+            "research_group": 0,
+            "advisorship": 2
+        },
+        "edge_relation_presence": {
+            "initiative": 2,
+            "research_group": 0,
+            "advisorship": 2
+        },
+        "classification_distribution": {
+            "researcher": 1,
+            "student": 2
+        },
+        "top_people_by_weighted_degree": [
+            {
+                "id": 121,
+                "name": "Vinícius Secchin De Melo",
+                "classification": "researcher",
+                "weighted_degree": 5,
+                "degree": 2
+            },
+            {
+                "id": 958,
+                "name": "Phillipe Rocha Maia",
+                "classification": "student",
+                "weighted_degree": 3,
+                "degree": 1
+            },
+            {
+                "id": 4437,
+                "name": "Wallastan Melo da Silva Junior",
+                "classification": "student",
+                "weighted_degree": 2,
+                "degree": 1
+            }
+        ]
+    },
+    "graph": {
+        "directed": false,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [
+            {
+                "name": "Vinícius Secchin De Melo",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Serra",
+                "degree": 2,
+                "weighted_degree": 5,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 121
+            },
+            {
+                "name": "Wallastan Melo da Silva Junior",
+                "classification": "student",
+                "classification_confidence": "high",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": null,
+                "degree": 1,
+                "weighted_degree": 2,
+                "is_group_member": false,
+                "is_advisorship_neighbor": true,
+                "id": 4437
+            },
+            {
+                "name": "Phillipe Rocha Maia",
+                "classification": "student",
+                "classification_confidence": "high",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": null,
+                "degree": 1,
+                "weighted_degree": 3,
+                "is_group_member": false,
+                "is_advisorship_neighbor": true,
+                "id": 958
+            }
+        ],
+        "edges": [
+            {
+                "weight": 3,
+                "initiative_count": 2,
+                "research_group_count": 0,
+                "advisorship_count": 1,
+                "relation_types": [
+                    "initiative",
+                    "advisorship"
+                ],
+                "source": 121,
+                "target": 958
+            },
+            {
+                "weight": 2,
+                "initiative_count": 1,
+                "research_group_count": 0,
+                "advisorship_count": 1,
+                "relation_types": [
+                    "initiative",
+                    "advisorship"
+                ],
+                "source": 121,
+                "target": 4437
+            }
+        ]
+    }
+}

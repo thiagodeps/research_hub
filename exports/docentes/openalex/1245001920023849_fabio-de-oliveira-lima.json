@@ -1,0 +1,78 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Fabio de Oliveira Lima",
+  "lattes_id": "1245001920023849",
+  "artigos_com_doi": 3,
+  "encontrados_openalex": 3,
+  "citacoes_total": 17,
+  "h_index": 3,
+  "g_index": 3,
+  "m_index": 0.25,
+  "idade_academica": 12,
+  "citacoes_por_artigo": 5.7,
+  "citacoes_mediana": 6,
+  "artigos_fracionados": 0.54,
+  "citacoes_fracionadas": 3.1,
+  "i10": 0,
+  "mais_citado": 8,
+  "fwci_medio": 0.64,
+  "fwci_mediana": 0.6,
+  "fwci_antigo": 0.52,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 1,
+  "momentum_pct": 6,
+  "citacoes_por_ano": {
+    "2015": 2,
+    "2017": 3,
+    "2018": 2,
+    "2019": 3,
+    "2020": 1,
+    "2021": 3,
+    "2022": 1,
+    "2023": 1,
+    "2024": 1
+  },
+  "artigo_ascensao": {
+    "titulo": "Feature selection for optical network design via a new mutual information estimator",
+    "ano": 2018,
+    "recent_2a": 1,
+    "citacoes": 8,
+    "share_recente_pct": 12,
+    "fwci": 0.5998,
+    "doi": "10.1016/j.eswa.2018.04.018"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Feature selection for optical network design via a new mutual information estimator",
+      "ano": 2018,
+      "citacoes": 8,
+      "fwci": 0.5998,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1016/j.eswa.2018.04.018"
+    },
+    {
+      "titulo": "Wavelength assignment using a hybrid evolutionary computation to reduce cross-phase modula",
+      "ano": 2014,
+      "citacoes": 6,
+      "fwci": 0.8753,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1590/s2179-10742014000100001"
+    },
+    {
+      "titulo": "A Multilayer Approach for Optical Network Planning",
+      "ano": 2016,
+      "citacoes": 3,
+      "fwci": 0.4397,
+      "percentil": 90,
+      "recent_2a": 0,
+      "doi": "10.1590/2179-10742016v15i1548"
+    }
+  ],
+  "rank": 46
+}

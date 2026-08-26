@@ -1,0 +1,64 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Moises Savedra Omena",
+  "lattes_id": "0059221043399777",
+  "artigos_com_doi": 2,
+  "encontrados_openalex": 2,
+  "citacoes_total": 24,
+  "h_index": 1,
+  "g_index": 2,
+  "m_index": 0.2,
+  "idade_academica": 5,
+  "citacoes_por_artigo": 12.0,
+  "citacoes_mediana": 12.0,
+  "artigos_fracionados": 0.38,
+  "citacoes_fracionadas": 3.1,
+  "i10": 1,
+  "mais_citado": 23,
+  "fwci_medio": 1.66,
+  "fwci_mediana": 1.66,
+  "fwci_antigo": null,
+  "fwci_recente": 1.66,
+  "fwci_delta": null,
+  "artigos_top10pct": 2,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 18,
+  "momentum_pct": 75,
+  "citacoes_por_ano": {
+    "2023": 6,
+    "2024": 10,
+    "2025": 6,
+    "2026": 2
+  },
+  "artigo_ascensao": {
+    "titulo": "Gis and fuzzy logic applied to modelling forest fire risk",
+    "ano": 2021,
+    "recent_2a": 17,
+    "citacoes": 23,
+    "share_recente_pct": 74,
+    "fwci": 1.5602,
+    "doi": "10.1590/0001-3765202120190726"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Gis and fuzzy logic applied to modelling forest fire risk",
+      "ano": 2021,
+      "citacoes": 23,
+      "fwci": 1.5602,
+      "percentil": 97,
+      "recent_2a": 17,
+      "doi": "10.1590/0001-3765202120190726"
+    },
+    {
+      "titulo": "Preliminary Panoramic View of Continuous Software Engineering Adoption in Brazilian Organi",
+      "ano": 2025,
+      "citacoes": 1,
+      "fwci": 1.7628,
+      "percentil": 91,
+      "recent_2a": 1,
+      "doi": "10.5753/jserd.2025.3807"
+    }
+  ],
+  "rank": 40
+}

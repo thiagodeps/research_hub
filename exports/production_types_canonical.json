@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "trabalhos_tecnicos",
+        "campus": null
+    },
+    {
+        "id": 2,
+        "name": "outras_producoes_tecnicas",
+        "campus": null
+    },
+    {
+        "id": 3,
+        "name": "softwares_sem_patente",
+        "campus": null
+    },
+    {
+        "id": 4,
+        "name": "entrevistas",
+        "campus": null
+    },
+    {
+        "id": 5,
+        "name": "produtos_tecnologicos",
+        "campus": null
+    },
+    {
+        "id": 6,
+        "name": "processos_tecnicas",
+        "campus": null
+    }
+]

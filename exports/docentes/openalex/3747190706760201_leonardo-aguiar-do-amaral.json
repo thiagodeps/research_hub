@@ -1,0 +1,52 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Leonardo Aguiar do Amaral",
+  "lattes_id": "3747190706760201",
+  "artigos_com_doi": 1,
+  "encontrados_openalex": 1,
+  "citacoes_total": 1,
+  "h_index": 1,
+  "g_index": 1,
+  "m_index": 0.2,
+  "idade_academica": 5,
+  "citacoes_por_artigo": 1.0,
+  "citacoes_mediana": 1,
+  "artigos_fracionados": 0.5,
+  "citacoes_fracionadas": 0.5,
+  "i10": 0,
+  "mais_citado": 1,
+  "fwci_medio": 0.12,
+  "fwci_mediana": 0.12,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 1,
+  "momentum_pct": 100,
+  "citacoes_por_ano": {
+    "2024": 1
+  },
+  "artigo_ascensao": {
+    "titulo": "Kleinberg’s Navigation in Fractal Small-World Networks by Dynamic Rejection Sampling",
+    "ano": 2021,
+    "recent_2a": 1,
+    "citacoes": 1,
+    "share_recente_pct": 100,
+    "fwci": 0.1175,
+    "doi": "10.1007/s13538-021-00995-4"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Kleinberg’s Navigation in Fractal Small-World Networks by Dynamic Rejection Sampling",
+      "ano": 2021,
+      "citacoes": 1,
+      "fwci": 0.1175,
+      "percentil": 90,
+      "recent_2a": 1,
+      "doi": "10.1007/s13538-021-00995-4"
+    }
+  ],
+  "rank": 57
+}

@@ -1,0 +1,105 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Gabriel Tozatto Zago",
+  "lattes_id": "8771088249434104",
+  "artigos_com_doi": 6,
+  "encontrados_openalex": 6,
+  "citacoes_total": 451,
+  "h_index": 5,
+  "g_index": 6,
+  "m_index": 0.45,
+  "idade_academica": 11,
+  "citacoes_por_artigo": 75.2,
+  "citacoes_mediana": 40.5,
+  "artigos_fracionados": 1.48,
+  "citacoes_fracionadas": 112.0,
+  "i10": 4,
+  "mais_citado": 252,
+  "fwci_medio": 4.98,
+  "fwci_mediana": 2.46,
+  "fwci_antigo": 7.64,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 3,
+  "artigos_top1pct": 2,
+  "citacoes_recentes_2a": 162,
+  "momentum_pct": 36,
+  "citacoes_por_ano": {
+    "2018": 5,
+    "2019": 12,
+    "2020": 31,
+    "2021": 76,
+    "2022": 94,
+    "2023": 71,
+    "2024": 81,
+    "2025": 58,
+    "2026": 23
+  },
+  "artigo_ascensao": {
+    "titulo": "Diabetic retinopathy detection using red lesion localization and convolutional neural networks",
+    "ano": 2019,
+    "recent_2a": 87,
+    "citacoes": 252,
+    "share_recente_pct": 35,
+    "fwci": 17.1212,
+    "doi": "10.1016/j.compbiomed.2019.103537"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Diabetic retinopathy detection using red lesion localization and convolutional neural netw",
+      "ano": 2019,
+      "citacoes": 252,
+      "fwci": 17.1212,
+      "percentil": 99,
+      "recent_2a": 87,
+      "doi": "10.1016/j.compbiomed.2019.103537"
+    },
+    {
+      "titulo": "Retinal image quality assessment using deep learning",
+      "ano": 2018,
+      "citacoes": 109,
+      "fwci": 7.6373,
+      "percentil": 99,
+      "recent_2a": 28,
+      "doi": "10.1016/j.compbiomed.2018.10.004"
+    },
+    {
+      "titulo": "Forecasting vehicular traffic flow using MLP and LSTM",
+      "ano": 2021,
+      "citacoes": 53,
+      "fwci": 3.2728,
+      "percentil": 89,
+      "recent_2a": 37,
+      "doi": "10.1007/s00521-021-06315-w"
+    },
+    {
+      "titulo": "Heartbeat classification system based on neural networks and dimensionality reduction",
+      "ano": 2017,
+      "citacoes": 28,
+      "fwci": 1.6392,
+      "percentil": 94,
+      "recent_2a": 8,
+      "doi": "10.1590/2446-4740.05815"
+    },
+    {
+      "titulo": "ECG-based detection of left ventricle hypertrophy",
+      "ano": 2015,
+      "citacoes": 9,
+      "fwci": 0.2002,
+      "percentil": 89,
+      "recent_2a": 2,
+      "doi": "10.1590/2446-4740.0691"
+    },
+    {
+      "titulo": "UTILIZAÇÃO DO MÉTODO DA DECOMPOSIÇÃO DE MODO EMPÍRICO PARA A REMOÇÃO DE RUÍDO EM SINAIS DE",
+      "ano": 2015,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.36524/ric.v1i1.247"
+    }
+  ],
+  "rank": 3
+}

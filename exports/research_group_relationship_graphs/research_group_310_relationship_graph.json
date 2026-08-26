@@ -1,0 +1,111 @@
+{
+    "metadata": {
+        "generated_at": "2026-08-26T13:14:58.120044+00:00",
+        "sources": {
+            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
+        },
+        "scope": {
+            "type": "research_group",
+            "research_group": {
+                "id": 310,
+                "name": "Programmable and Intelligent NetworkinG",
+                "short_name": "PING",
+                "member_count": 1,
+                "expanded_node_count": 2,
+                "advisorship_neighbor_count": 1
+            }
+        },
+        "weight_definition": "Each edge weight equals the total number of relationship evidences between two people. Every shared initiative, shared research group, and advisorship adds 1 to the edge weight.",
+        "relation_types": {
+            "initiative": "People who appear together in the same initiative team.",
+            "research_group": "People who belong to the same research group.",
+            "advisorship": "Supervisor and student connected by an advisorship."
+        }
+    },
+    "graph_stats": {
+        "nodes": 2,
+        "edges": 1,
+        "isolated_nodes": 0,
+        "connected_components": 1,
+        "largest_component_size": 2,
+        "relation_event_totals": {
+            "initiative": 2,
+            "research_group": 0,
+            "advisorship": 1
+        },
+        "edge_relation_presence": {
+            "initiative": 1,
+            "research_group": 0,
+            "advisorship": 1
+        },
+        "classification_distribution": {
+            "researcher": 2
+        },
+        "top_people_by_weighted_degree": [
+            {
+                "id": 266,
+                "name": "Cristina Klippel Dominicini",
+                "classification": "researcher",
+                "weighted_degree": 3,
+                "degree": 1
+            },
+            {
+                "id": 418,
+                "name": "Everson Scherrer Borges",
+                "classification": "researcher",
+                "weighted_degree": 3,
+                "degree": 1
+            }
+        ]
+    },
+    "graph": {
+        "directed": false,
+        "multigraph": false,
+        "graph": {},
+        "nodes": [
+            {
+                "name": "Everson Scherrer Borges",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": true,
+                "was_staff": true,
+                "campus_name": "Cachoeiro de Itapemirim",
+                "degree": 1,
+                "weighted_degree": 3,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 418
+            },
+            {
+                "name": "Cristina Klippel Dominicini",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": true,
+                "was_staff": true,
+                "campus_name": "Serra",
+                "degree": 1,
+                "weighted_degree": 3,
+                "is_group_member": false,
+                "is_advisorship_neighbor": true,
+                "id": 266
+            }
+        ],
+        "edges": [
+            {
+                "weight": 3,
+                "initiative_count": 2,
+                "research_group_count": 0,
+                "advisorship_count": 1,
+                "relation_types": [
+                    "initiative",
+                    "advisorship"
+                ],
+                "source": 418,
+                "target": 266
+            }
+        ]
+    }
+}

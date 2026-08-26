@@ -1,0 +1,78 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Kelly Assis de Souza Gazolli",
+  "lattes_id": "0343732414150447",
+  "artigos_com_doi": 3,
+  "encontrados_openalex": 3,
+  "citacoes_total": 40,
+  "h_index": 2,
+  "g_index": 3,
+  "m_index": 0.17,
+  "idade_academica": 12,
+  "citacoes_por_artigo": 13.3,
+  "citacoes_mediana": 8,
+  "artigos_fracionados": 1.0,
+  "citacoes_fracionadas": 14.7,
+  "i10": 1,
+  "mais_citado": 32,
+  "fwci_medio": 1.74,
+  "fwci_mediana": 1.07,
+  "fwci_antigo": null,
+  "fwci_recente": 2.07,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 32,
+  "momentum_pct": 80,
+  "citacoes_por_ano": {
+    "2015": 2,
+    "2016": 1,
+    "2017": 1,
+    "2019": 2,
+    "2020": 1,
+    "2022": 1,
+    "2024": 7,
+    "2025": 8,
+    "2026": 17
+  },
+  "artigo_ascensao": {
+    "titulo": "Anomaly detection in oil-producing wells: a comparative study of one-class classifiers in a multivariate time series dat",
+    "ano": 2023,
+    "recent_2a": 32,
+    "citacoes": 32,
+    "share_recente_pct": 100,
+    "fwci": 4.136,
+    "doi": "10.1007/s13202-023-01710-6"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Anomaly detection in oil-producing wells: a comparative study of one-class classifiers in ",
+      "ano": 2023,
+      "citacoes": 32,
+      "fwci": 4.136,
+      "percentil": 98,
+      "recent_2a": 32,
+      "doi": "10.1007/s13202-023-01710-6"
+    },
+    {
+      "titulo": "Exploring neighborhood and spatial information for improving scene classification",
+      "ano": 2014,
+      "citacoes": 8,
+      "fwci": 1.0746,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1016/j.patrec.2014.05.009"
+    },
+    {
+      "titulo": "INTERESSE DOS INTERNAUTAS EM PORTAIS DE NOTÍCIAS BRASILEIROS ENTRE 2017 E 2018",
+      "ano": 2023,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.54751/revistafoco.v16n4-058"
+    }
+  ],
+  "rank": 36
+}

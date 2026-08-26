@@ -1,0 +1,124 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Maxwell Eduardo Monteiro",
+  "lattes_id": "8831352516689445",
+  "artigos_com_doi": 10,
+  "encontrados_openalex": 10,
+  "citacoes_total": 92,
+  "h_index": 5,
+  "g_index": 9,
+  "m_index": 0.31,
+  "idade_academica": 16,
+  "citacoes_por_artigo": 9.2,
+  "citacoes_mediana": 5.0,
+  "artigos_fracionados": 2.0,
+  "citacoes_fracionadas": 14.0,
+  "i10": 4,
+  "mais_citado": 28,
+  "fwci_medio": 3.1,
+  "fwci_mediana": 0.95,
+  "fwci_antigo": 0.55,
+  "fwci_recente": 1.69,
+  "fwci_delta": 1.14,
+  "artigos_top10pct": 7,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 62,
+  "momentum_pct": 67,
+  "citacoes_por_ano": {
+    "2012": 1,
+    "2015": 1,
+    "2019": 4,
+    "2020": 4,
+    "2021": 3,
+    "2022": 4,
+    "2023": 12,
+    "2024": 16,
+    "2025": 24,
+    "2026": 22
+  },
+  "artigo_ascensao": {
+    "titulo": "A fabric-based soft hand exoskeleton for assistance: the ExHand Exoskeleton",
+    "ano": 2023,
+    "recent_2a": 26,
+    "citacoes": 28,
+    "share_recente_pct": 93,
+    "fwci": 2.2402,
+    "doi": "10.3389/fnbot.2023.1091827"
+  },
+  "top_artigos": [
+    {
+      "titulo": "A fabric-based soft hand exoskeleton for assistance: the ExHand Exoskeleton",
+      "ano": 2023,
+      "citacoes": 28,
+      "fwci": 2.2402,
+      "percentil": 94,
+      "recent_2a": 26,
+      "doi": "10.3389/fnbot.2023.1091827"
+    },
+    {
+      "titulo": "Integrated Photonic Neural Networks for Equalizing Optical Communication Signals: A Review",
+      "ano": 2025,
+      "citacoes": 17,
+      "fwci": 19.3285,
+      "percentil": 98,
+      "recent_2a": 17,
+      "doi": "10.3390/photonics12010039"
+    },
+    {
+      "titulo": "Soft-Sensor System for Grasp Type Recognition in Underactuated Hand Prostheses",
+      "ano": 2023,
+      "citacoes": 14,
+      "fwci": 1.1319,
+      "percentil": 97,
+      "recent_2a": 10,
+      "doi": "10.3390/s23073364"
+    },
+    {
+      "titulo": "Optimizing C-RAN Backhaul Topologies: A Resilience-Oriented Approach Using Graph Invariant",
+      "ano": 2019,
+      "citacoes": 12,
+      "fwci": 0.9299,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.3390/app9010136"
+    },
+    {
+      "titulo": "Aplicativo SARA para tratamento de pessoas com tuberculose: estudo metodológico",
+      "ano": 2023,
+      "citacoes": 6,
+      "fwci": 4.9256,
+      "percentil": 94,
+      "recent_2a": 3,
+      "doi": "10.37689/acta-ape/2023ao03391"
+    },
+    {
+      "titulo": "A goal-oriented framework for ontology reuse",
+      "ano": 2022,
+      "citacoes": 4,
+      "fwci": 0.3732,
+      "percentil": 89,
+      "recent_2a": 3,
+      "doi": "10.3233/ao-220269"
+    },
+    {
+      "titulo": "An extended software defined optical networks slicing architecture",
+      "ano": 2020,
+      "citacoes": 4,
+      "fwci": 0.5532,
+      "percentil": 93,
+      "recent_2a": 0,
+      "doi": "10.1016/j.csi.2020.103428"
+    },
+    {
+      "titulo": "ONTOLOGY BASED MODEL FOR THE ITU-T RECOMMENDATION G.805: TOWARDS THE SELF-MANAGEMENT OF TR",
+      "ano": 2010,
+      "citacoes": 3,
+      "fwci": 0.9796,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.5121/ijcsit.2010.2213"
+    }
+  ],
+  "rank": 20
+}

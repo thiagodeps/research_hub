@@ -1,0 +1,45 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Bruno Cardoso Coutinho",
+  "lattes_id": "8843799612871667",
+  "artigos_com_doi": 1,
+  "encontrados_openalex": 1,
+  "citacoes_total": 3,
+  "h_index": 1,
+  "g_index": 1,
+  "m_index": 0.1,
+  "idade_academica": 10,
+  "citacoes_por_artigo": 3.0,
+  "citacoes_mediana": 3,
+  "artigos_fracionados": 0.2,
+  "citacoes_fracionadas": 0.6,
+  "i10": 0,
+  "mais_citado": 3,
+  "fwci_medio": 0.44,
+  "fwci_mediana": 0.44,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 0,
+  "momentum_pct": 0,
+  "citacoes_por_ano": {
+    "2018": 1,
+    "2019": 2
+  },
+  "artigo_ascensao": null,
+  "top_artigos": [
+    {
+      "titulo": "A Multilayer Approach for Optical Network Planning",
+      "ano": 2016,
+      "citacoes": 3,
+      "fwci": 0.4397,
+      "percentil": 90,
+      "recent_2a": 0,
+      "doi": "10.1590/2179-10742016v15i1548"
+    }
+  ],
+  "rank": 52
+}

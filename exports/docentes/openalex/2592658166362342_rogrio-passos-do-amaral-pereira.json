@@ -1,0 +1,120 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Rogério Passos do Amaral Pereira",
+  "lattes_id": "2592658166362342",
+  "artigos_com_doi": 8,
+  "encontrados_openalex": 8,
+  "citacoes_total": 17,
+  "h_index": 2,
+  "g_index": 4,
+  "m_index": 0.25,
+  "idade_academica": 8,
+  "citacoes_por_artigo": 2.1,
+  "citacoes_mediana": 0.5,
+  "artigos_fracionados": 1.12,
+  "citacoes_fracionadas": 2.3,
+  "i10": 1,
+  "mais_citado": 10,
+  "fwci_medio": 0.22,
+  "fwci_mediana": 0.05,
+  "fwci_antigo": null,
+  "fwci_recente": 0.0,
+  "fwci_delta": null,
+  "artigos_top10pct": 4,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 11,
+  "momentum_pct": 65,
+  "citacoes_por_ano": {
+    "2019": 1,
+    "2022": 2,
+    "2023": 3,
+    "2024": 6,
+    "2025": 4,
+    "2026": 1
+  },
+  "artigo_ascensao": {
+    "titulo": "Self-tuning regulatory controller of cyclical disturbances using data-driven frequency estimator based on fuzzy logic",
+    "ano": 2023,
+    "recent_2a": 5,
+    "citacoes": 5,
+    "share_recente_pct": 100,
+    "fwci": 0.5721,
+    "doi": "10.1016/j.engappai.2023.106987"
+  },
+  "top_artigos": [
+    {
+      "titulo": "A Model-Based Predictive Controller of the Level of Steel in the Mold with Disturbances Us",
+      "ano": 2021,
+      "citacoes": 10,
+      "fwci": 0.9878,
+      "percentil": 91,
+      "recent_2a": 5,
+      "doi": "10.3390/met11091458"
+    },
+    {
+      "titulo": "Self-tuning regulatory controller of cyclical disturbances using data-driven frequency est",
+      "ano": 2023,
+      "citacoes": 5,
+      "fwci": 0.5721,
+      "percentil": 94,
+      "recent_2a": 5,
+      "doi": "10.1016/j.engappai.2023.106987"
+    },
+    {
+      "titulo": "RETRACTED: Online tuning of generalized predictive controllers using fuzzy logic",
+      "ano": 2022,
+      "citacoes": 1,
+      "fwci": 0.0992,
+      "percentil": 91,
+      "recent_2a": 1,
+      "doi": "10.3233/jifs-212322"
+    },
+    {
+      "titulo": "Controle de nível por aquisição de imagem numa planta didática / Control of level by image",
+      "ano": 2018,
+      "citacoes": 1,
+      "fwci": 0.1207,
+      "percentil": 90,
+      "recent_2a": 0,
+      "doi": "10.34115/basr.v2i1.376"
+    },
+    {
+      "titulo": "SRcdFuzzy: Software for simulating adaptive regulatory controllers of cyclical disturbance",
+      "ano": 2024,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.1016/j.simpa.2024.100672"
+    },
+    {
+      "titulo": "Algoritmos de navegação de robôs móveis com tração nas quatro rodas utilizando sistemas de",
+      "ano": 2023,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.53660/255.prw414b"
+    },
+    {
+      "titulo": "Construção de robô 4WD para navegação indoor utilizando ROS 2",
+      "ano": 2023,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.53660/254.prw414a"
+    },
+    {
+      "titulo": "Auto-localização de uma cadeira de rodas motorizada utilizando fusão sensorial da odometri",
+      "ano": 2022,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.34117/bjdv8n9-091"
+    }
+  ],
+  "rank": 47
+}

@@ -1,0 +1,118 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Emmanuel Marques Silva",
+  "lattes_id": "8050663713027392",
+  "artigos_com_doi": 12,
+  "encontrados_openalex": 12,
+  "citacoes_total": 45,
+  "h_index": 1,
+  "g_index": 6,
+  "m_index": 0.12,
+  "idade_academica": 8,
+  "citacoes_por_artigo": 3.8,
+  "citacoes_mediana": 0.0,
+  "artigos_fracionados": 3.9,
+  "citacoes_fracionadas": 14.8,
+  "i10": 1,
+  "mais_citado": 42,
+  "fwci_medio": 0.29,
+  "fwci_mediana": 0.0,
+  "fwci_antigo": null,
+  "fwci_recente": 0.0,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 42,
+  "momentum_pct": 93,
+  "citacoes_por_ano": {
+    "2023": 3,
+    "2024": 12,
+    "2025": 17,
+    "2026": 13
+  },
+  "artigo_ascensao": {
+    "titulo": "Mental Accounting and decision making: a systematic literature review",
+    "ano": 2023,
+    "recent_2a": 41,
+    "citacoes": 42,
+    "share_recente_pct": 98,
+    "fwci": 2.184,
+    "doi": "10.1016/j.socec.2023.102092"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Mental Accounting and decision making: a systematic literature review",
+      "ano": 2023,
+      "citacoes": 42,
+      "fwci": 2.184,
+      "percentil": 89,
+      "recent_2a": 41,
+      "doi": "10.1016/j.socec.2023.102092"
+    },
+    {
+      "titulo": "Impact of Tax Policies on Foreign Direct Investment: A Decade of Bibliometric Analysis and",
+      "ano": 2024,
+      "citacoes": 1,
+      "fwci": 0.2221,
+      "percentil": 91,
+      "recent_2a": 1,
+      "doi": "10.1080/10978526.2024.2421539"
+    },
+    {
+      "titulo": "Determinantes da temporalidade dos processos administrativos de imposto de renda de grande",
+      "ano": 2023,
+      "citacoes": 1,
+      "fwci": 0.8209,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.5007/2175-8069.2023.e93728"
+    },
+    {
+      "titulo": "Imposto de renda e previdência privada: benefícios fiscais e tributação regressiva",
+      "ano": 2023,
+      "citacoes": 1,
+      "fwci": 0.3091,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.5007/2175-8077.2022.e79488"
+    },
+    {
+      "titulo": "Cognitive Biases and Consumer Debt Behavior: A Systematic Literature Review",
+      "ano": 2026,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.1891/jfcp-2024-0094"
+    },
+    {
+      "titulo": "Ciclos políticos e desempenho dos bancos: uma revisão sistemática da literatura",
+      "ano": 2025,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.4025/enfoque.v44i3.68808"
+    },
+    {
+      "titulo": "Inflação: uma análise da relação entre a variação do valor da cesta básica de alimentos e ",
+      "ano": 2025,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.38116/ppe55n2art5"
+    },
+    {
+      "titulo": "Escala FK4BR",
+      "ano": 2025,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.12660/rbfin.v23n1.2025.94817"
+    }
+  ],
+  "rank": 35
+}

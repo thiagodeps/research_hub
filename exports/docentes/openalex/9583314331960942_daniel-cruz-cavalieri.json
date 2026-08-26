@@ -1,0 +1,128 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Daniel Cruz Cavalieri",
+  "lattes_id": "9583314331960942",
+  "artigos_com_doi": 14,
+  "encontrados_openalex": 14,
+  "citacoes_total": 148,
+  "h_index": 6,
+  "g_index": 12,
+  "m_index": 0.4,
+  "idade_academica": 15,
+  "citacoes_por_artigo": 10.6,
+  "citacoes_mediana": 5.0,
+  "artigos_fracionados": 2.99,
+  "citacoes_fracionadas": 25.3,
+  "i10": 5,
+  "mais_citado": 77,
+  "fwci_medio": 2.42,
+  "fwci_mediana": 1.25,
+  "fwci_antigo": 1.25,
+  "fwci_recente": 1.56,
+  "fwci_delta": 0.31,
+  "artigos_top10pct": 5,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 42,
+  "momentum_pct": 28,
+  "citacoes_por_ano": {
+    "2013": 2,
+    "2014": 4,
+    "2015": 8,
+    "2016": 8,
+    "2017": 8,
+    "2018": 10,
+    "2019": 18,
+    "2020": 7,
+    "2021": 16,
+    "2022": 11,
+    "2023": 13,
+    "2024": 10,
+    "2025": 27,
+    "2026": 5
+  },
+  "artigo_ascensao": {
+    "titulo": "Efficient monitoring of longitudinal tears in conveyor belts using 2D laser scanner and statistical methods",
+    "ano": 2024,
+    "recent_2a": 12,
+    "citacoes": 12,
+    "share_recente_pct": 100,
+    "fwci": 1.6573,
+    "doi": "10.1016/j.measurement.2024.114225"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Towards a New Modality-Independent Interface for a Robotic Wheelchair",
+      "ano": 2013,
+      "citacoes": 77,
+      "fwci": 7.69,
+      "percentil": 94,
+      "recent_2a": 8,
+      "doi": "10.1109/tnsre.2013.2265237"
+    },
+    {
+      "titulo": "Combination of Language Models for Word Prediction: An Exponential Approach",
+      "ano": 2016,
+      "citacoes": 14,
+      "fwci": 3.7821,
+      "percentil": 89,
+      "recent_2a": 3,
+      "doi": "10.1109/taslp.2016.2547743"
+    },
+    {
+      "titulo": "Efficient monitoring of longitudinal tears in conveyor belts using 2D laser scanner and st",
+      "ano": 2024,
+      "citacoes": 12,
+      "fwci": 1.6573,
+      "percentil": 90,
+      "recent_2a": 12,
+      "doi": "10.1016/j.measurement.2024.114225"
+    },
+    {
+      "titulo": "Estimation and prediction of motor load torque applied to electrical submersible pumps",
+      "ano": 2018,
+      "citacoes": 12,
+      "fwci": 1.2327,
+      "percentil": 89,
+      "recent_2a": 2,
+      "doi": "10.1016/j.conengprac.2018.11.019"
+    },
+    {
+      "titulo": "Predicting diabetic retinopathy stage using Siamese Convolutional Neural Network",
+      "ano": 2024,
+      "citacoes": 10,
+      "fwci": 2.5586,
+      "percentil": 94,
+      "recent_2a": 10,
+      "doi": "10.1080/21681163.2023.2297017"
+    },
+    {
+      "titulo": "Novelty Detection in Social Media by Fusing Text and Image Into a Single Structure",
+      "ano": 2019,
+      "citacoes": 9,
+      "fwci": 1.2735,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1109/access.2019.2939736"
+    },
+    {
+      "titulo": "Surface-Enhanced Raman Scattering Combined with Machine Learning for Rapid and Sensitive D",
+      "ano": 2024,
+      "citacoes": 5,
+      "fwci": 1.4588,
+      "percentil": 97,
+      "recent_2a": 5,
+      "doi": "10.3390/bios14110523"
+    },
+    {
+      "titulo": "Controlling Devices Using Biological Signals",
+      "ano": 2011,
+      "citacoes": 5,
+      "fwci": 0.2563,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.5772/10665"
+    }
+  ],
+  "rank": 13
+}

@@ -1,0 +1,2071 @@
+[
+    {
+        "projects": [
+            {
+                "id": 84,
+                "name": "Pré-classificação de Base de Dados Multibiométricos de Grande Escala baseado em Medidas Biométricas Leves e Não-invasivas",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 6
+            },
+            {
+                "id": 86,
+                "name": "Desenvolvimento de uma cadeira de rodas autônoma – Fase 2.",
+                "campus": null,
+                "total_students": 13,
+                "active_students": 0,
+                "monthly_investment": 4000.0,
+                "main_program": "PIBITI",
+                "team_size": 4
+            },
+            {
+                "id": 88,
+                "name": "Implementação de uma Plataforma Didática para Simulação, Análise e Controle de uma Coluna de Destilação",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 3
+            },
+            {
+                "id": 91,
+                "name": "Desenvolvimento de um sistema de monitoramento remoto do nível de um rio e alerta de transbordamentos para populações em risco",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 4
+            },
+            {
+                "id": 93,
+                "name": "Desenvolvimento de uma plataforma de aquisição de sinais cerebrais para projetos orientados a robótica",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 4
+            },
+            {
+                "id": 99,
+                "name": "Instrumentação e desenvolvimento de controladores avançados do nível do molde do lingotamento contínuo numa planta piloto",
+                "campus": null,
+                "total_students": 10,
+                "active_students": 0,
+                "monthly_investment": 3200.0,
+                "main_program": "PIBITI",
+                "team_size": 3
+            },
+            {
+                "id": 106,
+                "name": "Eleições municipais de Montanha/ES: um microcosmo da política nacional?",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 300.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 1
+            },
+            {
+                "id": 110,
+                "name": "EXPERIMENTOS DIDÁTICOS EM FÍSICA COM O USO DO MICROCONTROLADOR ARDUINO",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 2
+            },
+            {
+                "id": 115,
+                "name": "Apoio Computacional Inteligente à Gestão Estratégica de Instituições de Ensino Técnico e Tecnológico",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 1200.0,
+                "main_program": "PIBIC",
+                "team_size": 10
+            },
+            {
+                "id": 123,
+                "name": "Modelagem e Apoio a Processos de Negócio",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 4
+            },
+            {
+                "id": 125,
+                "name": "Sistema de Mapeamento de Tartarugas Marinhas",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 127,
+                "name": "Desenvolvimento de uma cadeira de rodas autônoma.",
+                "campus": null,
+                "total_students": 7,
+                "active_students": 0,
+                "monthly_investment": 1400.0,
+                "main_program": "PIVIC",
+                "team_size": 4
+            },
+            {
+                "id": 129,
+                "name": "Desenvolvimento de uma cadeira de rodas autônoma - CNPQ 17",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-EM",
+                "team_size": 4
+            },
+            {
+                "id": 132,
+                "name": "Otimização do Pátio de manobras da Companhia Vale do Rio Doce",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBITI",
+                "team_size": 3
+            },
+            {
+                "id": 136,
+                "name": "Robô móvel para vigilância em ambiente internos.",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 500.0,
+                "main_program": "PIBIC-EM",
+                "team_size": 2
+            },
+            {
+                "id": 142,
+                "name": "Aplicações do sensor Kinect em mapeamento tridimensional de superfícies",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBITI",
+                "team_size": 6
+            },
+            {
+                "id": 145,
+                "name": "Ciência dos materiais aplicada à construção de dispositivos eletrônicos em engenharia",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 1200.0,
+                "main_program": "PIBIC",
+                "team_size": 4
+            },
+            {
+                "id": 151,
+                "name": "Desenvolvimento de Experimentos Replicáveis e de Baixo Custo para o Ensino da Robótica",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 2
+            },
+            {
+                "id": 154,
+                "name": "Estudo de micro geração e sustentabilidade energética residencial",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 2
+            },
+            {
+                "id": 158,
+                "name": "O uso racional da água na cultura do café: uma abordagem utilizando a tecnologia de redes de sensores no processo de irrigação.",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 5
+            },
+            {
+                "id": 160,
+                "name": "Mídias impressas e esfera pública: estudo de caso do jornalismo político praticado em Montanha/ES.",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-EM",
+                "team_size": 1
+            },
+            {
+                "id": 164,
+                "name": "Proposta de assistente virtual inteligente no apoio ao discente do IFES em relação às rotinas acadêmicas",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVITI",
+                "team_size": 3
+            },
+            {
+                "id": 166,
+                "name": "Construção de sensores utilizando nanotecnologia",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIVIC",
+                "team_size": 5
+            },
+            {
+                "id": 169,
+                "name": "Sistema de monitoramento de temperatura para preparação de caixas de transporte de órgão",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 4
+            },
+            {
+                "id": 173,
+                "name": "Análise e Aplicação de Modelos de Referência para Internet das Coisas - Parte 2 (2017-2018).",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 2
+            },
+            {
+                "id": 175,
+                "name": "EXPERIMENTOS SONOROS E ACÚSTICOS EM FÍSICA COM O AUXILIO DO ARDUÍNO",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 3
+            },
+            {
+                "id": 179,
+                "name": "Diagnóstico de Patologias Cardíacas Aplicando Técnicas de Reconhecimento de Padrões.",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 3
+            },
+            {
+                "id": 183,
+                "name": "Desenvolvimento de uma interface gráfica para utilização do método NERI, para priorização gênica por importância relativa em redes complexas",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 186,
+                "name": "Uma radiografia dos conflitos sociais ocorridos no ES entre 2015 e 2018",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 1
+            },
+            {
+                "id": 190,
+                "name": "Cooperação Entre um Robô Aéreo e um Robô Terrestre Aplicados a Vigilância",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVITI",
+                "team_size": 5
+            },
+            {
+                "id": 197,
+                "name": "Sistema de detecção e desvio de obstáculos para auxilio a pessoas com deficiência visual baseado em sensor Kinect",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBITI",
+                "team_size": 2
+            },
+            {
+                "id": 199,
+                "name": "Controle e Instrumentação de um robô móvel de grande porte para auxilio na construção de navios",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBITI",
+                "team_size": 2
+            },
+            {
+                "id": 202,
+                "name": "Métodos para Classificação do Café por Visão Computacional",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 1600.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 205,
+                "name": "Avaliação semântica de elementos de estratégia e incorporação de planos estratégicos em ArchiMate",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 1
+            },
+            {
+                "id": 208,
+                "name": "Implementação de modelos de otimização para o problema de colheira florestal",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 210,
+                "name": "Monitoramento de emissões das chaminés do Complexo Tubarão por Processamento Digital de Imagens",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 3
+            },
+            {
+                "id": 213,
+                "name": "Estudo de viabilidade para desenvolvimento de ambiente experimental baseado em WebServices para ensino de tecnologias de controle e instrumentação de processos para a Indústria 4.0.",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 6
+            },
+            {
+                "id": 216,
+                "name": "Cleber Maciel e a história da cultura afro-capixaba",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 300.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 4
+            },
+            {
+                "id": 220,
+                "name": "Avaliação do processo de corrosão metálica em estruturas de concreto armado",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 1
+            },
+            {
+                "id": 222,
+                "name": "Implementação de modelos de otimização para projetos de redes ópticas",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 1200.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 224,
+                "name": "Tecnologia Vestível Para Alerta e Vigilância de Atmosfera Perigosa",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 100.0,
+                "main_program": "PIVITI",
+                "team_size": 10
+            },
+            {
+                "id": 227,
+                "name": "As eleições estaduais no Espírito Santo em contexto de crise político-econômica",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 3
+            },
+            {
+                "id": 231,
+                "name": "Cadeira de Rodas Inteligente",
+                "campus": null,
+                "total_students": 11,
+                "active_students": 0,
+                "monthly_investment": 3200.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 234,
+                "name": "Desenvolvimento de um sistema de navegação inercial para robôs móveis utilizando o filtro de Kalman.",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 2
+            },
+            {
+                "id": 236,
+                "name": "Controle de Uma Mão Robótica a Partir de Sinais de Eletromiografia de Superfície (sEMG)",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 3
+            },
+            {
+                "id": 244,
+                "name": "Controle da Navegação de Uma Cadeira de Rodas Robotizada Dentro de Um Ambiente Controlado Usando Visão Computacional",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 2
+            },
+            {
+                "id": 253,
+                "name": "Super-resolução e identificação de placas de veículos em vídeos com baixa qualidade",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 5
+            },
+            {
+                "id": 256,
+                "name": "Construção de Experimentos de Física Automatizados",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 5
+            },
+            {
+                "id": 258,
+                "name": "Desenvolvimento de protótipos robóticos inteligentes para análise mineralógico, testes de queda e compressão",
+                "campus": null,
+                "total_students": 10,
+                "active_students": 0,
+                "monthly_investment": 3200.0,
+                "main_program": "PIBITI",
+                "team_size": 10
+            },
+            {
+                "id": 260,
+                "name": "Sensoriamento e Automação do Disco de Pelotamento",
+                "campus": null,
+                "total_students": 16,
+                "active_students": 0,
+                "monthly_investment": 5600.0,
+                "main_program": "PIBITI",
+                "team_size": 3
+            },
+            {
+                "id": 263,
+                "name": "Modelagem Conceitual e Sistema para predição de transtornos mentais comuns na atenção primária a saúde",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 268,
+                "name": "Levantamento de bases de dados com sinais periódicos extraídos de sistemas físicos reais",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 5
+            },
+            {
+                "id": 277,
+                "name": "Observatório Automático de Egressos do Ifes via Redes Sociais",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 279,
+                "name": "TalkToMe – Uma plataforma baseada em Reconhecimento Automático da Fala e Aprendizado Profundo para Controle de Veículos Autônomos",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 283,
+                "name": "Desenvolvimento de uma Bancada Didática de Baixo Custo para o Controle de Nível e Temperatura de uma Planta em Escala Reduzida",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 367,
+                "name": "Análise de opiniões em Tweets sobre a Pandemia COVID-19",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 4
+            },
+            {
+                "id": 285,
+                "name": "Análise de Sentimentos em Tweets sobre a Pandemia COVID-19",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 100.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 3
+            },
+            {
+                "id": 288,
+                "name": "Reestruturação II e Modernização do Laboratório de Ensino de Matemática - LEM",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 4
+            },
+            {
+                "id": 290,
+                "name": "Aprimoramento de assistente virtual inteligente para a solução de dúvidas dos estudantes em relação às rotinas acadêmicas",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 100.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 1
+            },
+            {
+                "id": 292,
+                "name": "Aplicação de Métodos de Otimização a Problema existentes no Parque Industrial da Região Metropolitana de Vitória",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 6
+            },
+            {
+                "id": 296,
+                "name": "Mini Casa Sustentável e Inteligente",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 8
+            },
+            {
+                "id": 301,
+                "name": "Interfaces Homem-Robô Não Convencionais",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 303,
+                "name": "Propaganda política e fake news nas eleições municipais",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 3
+            },
+            {
+                "id": 306,
+                "name": "Construção de Robôs Móveis para Introdução à Pesquisa e Desenvolvimento do Aprendizado",
+                "campus": null,
+                "total_students": 9,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 11
+            },
+            {
+                "id": 317,
+                "name": "Otimização da produção de energia elétrica em um Sistema Fotovoltaico de 140 kWp do IFES – Campus Serra",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 3
+            },
+            {
+                "id": 319,
+                "name": "Uso de ciência de dados para predição de transtornos mentais comuns na atenção primária a saúde: Modelagem conceitual em ontologias e desenvolvimento de algoritmos",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 3
+            },
+            {
+                "id": 321,
+                "name": "Death Rate – Outbreak: Um jogo sério sobre propagação de pandemias",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 4
+            },
+            {
+                "id": 326,
+                "name": "Orquestração de serviços virtualizados em múltiplos domínios",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 5
+            },
+            {
+                "id": 332,
+                "name": "Controle de Vazão e Nível para uma Mini Casa Sustentável e Inteligente",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 5
+            },
+            {
+                "id": 336,
+                "name": "Desenvolvimento de um espectrofotômetro de baixo custo utilizando uma webcam.",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 338,
+                "name": "Otimização de assistente virtual para estudantes através do processamento de linguagem natural baseado em fontes textuais e entrevistas",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 340,
+                "name": "Controle e Monitoramento de um Portão de Garagem Inteligente baseado em Internet das Coisas (IoT)",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 6
+            },
+            {
+                "id": 342,
+                "name": "Mapeamento dos índices da (Des)Igualdade de Gênero por Unidade da Federação no Brasil",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 3
+            },
+            {
+                "id": 346,
+                "name": "Instrumentação de um Drone Restaurador Florestal de Tecnologia LoRa",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 5
+            },
+            {
+                "id": 350,
+                "name": "Classificação de pneumonia via radiografia de tórax",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 356,
+                "name": "Proposta de Bancada Didática para Instrumentação e Controle de Nível e Vazão",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 360,
+                "name": "Construção de Robôs Móveis de baixo custo para o ensino",
+                "campus": null,
+                "total_students": 6,
+                "active_students": 0,
+                "monthly_investment": 1600.0,
+                "main_program": "PIBIC",
+                "team_size": 6
+            },
+            {
+                "id": 362,
+                "name": "Uso de assistente virtual no atendimento nível 1 do Help Desk de um Departamento de TI",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 2
+            },
+            {
+                "id": 370,
+                "name": "Aplicação de Diferentes Algoritmos de Aprendizado Profundo para Classificação de Sinais Biológicos",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 375,
+                "name": "Processamento de linguagem natural aplicada na bibliometria automatizada",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 2
+            },
+            {
+                "id": 378,
+                "name": "Gerenciamento energético para microrredes",
+                "campus": null,
+                "total_students": 5,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIVIC",
+                "team_size": 3
+            },
+            {
+                "id": 382,
+                "name": "Predição, detecção e diagnóstico de falhas em mancais de rolamento de motores elétricos industriais.",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 3
+            },
+            {
+                "id": 387,
+                "name": "Uso do método OTA (Over-The-Air) para atualização remota de um robô móvel baseado em ESP32: uma abordagem em plataformas robóticas espaciais",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 1
+            },
+            {
+                "id": 389,
+                "name": "Segmentação de defeitos em tecidos por Redes Neurais Convolucionais",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 4
+            },
+            {
+                "id": 391,
+                "name": "Detecção Automática de Rachaduras em Concretos por Visão Computacional",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBITI",
+                "team_size": 4
+            },
+            {
+                "id": 6,
+                "name": "Cidades e Prédios Inteligentes 2.2",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 28
+            },
+            {
+                "id": 396,
+                "name": "Inclusão de Biografias de Pesquisadoras na Wikipedia",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 8
+            },
+            {
+                "id": 2,
+                "name": "Implantação de uma estação meteorológica automática para estudos de geração de energia e planejamento energético",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 4,
+                "active_students": 1,
+                "monthly_investment": 600.0,
+                "main_program": "PROPÓS",
+                "team_size": 31
+            },
+            {
+                "id": 401,
+                "name": "Classificação de arritmias e isquemias cardíacas a partir de exames de eletrocardiograma",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIVIC",
+                "team_size": 1
+            },
+            {
+                "id": 1,
+                "name": "A necessidade de metodologias e ferramentas adequadas para avaliação, desenvolvimento e validação de ideias no contexto dos habitats e ambientes de  inovação.",
+                "campus": null,
+                "total_students": 18,
+                "active_students": 0,
+                "monthly_investment": 2100.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 13
+            },
+            {
+                "id": 407,
+                "name": "Processo de Treinamento de Classificadores Visuais Utilizando Bases de Dados Reduzidas",
+                "campus": null,
+                "total_students": 7,
+                "active_students": 0,
+                "monthly_investment": 1500.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 410,
+                "name": "Propaganda política na era do algoritmo: estudo de caso das eleições de 2022",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 3
+            },
+            {
+                "id": 429,
+                "name": "Os dados do ENEM mapeados por município do Espírito Santo",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 431,
+                "name": "REPROVAÇÃO EM MASSA NO ENSINO SUPERIOR: ESTUDO DE CASO COM ESTUDANTES DE ENGENHARIA MECÂNICA",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 433,
+                "name": "Análise de transcrição musical automática do tipo piano roll por compositor",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC",
+                "team_size": 4
+            },
+            {
+                "id": 435,
+                "name": "Biometria de Blocos de Rochas Naturais",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 4
+            },
+            {
+                "id": 437,
+                "name": "Marcação e medição de blocos de rochas ornamentais por Visão Computacional",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 5
+            },
+            {
+                "id": 439,
+                "name": "Sistema automático de medição de empeno em placas de aço",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 6
+            },
+            {
+                "id": 441,
+                "name": "Painel Pericial de Substâncias Psicoativas do Espírito Santo - Paspes",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 12
+            },
+            {
+                "id": 445,
+                "name": "Um sistema de percepção sensorial tátil da força de preensão para garras robóticas",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 1
+            },
+            {
+                "id": 450,
+                "name": "Obtenção de Modelos de Processo de Negócios a Partir de Documentos Textuais usando Aprendizado Profundo e Recomendação.",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 7
+            },
+            {
+                "id": 452,
+                "name": "Machine learning e deep learning aplicados à detecção e ao diagnóstico de falhas em processos industriais.",
+                "campus": null,
+                "total_students": 5,
+                "active_students": 0,
+                "monthly_investment": 1900.0,
+                "main_program": "PIBIC",
+                "team_size": 5
+            },
+            {
+                "id": 5,
+                "name": "Uso de Inteligência Artificial para o Monitoramento do Estado de Correias Transportadoras",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 11,
+                "active_students": 3,
+                "monthly_investment": 4000.0,
+                "main_program": "PIBIC",
+                "team_size": 23
+            },
+            {
+                "id": 77,
+                "name": "Ações de Eficiência Energética associadas ao uso de Fontes Alternativas - Estudo de Caso do IFES/Campus Serra",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 28
+            },
+            {
+                "id": 472,
+                "name": "Kits Didáticos para Ensino de Modelagem de Sistemas Inteligentes",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 474,
+                "name": "Teleoperação de Robôs Manipuladores Kuka",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 100.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 2
+            },
+            {
+                "id": 477,
+                "name": "Sistema de recomendação baseado em Inteligência Computacional para manejo de culturas de morango infestadas por ácaros-rajados",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 1300.0,
+                "main_program": "PIBIC",
+                "team_size": 5
+            },
+            {
+                "id": 484,
+                "name": "Desenvolvimento de modelos de aulas baseados em metodologias ativas para o ensino de automação industrial utilizando tecnologias de um laboratório maker",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC",
+                "team_size": 3
+            },
+            {
+                "id": 487,
+                "name": "Desenvolvimento de um Scanner 3D utilizando Sensor de Perfil Laser",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 4
+            },
+            {
+                "id": 490,
+                "name": "Utilização de Inteligência Artificial para diagnóstico de doenças a partir de Imagens de OCT",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 5
+            },
+            {
+                "id": 493,
+                "name": "Tecnologia 3d No Ensino De Máquinas Elétricas: Modelagem E Impressão De Modelos Didáticos Para Melhorar O Processo De Ensino-Aprendizagem",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 4
+            },
+            {
+                "id": 497,
+                "name": "Beacon Visual: Um dispositivo eletrônico de apoio a pessoas com deficiência visual para localização dentro de um ambiente",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 1000.0,
+                "main_program": "PIBIC",
+                "team_size": 1
+            },
+            {
+                "id": 499,
+                "name": "Desenvolvimento de um Medidor de Desgaste de Furo de Lança de Convertedores LD",
+                "campus": null,
+                "total_students": 7,
+                "active_students": 0,
+                "monthly_investment": 2400.0,
+                "main_program": "PIBITI",
+                "team_size": 3
+            },
+            {
+                "id": 508,
+                "name": "“AIR WRITING” UTILIZANDO VISÃO COMPUTACIONAL E APRENDIZADO DE MÁQUINA",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 1200.0,
+                "main_program": "PIBIC",
+                "team_size": 4
+            },
+            {
+                "id": 518,
+                "name": "Justiça social através dos processos de inclusão escolar das pessoas com deficiência: um estudo de caso no campus Serra.",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 3
+            },
+            {
+                "id": 8,
+                "name": "Laboratório Espaço Energia: avanços na mobilidade elétrica com a implantação de eletroposto para recarga de veículos elétricos",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 33
+            },
+            {
+                "id": 3,
+                "name": "Mina Digital de Rochas Ornamentais",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 6,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 84
+            },
+            {
+                "id": 12,
+                "name": "Desenvolvimento de um Sistema Baseado em Inteligência Artificial para Análise de Raio-X de Tórax “Priori-RX”.",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 8,
+                "active_students": 2,
+                "monthly_investment": 2400.0,
+                "main_program": "PIBIC",
+                "team_size": 43
+            },
+            {
+                "id": 7,
+                "name": "Robótica e Tecnologia, kits educacionais – RoboTech 4.0",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 10,
+                "active_students": 5,
+                "monthly_investment": 1000.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 19
+            },
+            {
+                "id": 17,
+                "name": "BPM Pós-Gestão - Automação Inteligente para Programas de Pós-graduação",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 8,
+                "active_students": 2,
+                "monthly_investment": 1200.0,
+                "main_program": "PROPÓS",
+                "team_size": 63
+            },
+            {
+                "id": 538,
+                "name": "Modelagem dos processos do Programa de Pós-graduação em Computação Aplicada",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 2
+            },
+            {
+                "id": 543,
+                "name": "Construção Modular de Sistemas Ciberfísicos: Explorando a Abordagem Metodológica com ROS",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 300.0,
+                "main_program": "PROPÓS",
+                "team_size": 2
+            },
+            {
+                "id": 546,
+                "name": "Otimização do processo de atualização da base de conhecimento de agentes conversacionais",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 548,
+                "name": "Construção de Experimentos Automatizados – protótipo motor V8",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 1200.0,
+                "main_program": "PIBIC",
+                "team_size": 8
+            },
+            {
+                "id": 550,
+                "name": "Desenvolvimento de uma caneta eletrônica para Air Writing: uma abordagem híbrida baseada em dispositivos e visão computacional",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 600.0,
+                "main_program": "PIBIC",
+                "team_size": 4
+            },
+            {
+                "id": 21,
+                "name": "Avaliação de Erros Gramaticais e Aderência ao Tópico de Redações Dissertativas-Argumentativas \nOrientada a Agentes",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 900.0,
+                "main_program": "PIBIC",
+                "team_size": 127
+            },
+            {
+                "id": 15,
+                "name": "Desenvolvimento de Materiais de Apoio para o Ensino em Engenharia Utilizando Tecnologias do Laboratório Maker",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 7,
+                "active_students": 2,
+                "monthly_investment": 1500.0,
+                "main_program": "PIBIC",
+                "team_size": 26
+            },
+            {
+                "id": 14,
+                "name": "Desenvolvimento de Materiais Didáticos Inovadores Para o Ensino de Disciplinas Técnicas com Tecnologias da Indústria 4.0",
+                "campus": null,
+                "total_students": 5,
+                "active_students": 2,
+                "monthly_investment": 1800.0,
+                "main_program": "PIBIC",
+                "team_size": 11
+            },
+            {
+                "id": 560,
+                "name": "Aplicação de roteamento na origem para ciência de dados intensiva",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 4
+            },
+            {
+                "id": 565,
+                "name": "Inteligência Artificial para Auxílio na Inspeção de Navios",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC",
+                "team_size": 5
+            },
+            {
+                "id": 569,
+                "name": "Sistema web para detecção e contagem de ácaros (tetranychus urticae, phytoseiulus macropilis e neoseiulus californicus) em culturas capixabas de morango usando deep learning",
+                "campus": null,
+                "total_students": 5,
+                "active_students": 0,
+                "monthly_investment": 1700.0,
+                "main_program": "PIBIC",
+                "team_size": 8
+            },
+            {
+                "id": 576,
+                "name": "Educação STEAM: Construção de Robôs Como Integração de Conhecimentos",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 3
+            },
+            {
+                "id": 579,
+                "name": "Monitoramento Remoto para Manutenção Preventiva e Economia de Energia",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBITI",
+                "team_size": 2
+            },
+            {
+                "id": 11,
+                "name": "Kit didático utilizando uma planta piloto de correias transportadora",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 1200.0,
+                "main_program": "PIBITI",
+                "team_size": 29
+            },
+            {
+                "id": 583,
+                "name": "IDENTIFICAÇÃO DE ANSIEDADE E DEPRESSÃO VIA ANÁLISE FACIAL EM BASE DE DADOS REDUZIDA",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 1
+            },
+            {
+                "id": 601,
+                "name": "Braço Robótico Organizador de Cores Com acesso Remoto",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 604,
+                "name": "Aprendizado de Máquina em Dispositivos Embarcados: Soluções para Cidades Inteligentes",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 1
+            },
+            {
+                "id": 13,
+                "name": "CLASSIFICAÇÃO DE IMAGENS DE OCT COM IA INTERPRETÁVEL",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBITI",
+                "team_size": 24
+            },
+            {
+                "id": 10,
+                "name": "Desenvolvimento de Jogos Educacionais para Auxiliar o Processo de Ensino-Aprendizagem no Ensino Médio",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 3,
+                "active_students": 2,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 27
+            },
+            {
+                "id": 617,
+                "name": "Utilização de Conditional Variational Autoencoder para Análise de Sinais EEG em Pacientes Pós-AVC",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 620,
+                "name": "Desenvolvimento de Aplicações Web para Fábricas Inteligentes: Explorando o Potencial do Python e dos Dispositivos da Internet das Coisas (IoT)",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 3
+            },
+            {
+                "id": 623,
+                "name": "Programação de Robôs Manipuladores Kuka",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 631,
+                "name": "Injustiça econômica versus injustiça simbólica: uma análise das eleições municipais no Espírito Santo à Luz da Teoria Crítica de Nancy Fraser.",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 4
+            },
+            {
+                "id": 635,
+                "name": "Um estudo sobre geração e detecção de DeepFake de Voz",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 0,
+                "monthly_investment": 600.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 5
+            },
+            {
+                "id": 43,
+                "name": "Propos - Automatização de documentos",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 1,
+                "active_students": 1,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 23
+            },
+            {
+                "id": 40,
+                "name": "Estudo e Implementação do Protocolo OPC UA como Camada de Comunicação para Dispositivos IoT",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 2,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC",
+                "team_size": 28
+            },
+            {
+                "id": 33,
+                "name": "VeriScan: Inteligência Computacional Aplicada à Detecção de Imagens Manipuladas",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 2,
+                "monthly_investment": 200.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 2
+            },
+            {
+                "id": 22,
+                "name": "Gerenciador de Denúncias da Delegacia Especializada de Proteção à Pessoa Idosa",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 3,
+                "monthly_investment": 900.0,
+                "main_program": "PIBITI",
+                "team_size": 2
+            },
+            {
+                "id": 651,
+                "name": "Análise Computacional de Características Estéticas Faciais e Dentárias a partir de Imagens Digitais",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 2,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 3
+            },
+            {
+                "id": 35,
+                "name": "ChatRad: Um Sistema de Conversação Multimodal para Análise Automatizada de Radiografias Torácicas",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 4,
+                "active_students": 3,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 69
+            },
+            {
+                "id": 42,
+                "name": "Análise da Efetividade de Programas de Formação Continuada De Professores Utilizando Técnicas de Ciência de Dados e Inteligência Artificial: Um Estudo Aplicado aos Dados do Cefope/ES",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 1,
+                "active_students": 1,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 61
+            },
+            {
+                "id": 20,
+                "name": "Estoicismo Red Pill: a apropriação da Filosofia Clássica por uma agenda política contemporânea",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 21
+            },
+            {
+                "id": 32,
+                "name": "Classificação de patologias da coluna vertebral a partir de imagens de Tomografia Computadorizada e Ressonância Magnética utilizando as redes YOLOv12 e U-Net.",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 2,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 26
+            },
+            {
+                "id": 23,
+                "name": "Implementação de Técnicas de IA para Melhoria de Processos em Laminadores de Tiras a Quente",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 2,
+                "monthly_investment": 800.0,
+                "main_program": "PIBITI",
+                "team_size": 26
+            },
+            {
+                "id": 18,
+                "name": "Sistema de Aquisição de Dados e Aprendizado de Máquina em planta piloto de Aciaria LD",
+                "campus": null,
+                "total_students": 3,
+                "active_students": 1,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 7
+            },
+            {
+                "id": 38,
+                "name": "Sistema Computacional para Pré-Diagnóstico de Câncer de Mama Utilizando Redes Neurais Convolucionais e Agentes Inteligentes",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 5,
+                "active_students": 5,
+                "monthly_investment": 1700.0,
+                "main_program": "PIBITI",
+                "team_size": 14
+            },
+            {
+                "id": 36,
+                "name": "Tecnologias de Prototipagem e Simulação CAD/CAE no Ensino de Física e Engenharia com Aplicações na Agricultura de Precisão e Processos de Fabricação Mecânica",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 2,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 132
+            },
+            {
+                "id": 29,
+                "name": "Desenvolvimento de um Módulo de Hidroponia Autônomo usando um agente IA",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 3,
+                "active_students": 2,
+                "monthly_investment": 800.0,
+                "main_program": "PIBITI",
+                "team_size": 29
+            },
+            {
+                "id": 25,
+                "name": "Traçador de Curva I-V para Usina Fotovoltaica",
+                "campus": null,
+                "total_students": 5,
+                "active_students": 1,
+                "monthly_investment": 1600.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 21
+            },
+            {
+                "id": 37,
+                "name": "EXPERIMENTOS DIDÁTICOS EM FÍSICA COM O AUXILIO DO ARDUINO",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 10
+            },
+            {
+                "id": 41,
+                "name": "Automatização de módulos didáticos para ensino da disciplina de Instalações Elétricas",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 2,
+                "monthly_investment": 500.0,
+                "main_program": "PIBIC",
+                "team_size": 129
+            },
+            {
+                "id": 34,
+                "name": "VitaBot: Robô de Resgate e Inspeção com Sensoriamento Visual e Térmico",
+                "campus": null,
+                "total_students": 4,
+                "active_students": 3,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 2
+            },
+            {
+                "id": 27,
+                "name": "Transformação Digital e Gestão Energética: Microrredes como uma rota para um futuro sustentável",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 1400.0,
+                "main_program": "PIBIC-AF",
+                "team_size": 47
+            },
+            {
+                "id": 26,
+                "name": "Inteligência artificial explicável para diagnóstico cardiovascular: transformando a interpretação de ecgs na atenção à saúde",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 2,
+                "monthly_investment": 800.0,
+                "main_program": "PIBITI",
+                "team_size": 26
+            },
+            {
+                "id": 28,
+                "name": "Feira Digital: Uma plataforma de Conexão Direta entre Produtores e Consumidores.",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 3,
+                "active_students": 3,
+                "monthly_investment": 1100.0,
+                "main_program": "PIBITI",
+                "team_size": 27
+            },
+            {
+                "id": 30,
+                "name": "Soluções de aprendizado de máquina para detecção e mitigação de ataques de negação de serviço em Scrubbing Centers",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 14
+            },
+            {
+                "id": 16,
+                "name": "ANÁLISE FACIAL EM SELFIES PARA IDENTIFICAÇÃO DE ANSIEDADE E DEPRESSÃO EM PACIENTES GESTANTES",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 0,
+                "monthly_investment": 400.0,
+                "main_program": "PIBIC",
+                "team_size": 2
+            },
+            {
+                "id": 4,
+                "name": "Otimização da Eficiência Energética do Uso de Gás na Siderurgia usando Neuro-Evolução",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 1,
+                "monthly_investment": 800.0,
+                "main_program": "PIBITI",
+                "team_size": 62
+            },
+            {
+                "id": 31,
+                "name": "DESENVOLVIMENTO DE KITS DIDÁTICOS PARA O ENSINO DE ENGENHARIA DE CONTROLE E AUTOMAÇÃO",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 800.0,
+                "main_program": "PIBIC",
+                "team_size": 26
+            },
+            {
+                "id": 24,
+                "name": "VibroLearn: Um Framework para Diagnóstico de Falhas em Máquinas Industriais",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 1,
+                "active_students": 1,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC",
+                "team_size": 68
+            },
+            {
+                "id": 39,
+                "name": "Prototipação de Estufas Inteligentes e Hortas Automatizadas: Desenvolvendo Soluções para Agricultura Urbana\nSustentável",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 0,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 4
+            },
+            {
+                "id": 53,
+                "name": "NOVA-IA Indústria (Núcleo Otimizado e Virtualizado para Aplicações de Inteligência Artificial para Indústria): um estudo sobre uso de PINNs no processo de sinter",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 2,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 62
+            },
+            {
+                "id": 47,
+                "name": "Desenvolvimento e Avaliação de Desempenho de Robôs Competitivos de Sumô e Futebol",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 4,
+                "active_students": 4,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 130
+            },
+            {
+                "id": 52,
+                "name": "ChatRad 2.0: Desenvolvimento de uma Plataforma para Análise Automatizada de Imagens Médicas",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 3,
+                "active_students": 3,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 68
+            },
+            {
+                "id": 49,
+                "name": "Desenvolvimento de Soluções Digitais Baseadas em Dados para Educação Financeira e Inovação Social no Contexto do LIEFIS",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 5,
+                "active_students": 5,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 66
+            },
+            {
+                "id": 741,
+                "name": "Justiça econômica versus justiça simbólica: uma análise das eleições de 2026 à Luz da Teoria Crítica de Nancy Fraser.",
+                "campus": null,
+                "total_students": 1,
+                "active_students": 1,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 2
+            },
+            {
+                "id": 51,
+                "name": "Desenvolvimento de um Sistema Inteligente para Gestão e Monitoramento de Laboratórios\nMultiusuários em Instituições de Ensino",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 2,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 22
+            },
+            {
+                "id": 54,
+                "name": "Desenvolvimento de Materiais Didáticos Acessíveis com Tecnologias Maker para Apoio ao Ensino de Estudantes com Necessidades Específicas",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 2,
+                "active_students": 2,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 22
+            },
+            {
+                "id": 50,
+                "name": "Modelagem Conceitual, Implementação e Avaliação de Plataforma de Espaço Inteligente para Ambientes Institucionais",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 4,
+                "active_students": 4,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 26
+            },
+            {
+                "id": 46,
+                "name": "Desenvolvimento de Plataforma Robótica Modular para Missões de Resgate com Navegação Autônoma e Percepção Inteligente",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 4,
+                "active_students": 4,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 130
+            },
+            {
+                "id": 44,
+                "name": "Correção Automática de Redações com Modelos de Linguagem",
+                "campus": {
+                    "id": 6,
+                    "name": "Serra"
+                },
+                "total_students": 1,
+                "active_students": 1,
+                "monthly_investment": 0.0,
+                "main_program": "PIBIC-JR",
+                "team_size": 132
+            },
+            {
+                "id": 761,
+                "name": "Educação Ambiental Crítica e Sustentabilidade no Território: Fortalecimento do Núcleo de Educação Ambiental do Campus Serra/Ifes",
+                "campus": null,
+                "total_students": 2,
+                "active_students": 2,
+                "monthly_investment": 0.0,
+                "main_program": "N/A",
+                "team_size": 3
+            }
+        ],
+        "campus": "Serra",
+        "campuses": [
+            {
+                "name": "Serra",
+                "count": 40
+            }
+        ],
+        "global_stats": {
+            "total_projects": 182,
+            "total_advisorships": 3131,
+            "total_active_advisorships": 90,
+            "total_monthly_investment": 102300.0,
+            "program_distribution": {
+                "PIVIC": 78,
+                "PIBIC": 183,
+                "PIVITI": 11,
+                "PIBITI": 78,
+                "PIBIC-JR": 106,
+                "PIBIC-EM": 7,
+                "PROPÓS": 12,
+                "JTC": 1,
+                "PIBIC-AF": 7
+            },
+            "investment_per_program": {
+                "PIVIC": 0.0,
+                "PIBIC": 56400.0,
+                "PIVITI": 0.0,
+                "PIBITI": 30400.0,
+                "PIBIC-JR": 6300.0,
+                "PIBIC-EM": 700.0,
+                "PROPÓS": 3600.0,
+                "JTC": 0.0,
+                "PIBIC-AF": 4900.0
+            },
+            "volunteer_count": 2825,
+            "participation_ratio": 17.2,
+            "volunteer_percentage": 90.23
+        },
+        "rankings": {
+            "top_supervisors": [
+                {
+                    "name": "Karin Satie Komati",
+                    "count": 183
+                },
+                {
+                    "name": "Marco Antonio De Souza Leite Cuadros",
+                    "count": 144
+                },
+                {
+                    "name": "Ronaldo Aparecida Marques",
+                    "count": 134
+                },
+                {
+                    "name": "Pablo Rodrigues Muniz",
+                    "count": 134
+                },
+                {
+                    "name": "Raphael Magalhães Gomes Moreira",
+                    "count": 122
+                },
+                {
+                    "name": "Gustavo Maia De Almeida",
+                    "count": 111
+                },
+                {
+                    "name": "Richard Junior Manuel Godinez Tello",
+                    "count": 107
+                },
+                {
+                    "name": "Renata Gomes De Jesus",
+                    "count": 105
+                },
+                {
+                    "name": "Daniel Cruz Cavalieri",
+                    "count": 80
+                },
+                {
+                    "name": "Leandro Colombi Resendo",
+                    "count": 61
+                }
+            ],
+            "top_projects_by_investment": [
+                {
+                    "name": "Sensoriamento e Automação do Disco de Pelotamento",
+                    "value": 5600.0
+                },
+                {
+                    "name": "Desenvolvimento de uma cadeira de rodas autônoma – Fase 2.",
+                    "value": 4000.0
+                },
+                {
+                    "name": "Uso de Inteligência Artificial para o Monitoramento do Estado de Correias Transportadoras",
+                    "value": 4000.0
+                },
+                {
+                    "name": "Instrumentação e desenvolvimento de controladores avançados do nível do molde do lingotamento contínuo numa planta piloto",
+                    "value": 3200.0
+                },
+                {
+                    "name": "Cadeira de Rodas Inteligente",
+                    "value": 3200.0
+                },
+                {
+                    "name": "Desenvolvimento de protótipos robóticos inteligentes para análise mineralógico, testes de queda e compressão",
+                    "value": 3200.0
+                },
+                {
+                    "name": "Desenvolvimento de um Medidor de Desgaste de Furo de Lança de Convertedores LD",
+                    "value": 2400.0
+                },
+                {
+                    "name": "Desenvolvimento de um Sistema Baseado em Inteligência Artificial para Análise de Raio-X de Tórax “Priori-RX”.",
+                    "value": 2400.0
+                },
+                {
+                    "name": "A necessidade de metodologias e ferramentas adequadas para avaliação, desenvolvimento e validação de ideias no contexto dos habitats e ambientes de  inovação.",
+                    "value": 2100.0
+                },
+                {
+                    "name": "Machine learning e deep learning aplicados à detecção e ao diagnóstico de falhas em processos industriais.",
+                    "value": 1900.0
+                }
+            ]
+        },
+        "generated_at": "2026-08-26T10:13:37.801243"
+    }
+]

@@ -1,0 +1,58 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Adriano Márcio Sgrancio",
+  "lattes_id": "6083976036911793",
+  "artigos_com_doi": 1,
+  "encontrados_openalex": 1,
+  "citacoes_total": 20,
+  "h_index": 1,
+  "g_index": 1,
+  "m_index": 0.11,
+  "idade_academica": 9,
+  "citacoes_por_artigo": 20.0,
+  "citacoes_mediana": 20,
+  "artigos_fracionados": 0.12,
+  "citacoes_fracionadas": 2.5,
+  "i10": 1,
+  "mais_citado": 20,
+  "fwci_medio": 1.86,
+  "fwci_mediana": 1.86,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 4,
+  "momentum_pct": 20,
+  "citacoes_por_ano": {
+    "2019": 2,
+    "2020": 4,
+    "2021": 3,
+    "2022": 3,
+    "2023": 3,
+    "2024": 2,
+    "2025": 2
+  },
+  "artigo_ascensao": {
+    "titulo": "Robust estimation of fractional seasonal processes: Modeling and forecasting daily average SO2 concentrations",
+    "ano": 2017,
+    "recent_2a": 4,
+    "citacoes": 20,
+    "share_recente_pct": 20,
+    "fwci": 1.8594,
+    "doi": "10.1016/j.matcom.2017.10.004"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Robust estimation of fractional seasonal processes: Modeling and forecasting daily average",
+      "ano": 2017,
+      "citacoes": 20,
+      "fwci": 1.8594,
+      "percentil": 94,
+      "recent_2a": 4,
+      "doi": "10.1016/j.matcom.2017.10.004"
+    }
+  ],
+  "rank": 41
+}

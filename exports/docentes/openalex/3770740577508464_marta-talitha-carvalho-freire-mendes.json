@@ -1,0 +1,55 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Marta Talitha Carvalho Freire Mendes",
+  "lattes_id": "3770740577508464",
+  "artigos_com_doi": 1,
+  "encontrados_openalex": 1,
+  "citacoes_total": 9,
+  "h_index": 1,
+  "g_index": 1,
+  "m_index": 0.14,
+  "idade_academica": 7,
+  "citacoes_por_artigo": 9.0,
+  "citacoes_mediana": 9,
+  "artigos_fracionados": 0.2,
+  "citacoes_fracionadas": 1.8,
+  "i10": 0,
+  "mais_citado": 9,
+  "fwci_medio": 1.27,
+  "fwci_mediana": 1.27,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 0,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 1,
+  "momentum_pct": 11,
+  "citacoes_por_ano": {
+    "2020": 2,
+    "2021": 5,
+    "2022": 1,
+    "2024": 1
+  },
+  "artigo_ascensao": {
+    "titulo": "Novelty Detection in Social Media by Fusing Text and Image Into a Single Structure",
+    "ano": 2019,
+    "recent_2a": 1,
+    "citacoes": 9,
+    "share_recente_pct": 11,
+    "fwci": 1.2735,
+    "doi": "10.1109/access.2019.2939736"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Novelty Detection in Social Media by Fusing Text and Image Into a Single Structure",
+      "ano": 2019,
+      "citacoes": 9,
+      "fwci": 1.2735,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1109/access.2019.2939736"
+    }
+  ],
+  "rank": 49
+}

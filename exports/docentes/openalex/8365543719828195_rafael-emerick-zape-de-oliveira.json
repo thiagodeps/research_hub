@@ -1,0 +1,72 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Rafael Emerick Zape de Oliveira",
+  "lattes_id": "8365543719828195",
+  "artigos_com_doi": 2,
+  "encontrados_openalex": 2,
+  "citacoes_total": 66,
+  "h_index": 2,
+  "g_index": 2,
+  "m_index": 0.17,
+  "idade_academica": 12,
+  "citacoes_por_artigo": 33.0,
+  "citacoes_mediana": 33.0,
+  "artigos_fracionados": 0.39,
+  "citacoes_fracionadas": 16.1,
+  "i10": 1,
+  "mais_citado": 62,
+  "fwci_medio": 4.59,
+  "fwci_mediana": 4.59,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 1,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 3,
+  "momentum_pct": 5,
+  "citacoes_por_ano": {
+    "2014": 4,
+    "2015": 6,
+    "2016": 11,
+    "2017": 4,
+    "2018": 9,
+    "2019": 9,
+    "2020": 7,
+    "2021": 2,
+    "2022": 7,
+    "2023": 4,
+    "2024": 2,
+    "2025": 1
+  },
+  "artigo_ascensao": {
+    "titulo": "Keyflow: a prototype for evolving SDN toward core network fabrics",
+    "ano": 2014,
+    "recent_2a": 2,
+    "citacoes": 62,
+    "share_recente_pct": 3,
+    "fwci": 8.82,
+    "doi": "10.1109/mnet.2014.6786608"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Keyflow: a prototype for evolving SDN toward core network fabrics",
+      "ano": 2014,
+      "citacoes": 62,
+      "fwci": 8.82,
+      "percentil": 90,
+      "recent_2a": 2,
+      "doi": "10.1109/mnet.2014.6786608"
+    },
+    {
+      "titulo": "Tackling OpenFlow power hog in core networks with KeyFlow",
+      "ano": 2014,
+      "citacoes": 4,
+      "fwci": 0.3675,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.1049/el.2014.2346"
+    }
+  ],
+  "rank": 27
+}

@@ -1,0 +1,45 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Milainy Ludmila Santos Goulart",
+  "lattes_id": "4538755343018125",
+  "artigos_com_doi": 1,
+  "encontrados_openalex": 1,
+  "citacoes_total": 2,
+  "h_index": 1,
+  "g_index": 1,
+  "m_index": 0.1,
+  "idade_academica": 10,
+  "citacoes_por_artigo": 2.0,
+  "citacoes_mediana": 2,
+  "artigos_fracionados": 0.33,
+  "citacoes_fracionadas": 0.7,
+  "i10": 0,
+  "mais_citado": 2,
+  "fwci_medio": 0.4,
+  "fwci_mediana": 0.4,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 0,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 0,
+  "momentum_pct": 0,
+  "citacoes_por_ano": {
+    "2019": 1,
+    "2021": 1
+  },
+  "artigo_ascensao": null,
+  "top_artigos": [
+    {
+      "titulo": "CONTINUIDADES E DESCONTINUIDADES DAS PRÁTICAS CORPORAIS NA COMUNIDADE TRADICIONAL ALTO SAN",
+      "ano": 2016,
+      "citacoes": 2,
+      "fwci": 0.4022,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.4025/jphyseduc.v27i1.2746"
+    }
+  ],
+  "rank": 55
+}

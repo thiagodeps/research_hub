@@ -1,0 +1,89 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Richard Junior Manuel Godinez Tello",
+  "lattes_id": "3966230569744918",
+  "artigos_com_doi": 4,
+  "encontrados_openalex": 4,
+  "citacoes_total": 81,
+  "h_index": 2,
+  "g_index": 4,
+  "m_index": 0.18,
+  "idade_academica": 11,
+  "citacoes_por_artigo": 20.2,
+  "citacoes_mediana": 9.5,
+  "artigos_fracionados": 1.08,
+  "citacoes_fracionadas": 18.7,
+  "i10": 2,
+  "mais_citado": 62,
+  "fwci_medio": 0.94,
+  "fwci_mediana": 0.61,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 0,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 18,
+  "momentum_pct": 22,
+  "citacoes_por_ano": {
+    "2016": 5,
+    "2017": 6,
+    "2018": 12,
+    "2019": 12,
+    "2020": 6,
+    "2021": 6,
+    "2022": 9,
+    "2023": 7,
+    "2024": 10,
+    "2025": 6,
+    "2026": 2
+  },
+  "artigo_ascensao": {
+    "titulo": "Comparison of the influence of stimuli color on Steady-State Visual Evoked Potentials",
+    "ano": 2015,
+    "recent_2a": 15,
+    "citacoes": 62,
+    "share_recente_pct": 24,
+    "fwci": 2.5444,
+    "doi": "10.1590/2446-4740.0739"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Comparison of the influence of stimuli color on Steady-State Visual Evoked Potentials",
+      "ano": 2015,
+      "citacoes": 62,
+      "fwci": 2.5444,
+      "percentil": 89,
+      "recent_2a": 15,
+      "doi": "10.1590/2446-4740.0739"
+    },
+    {
+      "titulo": "An independent-BCI based on SSVEP using Figure-Ground Perception (FGP)",
+      "ano": 2016,
+      "citacoes": 19,
+      "fwci": 1.2101,
+      "percentil": 89,
+      "recent_2a": 3,
+      "doi": "10.1016/j.bspc.2015.12.010"
+    },
+    {
+      "titulo": "A Luminous Pen for Air-Writing: Hybrid Approach with Computer Vision and Vision–Language M",
+      "ano": 2026,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.22456/2175-2745.150973"
+    },
+    {
+      "titulo": "APRENDIZAGEM AUTÊNTICA COM O USO DA ROBÓTICA EDUCACIONAL NO ENSINO DE SISTEMAS EMBARCADOS",
+      "ano": 2021,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.36524/dect.v9i01.1275"
+    }
+  ],
+  "rank": 22
+}

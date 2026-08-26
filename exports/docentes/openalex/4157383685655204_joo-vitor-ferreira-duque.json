@@ -1,0 +1,121 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "João Vitor Ferreira Duque",
+  "lattes_id": "4157383685655204",
+  "artigos_com_doi": 8,
+  "encontrados_openalex": 8,
+  "citacoes_total": 154,
+  "h_index": 7,
+  "g_index": 8,
+  "m_index": 1.17,
+  "idade_academica": 6,
+  "citacoes_por_artigo": 19.2,
+  "citacoes_mediana": 15.0,
+  "artigos_fracionados": 2.14,
+  "citacoes_fracionadas": 41.5,
+  "i10": 6,
+  "mais_citado": 39,
+  "fwci_medio": 1.09,
+  "fwci_mediana": 0.9,
+  "fwci_antigo": 1.39,
+  "fwci_recente": 0.77,
+  "fwci_delta": -0.62,
+  "artigos_top10pct": 6,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 53,
+  "momentum_pct": 34,
+  "citacoes_por_ano": {
+    "2020": 5,
+    "2021": 21,
+    "2022": 43,
+    "2023": 32,
+    "2024": 22,
+    "2025": 24,
+    "2026": 7
+  },
+  "artigo_ascensao": {
+    "titulo": "Investigating Waste Plastic Pyrolysis Kinetic Parameters by Genetic Algorithm Coupled with Thermogravimetric Analysis",
+    "ano": 2020,
+    "recent_2a": 14,
+    "citacoes": 39,
+    "share_recente_pct": 36,
+    "fwci": 1.8794,
+    "doi": "10.1007/s12649-020-01181-4"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Investigating Waste Plastic Pyrolysis Kinetic Parameters by Genetic Algorithm Coupled with",
+      "ano": 2020,
+      "citacoes": 39,
+      "fwci": 1.8794,
+      "percentil": 89,
+      "recent_2a": 14,
+      "doi": "10.1007/s12649-020-01181-4"
+    },
+    {
+      "titulo": "The influence of the recycling stress history on LDPE waste pyrolysis",
+      "ano": 2020,
+      "citacoes": 38,
+      "fwci": 2.381,
+      "percentil": 94,
+      "recent_2a": 12,
+      "doi": "10.1016/j.polymertesting.2020.106460"
+    },
+    {
+      "titulo": "Developing a combustion-driven reactor for waste conversion",
+      "ano": 2021,
+      "citacoes": 25,
+      "fwci": 1.3172,
+      "percentil": 90,
+      "recent_2a": 8,
+      "doi": "10.1016/j.energy.2021.121489"
+    },
+    {
+      "titulo": "Application of a neural fuzzy model combined with simulated annealing algorithm to predict",
+      "ano": 2020,
+      "citacoes": 16,
+      "fwci": 0.9021,
+      "percentil": 91,
+      "recent_2a": 4,
+      "doi": "10.1016/j.heliyon.2020.e05598"
+    },
+    {
+      "titulo": "Relevant aspects of propagating a combustion front in an annular reactor for out-of-bed he",
+      "ano": 2021,
+      "citacoes": 14,
+      "fwci": 0.6586,
+      "percentil": 96,
+      "recent_2a": 5,
+      "doi": "10.1016/j.expthermflusci.2021.110575"
+    },
+    {
+      "titulo": "Recovering wax from polyethylene waste using C-DPyR",
+      "ano": 2023,
+      "citacoes": 11,
+      "fwci": 0.8893,
+      "percentil": 94,
+      "recent_2a": 9,
+      "doi": "10.1016/j.energy.2023.127135"
+    },
+    {
+      "titulo": "Waste Plastic Thermal Pyrolysis Analysis by a Neural Fuzzy Model Coupled with a Genetic Al",
+      "ano": 2021,
+      "citacoes": 8,
+      "fwci": 0.5854,
+      "percentil": 96,
+      "recent_2a": 0,
+      "doi": "10.1007/s12649-021-01522-x"
+    },
+    {
+      "titulo": "Biodegradable masterbatch blends: The implications on thermal conversion and recycling str",
+      "ano": 2020,
+      "citacoes": 3,
+      "fwci": 0.1457,
+      "percentil": 89,
+      "recent_2a": 1,
+      "doi": "10.17352/ojc.000016"
+    }
+  ],
+  "rank": 12
+}

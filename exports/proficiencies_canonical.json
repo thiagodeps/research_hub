@@ -1,0 +1,2092 @@
+[
+    {
+        "id": 1,
+        "researcher_id": 1281,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 2,
+        "researcher_id": 1281,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 3,
+        "researcher_id": 1281,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 4,
+        "researcher_id": 721,
+        "language_id": 4,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 5,
+        "researcher_id": 721,
+        "language_id": 5,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 6,
+        "researcher_id": 721,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 7,
+        "researcher_id": 721,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 8,
+        "researcher_id": 721,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 9,
+        "researcher_id": 721,
+        "language_id": 6,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 10,
+        "researcher_id": 1156,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 11,
+        "researcher_id": 168,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 12,
+        "researcher_id": 168,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 13,
+        "researcher_id": 1308,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 14,
+        "researcher_id": 147,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 15,
+        "researcher_id": 147,
+        "language_id": 1,
+        "comprehension": "NaoSeAplica",
+        "speaking": "NaoSeAplica",
+        "reading": "Basico",
+        "writing": "NaoSeAplica",
+        "campus": null
+    },
+    {
+        "id": 16,
+        "researcher_id": 312,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 17,
+        "researcher_id": 312,
+        "language_id": 5,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 18,
+        "researcher_id": 1379,
+        "language_id": 2,
+        "comprehension": "NaoSeAplica",
+        "speaking": "NaoSeAplica",
+        "reading": "Medio",
+        "writing": "NaoSeAplica",
+        "campus": null
+    },
+    {
+        "id": 19,
+        "researcher_id": 1379,
+        "language_id": 1,
+        "comprehension": "NaoSeAplica",
+        "speaking": "NaoSeAplica",
+        "reading": "Medio",
+        "writing": "NaoSeAplica",
+        "campus": null
+    },
+    {
+        "id": 20,
+        "researcher_id": 305,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 21,
+        "researcher_id": 305,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 22,
+        "researcher_id": 659,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 23,
+        "researcher_id": 659,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 24,
+        "researcher_id": 659,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 25,
+        "researcher_id": 696,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 26,
+        "researcher_id": 464,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 27,
+        "researcher_id": 465,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 28,
+        "researcher_id": 448,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 29,
+        "researcher_id": 448,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Alto",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 30,
+        "researcher_id": 262,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 31,
+        "researcher_id": 262,
+        "language_id": 7,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 32,
+        "researcher_id": 463,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 33,
+        "researcher_id": 463,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 34,
+        "researcher_id": 463,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 35,
+        "researcher_id": 1576,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "NaoSeAplica",
+        "reading": "Medio",
+        "writing": "NaoSeAplica",
+        "campus": null
+    },
+    {
+        "id": 36,
+        "researcher_id": 628,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 37,
+        "researcher_id": 628,
+        "language_id": 7,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 38,
+        "researcher_id": 565,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 39,
+        "researcher_id": 565,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 40,
+        "researcher_id": 374,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 41,
+        "researcher_id": 374,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 42,
+        "researcher_id": 374,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 43,
+        "researcher_id": 122,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 44,
+        "researcher_id": 122,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 45,
+        "researcher_id": 122,
+        "language_id": 5,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 46,
+        "researcher_id": 572,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 47,
+        "researcher_id": 572,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 48,
+        "researcher_id": 146,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 49,
+        "researcher_id": 710,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 50,
+        "researcher_id": 1670,
+        "language_id": 2,
+        "comprehension": "Basico",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 51,
+        "researcher_id": 1670,
+        "language_id": 7,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 52,
+        "researcher_id": 23,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 53,
+        "researcher_id": 23,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 54,
+        "researcher_id": 23,
+        "language_id": 7,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 55,
+        "researcher_id": 23,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 56,
+        "researcher_id": 23,
+        "language_id": 5,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 57,
+        "researcher_id": 587,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 58,
+        "researcher_id": 587,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 59,
+        "researcher_id": 587,
+        "language_id": 7,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 60,
+        "researcher_id": 587,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 61,
+        "researcher_id": 587,
+        "language_id": 5,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 62,
+        "researcher_id": 1744,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 63,
+        "researcher_id": 1744,
+        "language_id": 5,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 64,
+        "researcher_id": 1744,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 65,
+        "researcher_id": 1751,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 66,
+        "researcher_id": 265,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 67,
+        "researcher_id": 410,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 68,
+        "researcher_id": 410,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 69,
+        "researcher_id": 410,
+        "language_id": 4,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 70,
+        "researcher_id": 372,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 71,
+        "researcher_id": 372,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 72,
+        "researcher_id": 372,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 73,
+        "researcher_id": 372,
+        "language_id": 5,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 74,
+        "researcher_id": 1127,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 75,
+        "researcher_id": 1127,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 76,
+        "researcher_id": 1819,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 77,
+        "researcher_id": 1819,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 78,
+        "researcher_id": 1824,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 79,
+        "researcher_id": 1824,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 80,
+        "researcher_id": 125,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 81,
+        "researcher_id": 493,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 82,
+        "researcher_id": 1850,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 83,
+        "researcher_id": 1153,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 84,
+        "researcher_id": 1153,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 85,
+        "researcher_id": 495,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 86,
+        "researcher_id": 495,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 87,
+        "researcher_id": 495,
+        "language_id": 4,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 88,
+        "researcher_id": 495,
+        "language_id": 7,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 89,
+        "researcher_id": 370,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 90,
+        "researcher_id": 370,
+        "language_id": 5,
+        "comprehension": "Basico",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 91,
+        "researcher_id": 370,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 92,
+        "researcher_id": 1873,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 93,
+        "researcher_id": 1873,
+        "language_id": 1,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 94,
+        "researcher_id": 634,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 95,
+        "researcher_id": 634,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 96,
+        "researcher_id": 634,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 97,
+        "researcher_id": 537,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 98,
+        "researcher_id": 537,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 99,
+        "researcher_id": 537,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 100,
+        "researcher_id": 708,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 101,
+        "researcher_id": 571,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 102,
+        "researcher_id": 571,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 103,
+        "researcher_id": 571,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 104,
+        "researcher_id": 1277,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 105,
+        "researcher_id": 1277,
+        "language_id": 1,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 106,
+        "researcher_id": 709,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 107,
+        "researcher_id": 709,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 108,
+        "researcher_id": 1969,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "NaoSeAplica",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 109,
+        "researcher_id": 1969,
+        "language_id": 1,
+        "comprehension": "NaoSeAplica",
+        "speaking": "NaoSeAplica",
+        "reading": "Medio",
+        "writing": "NaoSeAplica",
+        "campus": null
+    },
+    {
+        "id": 110,
+        "researcher_id": 690,
+        "language_id": 2,
+        "comprehension": "NaoSeAplica",
+        "speaking": "NaoSeAplica",
+        "reading": "Alto",
+        "writing": "NaoSeAplica",
+        "campus": null
+    },
+    {
+        "id": 111,
+        "researcher_id": 1037,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 112,
+        "researcher_id": 523,
+        "language_id": 5,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 113,
+        "researcher_id": 523,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 114,
+        "researcher_id": 523,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 115,
+        "researcher_id": 76,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 116,
+        "researcher_id": 76,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 117,
+        "researcher_id": 76,
+        "language_id": 5,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 118,
+        "researcher_id": 2039,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 119,
+        "researcher_id": 654,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 120,
+        "researcher_id": 2056,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 121,
+        "researcher_id": 123,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 122,
+        "researcher_id": 123,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 123,
+        "researcher_id": 123,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 124,
+        "researcher_id": 496,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 125,
+        "researcher_id": 496,
+        "language_id": 4,
+        "comprehension": "NaoSeAplica",
+        "speaking": "NaoSeAplica",
+        "reading": "Basico",
+        "writing": "NaoSeAplica",
+        "campus": null
+    },
+    {
+        "id": 126,
+        "researcher_id": 496,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 127,
+        "researcher_id": 2115,
+        "language_id": 1,
+        "comprehension": "NaoSeAplica",
+        "speaking": "NaoSeAplica",
+        "reading": "Basico",
+        "writing": "NaoSeAplica",
+        "campus": null
+    },
+    {
+        "id": 128,
+        "researcher_id": 2115,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 129,
+        "researcher_id": 2115,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 130,
+        "researcher_id": 297,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 131,
+        "researcher_id": 297,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 132,
+        "researcher_id": 313,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 133,
+        "researcher_id": 313,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 134,
+        "researcher_id": 617,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 135,
+        "researcher_id": 617,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 136,
+        "researcher_id": 2152,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 137,
+        "researcher_id": 2152,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 138,
+        "researcher_id": 369,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 139,
+        "researcher_id": 369,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "NaoSeAplica",
+        "reading": "Medio",
+        "writing": "NaoSeAplica",
+        "campus": null
+    },
+    {
+        "id": 140,
+        "researcher_id": 289,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "NaoSeAplica",
+        "reading": "Alto",
+        "writing": "NaoSeAplica",
+        "campus": null
+    },
+    {
+        "id": 141,
+        "researcher_id": 420,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 142,
+        "researcher_id": 420,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 143,
+        "researcher_id": 507,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 144,
+        "researcher_id": 1233,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 145,
+        "researcher_id": 1233,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 146,
+        "researcher_id": 566,
+        "language_id": 2,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 147,
+        "researcher_id": 2200,
+        "language_id": 2,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 148,
+        "researcher_id": 2200,
+        "language_id": 1,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 149,
+        "researcher_id": 2206,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 150,
+        "researcher_id": 2206,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 151,
+        "researcher_id": 1870,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 152,
+        "researcher_id": 1870,
+        "language_id": 5,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 153,
+        "researcher_id": 2219,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 154,
+        "researcher_id": 2219,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 155,
+        "researcher_id": 2219,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 156,
+        "researcher_id": 376,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 157,
+        "researcher_id": 1849,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 158,
+        "researcher_id": 1849,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 159,
+        "researcher_id": 1849,
+        "language_id": 1,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 160,
+        "researcher_id": 1849,
+        "language_id": 5,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 161,
+        "researcher_id": 2239,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 162,
+        "researcher_id": 2239,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 163,
+        "researcher_id": 1071,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 164,
+        "researcher_id": 2263,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 165,
+        "researcher_id": 378,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 166,
+        "researcher_id": 378,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 167,
+        "researcher_id": 378,
+        "language_id": 8,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 168,
+        "researcher_id": 616,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 169,
+        "researcher_id": 616,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 170,
+        "researcher_id": 616,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 171,
+        "researcher_id": 616,
+        "language_id": 5,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 172,
+        "researcher_id": 266,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 173,
+        "researcher_id": 266,
+        "language_id": 4,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 174,
+        "researcher_id": 266,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 175,
+        "researcher_id": 266,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 176,
+        "researcher_id": 1126,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 177,
+        "researcher_id": 574,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 178,
+        "researcher_id": 574,
+        "language_id": 5,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 179,
+        "researcher_id": 674,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 180,
+        "researcher_id": 373,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 181,
+        "researcher_id": 1253,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 182,
+        "researcher_id": 385,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 183,
+        "researcher_id": 385,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 184,
+        "researcher_id": 2359,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 185,
+        "researcher_id": 14,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 186,
+        "researcher_id": 14,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 187,
+        "researcher_id": 14,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 188,
+        "researcher_id": 462,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 189,
+        "researcher_id": 462,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 190,
+        "researcher_id": 539,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 191,
+        "researcher_id": 539,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 192,
+        "researcher_id": 124,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 193,
+        "researcher_id": 124,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 194,
+        "researcher_id": 1276,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Basico",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 195,
+        "researcher_id": 2407,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 196,
+        "researcher_id": 2407,
+        "language_id": 1,
+        "comprehension": "Medio",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 197,
+        "researcher_id": 1232,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 198,
+        "researcher_id": 1232,
+        "language_id": 8,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Basico",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 199,
+        "researcher_id": 1232,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 200,
+        "researcher_id": 1232,
+        "language_id": 5,
+        "comprehension": "Basico",
+        "speaking": "Basico",
+        "reading": "Medio",
+        "writing": "Basico",
+        "campus": null
+    },
+    {
+        "id": 201,
+        "researcher_id": 660,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 202,
+        "researcher_id": 671,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 203,
+        "researcher_id": 671,
+        "language_id": 1,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Medio",
+        "campus": null
+    },
+    {
+        "id": 204,
+        "researcher_id": 319,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 205,
+        "researcher_id": 319,
+        "language_id": 2,
+        "comprehension": "Medio",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 206,
+        "researcher_id": 121,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 207,
+        "researcher_id": 121,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Medio",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 208,
+        "researcher_id": 1072,
+        "language_id": 2,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    },
+    {
+        "id": 209,
+        "researcher_id": 1072,
+        "language_id": 3,
+        "comprehension": "Alto",
+        "speaking": "Alto",
+        "reading": "Alto",
+        "writing": "Alto",
+        "campus": null
+    }
+]

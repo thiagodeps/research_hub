@@ -1,0 +1,56 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Vinicius Secchin de Melo",
+  "lattes_id": "0449903748898289",
+  "artigos_com_doi": 1,
+  "encontrados_openalex": 1,
+  "citacoes_total": 5,
+  "h_index": 1,
+  "g_index": 1,
+  "m_index": 0.17,
+  "idade_academica": 6,
+  "citacoes_por_artigo": 5.0,
+  "citacoes_mediana": 5,
+  "artigos_fracionados": 0.2,
+  "citacoes_fracionadas": 1.0,
+  "i10": 0,
+  "mais_citado": 5,
+  "fwci_medio": 0.26,
+  "fwci_mediana": 0.26,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 0,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 2,
+  "momentum_pct": 40,
+  "citacoes_por_ano": {
+    "2021": 1,
+    "2022": 1,
+    "2023": 1,
+    "2024": 1,
+    "2025": 1
+  },
+  "artigo_ascensao": {
+    "titulo": "Open-Loop Single-Phase Space State Model and Equivalent Circuit of a Non-Conventional Three-Phase Inverter",
+    "ano": 2020,
+    "recent_2a": 2,
+    "citacoes": 5,
+    "share_recente_pct": 40,
+    "fwci": 0.2571,
+    "doi": "10.3390/electronics9050744"
+  },
+  "top_artigos": [
+    {
+      "titulo": "Open-Loop Single-Phase Space State Model and Equivalent Circuit of a Non-Conventional Thre",
+      "ano": 2020,
+      "citacoes": 5,
+      "fwci": 0.2571,
+      "percentil": 89,
+      "recent_2a": 2,
+      "doi": "10.3390/electronics9050744"
+    }
+  ],
+  "rank": 50
+}

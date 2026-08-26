@@ -1,0 +1,51 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Francisco José Casarim Rapchan",
+  "lattes_id": "1844100532565640",
+  "artigos_com_doi": 3,
+  "encontrados_openalex": 2,
+  "citacoes_total": 0,
+  "h_index": 0,
+  "g_index": 0,
+  "m_index": 0.0,
+  "idade_academica": 9,
+  "citacoes_por_artigo": 0.0,
+  "citacoes_mediana": 0.0,
+  "artigos_fracionados": 0.53,
+  "citacoes_fracionadas": 0.0,
+  "i10": 0,
+  "mais_citado": 0,
+  "fwci_medio": 0.0,
+  "fwci_mediana": 0.0,
+  "fwci_antigo": null,
+  "fwci_recente": null,
+  "fwci_delta": null,
+  "artigos_top10pct": 0,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 0,
+  "momentum_pct": 0,
+  "citacoes_por_ano": {},
+  "artigo_ascensao": null,
+  "top_artigos": [
+    {
+      "titulo": "Protagonismo estudantil no Cefet/RJ e ecossistema de inovação da Rede Federal de EPCT / St",
+      "ano": 2022,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.34117/bjdv8n2-180"
+    },
+    {
+      "titulo": "INTERAÇÃO UNIVERSIDADE-EMPRESA: CAMINHOS PARA REDE FEDERAL DE EDUCAÇÃO TECNOLÓGICA",
+      "ano": 2017,
+      "citacoes": 0,
+      "fwci": 0.0,
+      "percentil": null,
+      "recent_2a": 0,
+      "doi": "10.7198/geintec.v7.i3.931"
+    }
+  ],
+  "rank": 74
+}

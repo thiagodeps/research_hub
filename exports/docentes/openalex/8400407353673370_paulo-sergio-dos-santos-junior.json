@@ -1,0 +1,102 @@
+{
+  "gerado_em": "2026-08-26 10:15",
+  "fonte": "OpenAlex (api.openalex.org), citações casadas por DOI do Lattes",
+  "nome": "Paulo Sergio dos Santos Junior",
+  "lattes_id": "8400407353673370",
+  "artigos_com_doi": 5,
+  "encontrados_openalex": 5,
+  "citacoes_total": 107,
+  "h_index": 4,
+  "g_index": 5,
+  "m_index": 0.24,
+  "idade_academica": 17,
+  "citacoes_por_artigo": 21.4,
+  "citacoes_mediana": 23,
+  "artigos_fracionados": 1.58,
+  "citacoes_fracionadas": 33.8,
+  "i10": 4,
+  "mais_citado": 42,
+  "fwci_medio": 5.63,
+  "fwci_mediana": 5.01,
+  "fwci_antigo": null,
+  "fwci_recente": 3.19,
+  "fwci_delta": null,
+  "artigos_top10pct": 3,
+  "artigos_top1pct": 0,
+  "citacoes_recentes_2a": 14,
+  "momentum_pct": 13,
+  "citacoes_por_ano": {
+    "2012": 5,
+    "2013": 6,
+    "2014": 7,
+    "2015": 11,
+    "2016": 2,
+    "2017": 5,
+    "2018": 8,
+    "2019": 11,
+    "2020": 2,
+    "2021": 13,
+    "2022": 5,
+    "2023": 9,
+    "2024": 8,
+    "2025": 3,
+    "2026": 3
+  },
+  "artigo_ascensao": {
+    "titulo": "From a Scrum Reference Ontology to the Integration of Applications for Data-Driven Software Development",
+    "ano": 2021,
+    "recent_2a": 10,
+    "citacoes": 23,
+    "share_recente_pct": 43,
+    "fwci": 5.7493,
+    "doi": "10.1016/j.infsof.2021.106570"
+  },
+  "top_artigos": [
+    {
+      "titulo": "An ontology-based analysis and semantics for organizational structure modeling in the ARIS",
+      "ano": 2012,
+      "citacoes": 42,
+      "fwci": 16.2424,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1016/j.is.2012.09.004"
+    },
+    {
+      "titulo": "Applying and extending a semantic foundation for role-related concepts in enterprise model",
+      "ano": 2009,
+      "citacoes": 28,
+      "fwci": 5.0095,
+      "percentil": 89,
+      "recent_2a": 0,
+      "doi": "10.1080/17517570903046292"
+    },
+    {
+      "titulo": "From a Scrum Reference Ontology to the Integration of Applications for Data-Driven Softwar",
+      "ano": 2021,
+      "citacoes": 23,
+      "fwci": 5.7493,
+      "percentil": 94,
+      "recent_2a": 10,
+      "doi": "10.1016/j.infsof.2021.106570"
+    },
+    {
+      "titulo": "Uncovering the organisational modelling and business process modelling languages in the AR",
+      "ano": 2011,
+      "citacoes": 10,
+      "fwci": 0.5337,
+      "percentil": 90,
+      "recent_2a": 0,
+      "doi": "10.1504/ijbpim.2011.040205"
+    },
+    {
+      "titulo": "First step climbing the Stairway to Heaven Model - Results from a Case Study in Industry",
+      "ano": 2022,
+      "citacoes": 4,
+      "fwci": 0.6333,
+      "percentil": 90,
+      "recent_2a": 4,
+      "doi": "10.5753/jserd.2021.1992"
+    }
+  ],
+  "rank": 16
+}
