@@ -7,10 +7,17 @@ import EntityPage from '../../components/EntityPage.jsx';
   <EntityPage 
     client:load 
     entity="students" 
-    columns={['id', 'name']} 
+    columns={['id', 'name', 'initiatives', 'research_groups', 'knowledge_areas', 'academic_education', 'articles', 'advisorships', 'campus']} 
     fields={[
       { name: 'id', label: 'ID', type: 'number' },
-      { name: 'name', label: 'Nome', required: true }
+      { name: 'name', label: 'Name', required: true },
+      { name: 'initiatives', label: 'Initiatives (Vínculos)', type: 'json_readonly' },
+      { name: 'research_groups', label: 'Research_groups (Vínculos)', type: 'json_readonly' },
+      { name: 'knowledge_areas', label: 'Knowledge_areas (Vínculos)', type: 'json_readonly' },
+      { name: 'academic_education', label: 'Academic_education (Vínculos)', type: 'json_readonly' },
+      { name: 'articles', label: 'Articles (Vínculos)', type: 'json_readonly' },
+      { name: 'advisorships', label: 'Advisorships (Vínculos)', type: 'json_readonly' },
+      { name: 'campus', label: 'Campus (Vínculos)', type: 'json_readonly' }
     ]} 
   />
 </Dashboard>
