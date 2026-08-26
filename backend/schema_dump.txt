@@ -1,0 +1,359 @@
+
+--- outside_ifes_canonical.parquet ---
+id                            Int64
+name                            str
+identification_id             Int64
+birthday                     object
+cnpq_url                        str
+google_scholar_url           object
+resume                          str
+citation_names                  str
+initiatives                     str
+research_groups                 str
+knowledge_areas                 str
+academic_education              str
+articles                        str
+advisorships                    str
+classification                  str
+classification_confidence       str
+classification_note             str
+role_evidence                   str
+was_student                    bool
+was_staff                      bool
+campus                       object
+dtype: object
+
+--- professional_activities_canonical.parquet ---
+id                       Int64
+researcher_id            Int64
+organization_id          Int64
+institution                str
+institution_name           str
+institution_acronym        str
+institution_country        str
+period                     str
+start_year             float64
+end_year               float64
+bond                       str
+classification             str
+work_regime                str
+role_function              str
+activity_type              str
+current                   bool
+campus                  object
+dtype: object
+
+--- fellowships_canonical.parquet ---
+id               Int64
+name               str
+description        str
+value          float64
+campus          object
+dtype: object
+
+--- students_canonical.parquet ---
+id                            Int64
+name                            str
+identification_id             Int64
+birthday                     object
+cnpq_url                     object
+google_scholar_url           object
+resume                       object
+citation_names               object
+initiatives                     str
+research_groups                 str
+knowledge_areas                 str
+academic_education              str
+articles                        str
+advisorships                    str
+classification                  str
+classification_confidence       str
+classification_note             str
+role_evidence                   str
+was_student                    bool
+was_staff                      bool
+campus                          str
+dtype: object
+
+--- production_authors_canonical.parquet ---
+production_id    Int64
+researcher_id    Int64
+dtype: object
+
+--- researchers_canonical.parquet ---
+id                            Int64
+name                            str
+identification_id             Int64
+birthday                     object
+cnpq_url                        str
+google_scholar_url           object
+resume                          str
+citation_names                  str
+initiatives                     str
+research_groups                 str
+knowledge_areas                 str
+academic_education              str
+articles                        str
+advisorships                    str
+classification                  str
+classification_confidence       str
+classification_note             str
+role_evidence                   str
+was_student                    bool
+was_staff                      bool
+campus                          str
+dtype: object
+
+--- knowledge_areas_canonical.parquet ---
+id        Int64
+name        str
+campus      str
+dtype: object
+
+--- organizations_canonical.parquet ---
+id              Int64
+name              str
+description    object
+short_name        str
+campus         object
+dtype: object
+
+--- campuses_canonical.parquet ---
+id                  Int64
+name                  str
+description        object
+short_name         object
+organization_id     Int64
+parent_id           Int64
+campus                str
+dtype: object
+
+--- null_researchers_canonical.parquet ---
+id                            Int64
+name                            str
+identification_id             Int64
+birthday                     object
+cnpq_url                        str
+google_scholar_url           object
+resume                          str
+citation_names                  str
+initiatives                     str
+research_groups                 str
+knowledge_areas                 str
+academic_education              str
+articles                        str
+advisorships                    str
+classification               object
+classification_confidence       str
+classification_note             str
+role_evidence                   str
+was_student                    bool
+was_staff                      bool
+campus                       object
+dtype: object
+
+--- initiatives_canonical.parquet ---
+id                          Int64
+name                          str
+status                        str
+description                   str
+start_date                    str
+end_date                      str
+initiative_type_id          Int64
+initiative_type               str
+organization_id             Int64
+organization                  str
+parent_id                   Int64
+team                          str
+demandante                 object
+campus                        str
+research_group                str
+knowledge_areas               str
+enrichment                    str
+external_partner           object
+external_research_group    object
+dtype: object
+
+--- entity_change_logs_canonical.parquet ---
+id                        Int64
+ingestion_run_id          Int64
+source_record_id          Int64
+canonical_entity_type       str
+canonical_entity_id       Int64
+operation                   str
+changed_fields_json         str
+before_json              object
+after_json                  str
+reason                      str
+changed_at                  str
+campus                      str
+dtype: object
+
+--- languages_canonical.parquet ---
+id         Int64
+name         str
+campus    object
+dtype: object
+
+--- entity_matches_canonical.parquet ---
+id                       Int64
+source_record_id         Int64
+canonical_entity_type      str
+canonical_entity_id      Int64
+match_strategy             str
+match_confidence           str
+matched_at                 str
+campus                     str
+dtype: object
+
+--- researchers_only_canonical.parquet ---
+id                            Int64
+name                            str
+identification_id             Int64
+birthday                     object
+cnpq_url                        str
+google_scholar_url           object
+resume                          str
+citation_names                  str
+initiatives                     str
+research_groups                 str
+knowledge_areas                 str
+academic_education              str
+articles                        str
+advisorships                    str
+classification                  str
+classification_confidence       str
+classification_note          object
+role_evidence                   str
+was_student                    bool
+was_staff                      bool
+campus                          str
+dtype: object
+
+--- proficiencies_canonical.parquet ---
+id                Int64
+researcher_id     Int64
+language_id       Int64
+comprehension       str
+speaking            str
+reading             str
+writing             str
+campus           object
+dtype: object
+
+--- advisorships_canonical.parquet ---
+id              Int64
+name              str
+status            str
+description       str
+start_date        str
+end_date          str
+campus            str
+advisorships      str
+team              str
+dtype: object
+
+--- ingestion_runs_canonical.parquet ---
+id                      Int64
+source_system             str
+flow_name                 str
+status                    str
+input_snapshot_hash    object
+notes                  object
+started_at                str
+finished_at               str
+campus                    str
+dtype: object
+
+--- initiative_types_canonical.parquet ---
+id              Int64
+name              str
+description       str
+campus         object
+dtype: object
+
+--- source_records_canonical.parquet ---
+id                    Int64
+ingestion_run_id      Int64
+source_system           str
+source_entity_type      str
+source_record_id        str
+source_file             str
+source_path             str
+raw_payload_json        str
+payload_hash            str
+extracted_at            str
+campus                  str
+dtype: object
+
+--- awards_canonical.parquet ---
+id                Int64
+researcher_id     Int64
+title               str
+year              int64
+campus           object
+dtype: object
+
+--- research_groups_canonical.parquet ---
+id                  Int64
+name                  str
+description           str
+short_name            str
+organization_id     Int64
+campus_id           Int64
+cnpq_url              str
+site               object
+organization          str
+campus                str
+knowledge_areas       str
+members               str
+leaders               str
+dtype: object
+
+--- production_types_canonical.parquet ---
+id         Int64
+name         str
+campus    object
+dtype: object
+
+--- articles_canonical.parquet ---
+id                    Int64
+title                   str
+doi                     str
+year                  int64
+type                    str
+journal_conference      str
+volume                  str
+pages                   str
+campus                  str
+dtype: object
+
+--- research_productions_canonical.parquet ---
+id                     Int64
+title                    str
+year                   int64
+production_type_id     Int64
+publisher             object
+isbn                  object
+edition               object
+book_title            object
+pages                 object
+version               object
+platform              object
+link                  object
+campus                object
+dtype: object
+
+--- attribute_assertions_canonical.parquet ---
+id                       Int64
+source_record_id         Int64
+canonical_entity_type      str
+canonical_entity_id      Int64
+attribute_name             str
+value_json                 str
+value_hash                 str
+is_selected               bool
+selection_reason           str
+asserted_at                str
+campus                     str
+dtype: object
