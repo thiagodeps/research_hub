@@ -18,15 +18,23 @@ class University(Base):
 class Researcher(Base):
     __tablename__ = "researchers"
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, index=True, nullable=False)
-    email = Column(String, unique=True, index=True, nullable=False)
-    lattes_id = Column(String, unique=True)
-    orcid = Column(String, unique=True)
+    name = Column(String, index=True)
+    identification_id = Column(Integer)
+    cnpq_url = Column(String)
+    classification = Column(String)
+    initiatives = Column(String)
+    research_groups = Column(String)
+    articles = Column(String)
+    advisorships = Column(String)
+    # kept for backwards compatibility with UI if needed
+    email = Column(String, nullable=True)
+    lattes_id = Column(String, nullable=True)
+    orcid = Column(String, nullable=True)
 
 class Article(Base):
     __tablename__ = "articles"
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(String, nullable=False)
+    title = Column(String)
     doi = Column(String)
     year = Column(Integer)
     type = Column(String)
@@ -35,7 +43,7 @@ class Article(Base):
 class ResearchGroup(Base):
     __tablename__ = "research_groups"
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False)
+    name = Column(String)
     description = Column(String)
     short_name = Column(String)
     cnpq_url = Column(String)
@@ -43,7 +51,7 @@ class ResearchGroup(Base):
 class Initiative(Base):
     __tablename__ = "initiatives"
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False)
+    name = Column(String)
     status = Column(String)
     description = Column(String)
     start_date = Column(String)
@@ -51,7 +59,7 @@ class Initiative(Base):
 class Advisorship(Base):
     __tablename__ = "advisorships"
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False)
+    name = Column(String)
     status = Column(String)
     description = Column(String)
     start_date = Column(String)
@@ -59,6 +67,6 @@ class Advisorship(Base):
 class Award(Base):
     __tablename__ = "awards"
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(String, nullable=False)
+    title = Column(String)
     year = Column(Integer)
 

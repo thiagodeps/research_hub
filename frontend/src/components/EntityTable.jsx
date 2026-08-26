@@ -67,7 +67,13 @@ export default function EntityTable({ entities, entityName, columns, onEdit, onD
                     onChange={() => toggleSelect(entity.id)}
                   />
                 </td>
-                {columns.map(col => <td key={col} className="px-6 py-4 whitespace-nowrap text-slate-900">{entity[col]}</td>)}
+                {columns.map(col => (
+                  <td key={col} className="px-6 py-4 whitespace-nowrap text-slate-900 max-w-[200px] truncate">
+                    {typeof entity[col] === 'string' && entity[col].startsWith('[') ? 
+                        (entity[col].length > 50 ? entity[col].substring(0, 50) + '...' : entity[col])
+                        : entity[col]}
+                  </td>
+                ))}
                 <td className="px-6 py-4 text-right space-x-3 whitespace-nowrap">
                   <button className="text-indigo-600 hover:text-indigo-900 font-medium transition-colors" onClick={() => onEdit(entity)}>Editar</button>
                   <button className="text-red-600 hover:text-red-900 font-medium transition-colors" onClick={() => onDelete(entity.id)}>Deletar</button>

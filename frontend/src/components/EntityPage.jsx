@@ -52,6 +52,38 @@ export default function EntityPage({ entity, columns, fields }) {
     }
   };
 
+  const handleMerge = async (ids, resolvedData) => {
+    try {
+      await apiFetch(`/merge/${entity}`, {
+        method: 'POST',
+        body: JSON.stringify({ source_ids: ids, resolved_data: resolvedData }),
+        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+      });
+      loadData();
+    } catch (e) {
+      alert(e.message);
+    }
+  };
+
+  const handleLink = async (parentTable, parentId, childTable, childId) => {
+    try {
+      await apiFetch(`/link`, {
+        method: 'POST',
+        body: JSON.stringify({
+          parent_type: parentTable,
+          parent_id: parentId,
+          child_type: childTable,
+          child_id: childId
+        }),
+        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+      });
+      alert('Vínculo criado com sucesso!');
+      loadData();
+    } catch (e) {
+      alert(e.message);
+    }
+  };
+
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center mb-6">
@@ -74,10 +106,13 @@ export default function EntityPage({ entity, columns, fields }) {
       )}
 
       <EntityTable 
+        entityName={entity}
         entities={data} 
         columns={columns} 
         onEdit={setEditingItem} 
         onDelete={handleDelete} 
+        onMerge={handleMerge}
+        onLink={handleLink}
       />
     </div>
   );

@@ -4,16 +4,15 @@ class MergeService:
     def merge(self, entity_type: str, source_ids: list, resolved_data: dict):
         repo = BaseRepository(entity_type)
         
-        # In a real app we'd fetch both entities, migrate their relationships, etc.
-        # 1. Create the new merged entity
-        new_entity = repo.create(resolved_data)
+        # 1. Update the first source_id with the resolved data (in place merge)
+        # OR create a new entity if we prefer. Let's update the first one.
+        primary_id = source_ids[0]
+        resolved_data["id"] = primary_id
         
-        # 2. Soft delete the original entities
-        for src_id in source_ids:
-            record = repo.get_by_id(src_id)
-            if record:
-                record["is_active"] = False
-                record["merged_into"] = new_entity["id"]
-                repo.update(src_id, record)
+        new_entity = repo.save(resolved_data)
+        
+        # 2. Hard delete the other original entities since our parquet schema doesn't have is_active
+        for src_id in source_ids[1:]:
+            repo.delete(src_id)
                 
         return new_entity

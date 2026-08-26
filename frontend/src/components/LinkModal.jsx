@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function LinkModal({ parentEntity, parentId, onLink, onCancel }) {
-  const [childType, setChildType] = useState('article');
+  const [childType, setChildType] = useState('articles');
   const [childId, setChildId] = useState('');
 
   const handleLink = () => {
@@ -20,8 +20,11 @@ export default function LinkModal({ parentEntity, parentId, onLink, onCancel }) 
             onChange={e => setChildType(e.target.value)} 
             className="w-full px-3 py-2 border border-slate-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
           >
-            <option value="article">Artigo</option>
-            <option value="research_group">Grupo de Pesquisa</option>
+            <option value="articles">Artigo</option>
+            <option value="groups">Grupo de Pesquisa</option>
+            <option value="initiatives">Iniciativas</option>
+            <option value="advisorships">Orientações</option>
+            <option value="awards">Premiações</option>
           </select>
         </div>
         

@@ -7,13 +7,13 @@ import EntityPage from '../../components/EntityPage.jsx';
   <EntityPage 
     client:load 
     entity="researchers" 
-    columns={['id', 'name', 'email', 'lattes_id']} 
+    columns={['id', 'name', 'initiatives', 'research_groups']} 
     fields={[
       { name: 'id', label: 'ID', type: 'number' },
       { name: 'name', label: 'Nome', required: true },
-      { name: 'email', label: 'Email', type: 'email', required: true },
-      { name: 'lattes_id', label: 'Lattes ID' },
-      { name: 'orcid', label: 'ORCID' }
+      { name: 'classification', label: 'Classificação' },
+      { name: 'initiatives', label: 'Iniciativas (JSON)' },
+      { name: 'research_groups', label: 'Grupos (JSON)' }
     ]} 
   />
 </Dashboard>
