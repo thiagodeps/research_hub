@@ -4,7 +4,9 @@ test('login form flow', async ({ page }) => {
   await page.goto('/login');
   
   // Verify split screen structure roughly
-  await expect(page.locator('form')).toBeVisible();
+  const form = page.locator('form');
+  await expect(form).toBeVisible();
+  await expect(form).toHaveClass(/max-w-sm/);
   
   // Fill the form
   await page.fill('input[type="email"]', 'admin@admin.com');

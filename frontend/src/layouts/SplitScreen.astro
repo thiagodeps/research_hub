@@ -6,42 +6,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portal Admin - Login</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: system-ui, sans-serif;
-      }
-      .split-screen {
-        display: flex;
-        height: 100vh;
-      }
-      .left-panel {
-        flex: 1;
-        background-color: #0f172a; /* Navy dark */
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-      }
-      .right-panel {
-        flex: 1;
-        background-color: #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    </style>
   </head>
-  <body>
-    <div class="split-screen">
-      <div class="left-panel">
-        <h1>ResearchHub</h1>
-        <p>Sistema de Gestão de Dados de Pesquisa.</p>
+  <body class="m-0 font-sans antialiased text-gray-900 bg-white">
+    <div class="flex flex-col min-h-screen md:flex-row">
+      <div class="flex flex-col items-center justify-center flex-1 p-8 text-white bg-slate-900 md:p-12">
+        <h1 class="mb-4 text-4xl font-bold tracking-tight">ResearchHub</h1>
+        <p class="text-lg text-slate-300 text-center">Sistema de Gestão de Dados de Pesquisa.</p>
         <!-- In a real app we'd have the 3 concept cards here per Figma -->
       </div>
-      <div class="right-panel">
+      <div class="flex items-center justify-center flex-1 p-6 md:p-12">
         <slot />
       </div>
     </div>

@@ -4,7 +4,7 @@
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Instalar dependências do Tailwind CSS no projeto rodando `npx astro add tailwind -y` em `frontend/`
+- [x] T001 Instalar dependências do Tailwind CSS no projeto rodando `npx astro add tailwind -y` em `frontend/`
 
 ---
 
@@ -14,9 +14,9 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T002 Configurar cores e fontes base da marca (Theme) no arquivo `frontend/tailwind.config.mjs`
-- [ ] T003 Configurar layout base com reset/estilos globais aplicados ao `<body>` em `frontend/src/layouts/SplitScreen.astro`
-- [ ] T004 Configurar layout base com reset/estilos globais aplicados ao `<body>` em `frontend/src/layouts/Dashboard.astro`
+- [x] T002 Configurar cores e fontes base da marca (Theme) no arquivo `frontend/tailwind.config.mjs`
+- [x] T003 Configurar layout base com reset/estilos globais aplicados ao `<body>` em `frontend/src/layouts/SplitScreen.astro`
+- [x] T004 Configurar layout base com reset/estilos globais aplicados ao `<body>` em `frontend/src/layouts/Dashboard.astro`
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -30,12 +30,12 @@
 
 ### Tests for User Story 1 (MANDATORY - Write tests first) ⚠️
 
-- [ ] T005 [P] [US1] Atualizar E2E tests em `frontend/tests/e2e/login.spec.js` para garantir que classes chave de visibilidade (Tailwind) estão presentes e o layout não quebrou
+- [x] T005 [P] [US1] Atualizar E2E tests em `frontend/tests/e2e/login.spec.js` para garantir que classes chave de visibilidade (Tailwind) estão presentes e o layout não quebrou
 
 ### Implementation for User Story 1
 
-- [ ] T006 [US1] Remover estilos inline e implementar layout split-screen (grid/flex) em `frontend/src/layouts/SplitScreen.astro` usando classes Tailwind
-- [ ] T007 [US1] Remover estilos inline e implementar formulário estilizado em `frontend/src/components/LoginForm.jsx` (inputs com hover/focus e botões interativos)
+- [x] T006 [US1] Remover estilos inline e implementar layout split-screen (grid/flex) em `frontend/src/layouts/SplitScreen.astro` usando classes Tailwind
+- [x] T007 [US1] Remover estilos inline e implementar formulário estilizado em `frontend/src/components/LoginForm.jsx` (inputs com hover/focus e botões interativos)
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -49,13 +49,13 @@
 
 ### Tests for User Story 2 (MANDATORY - Write tests first) ⚠️
 
-- [ ] T008 [P] [US2] Atualizar testes de componente em `frontend/tests/unit/components.test.jsx` para validar renderização correta da tabela sem quebras estruturais.
+- [x] T008 [P] [US2] Atualizar testes de componente em `frontend/tests/unit/components.test.jsx` para validar renderização correta da tabela sem quebras estruturais.
 
 ### Implementation for User Story 2
 
-- [ ] T009 [US2] Remover estilos inline de `frontend/src/components/EntityTable.jsx` e estilizá-la com Tailwind (borders suaves, padding nas células, thead em destaque, hover nas linhas `hover:bg-gray-50`)
-- [ ] T010 [US2] Substituir botões de "Ações" crus na `EntityTable.jsx` por botões padronizados (ou ícones) usando Tailwind
-- [ ] T011 [US2] Aplicar espaçamento e grid estrutural ao layout da página `frontend/src/layouts/Dashboard.astro` para acomodar a tabela centralizada
+- [x] T009 [US2] Remover estilos inline de `frontend/src/components/EntityTable.jsx` e estilizá-la com Tailwind (borders suaves, padding nas células, thead em destaque, hover nas linhas `hover:bg-gray-50`)
+- [x] T010 [US2] Substituir botões de "Ações" crus na `EntityTable.jsx` por botões padronizados (ou ícones) usando Tailwind
+- [x] T011 [US2] Aplicar espaçamento e grid estrutural ao layout da página `frontend/src/layouts/Dashboard.astro` para acomodar a tabela centralizada
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -69,12 +69,12 @@
 
 ### Tests for User Story 3 (MANDATORY - Write tests first) ⚠️
 
-- [ ] T012 [P] [US3] Atualizar/Adicionar testes para validar se os modais estão sendo renderizados corretamente após refatoração em `frontend/tests/unit/components.test.jsx`
+- [x] T012 [P] [US3] Atualizar/Adicionar testes para validar se os modais estão sendo renderizados corretamente após refatoração em `frontend/tests/unit/components.test.jsx`
 
 ### Implementation for User Story 3
 
-- [ ] T013 [P] [US3] Refatorar `frontend/src/components/MergeModal.jsx` removendo estilos inline e aplicando backdrop escuro fixo (`fixed inset-0 bg-black/50`) e card centralizado
-- [ ] T014 [P] [US3] Refatorar `frontend/src/components/LinkModal.jsx` removendo estilos inline e aplicando backdrop escuro fixo e card centralizado
+- [x] T013 [P] [US3] Refatorar `frontend/src/components/MergeModal.jsx` removendo estilos inline e aplicando backdrop escuro fixo (`fixed inset-0 bg-black/50`) e card centralizado
+- [x] T014 [P] [US3] Refatorar `frontend/src/components/LinkModal.jsx` removendo estilos inline e aplicando backdrop escuro fixo e card centralizado
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -84,9 +84,9 @@
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T015 [P] Otimização das classes (remover estilos não utilizados) no build final rodando `npm run build`
-- [ ] T016 [P] Validação com Lighthouse (Score > 90) em acessibilidade nas rotas principais
-- [ ] T017 [P] Revisar `frontend/src/components/EntityPage.jsx` para garantir que o formulário genérico de criação siga o design padronizado
+- [x] T015 [P] Otimização das classes (remover estilos não utilizados) no build final rodando `npm run build`
+- [x] T016 [P] Validação com Lighthouse (Score > 90) em acessibilidade nas rotas principais
+- [x] T017 [P] Revisar `frontend/src/components/EntityPage.jsx` para garantir que o formulário genérico de criação siga o design padronizado
 
 ---
 

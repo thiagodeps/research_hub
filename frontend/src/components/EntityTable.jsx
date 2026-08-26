@@ -16,9 +16,10 @@ export default function EntityTable({ entities, entityName, columns, onEdit, onD
   };
 
   return (
-    <div style={{ marginTop: '1rem' }}>
-      <div style={{ marginBottom: '1rem' }}>
+    <div className="mt-4">
+      <div className="mb-4">
         <button 
+          className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md disabled:bg-slate-300 disabled:cursor-not-allowed hover:bg-indigo-700 transition-colors"
           disabled={selectedIds.length < 2} 
           onClick={() => setShowMerge(true)}
         >
@@ -44,34 +45,39 @@ export default function EntityTable({ entities, entityName, columns, onEdit, onD
         />
       )}
 
-      <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '1rem' }}>
-        <thead>
-          <tr style={{ borderBottom: '2px solid #ccc' }}>
-            <th>#</th>
-            {columns.map(col => <th key={col} style={{ textAlign: 'left', padding: '0.5rem' }}>{col}</th>)}
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          {entities.map(entity => (
-            <tr key={entity.id} style={{ borderBottom: '1px solid #eee' }}>
-              <td>
-                <input 
-                  type="checkbox" 
-                  checked={selectedIds.includes(entity.id)}
-                  onChange={() => toggleSelect(entity.id)}
-                />
-              </td>
-              {columns.map(col => <td key={col} style={{ padding: '0.5rem' }}>{entity[col]}</td>)}
-              <td style={{ padding: '0.5rem' }}>
-                <button onClick={() => onEdit(entity)}>Editar</button>
-                <button onClick={() => onDelete(entity.id)}>Deletar</button>
-                <button onClick={() => setLinkParent(entity.id)}>Vincular</button>
-              </td>
+      <div className="overflow-x-auto bg-white rounded-lg shadow ring-1 ring-slate-200">
+        <table className="w-full text-sm text-left text-slate-500">
+          <thead className="text-xs text-slate-700 uppercase bg-slate-50 border-b border-slate-200">
+            <tr>
+              <th scope="col" className="px-6 py-3 w-10">
+                <span className="sr-only">Selecionar</span>
+              </th>
+              {columns.map(col => <th key={col} scope="col" className="px-6 py-3 font-semibold">{col}</th>)}
+              <th scope="col" className="px-6 py-3 text-right font-semibold">Ações</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody className="divide-y divide-slate-200">
+            {entities.map(entity => (
+              <tr key={entity.id} className="hover:bg-slate-50 transition-colors">
+                <td className="px-6 py-4">
+                  <input 
+                    type="checkbox" 
+                    className="w-4 h-4 text-indigo-600 bg-gray-100 border-gray-300 rounded focus:ring-indigo-500"
+                    checked={selectedIds.includes(entity.id)}
+                    onChange={() => toggleSelect(entity.id)}
+                  />
+                </td>
+                {columns.map(col => <td key={col} className="px-6 py-4 whitespace-nowrap text-slate-900">{entity[col]}</td>)}
+                <td className="px-6 py-4 text-right space-x-3 whitespace-nowrap">
+                  <button className="text-indigo-600 hover:text-indigo-900 font-medium transition-colors" onClick={() => onEdit(entity)}>Editar</button>
+                  <button className="text-red-600 hover:text-red-900 font-medium transition-colors" onClick={() => onDelete(entity.id)}>Deletar</button>
+                  <button className="text-slate-600 hover:text-slate-900 font-medium transition-colors" onClick={() => setLinkParent(entity.id)}>Vincular</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

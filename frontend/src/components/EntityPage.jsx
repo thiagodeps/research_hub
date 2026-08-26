@@ -53,8 +53,16 @@ export default function EntityPage({ entity, columns, fields }) {
   };
 
   return (
-    <div>
-      <button onClick={() => setEditingItem({})}>Novo Registro</button>
+    <div className="space-y-6">
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-2xl font-bold text-slate-900 capitalize">{entity}</h1>
+        <button 
+          onClick={() => setEditingItem({})}
+          className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
+        >
+          Novo Registro
+        </button>
+      </div>
       
       {editingItem && (
         <EntityForm 
