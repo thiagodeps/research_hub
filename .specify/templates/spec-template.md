@@ -82,6 +82,12 @@
   Fill them out with the right functional requirements.
 -->
 
+### Technical & Architectural Constraints
+
+- **CON-001**: Frontend DEVE ser construído em Astro (deploy no GitHub Pages), seguindo o protótipo Figma.
+- **CON-002**: Backend DEVE ser construído em Python reutilizando a biblioteca de domínio `research_domain`.
+- **CON-003**: Todas as entidades do domínio exigem CRUD completo operado unicamente por perfil de Admin (sem fluxo de aprovação).
+
 ### Functional Requirements
 
 - **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]

@@ -1,0 +1,45 @@
+---
+// src/layouts/Dashboard.astro
+---
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal Admin - Dashboard</title>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; display: flex; }
+      .sidebar {
+        width: 250px;
+        background-color: #0f172a;
+        color: white;
+        height: 100vh;
+        padding: 1rem;
+      }
+      .sidebar a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 0;
+      }
+      .content {
+        flex: 1;
+        padding: 2rem;
+        background-color: #f8fafc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>ResearchHub</h2>
+      <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/dashboard/universities">Universities</a>
+        <a href="/dashboard/researchers">Researchers</a>
+        <a href="#" onclick="localStorage.removeItem('token'); window.location.href='/login'">Sair</a>
+      </nav>
+    </div>
+    <div class="content">
+      <slot />
+    </div>
+  </body>
+</html>

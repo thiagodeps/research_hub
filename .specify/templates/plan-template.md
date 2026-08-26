@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] TDD Adherence: Test planning is prioritized and tasks clearly follow the Red-Green-Refactor cycle.
+- [ ] ResearchDomain Reuse: No domain entities (Researcher, University, etc.) are being reimagined or duplicated.
+- [ ] Test Strategy: Backend specifies pytest (unit/integration) and frontend specifies Vitest/Playwright (components/E2E).
+- [ ] Architecture: Backend in Python, Frontend in Astro (deployable as static site on GitHub Pages).
+- [ ] Operations: Direct CRUD operations by Admin only, no approval flows. Identity/branding strictly follows Figma specs.
 
 ## Project Structure
 
