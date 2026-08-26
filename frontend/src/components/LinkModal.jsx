@@ -25,6 +25,15 @@ export default function LinkModal({ parentEntity, parentId, onLink, onCancel }) 
             <option value="initiatives">Iniciativas</option>
             <option value="advisorships">Orientações</option>
             <option value="awards">Premiações</option>
+            <option value="students">Alunos</option>
+            <option value="campuses">Campus</option>
+            <option value="organizations">Organizações</option>
+            <option value="fellowships">Bolsas</option>
+            <option value="proficiencies">Proficiências</option>
+            <option value="professional_activities">Ativ. Profissionais</option>
+            <option value="knowledge_areas">Áreas de Conhecimento</option>
+            <option value="languages">Idiomas</option>
+            <option value="research_productions">Prod. Científicas</option>
           </select>
         </div>
         

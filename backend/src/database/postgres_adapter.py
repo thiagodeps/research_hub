@@ -1,5 +1,8 @@
 from src.database.session import SessionLocal
-from src.models.orm import Admin, University, Researcher, Article, ResearchGroup, Initiative, Advisorship, Award
+from src.models.orm import (
+    Admin, University, Researcher, Article, ResearchGroup, Initiative, Advisorship, Award,
+    Student, Campus, Organization, Fellowship, Proficiency, ProfessionalActivity, KnowledgeArea, Language, ResearchProduction
+)
 
 class DatabasePostgresAdapter:
     def __init__(self):
@@ -11,7 +14,16 @@ class DatabasePostgresAdapter:
             "groups": ResearchGroup,
             "initiatives": Initiative,
             "advisorships": Advisorship,
-            "awards": Award
+            "awards": Award,
+            "students": Student,
+            "campuses": Campus,
+            "organizations": Organization,
+            "fellowships": Fellowship,
+            "proficiencies": Proficiency,
+            "professional_activities": ProfessionalActivity,
+            "knowledge_areas": KnowledgeArea,
+            "languages": Language,
+            "research_productions": ResearchProduction
         }
 
     def _get_model(self, table: str):

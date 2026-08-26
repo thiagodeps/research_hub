@@ -70,3 +70,48 @@ class Award(Base):
     title = Column(String)
     year = Column(Integer)
 
+class Student(Base):
+    __tablename__ = "students"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+
+class Campus(Base):
+    __tablename__ = "campuses"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+
+class Organization(Base):
+    __tablename__ = "organizations"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+
+class Fellowship(Base):
+    __tablename__ = "fellowships"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+
+class Proficiency(Base):
+    __tablename__ = "proficiencies"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+
+class ProfessionalActivity(Base):
+    __tablename__ = "professional_activities"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+
+class KnowledgeArea(Base):
+    __tablename__ = "knowledge_areas"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+
+class Language(Base):
+    __tablename__ = "languages"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+
+class ResearchProduction(Base):
+    __tablename__ = "research_productions"
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String)
+
