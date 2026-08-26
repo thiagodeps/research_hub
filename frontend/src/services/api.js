@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env?.PUBLIC_API_URL || '/api/v1';
+const API_BASE_URL = import.meta.env?.PUBLIC_API_URL || 'http://localhost:8000/api/v1';
 
 export async function apiFetch(endpoint, options = {}) {
   const url = endpoint.startsWith('http') ? endpoint : `${API_BASE_URL}${endpoint}`;

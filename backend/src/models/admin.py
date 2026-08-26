@@ -1,8 +1,10 @@
 from pydantic import BaseModel, EmailStr
 import uuid
 
+from typing import Union
+
 class AdminUser(BaseModel):
-    id: str
+    id: Union[int, str]
     email: EmailStr
     password_hash: str
 

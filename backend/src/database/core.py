@@ -26,6 +26,13 @@ def get_db():
         storage_type = os.environ.get("STORAGE_TYPE", "memory")
         if storage_type == "memory":
             _db_instance = DatabaseMemoryAdapter()
+            # SEED DEFAULT ADMIN
+            from src.core.security import get_password_hash
+            _db_instance.save("admins", {
+                "id": 1,
+                "email": "admin@admin.com",
+                "password_hash": get_password_hash("admin123")
+            })
         else:
             raise NotImplementedError("Postgres adapter not implemented yet")
     return _db_instance
