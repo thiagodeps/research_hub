@@ -6,7 +6,7 @@ class BaseRepository:
 
     def get_all(self):
         db = get_db()
-        return list(db._data.get(self.table_name, {}).values())
+        return db.get_all(self.table_name)
 
     def get_by_id(self, record_id: int):
         db = get_db()
@@ -20,15 +20,11 @@ class BaseRepository:
         db = get_db()
         record = db.get(self.table_name, record_id)
         if record:
-            record.update(data)
-            db.save(self.table_name, record)
+            # We construct a new dict to pass to save so that we don't mutate memory directly if it's not ORM
+            merged = {**record, **data, "id": record_id}
+            return db.save(self.table_name, merged)
         return record
 
     def delete(self, record_id: int):
         db = get_db()
-        key = int(record_id) if str(record_id).isdigit() else record_id
-        # In memory deletion
-        if self.table_name in db._data and key in db._data[self.table_name]:
-            del db._data[self.table_name][key]
-            return True
-        return False
+        return db.delete(self.table_name, record_id)
