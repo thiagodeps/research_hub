@@ -63,23 +63,33 @@ class ParquetService:
         overwritten_files = set()
         new_files_data = {}
         
-        # 1. Generate new parquet data from DB for mapped tables
+        # 1. Generate new parquet AND json data from DB for mapped tables
         for table_name in Base.metadata.tables.keys():
             if table_name in ["admins", "universities"]: 
                 continue # Skip internal UI tables
                 
             try:
                 df = pd.read_sql_table(table_name, engine)
+                
+                export_base = f"{table_name}_canonical"
+                if table_name == "groups":
+                    export_base = "research_groups_canonical"
+                
+                # Save Parquet
                 pq_buffer = io.BytesIO()
                 df.to_parquet(pq_buffer, index=False)
+                pq_path = f"parquet/{export_base}.parquet"
+                overwritten_files.add(pq_path)
+                new_files_data[pq_path] = pq_buffer.getvalue()
                 
-                export_name = f"{table_name}_canonical.parquet"
-                if table_name == "groups":
-                    export_name = "research_groups_canonical.parquet"
-                    
-                full_path = f"parquet/{export_name}"
-                overwritten_files.add(full_path)
-                new_files_data[full_path] = pq_buffer.getvalue()
+                # Save JSON
+                json_buffer = io.BytesIO()
+                # Use standard json orient="records"
+                df.to_json(json_buffer, orient="records", force_ascii=False)
+                json_path = f"{export_base}.json"
+                overwritten_files.add(json_path)
+                new_files_data[json_path] = json_buffer.getvalue()
+                
             except Exception as e:
                 print(f"Error exporting {table_name}: {e}")
 
