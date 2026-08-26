@@ -5,18 +5,23 @@ import EntityForm from './EntityForm';
 
 export default function EntityPage({ entity, columns, fields }) {
   const [data, setData] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [page, setPage] = useState(0);
   const [editingItem, setEditingItem] = useState(null);
+  const limit = 50;
 
   const loadData = async () => {
     try {
-      const res = await apiFetch(`/${entity}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }});
+      const offset = page * limit;
+      const res = await apiFetch(`/${entity}?limit=${limit}&offset=${offset}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }});
       setData(res.items || []);
+      setTotal(res.total || 0);
     } catch (e) {
       console.error(e);
     }
   };
 
-  useEffect(() => { loadData(); }, [entity]);
+  useEffect(() => { loadData(); }, [entity, page]);
 
   const handleSave = async (payload) => {
     try {
@@ -114,6 +119,28 @@ export default function EntityPage({ entity, columns, fields }) {
         onMerge={handleMerge}
         onLink={handleLink}
       />
+
+      <div className="flex justify-between items-center mt-4 text-sm text-slate-600">
+        <div>
+          Mostrando {page * limit + 1} a {Math.min((page + 1) * limit, total)} de {total} registros
+        </div>
+        <div className="space-x-2">
+          <button 
+            disabled={page === 0} 
+            onClick={() => setPage(page - 1)}
+            className="px-3 py-1 bg-white border border-slate-300 rounded disabled:opacity-50 hover:bg-slate-50 transition-colors"
+          >
+            Anterior
+          </button>
+          <button 
+            disabled={(page + 1) * limit >= total} 
+            onClick={() => setPage(page + 1)}
+            className="px-3 py-1 bg-white border border-slate-300 rounded disabled:opacity-50 hover:bg-slate-50 transition-colors"
+          >
+            Próxima
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

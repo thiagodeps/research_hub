@@ -32,11 +32,12 @@ class DatabasePostgresAdapter:
             obj = session.query(model).filter(model.id == key).first()
             return self._to_dict(obj)
 
-    def get_all(self, table: str):
+    def get_all(self, table: str, limit: int = 100, offset: int = 0):
         model = self._get_model(table)
         with SessionLocal() as session:
-            objs = session.query(model).all()
-            return [self._to_dict(obj) for obj in objs]
+            objs = session.query(model).offset(offset).limit(limit).all()
+            total = session.query(model).count()
+            return [self._to_dict(obj) for obj in objs], total
 
     def save(self, table: str, record: dict):
         model = self._get_model(table)

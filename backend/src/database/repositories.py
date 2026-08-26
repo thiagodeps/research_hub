@@ -4,9 +4,9 @@ class BaseRepository:
     def __init__(self, table_name: str):
         self.table_name = table_name
 
-    def get_all(self):
+    def get_all(self, limit: int = 100, offset: int = 0):
         db = get_db()
-        return db.get_all(self.table_name)
+        return db.get_all(self.table_name, limit, offset)
 
     def get_by_id(self, record_id: int):
         db = get_db()
