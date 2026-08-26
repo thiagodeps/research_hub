@@ -75,23 +75,67 @@ class ParquetService:
                 if table_name == "groups":
                     export_base = "research_groups_canonical"
                 
-                # Save Parquet
+                pq_path = f"parquet/{export_base}.parquet"
+                json_path = f"{export_base}.json"
+                
+                # RECOVER ORIGINAL TYPES AND STRUCTURE
+                import json
+                if os.path.exists(ParquetService.ORIGINAL_ZIP_PATH):
+                    with zipfile.ZipFile(ParquetService.ORIGINAL_ZIP_PATH, "r") as oz:
+                        if pq_path in oz.namelist():
+                            with oz.open(pq_path) as pf:
+                                df_orig = pd.read_parquet(pf)
+                                
+                                # Align columns and types
+                                for col in df_orig.columns:
+                                    if col not in df.columns:
+                                        continue
+                                        
+                                    # If original is boolean
+                                    if pd.api.types.is_bool_dtype(df_orig[col]):
+                                        df[col] = df[col].map({'1': True, '0': False, 'True': True, 'False': False, 1: True, 0: False, True: True, False: False})
+                                    
+                                    # Numeric types
+                                    elif pd.api.types.is_numeric_dtype(df_orig[col]):
+                                        df[col] = pd.to_numeric(df[col], errors='coerce')
+                                        df[col] = df[col].astype(df_orig[col].dtype)
+                                
+                                # Reorder columns exactly like the original schema
+                                ordered_cols = [c for c in df_orig.columns if c in df.columns]
+                                df = df[ordered_cols]
+                
+                # Save Parquet (keep strings as strings)
                 pq_buffer = io.BytesIO()
                 df.to_parquet(pq_buffer, index=False)
-                pq_path = f"parquet/{export_base}.parquet"
                 overwritten_files.add(pq_path)
                 new_files_data[pq_path] = pq_buffer.getvalue()
                 
+                # Prepare DataFrame for JSON (parse JSON strings into actual objects)
+                import json
+                df_json = df.copy()
+                for col in df_json.columns:
+                    # Try parsing strings that look like JSON arrays or objects
+                    def try_parse_json(val):
+                        if isinstance(val, str) and (val.startswith('[') or val.startswith('{')):
+                            try:
+                                return json.loads(val)
+                            except:
+                                pass
+                        return val
+                    df_json[col] = df_json[col].apply(try_parse_json)
+                
                 # Save JSON
                 json_buffer = io.BytesIO()
-                # Use standard json orient="records"
-                df.to_json(json_buffer, orient="records", force_ascii=False)
-                json_path = f"{export_base}.json"
+                json_str = json.dumps(df_json.to_dict(orient="records"), ensure_ascii=False, indent=4)
+                json_buffer.write(json_str.encode('utf-8'))
+                
                 overwritten_files.add(json_path)
                 new_files_data[json_path] = json_buffer.getvalue()
                 
             except Exception as e:
+                import traceback
                 print(f"Error exporting {table_name}: {e}")
+                traceback.print_exc()
 
         # 2. Write to the new zip file
         with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as z:
