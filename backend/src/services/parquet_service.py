@@ -126,7 +126,9 @@ class ParquetService:
                 
                 # Save JSON
                 json_buffer = io.BytesIO()
-                json_str = json.dumps(df_json.to_dict(orient="records"), ensure_ascii=False, indent=4)
+                # Replace pandas NaN/NaT with None so json.dumps outputs standard 'null' instead of 'NaN'
+                df_clean = df_json.astype(object).where(pd.notnull(df_json), None)
+                json_str = json.dumps(df_clean.to_dict(orient="records"), ensure_ascii=False, indent=4)
                 json_buffer.write(json_str.encode('utf-8'))
                 
                 overwritten_files.add(json_path)
