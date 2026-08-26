@@ -12,8 +12,8 @@ import EntityPage from '../../components/EntityPage.jsx';
       { name: 'id', label: 'ID', type: 'number' },
       { name: 'name', label: 'Nome', required: true },
       { name: 'classification', label: 'Classificação' },
-      { name: 'initiatives', label: 'Iniciativas (JSON)' },
-      { name: 'research_groups', label: 'Grupos (JSON)' }
+      { name: 'initiatives', label: 'Iniciativas Vinculadas', type: 'json_readonly' },
+      { name: 'research_groups', label: 'Grupos Vinculados', type: 'json_readonly' }
     ]} 
   />
 </Dashboard>
