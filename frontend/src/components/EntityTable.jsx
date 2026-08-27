@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MergeModal from './MergeModal';
 import LinkModal from './LinkModal';
 
-export default function EntityTable({ entities, entityName, columns, fields = [], onEdit, onDelete, onMerge, onLink }) {
+export default function EntityTable({ entities, entityName, columns, fields = [], sortCol, sortOrder, onSort, onEdit, onDelete, onMerge, onLink }) {
   const [selectedIds, setSelectedIds] = useState([]);
   const [showMerge, setShowMerge] = useState(false);
   const [linkParent, setLinkParent] = useState(null);
@@ -76,7 +76,23 @@ export default function EntityTable({ entities, entityName, columns, fields = []
               <th scope="col" className="px-6 py-3 w-10">
                 <span className="sr-only">Selecionar</span>
               </th>
-              {columns.map(col => <th key={col} scope="col" className="px-6 py-3 font-semibold">{col}</th>)}
+              {columns.map(col => (
+                <th 
+                  key={col} 
+                  scope="col" 
+                  className="px-6 py-3 font-semibold cursor-pointer hover:bg-slate-200 transition-colors select-none"
+                  onClick={() => onSort && onSort(col)}
+                >
+                  <div className="flex items-center space-x-1">
+                    <span>{col}</span>
+                    {sortCol === col && (
+                      <span className="text-indigo-600">
+                        {sortOrder === 'asc' ? '↑' : '↓'}
+                      </span>
+                    )}
+                  </div>
+                </th>
+              ))}
               <th scope="col" className="px-6 py-3 text-right font-semibold">Ações</th>
             </tr>
           </thead>

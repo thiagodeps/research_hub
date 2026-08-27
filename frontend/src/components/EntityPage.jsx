@@ -8,6 +8,8 @@ export default function EntityPage({ entity, columns, fields }) {
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(0);
   const [search, setSearch] = useState("");
+  const [sortCol, setSortCol] = useState(null);
+  const [sortOrder, setSortOrder] = useState("asc");
   const [editingItem, setEditingItem] = useState(null);
   const limit = 50;
 
@@ -16,6 +18,7 @@ export default function EntityPage({ entity, columns, fields }) {
       const offset = page * limit;
       let url = `/${entity}?limit=${limit}&offset=${offset}`;
       if (search) url += `&search=${encodeURIComponent(search)}`;
+      if (sortCol) url += `&sort=${encodeURIComponent(sortCol)}&order=${sortOrder}`;
       
       const res = await apiFetch(url, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }});
       setData(res.items || []);
@@ -25,7 +28,7 @@ export default function EntityPage({ entity, columns, fields }) {
     }
   };
 
-  useEffect(() => { loadData(); }, [entity, page, search]);
+  useEffect(() => { loadData(); }, [entity, page, search, sortCol, sortOrder]);
 
   // Deep linking: Check URL for openId on mount
   useEffect(() => {
@@ -148,6 +151,16 @@ export default function EntityPage({ entity, columns, fields }) {
         entities={data} 
         columns={columns} 
         fields={fields}
+        sortCol={sortCol}
+        sortOrder={sortOrder}
+        onSort={(col) => {
+          if (sortCol === col) {
+            setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+          } else {
+            setSortCol(col);
+            setSortOrder("asc");
+          }
+        }}
         onEdit={setEditingItem} 
         onDelete={handleDelete} 
         onMerge={handleMerge}

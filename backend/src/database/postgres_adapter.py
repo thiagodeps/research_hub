@@ -44,7 +44,7 @@ class DatabasePostgresAdapter:
             obj = session.query(model).filter(model.id == key).first()
             return self._to_dict(obj)
 
-    def get_all(self, table: str, limit: int = 50, offset: int = 0, search: str = None):
+    def get_all(self, table: str, limit: int = 50, offset: int = 0, search: str = None, sort: str = None, order: str = "asc"):
         model = self._get_model(table)
         session = SessionLocal()
         try:
@@ -59,6 +59,25 @@ class DatabasePostgresAdapter:
                 
                 if searchable_col is not None:
                     query = query.filter(searchable_col.ilike(f"%{search}%"))
+            
+            if sort and hasattr(model, sort):
+                from sqlalchemy import func
+                sort_col = getattr(model, sort)
+                
+                # Check if this column is likely a JSON relationship array by its name
+                json_columns = ['initiatives', 'research_groups', 'groups', 'knowledge_areas', 'students', 
+                                'advisorships', 'articles', 'awards', 'organizations', 'proficiencies', 
+                                'fellowships', 'languages', 'professional_activities', 'research_productions']
+                
+                if sort in json_columns:
+                    sort_attr = func.length(sort_col)
+                else:
+                    sort_attr = sort_col
+                
+                if order == "desc":
+                    query = query.order_by(sort_attr.desc().nulls_last())
+                else:
+                    query = query.order_by(sort_attr.asc().nulls_last())
             
             total = query.count()
             items = query.offset(offset).limit(limit).all()

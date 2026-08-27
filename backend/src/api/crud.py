@@ -9,9 +9,9 @@ def get_service(entity: str) -> CrudService:
     return CrudService(entity)
 
 @router.get("/{entity}")
-def get_all(entity: str, limit: int = Query(100, ge=1, le=1000), offset: int = Query(0, ge=0), search: Optional[str] = None):
+def get_all(entity: str, limit: int = Query(100, ge=1, le=1000), offset: int = Query(0, ge=0), search: Optional[str] = None, sort: Optional[str] = None, order: Optional[str] = "asc"):
     service = get_service(entity)
-    items, total = service.list_all(limit, offset, search=search)
+    items, total = service.list_all(limit, offset, search=search, sort=sort, order=order)
     return {"items": items, "total": total}
 
 @router.get("/{entity}/{entity_id}")
