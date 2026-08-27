@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MergeModal from './MergeModal';
 import LinkModal from './LinkModal';
 
-export default function EntityTable({ entities, entityName, columns, onEdit, onDelete, onMerge, onLink }) {
+export default function EntityTable({ entities, entityName, columns, fields = [], onEdit, onDelete, onMerge, onLink }) {
   const [selectedIds, setSelectedIds] = useState([]);
   const [showMerge, setShowMerge] = useState(false);
   const [linkParent, setLinkParent] = useState(null);
@@ -13,6 +13,28 @@ export default function EntityTable({ entities, entityName, columns, onEdit, onD
 
   const toggleSelect = (id) => {
     setSelectedIds(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
+  };
+
+  const formatCellValue = (val, col) => {
+    // Find field definition to see if it's json_readonly
+    const fieldDef = fields.find(f => f.name === col);
+    if (fieldDef && fieldDef.type === 'json_readonly') {
+      if (!val) return '0 vínculos';
+      try {
+        const parsed = JSON.parse(val);
+        if (Array.isArray(parsed)) {
+          return `${parsed.length} vínculos`;
+        }
+      } catch (e) {
+        return 'Erro/0 vínculos';
+      }
+    }
+    
+    // Fallback for long strings that aren't marked json_readonly
+    if (typeof val === 'string' && val.length > 50) {
+      return val.substring(0, 50) + '...';
+    }
+    return val;
   };
 
   return (
@@ -69,13 +91,11 @@ export default function EntityTable({ entities, entityName, columns, onEdit, onD
                 </td>
                 {columns.map(col => (
                   <td key={col} className="px-6 py-4 whitespace-nowrap text-slate-900 max-w-[200px] truncate">
-                    {typeof entity[col] === 'string' && entity[col].startsWith('[') ? 
-                        (entity[col].length > 50 ? entity[col].substring(0, 50) + '...' : entity[col])
-                        : entity[col]}
+                    {formatCellValue(entity[col], col)}
                   </td>
                 ))}
                 <td className="px-6 py-4 text-right space-x-3 whitespace-nowrap">
-                  <button className="text-indigo-600 hover:text-indigo-900 font-medium transition-colors" onClick={() => onEdit(entity)}>Editar</button>
+                  <button className="text-indigo-600 hover:text-indigo-900 font-medium transition-colors" onClick={() => onEdit(entity)}>Visualizar</button>
                   <button className="text-red-600 hover:text-red-900 font-medium transition-colors" onClick={() => onDelete(entity.id)}>Deletar</button>
                   <button className="text-slate-600 hover:text-slate-900 font-medium transition-colors" onClick={() => setLinkParent(entity.id)}>Vincular</button>
                 </td>

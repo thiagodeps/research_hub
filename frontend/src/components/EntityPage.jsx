@@ -114,6 +114,7 @@ export default function EntityPage({ entity, columns, fields }) {
         entityName={entity}
         entities={data} 
         columns={columns} 
+        fields={fields}
         onEdit={setEditingItem} 
         onDelete={handleDelete} 
         onMerge={handleMerge}
