@@ -23,7 +23,10 @@ export default function EntityForm({ initialData = {}, fields, onSubmit, onCance
         {fields.map(f => {
           if (f.type === 'json_readonly') {
             let items = [];
-            try { items = data[f.name] ? JSON.parse(data[f.name]) : []; } catch(e) {}
+            try { 
+              const parsed = data[f.name] ? JSON.parse(data[f.name]) : []; 
+              items = Array.isArray(parsed) ? parsed : (parsed ? [parsed] : []);
+            } catch(e) {}
             
             // Map column names to dashboard routes
             const getRoute = (colName) => {

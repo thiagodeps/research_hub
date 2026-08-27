@@ -19,14 +19,16 @@ export default function EntityTable({ entities, entityName, columns, fields = []
     // Find field definition to see if it's json_readonly
     const fieldDef = fields.find(f => f.name === col);
     if (fieldDef && fieldDef.type === 'json_readonly') {
-      if (!val) return '0 vínculos';
+      if (!val) return '-';
       try {
         const parsed = JSON.parse(val);
         if (Array.isArray(parsed)) {
           return `${parsed.length} vínculos`;
+        } else if (typeof parsed === 'object' && parsed !== null) {
+          return parsed.name || parsed.title || '-';
         }
       } catch (e) {
-        return 'Erro/0 vínculos';
+        return 'Erro';
       }
     }
     

@@ -16,11 +16,8 @@ class ParquetService:
         if base.endswith("_canonical"):
             base = base.replace("_canonical", "")
         
-        # map to our table names
-        table_map = {
-            "research_groups": "groups"
-        }
-        return table_map.get(base, base)
+        # We don't map research_groups to groups here because Base.metadata.tables uses 'research_groups'
+        return base
 
     @staticmethod
     async def import_zip(file: UploadFile):
