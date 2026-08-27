@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, Depends, Query
-from typing import Any
+from typing import Any, Optional
 from src.services.crud_service import CrudService
 
 router = APIRouter(prefix="/api/v1")
@@ -9,9 +9,9 @@ def get_service(entity: str) -> CrudService:
     return CrudService(entity)
 
 @router.get("/{entity}")
-def get_all(entity: str, limit: int = Query(100, ge=1, le=1000), offset: int = Query(0, ge=0)):
+def get_all(entity: str, limit: int = Query(100, ge=1, le=1000), offset: int = Query(0, ge=0), search: Optional[str] = None):
     service = get_service(entity)
-    items, total = service.list_all(limit, offset)
+    items, total = service.list_all(limit, offset, search=search)
     return {"items": items, "total": total}
 
 @router.get("/{entity}/{entity_id}")

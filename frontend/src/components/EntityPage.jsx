@@ -7,13 +7,17 @@ export default function EntityPage({ entity, columns, fields }) {
   const [data, setData] = useState([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(0);
+  const [search, setSearch] = useState("");
   const [editingItem, setEditingItem] = useState(null);
   const limit = 50;
 
   const loadData = async () => {
     try {
       const offset = page * limit;
-      const res = await apiFetch(`/${entity}?limit=${limit}&offset=${offset}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }});
+      let url = `/${entity}?limit=${limit}&offset=${offset}`;
+      if (search) url += `&search=${encodeURIComponent(search)}`;
+      
+      const res = await apiFetch(url, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }});
       setData(res.items || []);
       setTotal(res.total || 0);
     } catch (e) {
@@ -21,7 +25,23 @@ export default function EntityPage({ entity, columns, fields }) {
     }
   };
 
-  useEffect(() => { loadData(); }, [entity, page]);
+  useEffect(() => { loadData(); }, [entity, page, search]);
+
+  // Deep linking: Check URL for openId on mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const openId = params.get('openId');
+    if (openId) {
+      // Remove it from URL so refresh doesn't trigger it again
+      window.history.replaceState({}, '', window.location.pathname);
+      // Fetch and open item
+      apiFetch(`/${entity}/${openId}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }})
+        .then(res => {
+          if (res && res.id) setEditingItem(res);
+        })
+        .catch(err => console.error("Could not load deep link:", err));
+    }
+  }, [entity]);
 
   const handleSave = async (payload) => {
     try {
@@ -91,14 +111,27 @@ export default function EntityPage({ entity, columns, fields }) {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
         <h1 className="text-2xl font-bold text-slate-900 capitalize">{entity}</h1>
-        <button 
-          onClick={() => setEditingItem({})}
-          className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
-        >
-          Novo Registro
-        </button>
+        
+        <div className="flex w-full sm:w-auto items-center space-x-3">
+          <input 
+            type="text" 
+            placeholder="Buscar registro..." 
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+              setPage(0); // Reset page on search
+            }}
+            className="w-full sm:w-64 px-4 py-2 text-sm border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+          <button 
+            onClick={() => setEditingItem({})}
+            className="whitespace-nowrap px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
+          >
+            Novo Registro
+          </button>
+        </div>
       </div>
       
       {editingItem && (

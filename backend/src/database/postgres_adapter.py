@@ -44,12 +44,27 @@ class DatabasePostgresAdapter:
             obj = session.query(model).filter(model.id == key).first()
             return self._to_dict(obj)
 
-    def get_all(self, table: str, limit: int = 100, offset: int = 0):
+    def get_all(self, table: str, limit: int = 50, offset: int = 0, search: str = None):
         model = self._get_model(table)
-        with SessionLocal() as session:
-            objs = session.query(model).offset(offset).limit(limit).all()
-            total = session.query(model).count()
-            return [self._to_dict(obj) for obj in objs], total
+        session = SessionLocal()
+        try:
+            query = session.query(model)
+            
+            if search:
+                searchable_col = None
+                for col_name in ["name", "title", "username"]:
+                    if hasattr(model, col_name):
+                        searchable_col = getattr(model, col_name)
+                        break
+                
+                if searchable_col is not None:
+                    query = query.filter(searchable_col.ilike(f"%{search}%"))
+            
+            total = query.count()
+            items = query.offset(offset).limit(limit).all()
+            return [self._to_dict(item) for item in items], total
+        finally:
+            session.close()
 
     def save(self, table: str, record: dict):
         model = self._get_model(table)

@@ -24,6 +24,16 @@ export default function EntityForm({ initialData = {}, fields, onSubmit, onCance
           if (f.type === 'json_readonly') {
             let items = [];
             try { items = data[f.name] ? JSON.parse(data[f.name]) : []; } catch(e) {}
+            
+            // Map column names to dashboard routes
+            const getRoute = (colName) => {
+              if (colName === 'research_groups') return 'groups';
+              if (colName === 'campus') return 'campuses';
+              if (colName === 'organizations') return 'organizations';
+              return colName;
+            };
+            const route = getRoute(f.name);
+
             return (
               <div key={f.name}>
                 <label className="block mb-1 text-sm font-medium text-slate-700">{f.label}</label>
@@ -31,8 +41,13 @@ export default function EntityForm({ initialData = {}, fields, onSubmit, onCance
                   {items.length > 0 ? (
                     <ul className="list-disc pl-5 space-y-1">
                       {items.map((item, idx) => (
-                        <li key={idx} className="text-slate-700">
-                          ID: {item.id} - {item.name || item.title || 'Sem nome'}
+                        <li key={idx}>
+                          <a 
+                            href={`/dashboard/${route}?openId=${item.id}`}
+                            className="text-indigo-600 hover:text-indigo-800 hover:underline cursor-pointer"
+                          >
+                            ID: {item.id} - {item.name || item.title || 'Sem nome'}
+                          </a>
                         </li>
                       ))}
                     </ul>
