@@ -42,17 +42,31 @@ export default function EntityForm({ initialData = {}, fields, onSubmit, onCance
                 <label className="block mb-1 text-sm font-medium text-slate-700">{f.label}</label>
                 <div className="p-3 bg-slate-50 border border-slate-200 rounded max-h-48 overflow-y-auto text-sm">
                   {items.length > 0 ? (
-                    <ul className="list-disc pl-5 space-y-1">
-                      {items.map((item, idx) => (
-                        <li key={idx}>
-                          <a 
-                            href={`/dashboard/${route}?openId=${item.id}`}
-                            className="text-indigo-600 hover:text-indigo-800 hover:underline cursor-pointer"
-                          >
-                            ID: {item.id} - {item.name || item.title || 'Sem nome'}
-                          </a>
-                        </li>
-                      ))}
+                    <ul className="list-disc pl-5 space-y-2">
+                      {items.map((item, idx) => {
+                        if (item.id) {
+                          return (
+                            <li key={idx}>
+                              <a 
+                                href={`/dashboard/${route}?openId=${item.id}`}
+                                className="text-indigo-600 hover:text-indigo-800 hover:underline cursor-pointer font-medium"
+                              >
+                                ID: {item.id} - {item.name || item.title || 'Sem nome'}
+                              </a>
+                            </li>
+                          );
+                        } else {
+                          return (
+                            <li key={idx} className="text-slate-600 text-xs border border-slate-200 rounded p-2 bg-white">
+                              {Object.entries(item).map(([k, v]) => (
+                                <div key={k} className="mb-1 last:mb-0">
+                                  <span className="font-semibold text-slate-800 capitalize">{k.replace(/_/g, ' ')}:</span> {String(v)}
+                                </div>
+                              ))}
+                            </li>
+                          );
+                        }
+                      })}
                     </ul>
                   ) : <span className="text-slate-400">Nenhum vínculo.</span>}
                 </div>
