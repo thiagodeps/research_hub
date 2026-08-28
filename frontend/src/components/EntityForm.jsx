@@ -48,7 +48,7 @@ export default function EntityForm({ initialData = {}, fields, onSubmit, onCance
                           return (
                             <li key={idx}>
                               <a 
-                                href={`/dashboard/${route}?openId=${item.id}`}
+                                href={`/research_hub/dashboard/${route}?openId=${item.id}`}
                                 className="text-indigo-600 hover:text-indigo-800 hover:underline cursor-pointer font-medium"
                               >
                                 ID: {item.id} - {item.name || item.title || 'Sem nome'}
