@@ -2,7 +2,7 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///./data/test.db")
+DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///./test.db")
 
 # check_same_thread is needed for SQLite. It's ignored by PostgreSQL.
 engine_args = {}
