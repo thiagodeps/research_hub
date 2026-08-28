@@ -1,0 +1,25 @@
+---
+// This is the root page that acts as an authentication router.
+---
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecionando...</title>
+  <script>
+    // This script runs immediately in the browser
+    const token = localStorage.getItem('token');
+    if (token) {
+      window.location.replace('/dashboard');
+    } else {
+      window.location.replace('/login');
+    }
+  </script>
+</head>
+<body class="bg-slate-50 flex items-center justify-center min-h-screen">
+  <div class="text-slate-500 font-medium animate-pulse">
+    Carregando...
+  </div>
+</body>
+</html>
