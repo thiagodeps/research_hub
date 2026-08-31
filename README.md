@@ -47,6 +47,23 @@ A plataforma lida com **15 Domínios de Dados Canônicos**:
 
 O projeto é dividido em dois serviços principais que devem ser rodados simultaneamente.
 
+### ⚡ Atalho via Makefile (recomendado)
+
+Na raiz do projeto, para instalar tudo (venv + dependências do backend + dependências do frontend):
+```bash
+make build
+```
+Para subir o backend (porta `8000`) e o frontend (porta `4321`) juntos, encerrando ambos com um único `Ctrl+C`:
+```bash
+make run
+```
+Para limpar `venv` e `node_modules` e reinstalar do zero:
+```bash
+make clean
+```
+
+Os passos manuais abaixo continuam funcionando caso prefira rodar cada serviço separadamente.
+
 ### 1. Inicializando o Backend (Python)
 Abra um terminal na raiz do projeto e acesse a pasta `backend`:
 ```bash
@@ -64,11 +81,16 @@ pip install fastapi uvicorn sqlalchemy pandas pyarrow python-multipart
 ```
 Inicie o servidor local na porta 8000:
 ```bash
-# O banco SQLite (test.db) será criado automaticamente
-export STORAGE_TYPE=postgres  # Opcional: Se quiser apontar para um PostgreSQL
+# O banco SQLite (test.db) será criado automaticamente.
+# STORAGE_TYPE=postgres é OBRIGATÓRIO (apesar do nome, funciona com o SQLite local também):
+# sem ele, a API cai no adaptador em memória, que fica desconectado dos dados
+# gravados pela importação de ZIP e o dashboard fica vazio mesmo após um import bem-sucedido.
+export STORAGE_TYPE=postgres
 uvicorn src.api.main:app --reload --port 8000
 ```
 > O backend agora está rodando e escutando as rotas da API em `http://localhost:8000`.
+>
+> Usando `make run`? Essa variável já vem configurada automaticamente, não precisa exportar nada.
 
 ### 2. Inicializando o Frontend (Astro/React)
 Abra um **novo terminal** na raiz do projeto e acesse a pasta `frontend`:
