@@ -23,6 +23,9 @@ serde = { version = "1.0", features = ["derive"] }
 log = "0.4"
 tauri = { version = "2.11.3", features = [] }
 tauri-plugin-log = "2"
+rusqlite = { version = "0.32", features = ["bundled", "serde_json", "backup", "functions"] }
+bcrypt = "0.15"
+thiserror = "2"
 
 [features]
 # Ligada pelo CLI nos builds de producao. Com ela, generate_context! embute o

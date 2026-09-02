@@ -1,3 +1,10 @@
+pub mod db;
+pub mod error;
+pub mod registry;
+pub mod state;
+
+use tauri::Manager;
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
@@ -9,6 +16,14 @@ pub fn run() {
                         .build(),
                 )?;
             }
+
+            // SQLite lives in the OS app-data dir, not next to the executable
+            // (the Python version drops test.db in the current directory).
+            let data_dir = app.path().app_data_dir()?;
+            let db_path = db::database_path(&data_dir)?;
+            let conn = db::initialize(&data_dir)?;
+            app.manage(state::AppState::new(conn, db_path));
+
             Ok(())
         })
         .run(tauri::generate_context!())
