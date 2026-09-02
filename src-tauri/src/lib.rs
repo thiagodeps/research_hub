@@ -1,3 +1,6 @@
+pub mod auth;
+pub mod commands;
+pub mod crud;
 pub mod db;
 pub mod error;
 pub mod registry;
@@ -26,6 +29,14 @@ pub fn run() {
 
             Ok(())
         })
+        .invoke_handler(tauri::generate_handler![
+            commands::login,
+            commands::list_entities,
+            commands::get_entity,
+            commands::create_entity,
+            commands::update_entity,
+            commands::delete_entity,
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
