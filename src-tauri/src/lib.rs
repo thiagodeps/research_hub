@@ -1,6 +1,8 @@
 pub mod auth;
 pub mod commands;
 pub mod crud;
+pub mod import;
+pub mod parquet_io;
 pub mod db;
 pub mod error;
 pub mod registry;
@@ -11,6 +13,7 @@ use tauri::Manager;
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_dialog::init())
         .setup(|app| {
             if cfg!(debug_assertions) {
                 app.handle().plugin(
@@ -36,6 +39,7 @@ pub fn run() {
             commands::create_entity,
             commands::update_entity,
             commands::delete_entity,
+            commands::import_canonical_zip,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

@@ -87,3 +87,61 @@ pub fn login(
         token_type: "bearer".into(),
     })
 }
+
+// ---------------------------------------------------------------- data import
+
+/// Import the canonical archive (SEP-018).
+///
+/// The dialog is opened here, in Rust (decision Q1), so the frontend needs no
+/// filesystem permission at all. `path` is accepted for the drag-and-drop path,
+/// where the window already knows the file.
+#[tauri::command(async)]
+pub fn import_canonical_zip(
+    app: tauri::AppHandle,
+    state: State<'_, AppState>,
+    path: Option<String>,
+) -> Result<Option<crate::import::ImportSummary>, AppError> {
+    use tauri::Emitter;
+    use tauri_plugin_dialog::DialogExt;
+
+    let chosen = match path {
+        Some(p) => std::path::PathBuf::from(p),
+        None => {
+            let picked = app
+                .dialog()
+                .file()
+                .add_filter("Pacote canônico", &["zip"])
+                .blocking_pick_file();
+            // Dismissing the dialog is a no-op, not an error (FR-001).
+            match picked {
+                Some(f) => f.into_path().map_err(|e| AppError::Internal(e.to_string()))?,
+                None => return Ok(None),
+            }
+        }
+    };
+
+    if !crate::import::looks_like_zip(&chosen) {
+        return Err(AppError::Internal(
+            "Apenas arquivos .zip contendo .parquet são aceitos.".into(),
+        ));
+    }
+
+    let bytes = std::fs::read(&chosen)?;
+    let data_dir = app_data_dir(&app)?;
+
+    // Own connection: the import runs for seconds and must not hold the lock
+    // the interface uses (FR-013).
+    let mut conn = state.etl_connection()?;
+    let summary = crate::import::import_archive(&mut conn, &bytes, &data_dir, |t| {
+        let _ = app.emit("import://progress", t);
+    })?;
+
+    Ok(Some(summary))
+}
+
+fn app_data_dir(app: &tauri::AppHandle) -> Result<std::path::PathBuf, AppError> {
+    use tauri::Manager;
+    app.path()
+        .app_data_dir()
+        .map_err(|e| AppError::Internal(format!("diretório de dados indisponível: {e}")))
+}
