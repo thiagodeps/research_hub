@@ -31,11 +31,21 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-- [ ] TDD Adherence: Test planning is prioritized and tasks clearly follow the Red-Green-Refactor cycle.
-- [ ] ResearchDomain Reuse: No domain entities (Researcher, University, etc.) are being reimagined or duplicated.
-- [ ] Test Strategy: Backend specifies pytest (unit/integration) and frontend specifies Vitest/Playwright (components/E2E).
-- [ ] Architecture: Backend in Python, Frontend in Astro (deployable as static site on GitHub Pages).
-- [ ] Operations: Direct CRUD operations by Admin only, no approval flows. Identity/branding strictly follows Figma specs.
+- [ ] I — TDD Adherence: Test planning is prioritized and tasks clearly follow the Red-Green-Refactor cycle.
+- [ ] II — Functional Parity: No new functionality precedes verified import→edit→export parity. Any fix to
+      pre-existing behavior is declared as explicit scope and registered as an expected diff against the
+      Python oracle. No silent behavior changes.
+- [ ] III — Test Strategy: Rust core specifies `cargo test` (unit for domain logic, integration against
+      in-memory SQLite); frontend specifies Vitest (components/IPC layer) and WebdriverIO + `tauri-driver`
+      (E2E). Every release target is covered by automated tests — no platform is claimed on manual scripts.
+- [ ] IV — Operations: Direct CRUD operations by Admin only, no approval flows.
+- [ ] V — Desktop Architecture: Single-process Tauri 2.0 app; Astro frontend built statically and embedded;
+      SQLite single-file storage in the OS app-data directory; no HTTP layer, no database server; works
+      fully offline. Identity/branding strictly follows Figma specs.
+- [ ] VI — Business Logic in Rust: No SQL, no file I/O, and no duplicated business rules in JavaScript.
+      The JS↔Rust boundary stays confined to a single frontend module.
+- [ ] Deferred Scope: The plan does not reintroduce macOS support, code signing, auto-update, or any
+      non-SQLite database engine (see Constitution §Escopo Diferido).
 
 ## Project Structure
 
