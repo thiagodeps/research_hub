@@ -36,7 +36,7 @@
         </ul>
       </nav>
       <div class="p-4 border-t border-slate-800">
-        <a href="#" onclick="localStorage.removeItem('token'); window.location.href='/login'" class="block px-3 py-2 rounded-md hover:bg-red-900/50 text-red-400 transition-colors">Sair</a>
+        <a href="#" id="logout" class="block px-3 py-2 rounded-md hover:bg-red-900/50 text-red-400 transition-colors">Sair</a>
       </div>
     </div>
     <div class="flex-1 p-8 overflow-auto">
@@ -44,5 +44,14 @@
         <slot />
       </div>
     </div>
-  </body>
+    <script>
+    import { invoke } from '@tauri-apps/api/core';
+    document.getElementById('logout')?.addEventListener('click', async (e) => {
+      e.preventDefault();
+      try { await invoke('logout'); } catch {}
+      localStorage.removeItem('token');
+      window.location.href = '/login';
+    });
+  </script>
+</body>
 </html>

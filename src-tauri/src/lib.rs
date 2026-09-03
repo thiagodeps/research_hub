@@ -36,6 +36,8 @@ pub fn run() {
         })
         .invoke_handler(tauri::generate_handler![
             commands::login,
+            commands::logout,
+            commands::session_status,
             commands::list_entities,
             commands::get_entity,
             commands::create_entity,

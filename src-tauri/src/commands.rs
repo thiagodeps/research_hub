@@ -18,6 +18,7 @@ pub fn list_entities(
     sort: Option<String>,
     order: Option<String>,
 ) -> Result<Page, AppError> {
+    state.require_session()?;
     let conn = state.db()?;
     crud::list(
         &conn,
@@ -32,6 +33,7 @@ pub fn list_entities(
 
 #[tauri::command(async)]
 pub fn get_entity(state: State<'_, AppState>, entity: String, id: i64) -> Result<Record, AppError> {
+    state.require_session()?;
     let conn = state.db()?;
     crud::get(&conn, &entity, id)
 }
@@ -42,6 +44,7 @@ pub fn create_entity(
     entity: String,
     payload: Record,
 ) -> Result<Record, AppError> {
+    state.require_session()?;
     let conn = state.db()?;
     crud::create(&conn, &entity, &payload)
 }
@@ -53,6 +56,7 @@ pub fn update_entity(
     id: i64,
     payload: Record,
 ) -> Result<Record, AppError> {
+    state.require_session()?;
     let conn = state.db()?;
     crud::update(&conn, &entity, id, &payload)
 }
@@ -62,6 +66,7 @@ pub fn update_entity(
 /// `apiFetch` parses a 204 empty body and throws before checking the status.
 #[tauri::command(async)]
 pub fn delete_entity(state: State<'_, AppState>, entity: String, id: i64) -> Result<(), AppError> {
+    state.require_session()?;
     let conn = state.db()?;
     crud::delete(&conn, &entity, id)
 }
@@ -80,8 +85,11 @@ pub fn login(
     email: String,
     password: String,
 ) -> Result<LoginResult, AppError> {
-    let conn = state.db()?;
-    crate::auth::verify_credentials(&conn, &email, &password)?;
+    {
+        let conn = state.db()?;
+        crate::auth::verify_credentials(&conn, &email, &password)?;
+    }
+    state.open_session(&email)?;
     Ok(LoginResult {
         access_token: "local-session".into(),
         token_type: "bearer".into(),
@@ -131,6 +139,7 @@ pub fn import_canonical_zip(
 
     // Own connection: the import runs for seconds and must not hold the lock
     // the interface uses (FR-013).
+    state.require_session()?;
     let mut conn = state.etl_connection()?;
     let summary = crate::import::import_archive(&mut conn, &bytes, &data_dir, |t| {
         let _ = app.emit("import://progress", t);
@@ -169,6 +178,7 @@ pub fn export_canonical_zip(
     let data_dir = app_data_dir(&app)?;
     let original = std::fs::read(data_dir.join(crate::import::ORIGINAL_ARCHIVE)).ok();
 
+    state.require_session()?;
     let conn = state.etl_connection()?;
     let (bytes, tables, preserved) =
         crate::export::build_archive(&conn, original.as_deref(), |t| {
@@ -193,6 +203,7 @@ pub fn merge_entities(
     source_ids: Vec<i64>,
     resolved_data: crud::Record,
 ) -> Result<crud::Record, AppError> {
+    state.require_session()?;
     let mut conn = state.etl_connection()?;
     crate::special::merge(&mut conn, &entity, &source_ids, &resolved_data)
 }
@@ -205,6 +216,27 @@ pub fn link_entities(
     child_type: String,
     child_id: i64,
 ) -> Result<crud::Record, AppError> {
+    state.require_session()?;
     let conn = state.db()?;
     crate::special::link(&conn, &parent_type, parent_id, &child_type, child_id)
+}
+
+#[tauri::command(async)]
+pub fn logout(state: State<'_, AppState>) -> Result<(), AppError> {
+    state.close_session()
+}
+
+#[derive(serde::Serialize)]
+pub struct SessionStatus {
+    pub authenticated: bool,
+    pub username: Option<String>,
+}
+
+#[tauri::command(async)]
+pub fn session_status(state: State<'_, AppState>) -> Result<SessionStatus, AppError> {
+    let s = state.current_session()?;
+    Ok(SessionStatus {
+        authenticated: s.is_some(),
+        username: s.map(|s| s.username),
+    })
 }
