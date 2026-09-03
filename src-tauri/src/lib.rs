@@ -1,6 +1,7 @@
 pub mod auth;
 pub mod commands;
 pub mod crud;
+pub mod export;
 pub mod import;
 pub mod parquet_io;
 pub mod db;
@@ -40,6 +41,7 @@ pub fn run() {
             commands::update_entity,
             commands::delete_entity,
             commands::import_canonical_zip,
+            commands::export_canonical_zip,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

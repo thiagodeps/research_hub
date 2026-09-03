@@ -145,3 +145,41 @@ fn app_data_dir(app: &tauri::AppHandle) -> Result<std::path::PathBuf, AppError> 
         .app_data_dir()
         .map_err(|e| AppError::Internal(format!("diretório de dados indisponível: {e}")))
 }
+
+/// Export the curated base (SEP-019). Save dialog opened in Rust (Q1).
+#[tauri::command(async)]
+pub fn export_canonical_zip(
+    app: tauri::AppHandle,
+    state: State<'_, AppState>,
+) -> Result<Option<crate::export::ExportSummary>, AppError> {
+    use tauri::Emitter;
+    use tauri_plugin_dialog::DialogExt;
+
+    let target = match app
+        .dialog()
+        .file()
+        .set_file_name(crate::export::DEFAULT_FILENAME)
+        .add_filter("Pacote canônico", &["zip"])
+        .blocking_save_file()
+    {
+        Some(f) => f.into_path().map_err(|e| AppError::Internal(e.to_string()))?,
+        None => return Ok(None),
+    };
+
+    let data_dir = app_data_dir(&app)?;
+    let original = std::fs::read(data_dir.join(crate::import::ORIGINAL_ARCHIVE)).ok();
+
+    let conn = state.etl_connection()?;
+    let (bytes, tables, preserved) =
+        crate::export::build_archive(&conn, original.as_deref(), |t| {
+            let _ = app.emit("export://progress", t);
+        })?;
+
+    std::fs::write(&target, &bytes)?;
+
+    Ok(Some(crate::export::ExportSummary {
+        tables,
+        preserved_entries: preserved,
+        path: target.display().to_string(),
+    }))
+}

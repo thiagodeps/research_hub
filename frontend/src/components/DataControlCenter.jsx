@@ -9,6 +9,7 @@ export default function DataControlCenter() {
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState(null);
   const [progress, setProgress] = useState([]);
+  const [exporting, setExporting] = useState(false);
 
   useEffect(() => {
     const unlisten = listen('import://progress', (event) => {
@@ -50,6 +51,24 @@ export default function DataControlCenter() {
     }
   }
 
+  async function runExport() {
+    setExporting(true);
+    setMessage(null);
+    try {
+      const summary = await invoke('export_canonical_zip');
+      if (summary === null) return; // dialog dismissed
+      setMessage({
+        type: 'success',
+        text: `${summary.tables.length} tabelas exportadas, ${summary.preserved_entries.toLocaleString('pt-BR')} arquivos originais preservados.`,
+        snapshot: summary.path,
+      });
+    } catch (err) {
+      setMessage({ type: 'error', text: err?.message ?? String(err) });
+    } finally {
+      setExporting(false);
+    }
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
       <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
@@ -84,7 +103,7 @@ export default function DataControlCenter() {
             {message.text}
             {message.snapshot && (
               <div className="mt-1 text-xs text-slate-500 break-all">
-                Cópia da base anterior: {message.snapshot}
+                Arquivo: {message.snapshot}
               </div>
             )}
           </div>
@@ -98,11 +117,11 @@ export default function DataControlCenter() {
           arquivos do arquivo original.
         </p>
         <button
-          disabled
-          title="Disponível na próxima etapa da migração"
-          className="bg-slate-200 text-slate-500 px-4 py-2 rounded font-medium cursor-not-allowed"
+          onClick={runExport}
+          disabled={exporting || busy}
+          className={`bg-emerald-600 text-white px-4 py-2 rounded font-medium hover:bg-emerald-700 transition-colors ${exporting || busy ? 'opacity-50 cursor-not-allowed' : ''}`}
         >
-          Exportar (em breve)
+          {exporting ? 'Exportando...' : 'Exportar .ZIP'}
         </button>
       </div>
     </div>
