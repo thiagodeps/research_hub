@@ -183,3 +183,28 @@ pub fn export_canonical_zip(
         path: target.display().to_string(),
     }))
 }
+
+// ----------------------------------------------------------- special ops (020)
+
+#[tauri::command(async)]
+pub fn merge_entities(
+    state: State<'_, AppState>,
+    entity: String,
+    source_ids: Vec<i64>,
+    resolved_data: crud::Record,
+) -> Result<crud::Record, AppError> {
+    let mut conn = state.etl_connection()?;
+    crate::special::merge(&mut conn, &entity, &source_ids, &resolved_data)
+}
+
+#[tauri::command(async)]
+pub fn link_entities(
+    state: State<'_, AppState>,
+    parent_type: String,
+    parent_id: i64,
+    child_type: String,
+    child_id: i64,
+) -> Result<crud::Record, AppError> {
+    let conn = state.db()?;
+    crate::special::link(&conn, &parent_type, parent_id, &child_type, child_id)
+}

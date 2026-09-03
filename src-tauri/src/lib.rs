@@ -7,6 +7,7 @@ pub mod parquet_io;
 pub mod db;
 pub mod error;
 pub mod registry;
+pub mod special;
 pub mod state;
 
 use tauri::Manager;
@@ -42,6 +43,8 @@ pub fn run() {
             commands::delete_entity,
             commands::import_canonical_zip,
             commands::export_canonical_zip,
+            commands::merge_entities,
+            commands::link_entities,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
