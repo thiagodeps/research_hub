@@ -49,6 +49,12 @@ sudo apt install -y libwebkit2gtk-4.1-dev libxdo-dev libssl-dev \
   libayatana-appindicator3-dev librsvg2-dev pkg-config
 ```
 
+> Se o terminal foi aberto a partir de um snap (VS Code, alguns emuladores), ele
+> exporta um `LD_LIBRARY_PATH` para `/snap/core20` que colide com a glibc do
+> sistema e derruba o binário com `undefined symbol: __libc_pthread_init`. O
+> Makefile já remove a variável; para rodar o executável direto, use
+> `env -u LD_LIBRARY_PATH ./src-tauri/target/debug/research-hub`.
+
 ```bash
 make build    # dependências do frontend
 make dev      # roda com hot reload
