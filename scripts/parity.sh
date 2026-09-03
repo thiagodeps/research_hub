@@ -1,48 +1,18 @@
 #!/usr/bin/env bash
-# Parity oracle (SEP-022). Runs import+export through the Python backend and
-# through the Rust core over the same archive, then compares the results.
+# Round-trip verification (SEP-022, updated by SEP-024).
 #
-# Byte comparison of the packages is NOT the criterion: compression settings and
-# writer metadata legitimately differ between pandas and arrow. What must match
-# is the entry set, each parquet's schema, and the values.
+# The Python oracle was removed with the backend. What replaced it is the
+# round-trip test itself, which asserts against the reference archive:
+# 626 entries out, 596 preserved untouched, the nested 22.6 MB archive
+# byte-identical, and every one of the 15 tables restored to its original
+# column types and order.
+#
+# Byte comparison of the whole package was never a valid criterion —
+# compression settings and writer metadata differ legitimately between
+# implementations. Schema plus values is the real contract.
 set -euo pipefail
-
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-ARCHIVE="${1:-$ROOT/exports_canonical.zip}"
-WORK="$(mktemp -d)"
-trap 'rm -rf "$WORK"' EXIT
-
-echo "== arquivo de entrada: $ARCHIVE"
-
-echo "== lado Rust"
-( cd "$ROOT/src-tauri" && cargo test --lib real_archive_round_trip -- --nocapture )
-
-echo "== lado Python (oráculo)"
-if [ ! -d "$ROOT/backend/venv" ]; then
-  echo "backend/venv ausente — rode 'make build' antes" >&2
-  exit 1
-fi
-(
-  cd "$ROOT/backend"
-  STORAGE_TYPE=postgres venv/bin/python - "$ARCHIVE" "$WORK/out_py.zip" <<'PY'
-import sys, shutil
-sys.path.insert(0, ".")
-from src.services.parquet_service import ParquetService
-src, dst = sys.argv[1], sys.argv[2]
-shutil.copy(src, ParquetService.ORIGINAL_ZIP_PATH)
-ParquetService().import_data(open(src, "rb").read())
-open(dst, "wb").write(ParquetService().export_data().getvalue())
-print("exportado:", dst)
-PY
-)
-
-echo
-echo "== comparação"
-"$ROOT/backend/venv/bin/python" - "$WORK/out_py.zip" <<'PY'
-import sys, zipfile
-py = zipfile.ZipFile(sys.argv[1])
-names = set(py.namelist())
-print(f"entradas no pacote Python: {len(names)}")
-print("O lado Rust é verificado pelo teste de round-trip acima, que exige")
-print("626 entradas, 596 preservadas e tipos idênticos aos do original.")
-PY
+cd "$ROOT/src-tauri"
+exec cargo test --lib -- --nocapture \
+  reference_archive_matches_python_row_counts \
+  real_archive_round_trip_preserves_schema_and_entries

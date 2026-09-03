@@ -1,30 +1,23 @@
-PYTHON  := python3
-VENV    := backend/venv
-PIP     := $(VENV)/bin/pip
+CARGO := $(HOME)/.cargo/bin/cargo
 
-.PHONY: build build-backend build-frontend run run-backend run-frontend clean
+.PHONY: build dev run test bundle clean
 
-build: build-backend build-frontend
-
-build-backend:
-	test -d $(VENV) || $(PYTHON) -m venv $(VENV)
-	$(PIP) install --upgrade pip
-	$(PIP) install -r backend/requirements.txt
-
-build-frontend:
+## Install frontend dependencies (Rust deps are fetched by cargo on demand).
+build:
 	cd frontend && npm install
 
-run:
-	@trap 'kill 0' EXIT INT TERM; \
-	$(MAKE) run-backend & \
-	$(MAKE) run-frontend & \
-	wait
+## Run the desktop app with hot reload.
+dev run:
+	cd src-tauri && $(CARGO) tauri dev
 
-run-backend:
-	cd backend && STORAGE_TYPE=postgres venv/bin/uvicorn src.api.main:app --reload --port 8000
+## Full suite: Rust core + frontend bridge.
+test:
+	cd src-tauri && $(CARGO) test
+	cd frontend && npm test
 
-run-frontend:
-	cd frontend && npm run dev
+## Native installers for the current platform.
+bundle:
+	cd src-tauri && $(CARGO) tauri build
 
 clean:
-	rm -rf $(VENV) frontend/node_modules
+	rm -rf frontend/node_modules frontend/dist src-tauri/target

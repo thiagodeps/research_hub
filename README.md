@@ -1,134 +1,78 @@
-# Research Hub - Data Curation Tool 🧬
+# Research Hub 🧬
 
-Bem-vindo ao **Research Hub**, a plataforma centralizada de curadoria e gestão de dados acadêmicos. Este sistema atua como uma ponte (ETL/Curadoria) entre o DataLake bruto (exportações em formato `.parquet` e `.json`) e os pipelines de Machine Learning e visualização da instituição.
+Ferramenta **desktop** de curadoria de dados acadêmicos. Recebe o pacote
+`exports_canonical.zip` do DataLake, permite corrigir, fundir e vincular os
+registros, e exporta o pacote de volta — preservando intactos todos os arquivos
+que ela não gerencia.
 
-O sistema recebe um pacote ZIP com dezenas de bases de dados acadêmicas (Pesquisadores, Alunos, Projetos, etc), carrega esses dados em um banco relacional, oferece uma **interface amigável para correção, fusão e relacionamento** dessas informações, e exporta novamente os dados tratados no formato original (Parquet e JSON sincronizados).
+Aplicativo de processo único: sem servidor, sem navegador, sem Python, sem rede.
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias
 
-**Backend (Motor de Dados & API)**
-- **Python 3.12+**
-- **FastAPI:** Criação das rotas RESTful da nossa API.
-- **Pandas / PyArrow:** Motor de ingestão e geração de alto desempenho para lidar com os arquivos `.parquet`.
-- **SQLAlchemy:** ORM para mapeamento e gestão do Banco de Dados (compatível com SQLite e PostgreSQL).
-- **Uvicorn:** Servidor ASGI para rodar a aplicação.
+- **Rust + Tauri 2.0** — núcleo, janela e comunicação por IPC
+- **SQLite** (`rusqlite`, embarcado) — banco em arquivo único
+- **arrow-rs** — leitura e escrita dos `.parquet` canônicos
+- **Astro + React + Tailwind** — interface, compilada estaticamente e embutida
+  no binário
 
-**Frontend (Interface Gráfica)**
-- **Astro:** Framework de alta velocidade para o ecossistema e rotas (SSG/SSR).
-- **React.js:** Componentização da UI e gestão de estado complexo (Edição de entidades, Modais).
-- **Tailwind CSS:** Estilização da interface de maneira ágil e moderna.
+## Instalar
 
----
+Baixe o instalador da [página de releases](https://github.com/RafaelDeps/research_hub/releases):
+`.deb`, `.rpm` ou `.AppImage` no Linux, `.exe` no Windows.
 
-## 📦 Arquitetura dos Dados
+> **Windows:** na primeira execução o SmartScreen exibe "O Windows protegeu o
+> computador". Clique em *Mais informações* → *Executar assim mesmo*. O aviso
+> aparece porque o binário não é assinado — decisão consciente para uma
+> ferramenta de uso pessoal.
 
-A plataforma lida com **15 Domínios de Dados Canônicos**:
-1. Pesquisadores (`researchers`)
-2. Alunos (`students`)
-3. Grupos de Pesquisa (`research_groups`)
-4. Iniciativas/Projetos (`initiatives`)
-5. Premiações (`awards`)
-6. Produções Científicas (`research_productions`)
-7. Áreas de Conhecimento (`knowledge_areas`)
-8. Orientações (`advisorships`)
-9. Organizações (`organizations`)
-10. Atividades Profissionais (`professional_activities`)
-11. Campus (`campuses`)
-12. Proficiências (`proficiencies`)
-13. Bolsas (`fellowships`)
-14. Idiomas (`languages`)
-15. Artigos (`articles`)
+## Usar
 
-**Atenção:** As tabelas utilizam colunas JSON Array para cruzamento dinâmico de chaves estrangeiras, eliminando a necessidade de tabelas associativas complexas e otimizando a leitura nos pipelines de Big Data.
+1. **Entrar** — `admin@admin.com` / `admin123`.
+2. **Importar** — no painel, escolha o `exports_canonical.zip` ou arraste-o
+   para a janela. Isso **substitui a base atual**; uma cópia de segurança é
+   gravada automaticamente antes, e o caminho dela aparece na tela.
+3. **Curar** — navegue pelas 15 entidades no menu lateral. Busque, ordene,
+   edite, funda duplicatas e crie vínculos.
+4. **Exportar** — gera o pacote canônico com os tipos originais restaurados e
+   os demais arquivos do ZIP preservados byte a byte.
 
----
+Os dados ficam em `~/.local/share/br.edu.ifes.researchhub/hub.db` no Linux e em
+`%APPDATA%\br.edu.ifes.researchhub\hub.db` no Windows. Fazer backup é copiar
+esse arquivo.
 
-## 🛠️ Como Instalar e Rodar Localmente
+## Desenvolver
 
-O projeto é dividido em dois serviços principais que devem ser rodados simultaneamente.
+Pré-requisitos: [Rust](https://rustup.rs), Node 22+ e, no Linux:
 
-### ⚡ Atalho via Makefile (recomendado)
-
-Na raiz do projeto, para instalar tudo (venv + dependências do backend + dependências do frontend):
 ```bash
-make build
-```
-Para subir o backend (porta `8000`) e o frontend (porta `4321`) juntos, encerrando ambos com um único `Ctrl+C`:
-```bash
-make run
-```
-Para limpar `venv` e `node_modules` e reinstalar do zero:
-```bash
-make clean
+sudo apt install -y libwebkit2gtk-4.1-dev libxdo-dev libssl-dev \
+  libayatana-appindicator3-dev librsvg2-dev pkg-config
 ```
 
-Os passos manuais abaixo continuam funcionando caso prefira rodar cada serviço separadamente.
-
-### 1. Inicializando o Backend (Python)
-Abra um terminal na raiz do projeto e acesse a pasta `backend`:
 ```bash
-cd backend
+make build    # dependências do frontend
+make dev      # roda com hot reload
+make test     # cargo test + vitest
+make bundle   # instaladores nativos
 ```
-Crie e ative um ambiente virtual (recomendado):
-```bash
-python -m venv venv
-source venv/bin/activate  # No Linux/Mac
-# venv\Scripts\activate   # No Windows
-```
-Instale as dependências:
-```bash
-pip install fastapi uvicorn sqlalchemy pandas pyarrow python-multipart
-```
-Inicie o servidor local na porta 8000:
-```bash
-# O banco SQLite (test.db) será criado automaticamente.
-# STORAGE_TYPE=postgres é OBRIGATÓRIO (apesar do nome, funciona com o SQLite local também):
-# sem ele, a API cai no adaptador em memória, que fica desconectado dos dados
-# gravados pela importação de ZIP e o dashboard fica vazio mesmo após um import bem-sucedido.
-export STORAGE_TYPE=postgres
-uvicorn src.api.main:app --reload --port 8000
-```
-> O backend agora está rodando e escutando as rotas da API em `http://localhost:8000`.
->
-> Usando `make run`? Essa variável já vem configurada automaticamente, não precisa exportar nada.
 
-### 2. Inicializando o Frontend (Astro/React)
-Abra um **novo terminal** na raiz do projeto e acesse a pasta `frontend`:
-```bash
-cd frontend
-```
-Instale as dependências via NPM:
-```bash
-npm install
-```
-Inicie o servidor de desenvolvimento do Astro:
-```bash
-npm run dev
-```
-> Acesse a interface web em `http://localhost:4321`.
+## Domínios de dados
 
----
+Pesquisadores, Alunos, Grupos de Pesquisa, Iniciativas, Premiações, Produções
+Científicas, Áreas de Conhecimento, Orientações, Organizações, Atividades
+Profissionais, Campus, Proficiências, Bolsas, Idiomas e Artigos.
 
-## ⚙️ Fluxo de Trabalho (Curadoria de Dados)
+Colunas de relacionamento guardam arrays JSON, evitando tabelas associativas e
+mantendo a leitura direta nos pipelines de Big Data.
 
-1. **Importação (`Upload`):**
-   - Na página inicial do Painel (Dashboard), utilize a central de controle para enviar o arquivo `exports_canonical.zip` proveniente do DataLake original.
-   - O Backend salva uma cópia intacta do `.zip`, dropa o banco de dados atual, processa todos os Parquets importados utilizando *Pandas* e preenche automaticamente as 15 tabelas mapeadas.
+## Migrando da versão web
 
-2. **Edição e Vínculos:**
-   - Navegue pelo menu lateral para explorar as entidades.
-   - Utilize as tabelas paginadas para encontrar registros rasurados.
-   - Você pode editar textos e usar a ferramenta **"Vincular"** para cruzar dados (ex: associar uma "Iniciativa" a um "Pesquisador"). O sistema lida com o parse automático dos Arrays JSON por debaixo dos panos.
+Não há migração automática do `backend/test.db` antigo. O caminho suportado é
+reimportar o `exports_canonical.zip` no aplicativo — o resultado é equivalente,
+já que a base sempre foi derivada dele.
 
-3. **Exportação (`Download`):**
-   - Ao finalizar sua curadoria, clique em **Exportar Curadoria**.
-   - O sistema reconstrói um novo arquivo `.zip` combinando o seu banco de dados higienizado com os arquivos originais intocados (grafos e metadados).
-   - O exportador sincroniza e recria ambos os formatos (`.parquet` compactado e `.json` pretty-print/minificado) mantendo exatamente o layout estrutural e tipagem (Int64, bool) exigidos pelo pipeline de destino.
+## Documentação
 
----
-
-## 📜 Regras de Negócio e Convenções
-- Todas as variáveis relacionais (como `initiatives` dentro de `researchers`) são mapeadas no frontend como `json_readonly` para otimização de renderização e prevenção de travamentos do navegador.
-- Arquivos passados no export ZIP que **não** constam no banco de dados mapeado (ex: `.meta.json` e `.cols.json`) são copiados **literalmente** da versão original do `.zip` fornecida no momento do Upload, preservando a integridade do pacote de dados.
-- Modificações de estrutura no banco exigem recadastramento no dicionário do arquivo `backend/src/database/postgres_adapter.py`.
-
+- `.specify/memory/constitution.md` — regras de arquitetura
+- `docs/estudo-migracao-rust-tauri.md` — o estudo que originou a reescrita
+- `specs/` — especificações por feature
