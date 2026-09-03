@@ -7,10 +7,24 @@ import EntityPage from '../../components/EntityPage.jsx';
   <EntityPage 
     client:load 
     entity="professional_activities" 
-    columns={['id', 'name', 'campus']} 
+    columns={['id', 'researcher_id', 'institution_name', 'role_function', 'bond', 'period']} 
     fields={[
       { name: 'id', label: 'ID', type: 'number' },
-      { name: 'name', label: 'Name', required: true },
+      { name: 'researcher_id', label: 'Pesquisador (ID)', type: 'number' },
+      { name: 'organization_id', label: 'Organização (ID)', type: 'number' },
+      { name: 'institution', label: 'Instituição' },
+      { name: 'institution_name', label: 'Nome da Instituição', required: true },
+      { name: 'institution_acronym', label: 'Sigla' },
+      { name: 'institution_country', label: 'País' },
+      { name: 'period', label: 'Período' },
+      { name: 'start_year', label: 'Ano de Início', type: 'number' },
+      { name: 'end_year', label: 'Ano de Término', type: 'number' },
+      { name: 'bond', label: 'Vínculo' },
+      { name: 'classification', label: 'Classificação' },
+      { name: 'work_regime', label: 'Regime de Trabalho' },
+      { name: 'role_function', label: 'Função' },
+      { name: 'activity_type', label: 'Tipo de Atividade' },
+      { name: 'current', label: 'Atual' },
       { name: 'campus', label: 'Campus (Vínculos)', type: 'json_readonly' }
     ]} 
   />

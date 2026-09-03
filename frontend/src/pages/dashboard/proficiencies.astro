@@ -7,10 +7,15 @@ import EntityPage from '../../components/EntityPage.jsx';
   <EntityPage 
     client:load 
     entity="proficiencies" 
-    columns={['id', 'name', 'campus']} 
+    columns={['id', 'researcher_id', 'language_id', 'comprehension', 'speaking', 'reading', 'writing']} 
     fields={[
       { name: 'id', label: 'ID', type: 'number' },
-      { name: 'name', label: 'Name', required: true },
+      { name: 'researcher_id', label: 'Pesquisador (ID)', type: 'number' },
+      { name: 'language_id', label: 'Idioma (ID)', type: 'number' },
+      { name: 'comprehension', label: 'Compreensão' },
+      { name: 'speaking', label: 'Fala' },
+      { name: 'reading', label: 'Leitura' },
+      { name: 'writing', label: 'Escrita' },
       { name: 'campus', label: 'Campus (Vínculos)', type: 'json_readonly' }
     ]} 
   />

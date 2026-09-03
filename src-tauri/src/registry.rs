@@ -169,7 +169,9 @@ pub const ENTITIES: &[EntityDef] = &[
             "end_year", "bond", "classification", "work_regime", "role_function",
             "activity_type", "current", "campus",
         ],
-        search_column: None,
+        // The Python probe only looks for name/title/username, so this column
+        // was never searchable and the search box sat dead on the page.
+        search_column: Some("institution_name"),
         exported: true,
     },
     EntityDef {
@@ -223,5 +225,46 @@ impl EntityDef {
         } else {
             column.to_string()
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// Guards against the class of bug that made `proficiencies` and
+    /// `professional_activities` show an always-empty "name" column: the Astro
+    /// pages were generated from a template assuming every entity has `name`,
+    /// and nothing connected those declarations to the real schema.
+    #[test]
+    fn dashboard_pages_only_declare_columns_that_exist() {
+        let pages = std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
+            .parent().unwrap()
+            .join("frontend/src/pages/dashboard");
+
+        let mut problems = Vec::new();
+        for file in std::fs::read_dir(&pages).expect("pasta de páginas").flatten() {
+            let text = std::fs::read_to_string(file.path()).unwrap_or_default();
+
+            let Some(route) = between(&text, "entity=\"", "\"") else { continue };
+            let Some(def) = ENTITIES.iter().find(|e| e.route == route) else {
+                problems.push(format!("{route}: rota não existe no registry"));
+                continue;
+            };
+
+            let Some(list) = between(&text, "columns={[", "]}") else { continue };
+            for column in list.split('\'').skip(1).step_by(2) {
+                if !def.has_column(column) {
+                    problems.push(format!("{route}: declara '{column}', que não existe"));
+                }
+            }
+        }
+        assert!(problems.is_empty(), "páginas fora de sincronia:\n  {}", problems.join("\n  "));
+    }
+
+    fn between<'a>(haystack: &'a str, start: &str, end: &str) -> Option<&'a str> {
+        let i = haystack.find(start)? + start.len();
+        let rest = &haystack[i..];
+        Some(&rest[..rest.find(end)?])
     }
 }
