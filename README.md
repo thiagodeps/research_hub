@@ -62,6 +62,26 @@ make test     # cargo test + vitest
 make bundle   # instaladores nativos
 ```
 
+### Build em contêiner
+
+Para gerar os instaladores Linux sem instalar Rust, Node e webkit na máquina:
+
+```bash
+make docker-bundle    # resultado em dist/
+```
+
+A imagem usa Ubuntu 24.04 de propósito: compilar contra uma glibc mais antiga
+que a da máquina de desenvolvimento faz os binários rodarem em mais sistemas,
+nunca em menos.
+
+> **O Docker aqui é ferramenta de build, não de execução.** Este é um aplicativo
+> desktop: rodá-lo dentro de um contêiner exigiria expor o socket X11 do host,
+> o que é pior do que simplesmente instalar o `.deb` que a imagem produz. Se
+> ainda assim precisar (uma máquina sem as bibliotecas do sistema, por exemplo),
+> o caminho é `-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix
+> --device /dev/dri`, com as ressalvas de aceleração gráfica e persistência do
+> banco que isso implica.
+
 ## Domínios de dados
 
 Pesquisadores, Alunos, Grupos de Pesquisa, Iniciativas, Premiações, Produções

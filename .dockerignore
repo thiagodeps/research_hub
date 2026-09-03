@@ -1,0 +1,14 @@
+# Build artifacts — rebuilt inside the image
+src-tauri/target/
+src-tauri/gen/
+frontend/node_modules/
+frontend/dist/
+frontend/.astro/
+
+# 35 MB test fixture; only cargo test needs it, and the image does not run it
+exports_canonical.zip
+exports/
+
+.git/
+docs/
+specs/
