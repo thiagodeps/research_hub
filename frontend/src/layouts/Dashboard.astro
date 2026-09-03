@@ -46,6 +46,18 @@
     </div>
     <script>
     import { invoke } from '@tauri-apps/api/core';
+    // Guard every dashboard page: a reload or deep link must not land on a
+    // screen whose commands the backend will refuse.
+    (async () => {
+      try {
+        const { authenticated } = await invoke<{ authenticated: boolean }>('session_status');
+        if (!authenticated) {
+          localStorage.removeItem('token');
+          window.location.replace('/login');
+        }
+      } catch {}
+    })();
+
     document.getElementById('logout')?.addEventListener('click', async (e) => {
       e.preventDefault();
       try { await invoke('logout'); } catch {}
