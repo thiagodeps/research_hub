@@ -1,94 +1,128 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { invoke } from '@tauri-apps/api/core';
+import { listen } from '@tauri-apps/api/event';
+import { getCurrentWebview } from '@tauri-apps/api/webview';
 
+// SEP-018. The file dialog is opened in Rust, so this component never touches
+// the filesystem and the app declares no filesystem permission.
 export default function DataControlCenter() {
-  const [loading, setLoading] = useState(false);
+  const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState(null);
+  const [progress, setProgress] = useState([]);
+  const [exporting, setExporting] = useState(false);
 
-  const handleFileUpload = async (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
+  useEffect(() => {
+    const unlisten = listen('import://progress', (event) => {
+      setProgress((prev) => [...prev, event.payload]);
+    });
+    return () => { unlisten.then((off) => off()); };
+  }, []);
 
-    if (!file.name.endsWith('.zip')) {
-      setMessage({ type: 'error', text: 'Por favor, envie um arquivo .zip contendo os Parquets.' });
-      return;
-    }
-
-    setLoading(true);
-    setMessage(null);
-
-    const formData = new FormData();
-    formData.append('file', file);
-
-    try {
-      const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8000/api/v1/data/import', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`
-        },
-        body: formData
-      });
-
-      if (!response.ok) {
-        throw new Error('Falha ao importar arquivo.');
+  // Dropping the archive on the window follows the same path as the dialog.
+  useEffect(() => {
+    const unlisten = getCurrentWebview().onDragDropEvent((event) => {
+      if (event.payload.type === 'drop' && !busy) {
+        const file = event.payload.paths?.[0];
+        if (file) runImport(file);
       }
-      
-      const result = await response.json();
-      setMessage({ type: 'success', text: result.message || 'Importação realizada com sucesso!' });
+    });
+    return () => { unlisten.then((off) => off()); };
+  }, [busy]);
+
+  async function runImport(path) {
+    setBusy(true);
+    setMessage(null);
+    setProgress([]);
+    try {
+      const summary = await invoke('import_canonical_zip', { path: path ?? null });
+      if (summary === null) {
+        setBusy(false);
+        return; // dialog dismissed
+      }
+      setMessage({
+        type: 'success',
+        text: `${summary.total_rows.toLocaleString('pt-BR')} registros em ${summary.tables.length} tabelas.`,
+        snapshot: summary.snapshot,
+      });
     } catch (err) {
-      setMessage({ type: 'error', text: err.message });
+      setMessage({ type: 'error', text: err?.message ?? String(err) });
     } finally {
-      setLoading(false);
-      // Reset input
-      event.target.value = '';
+      setBusy(false);
     }
-  };
+  }
+
+  async function runExport() {
+    setExporting(true);
+    setMessage(null);
+    try {
+      const summary = await invoke('export_canonical_zip');
+      if (summary === null) return; // dialog dismissed
+      setMessage({
+        type: 'success',
+        text: `${summary.tables.length} tabelas exportadas, ${summary.preserved_entries.toLocaleString('pt-BR')} arquivos originais preservados.`,
+        snapshot: summary.path,
+      });
+    } catch (err) {
+      setMessage({ type: 'error', text: err?.message ?? String(err) });
+    } finally {
+      setExporting(false);
+    }
+  }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-      {/* Import Card */}
       <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
-        <h2 className="text-xl font-semibold text-slate-800 mb-4">Importar Dados (Upload)</h2>
+        <h2 className="text-xl font-semibold text-slate-800 mb-4">Importar Dados</h2>
         <p className="text-slate-600 mb-6 text-sm">
-          Envie o arquivo <code className="bg-slate-100 px-1 rounded">exports_canonical.zip</code> contendo as tabelas em formato Parquet para popular o banco de dados da aplicação. 
-          <strong>Atenção:</strong> Isso substituirá a base atual.
+          Selecione o <code className="bg-slate-100 px-1 rounded">exports_canonical.zip</code> ou
+          arraste-o para a janela. <strong>Atenção:</strong> isso substitui a base atual — uma
+          cópia de segurança é gravada automaticamente antes.
         </p>
 
-        <div className="flex items-center gap-4">
-          <label className={`cursor-pointer bg-blue-600 text-white px-4 py-2 rounded font-medium hover:bg-blue-700 transition-colors ${loading ? 'opacity-50 pointer-events-none' : ''}`}>
-            {loading ? 'Processando...' : 'Escolher Arquivo .ZIP'}
-            <input 
-              type="file" 
-              accept=".zip" 
-              className="hidden" 
-              onChange={handleFileUpload} 
-              disabled={loading}
-            />
-          </label>
-        </div>
+        <button
+          onClick={() => runImport(null)}
+          disabled={busy}
+          className={`bg-blue-600 text-white px-4 py-2 rounded font-medium hover:bg-blue-700 transition-colors ${busy ? 'opacity-50 cursor-not-allowed' : ''}`}
+        >
+          {busy ? 'Importando...' : 'Escolher arquivo .ZIP'}
+        </button>
+
+        {progress.length > 0 && (
+          <ul className="mt-4 max-h-40 overflow-y-auto text-xs text-slate-600 space-y-1">
+            {progress.map((p, i) => (
+              <li key={i} className="flex justify-between border-b border-slate-100 pb-1">
+                <span>{p.table}</span>
+                <span className="tabular-nums">{p.rows.toLocaleString('pt-BR')}</span>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {message && (
-          <div className={`mt-4 p-3 rounded text-sm ${message.type === 'error' ? 'bg-red-50 text-red-600' : 'bg-green-50 text-green-600'}`}>
+          <div className={`mt-4 p-3 rounded text-sm ${message.type === 'error' ? 'bg-red-50 text-red-600' : 'bg-green-50 text-green-700'}`}>
             {message.text}
+            {message.snapshot && (
+              <div className="mt-1 text-xs text-slate-500 break-all">
+                Arquivo: {message.snapshot}
+              </div>
+            )}
           </div>
         )}
       </div>
 
-      {/* Export Card */}
       <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
         <h2 className="text-xl font-semibold text-slate-800 mb-4">Exportar Base Curada</h2>
         <p className="text-slate-600 mb-6 text-sm">
-          Baixe o estado atual de todas as tabelas editadas neste painel em formato Parquet.
-          O arquivo zipado gerado estará pronto para ser ingerido pelo projeto analítico.
+          Gera o pacote canônico com as tabelas editadas, preservando intactos os demais
+          arquivos do arquivo original.
         </p>
-        
-        <a 
-          href="http://localhost:8000/api/v1/data/export" 
-          download="portal_export_canonical.zip"
-          className="inline-block bg-emerald-600 text-white px-4 py-2 rounded font-medium hover:bg-emerald-700 transition-colors"
+        <button
+          onClick={runExport}
+          disabled={exporting || busy}
+          className={`bg-emerald-600 text-white px-4 py-2 rounded font-medium hover:bg-emerald-700 transition-colors ${exporting || busy ? 'opacity-50 cursor-not-allowed' : ''}`}
         >
-          Exportar Arquivos .Parquet
-        </a>
+          {exporting ? 'Exportando...' : 'Exportar .ZIP'}
+        </button>
       </div>
     </div>
   );

@@ -84,9 +84,12 @@
 
 ### Technical & Architectural Constraints
 
-- **CON-001**: Frontend DEVE ser construído em Astro (deploy no GitHub Pages), seguindo o protótipo Figma.
-- **CON-002**: Backend DEVE ser construído em Python reutilizando a biblioteca de domínio `research_domain`.
-- **CON-003**: Todas as entidades do domínio exigem CRUD completo operado unicamente por perfil de Admin (sem fluxo de aprovação).
+- **CON-001**: A aplicação DEVE ser um app desktop de processo único em Tauri 2.0, com núcleo em Rust e front-end em Astro/React/Tailwind compilado estaticamente e embarcado no binário, seguindo o protótipo Figma. Funciona integralmente sem rede.
+- **CON-002**: A persistência DEVE usar SQLite em arquivo único, embarcado (`rusqlite`, feature `bundled`), no diretório de dados da aplicação. É proibido qualquer motor que exija servidor ou instalação separada.
+- **CON-003**: Toda regra de negócio DEVE residir no processo Rust. É proibido SQL, acesso a arquivos ou duplicação de regra no JavaScript; a comunicação se dá por IPC do Tauri, concentrada em um único módulo do front-end.
+- **CON-004**: Todas as entidades do domínio exigem CRUD completo operado unicamente por perfil de Admin (sem fluxo de aprovação).
+- **CON-005**: Paridade funcional precede melhoria. Correções de comportamento preexistente DEVEM ser declaradas como escopo explícito desta spec, nunca aplicadas em silêncio.
+- **CON-006**: Alvos de release são Linux e Windows. macOS, assinatura de código, auto-update e bancos não-SQLite estão fora de escopo por decisão de arquitetura.
 
 ### Functional Requirements
 

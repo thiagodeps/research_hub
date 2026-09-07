@@ -1,0 +1,65 @@
+name: Release
+
+# One runner per OS: Tauri has no reliable cross-compilation.
+# macOS is deliberately absent — tauri-driver cannot drive it, and the
+# Constitution forbids shipping a platform without automated tests.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, cache-dependency-path: frontend/package-lock.json }
+      - name: System dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libxdo-dev libssl-dev \
+            libayatana-appindicator3-dev librsvg2-dev pkg-config
+      - uses: swatinem/rust-cache@v2
+        with: { workspaces: src-tauri }
+      - run: npm --prefix frontend ci
+      - run: npm --prefix frontend test
+      - run: cargo test --manifest-path src-tauri/Cargo.toml
+
+  bundle:
+    needs: test
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            targets: deb,rpm,appimage
+          - os: windows-latest
+            targets: nsis
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, cache-dependency-path: frontend/package-lock.json }
+      - name: System dependencies
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libxdo-dev libssl-dev \
+            libayatana-appindicator3-dev librsvg2-dev pkg-config
+      - uses: swatinem/rust-cache@v2
+        with: { workspaces: src-tauri }
+      - run: npm --prefix frontend ci
+      # No signing: personal, local-use tool. First launch on Windows shows the
+      # SmartScreen prompt; the README documents it.
+      - uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: src-tauri
+          args: --bundles ${{ matrix.targets }}
+          tagName: ${{ github.ref_name }}
+          releaseName: ResearchHub ${{ github.ref_name }}
+          releaseDraft: true

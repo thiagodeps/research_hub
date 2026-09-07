@@ -1,0 +1,47 @@
+[package]
+name = "research-hub"
+version = "0.1.0"
+description = "Ferramenta desktop de curadoria de dados academicos"
+authors = ["RafaelDeps"]
+license = ""
+repository = "https://github.com/RafaelDeps/research_hub"
+edition = "2021"
+rust-version = "1.77.2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "research_hub_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.6.3", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+log = "0.4"
+tauri = { version = "2.11.3", features = [] }
+tauri-plugin-log = "2"
+rusqlite = { version = "0.32", features = ["bundled", "serde_json", "backup", "functions"] }
+bcrypt = "0.15"
+thiserror = "2"
+tauri-plugin-dialog = "2"
+# Parquet via arrow-rs rather than Polars: this workload is type-preserving
+# column copying, not dataframe analytics, and export fidelity (SEP-019) needs
+# explicit control over casts. Amends study AD-03.
+parquet = { version = "53", default-features = false, features = ["arrow", "snap", "zstd", "brotli", "flate2", "lz4"] }
+arrow = { version = "53", default-features = false }
+bytes = "1"
+zip = { version = "2", default-features = false, features = ["deflate", "bzip2", "zstd"] }
+
+[features]
+# Ligada pelo CLI nos builds de producao. Com ela, generate_context! embute o
+# frontend em vez de apontar para o dev server. NAO REMOVER.
+custom-protocol = ["tauri/custom-protocol"]
+
+[dev-dependencies]
+# "test" habilita tauri::test::mock_builder.
+# "custom-protocol" faz o `cargo test` embutir os assets, para que o teste de
+# roteamento exercite o mesmo resolvedor que o binario de producao usa.
+tauri = { version = "2.11.3", features = ["test", "custom-protocol"] }

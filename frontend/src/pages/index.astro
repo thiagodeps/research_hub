@@ -8,13 +8,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redirecionando...</title>
   <script>
-    // This script runs immediately in the browser
-    const token = localStorage.getItem('token');
-    if (token) {
-      window.location.replace('/dashboard');
-    } else {
-      window.location.replace('/login');
-    }
+    // The session lives in the Rust process and does not survive a restart,
+    // while localStorage does. Ask the backend instead of trusting the flag,
+    // or the interface shows a dashboard where every command is refused.
+    import { invoke } from '@tauri-apps/api/core';
+    (async () => {
+      let authenticated = false;
+      try {
+        authenticated = (await invoke<{ authenticated: boolean }>('session_status')).authenticated;
+      } catch {}
+      if (!authenticated) localStorage.removeItem('token');
+      window.location.replace(authenticated ? '/dashboard' : '/login');
+    })();
   </script>
 </head>
 <body class="bg-slate-50 flex items-center justify-center min-h-screen">
