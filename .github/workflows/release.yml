@@ -88,9 +88,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           projectPath: src-tauri
-          args: >-
-            ${{ matrix.target != '' && format('--target {0}', matrix.target) || '' }}
-            ${{ matrix.bundles != '' && format('--bundles {0}', matrix.bundles) || '' }}
+          args: ${{ matrix.target != '' && format('--target {0}', matrix.target) || '' }} ${{ matrix.bundles != '' && format('--bundles {0}', matrix.bundles) || '' }}
           tagName: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || '' }}
           releaseName: ${{ startsWith(github.ref, 'refs/tags/') && format('ResearchHub {0}', github.ref_name) || '' }}
           releaseBody: "Instaladores desktop para macOS (.dmg / .app universal), Windows (.msi / .exe) e Linux (.deb, .rpm, .AppImage). Builds sem assinatura de código."
