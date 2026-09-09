@@ -10,3 +10,6 @@
   - [x] Add specific dependencies for Ubuntu (`libwebkit2gtk-4.1-dev`, etc.).
   - [x] Add Apple Silicon targets and universal targets for macOS.
   - [x] Configure `tauri-action` to build and upload release artifacts based on OS.
+  
+- [x] **Task 2**: Fix `apt-get update` Hash Sum mismatch on Ubuntu GitHub Action runners.
+  - [x] Remove `google-chrome.list` before running `sudo apt-get update` in `.github/workflows/release.yml`.
