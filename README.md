@@ -74,6 +74,34 @@ A imagem usa Ubuntu 24.04 de propósito: compilar contra uma glibc mais antiga
 que a da máquina de desenvolvimento faz os binários rodarem em mais sistemas,
 nunca em menos.
 
+#### Executando os artefatos gerados
+
+Os arquivos gerados estarão na pasta `dist/` e pertencerão ao usuário `root`.
+Você tem 3 métodos para testar ou instalar o aplicativo no Linux:
+
+**1. AppImage (Roda sem instalar - Recomendado para teste rápido)**
+```bash
+cd dist/
+# Mude o dono para o seu usuário (evita rodar como root)
+sudo chown $USER:$USER ResearchHub_*.AppImage
+# Dê permissão de execução
+chmod +x ResearchHub_*.AppImage
+# Execute
+./ResearchHub_*.AppImage
+```
+
+**2. Instalador Debian/Ubuntu (.deb)**
+```bash
+cd dist/
+sudo apt install ./ResearchHub_*.deb
+```
+
+**3. Instalador Fedora/RHEL (.rpm)**
+```bash
+cd dist/
+sudo dnf install ./ResearchHub-*.rpm
+```
+
 > **O Docker aqui é ferramenta de build, não de execução.** Este é um aplicativo
 > desktop: rodá-lo dentro de um contêiner exigiria expor o socket X11 do host,
 > o que é pior do que simplesmente instalar o `.deb` que a imagem produz. Se
