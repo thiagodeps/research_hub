@@ -26,6 +26,7 @@ jobs:
         with: { workspaces: src-tauri }
       - run: npm --prefix frontend ci
       - run: npm --prefix frontend test
+      - run: npm --prefix frontend run build
       - run: cargo test --manifest-path src-tauri/Cargo.toml
 
   build:
