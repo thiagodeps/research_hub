@@ -67,8 +67,8 @@ pub fn link(
     let column = target_column(child_route);
     if !parent_def.has_column(column) {
         return Err(AppError::InvalidColumn(format!(
-            "{} não tem coluna '{}' para vincular {}",
-            parent_def.table, column, child_def.table
+            "Operação inválida: Não é possível vincular '{}' diretamente a '{}'.",
+            child_def.table, parent_def.table
         )));
     }
 

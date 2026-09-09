@@ -74,6 +74,20 @@ export default function EntityForm({ initialData = {}, fields, onSubmit, onCance
             );
           }
 
+          if (f.name === 'id' && !initialData.id) {
+            return (
+              <div key={f.name}>
+                <label className="block mb-1 text-sm font-medium text-slate-700">{f.label}</label>
+                <input 
+                  type="text" 
+                  value="Atribuído automaticamente"
+                  disabled
+                  className="w-full px-3 py-2 border border-slate-300 rounded-md bg-slate-100 text-slate-500 cursor-not-allowed"
+                />
+              </div>
+            );
+          }
+
           return (
             <div key={f.name}>
               <label className="block mb-1 text-sm font-medium text-slate-700">{f.label}</label>
@@ -82,7 +96,8 @@ export default function EntityForm({ initialData = {}, fields, onSubmit, onCance
                 value={data[f.name] || ''} 
                 onChange={e => handleChange(f.name, e.target.value, f.type)}
                 required={f.required}
-                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                disabled={f.name === 'id'}
+                className={`w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${f.name === 'id' ? 'bg-slate-50 text-slate-500 cursor-not-allowed' : ''}`}
               />
             </div>
           );
