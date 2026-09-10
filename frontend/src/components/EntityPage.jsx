@@ -48,8 +48,12 @@ export default function EntityPage({ entity, columns, fields }) {
 
   const handleSave = async (payload) => {
     try {
-      if (editingItem?.id === payload.id) {
-        await apiFetch(`/${entity}/${payload.id}`, {
+      // Whether this is an edit depends on the record we opened the form
+      // with, not on whatever the (editable) id field in the payload holds —
+      // a blank id on a new record must never be compared against itself.
+      const isEditing = editingItem?.id !== undefined && editingItem?.id !== null;
+      if (isEditing) {
+        await apiFetch(`/${entity}/${editingItem.id}`, {
           method: 'PUT',
           body: JSON.stringify(payload),
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }

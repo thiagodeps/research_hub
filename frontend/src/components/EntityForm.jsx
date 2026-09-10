@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 export default function EntityForm({ initialData = {}, fields, onSubmit, onCancel }) {
   const [data, setData] = useState(initialData);
+  const isEditing = initialData.id !== undefined && initialData.id !== null;
 
   const handleChange = (name, value, type) => {
     let parsedValue = value;
@@ -23,11 +24,14 @@ export default function EntityForm({ initialData = {}, fields, onSubmit, onCance
         {fields.map(f => {
           if (f.type === 'json_readonly') {
             let items = [];
-            try { 
-              const parsed = data[f.name] ? JSON.parse(data[f.name]) : []; 
+            let parseError = null;
+            try {
+              const parsed = data[f.name] ? JSON.parse(data[f.name]) : [];
               items = Array.isArray(parsed) ? parsed : (parsed ? [parsed] : []);
-            } catch(e) {}
-            
+            } catch (e) {
+              parseError = e.message;
+            }
+
             // Map column names to dashboard routes
             const getRoute = (colName) => {
               if (colName === 'research_groups') return 'groups';
@@ -41,13 +45,15 @@ export default function EntityForm({ initialData = {}, fields, onSubmit, onCance
               <div key={f.name}>
                 <label className="block mb-1 text-sm font-medium text-slate-700">{f.label}</label>
                 <div className="p-3 bg-slate-50 border border-slate-200 rounded max-h-48 overflow-y-auto text-sm">
-                  {items.length > 0 ? (
+                  {parseError ? (
+                    <span className="text-red-600 font-medium">Erro ao ler vínculos: {parseError}</span>
+                  ) : items.length > 0 ? (
                     <ul className="list-disc pl-5 space-y-2">
                       {items.map((item, idx) => {
                         if (item.id) {
                           return (
                             <li key={idx}>
-                              <a 
+                              <a
                                 href={`/dashboard/${route}?openId=${item.id}`}
                                 className="text-indigo-600 hover:text-indigo-800 hover:underline cursor-pointer font-medium"
                               >
@@ -74,15 +80,22 @@ export default function EntityForm({ initialData = {}, fields, onSubmit, onCance
             );
           }
 
+          // The id is always backend-assigned, continuing the ZIP import's own
+          // numbering — it is only ever shown, never hand-entered, on create.
+          const idLocked = f.name === 'id' && !isEditing;
+
           return (
             <div key={f.name}>
               <label className="block mb-1 text-sm font-medium text-slate-700">{f.label}</label>
-              <input 
-                type={f.type || 'text'} 
-                value={data[f.name] || ''} 
+              <input
+                type={f.type || 'text'}
+                value={idLocked ? '' : (data[f.name] || '')}
+                placeholder={idLocked ? 'Automático' : undefined}
                 onChange={e => handleChange(f.name, e.target.value, f.type)}
-                required={f.required}
-                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                required={f.required && !idLocked}
+                readOnly={idLocked}
+                disabled={idLocked}
+                className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 disabled:bg-slate-100 disabled:text-slate-400"
               />
             </div>
           );
