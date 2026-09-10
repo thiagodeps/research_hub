@@ -7,11 +7,14 @@ export default function EntityPage({ entity, columns, fields }) {
   const [data, setData] = useState([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(0);
+  const [pageInput, setPageInput] = useState('1');
   const [search, setSearch] = useState("");
   const [sortCol, setSortCol] = useState(null);
   const [sortOrder, setSortOrder] = useState("asc");
   const [editingItem, setEditingItem] = useState(null);
   const limit = 50;
+  
+  const totalPages = Math.max(1, Math.ceil(total / limit));
 
   const loadData = async () => {
     try {
@@ -29,6 +32,22 @@ export default function EntityPage({ entity, columns, fields }) {
   };
 
   useEffect(() => { loadData(); }, [entity, page, search, sortCol, sortOrder]);
+
+  useEffect(() => {
+    setPageInput((page + 1).toString());
+  }, [page]);
+
+  const handlePageSubmit = () => {
+    let newPage = parseInt(pageInput, 10);
+    if (isNaN(newPage)) {
+      setPageInput((page + 1).toString());
+      return;
+    }
+    if (newPage < 1) newPage = 1;
+    if (newPage > totalPages) newPage = totalPages;
+    setPageInput(newPage.toString());
+    setPage(newPage - 1);
+  };
 
   // Deep linking: Check URL for openId on mount
   useEffect(() => {
@@ -169,9 +188,9 @@ export default function EntityPage({ entity, columns, fields }) {
 
       <div className="flex justify-between items-center mt-4 text-sm text-slate-600">
         <div>
-          Mostrando {page * limit + 1} a {Math.min((page + 1) * limit, total)} de {total} registros
+          Mostrando {total === 0 ? 0 : page * limit + 1} a {Math.min((page + 1) * limit, total)} de {total} registros
         </div>
-        <div className="space-x-2">
+        <div className="flex items-center space-x-2">
           <button 
             disabled={page === 0} 
             onClick={() => setPage(page - 1)}
@@ -179,6 +198,25 @@ export default function EntityPage({ entity, columns, fields }) {
           >
             Anterior
           </button>
+          
+          <div className="flex items-center space-x-1">
+            <label htmlFor="pageInput" className="sr-only">Ir para página</label>
+            <input
+              id="pageInput"
+              type="text"
+              value={pageInput}
+              onChange={(e) => setPageInput(e.target.value)}
+              onBlur={handlePageSubmit}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  handlePageSubmit();
+                }
+              }}
+              className="w-12 text-center px-2 py-1 bg-white border border-slate-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
+            />
+            <span className="text-slate-500">de {totalPages}</span>
+          </div>
+
           <button 
             disabled={(page + 1) * limit >= total} 
             onClick={() => setPage(page + 1)}
