@@ -1,0 +1,3 @@
+args: >-
+  
+  --bundles deb,rpm,appimage
