@@ -130,3 +130,15 @@ já que a base sempre foi derivada dele.
 - `.specify/memory/constitution.md` — regras de arquitetura
 - `docs/estudo-migracao-rust-tauri.md` — o estudo que originou a reescrita
 - `specs/` — especificações por feature
+
+<img width="1342" height="704" alt="Captura de tela 2026-09-15 153116" src="https://github.com/user-attachments/assets/cf25ce56-8ac7-44e6-b2c6-119faac088d9" />
+
+<img width="1364" height="703" alt="Captura de tela 2026-09-15 153301" src="https://github.com/user-attachments/assets/d3e824c3-5f48-4d73-baa4-1430ba497f1a" />
+
+<img width="1059" height="471" alt="Captura de tela 2026-09-15 153659" src="https://github.com/user-attachments/assets/cbc63fc3-f67c-4925-9f62-d1c3b825134c" />
+
+<img width="1106" height="702" alt="Captura de tela 2026-09-15 153621" src="https://github.com/user-attachments/assets/3d0b22a5-f7f3-4a21-9140-8d9e58d856f2" />
+
+<img width="1060" height="464" alt="Captura de tela 2026-09-15 153445" src="https://github.com/user-attachments/assets/df9658de-af86-43e6-9584-1ea0c01741c9" />
+
+<img width="1316" height="406" alt="Captura de tela 2026-09-15 153336" src="https://github.com/user-attachments/assets/9a16f816-cf73-4cd1-8c13-8914197b665e" />
