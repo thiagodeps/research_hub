@@ -9,8 +9,8 @@ backgroundColor: #ffffff
 # Research Hub 🧬
 ## Academic Data Curation
 
-*[Presenter Name / Team]*
-*[Date]*
+*[Thiago Almeida Deps Caldeira]*
+
 
 ---
 
