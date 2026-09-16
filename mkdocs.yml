@@ -1,0 +1,40 @@
+site_name: Research Hub
+site_description: Desktop tool for academic data curation.
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro / Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro / Switch to light mode
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      languages:
+        - locale: pt
+          name: Português
+          default: true
+        - locale: en
+          name: English
+
+nav:
+  - Início / Home: index.md
+  - Migração / Migration: estudo-migracao-rust-tauri.md
+  - Apresentação / Presentation: apresentacao_projeto.md
