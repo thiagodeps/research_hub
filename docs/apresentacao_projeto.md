@@ -9,8 +9,8 @@ backgroundColor: #ffffff
 # Research Hub 🧬
 ## Curadoria de Dados Acadêmicos
 
-*[Nome do Apresentador / Equipe]*
-*[Data]*
+*[Thiago Almeida Deps Caldeira]*
+
 
 ---
 
