@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://thiagodeps.github.io/research_hub/</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://thiagodeps.github.io/research_hub/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://thiagodeps.github.io/research_hub/en/"/>
+    </url>
+    <url>
+        <loc>https://thiagodeps.github.io/research_hub/apresentacao_projeto/</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://thiagodeps.github.io/research_hub/apresentacao_projeto/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://thiagodeps.github.io/research_hub/en/apresentacao_projeto/"/>
+    </url>
+    <url>
+        <loc>https://thiagodeps.github.io/research_hub/estudo-migracao-rust-tauri/</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://thiagodeps.github.io/research_hub/estudo-migracao-rust-tauri/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://thiagodeps.github.io/research_hub/en/estudo-migracao-rust-tauri/"/>
+    </url>
+    <url>
+        <loc>https://thiagodeps.github.io/research_hub/en/</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://thiagodeps.github.io/research_hub/en/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://thiagodeps.github.io/research_hub/"/>
+    </url>
+    <url>
+        <loc>https://thiagodeps.github.io/research_hub/en/apresentacao_projeto/</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://thiagodeps.github.io/research_hub/en/apresentacao_projeto/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://thiagodeps.github.io/research_hub/apresentacao_projeto/"/>
+    </url>
+    <url>
+        <loc>https://thiagodeps.github.io/research_hub/en/estudo-migracao-rust-tauri/</loc>
+        <lastmod>2026-09-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://thiagodeps.github.io/research_hub/en/estudo-migracao-rust-tauri/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://thiagodeps.github.io/research_hub/estudo-migracao-rust-tauri/"/>
+    </url>
+</urlset>
