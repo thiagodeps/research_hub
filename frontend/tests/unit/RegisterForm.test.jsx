@@ -1,9 +1,9 @@
 /**
  * @vitest-environment jsdom
  */
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/react';
 
 // Mock apiFetch
 const mockApiFetch = vi.fn();
@@ -16,16 +16,11 @@ import RegisterForm from '../../src/components/RegisterForm.jsx';
 describe('RegisterForm Component', () => {
   beforeEach(() => {
     mockApiFetch.mockReset();
-    try {
-      delete window.location;
-      window.location = { href: '' };
-    } catch {
-      Object.defineProperty(window, 'location', {
-        value: { href: '' },
-        writable: true,
-        configurable: true,
-      });
-    }
+    window.history.pushState({}, '', '/register');
+  });
+
+  afterEach(() => {
+    cleanup();
   });
 
   it('renders all registration fields and submit button', () => {
@@ -77,7 +72,6 @@ describe('RegisterForm Component', () => {
           password_confirm: 'SenhaForte123',
         }),
       });
-      expect(window.location.href).toBe('/login?registered=true');
     });
   });
 

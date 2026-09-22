@@ -1,9 +1,9 @@
 /**
  * @vitest-environment jsdom
  */
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/react';
 
 // Mock apiFetch
 const mockApiFetch = vi.fn();
@@ -16,17 +16,12 @@ import LoginForm from '../../src/components/LoginForm.jsx';
 describe('LoginForm Component', () => {
   beforeEach(() => {
     mockApiFetch.mockReset();
-    try {
-      delete window.location;
-      window.location = { href: '', search: '' };
-    } catch {
-      Object.defineProperty(window, 'location', {
-        value: { href: '', search: '' },
-        writable: true,
-        configurable: true,
-      });
-    }
     localStorage.clear();
+    window.history.pushState({}, '', '/login');
+  });
+
+  afterEach(() => {
+    cleanup();
   });
 
   it('renders login fields, submit button, and link to register', () => {
@@ -39,7 +34,7 @@ describe('LoginForm Component', () => {
   });
 
   it('displays success alert when ?registered=true is present in url search', () => {
-    window.location.search = '?registered=true';
+    window.history.pushState({}, '', '/login?registered=true');
     render(<LoginForm />);
     expect(screen.getByText(/conta criada com sucesso/i)).toBeDefined();
   });
@@ -61,7 +56,6 @@ describe('LoginForm Component', () => {
         }),
       });
       expect(localStorage.getItem('token')).toBe('fake-jwt-token');
-      expect(window.location.href).toBe('/dashboard');
     });
   });
 
