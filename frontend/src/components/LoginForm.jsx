@@ -5,6 +5,13 @@ export default function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const [registeredSuccess] = useState(() => {
+    if (typeof window !== 'undefined' && window.location) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('registered') === 'true';
+    }
+    return false;
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -12,7 +19,7 @@ export default function LoginForm() {
     try {
       const response = await apiFetch('/auth/login', {
         method: 'POST',
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email: email.trim(), password })
       });
       if (response.access_token) {
         localStorage.setItem('token', response.access_token);
@@ -26,6 +33,11 @@ export default function LoginForm() {
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-sm p-8 bg-white rounded-lg shadow-lg">
       <h2 className="mb-6 text-2xl font-bold text-center text-slate-800">Bem-vindo Admin</h2>
+      {registeredSuccess && (
+        <div className="p-3 mb-4 text-sm text-green-800 bg-green-100 rounded-md">
+          Conta criada com sucesso! Faça login com suas credenciais.
+        </div>
+      )}
       {error && <div className="p-3 mb-4 text-sm text-red-700 bg-red-100 rounded-md">{error}</div>}
       <div className="mb-4">
         <label className="block mb-1 text-sm font-medium text-slate-700">Email</label>
@@ -50,6 +62,13 @@ export default function LoginForm() {
       <button type="submit" className="w-full px-4 py-2 text-white bg-slate-900 hover:bg-slate-800 rounded-md transition-colors focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 outline-none font-medium">
         Entrar
       </button>
+
+      <div className="mt-4 text-center">
+        <a href="/register" className="text-sm font-medium text-slate-600 hover:text-slate-900 underline">
+          Não tem uma conta? Cadastre-se
+        </a>
+      </div>
     </form>
   );
 }
+

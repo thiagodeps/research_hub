@@ -96,7 +96,19 @@ pub fn login(
     })
 }
 
+#[tauri::command(async)]
+pub fn register(
+    state: State<'_, AppState>,
+    email: String,
+    password: String,
+    password_confirm: String,
+) -> Result<(), AppError> {
+    let conn = state.db()?;
+    crate::auth::register_admin(&conn, &email, &password, &password_confirm)
+}
+
 // ---------------------------------------------------------------- data import
+
 
 /// Import the canonical archive (SEP-018).
 ///

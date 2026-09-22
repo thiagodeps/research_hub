@@ -11,6 +11,13 @@ const ROUTES = [
   [/^\/auth\/login$/, 'POST', (_m, b) =>
     invoke('login', { email: b.email, password: b.password })],
 
+  [/^\/auth\/register$/, 'POST', (_m, b) =>
+    invoke('register', {
+      email: b.email,
+      password: b.password,
+      passwordConfirm: b.password_confirm,
+    })],
+
   [/^\/merge\/([^/?]+)$/, 'POST', (m, b) =>
     invoke('merge_entities', {
       entity: m[1], sourceIds: b.source_ids, resolvedData: b.resolved_data,

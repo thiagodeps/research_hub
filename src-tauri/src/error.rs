@@ -33,6 +33,9 @@ pub enum AppError {
     Io(#[from] std::io::Error),
 
     #[error("{0}")]
+    Validation(String),
+
+    #[error("{0}")]
     Internal(String),
 }
 
@@ -54,6 +57,7 @@ impl AppError {
             Self::Database(_) => "database",
             Self::Migration(_) => "migration",
             Self::Io(_) => "io",
+            Self::Validation(_) => "validation",
             Self::Internal(_) => "internal",
         }
     }

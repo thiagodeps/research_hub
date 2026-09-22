@@ -36,6 +36,7 @@ pub fn run() {
         })
         .invoke_handler(tauri::generate_handler![
             commands::login,
+            commands::register,
             commands::logout,
             commands::session_status,
             commands::list_entities,
@@ -132,4 +133,16 @@ mod tests {
             "ROUTES deve cobrir raiz + login + dashboard + 15 entidades"
         );
     }
+
+    /// Rota de cadastro (/register) adicionada para registro de usuarios.
+    #[test]
+    fn rota_de_cadastro_resolve() {
+        let app = app();
+        let resolver = app.asset_resolver();
+        assert!(
+            resolver.get("/register".into()).is_some(),
+            "rota /register nao resolveu"
+        );
+    }
 }
+
