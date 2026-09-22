@@ -67,6 +67,19 @@ describe('apiFetch routing', () => {
     expect(invoke).toHaveBeenCalledWith('login', { email: 'a@b.c', password: 'x' });
   });
 
+  it('routes register', async () => {
+    invoke.mockResolvedValue(null);
+    await apiFetch('/auth/register', {
+      method: 'POST',
+      body: JSON.stringify({ email: 'a@b.c', password: 'secretpassword', password_confirm: 'secretpassword' }),
+    });
+    expect(invoke).toHaveBeenCalledWith('register', {
+      email: 'a@b.c',
+      password: 'secretpassword',
+      passwordConfirm: 'secretpassword',
+    });
+  });
+
   // `/link` is one segment, so it would match the generic create pattern if
   // the ordering were wrong.
   it('routes link before the generic create', async () => {
