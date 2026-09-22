@@ -40,8 +40,9 @@ export default function LoginForm() {
       )}
       {error && <div className="p-3 mb-4 text-sm text-red-700 bg-red-100 rounded-md">{error}</div>}
       <div className="mb-4">
-        <label className="block mb-1 text-sm font-medium text-slate-700">Email</label>
+        <label htmlFor="email" className="block mb-1 text-sm font-medium text-slate-700">Email</label>
         <input 
+          id="email"
           type="email" 
           value={email}
           onChange={e => setEmail(e.target.value)}
@@ -50,8 +51,9 @@ export default function LoginForm() {
         />
       </div>
       <div className="mb-6">
-        <label className="block mb-1 text-sm font-medium text-slate-700">Senha</label>
+        <label htmlFor="password" className="block mb-1 text-sm font-medium text-slate-700">Senha</label>
         <input 
+          id="password"
           type="password" 
           value={password}
           onChange={e => setPassword(e.target.value)}
