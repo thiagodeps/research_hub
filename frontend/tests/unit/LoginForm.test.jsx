@@ -1,3 +1,6 @@
+/**
+ * @vitest-environment jsdom
+ */
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
@@ -13,8 +16,16 @@ import LoginForm from '../../src/components/LoginForm.jsx';
 describe('LoginForm Component', () => {
   beforeEach(() => {
     mockApiFetch.mockReset();
-    delete window.location;
-    window.location = { href: '', search: '' };
+    try {
+      delete window.location;
+      window.location = { href: '', search: '' };
+    } catch {
+      Object.defineProperty(window, 'location', {
+        value: { href: '', search: '' },
+        writable: true,
+        configurable: true,
+      });
+    }
     localStorage.clear();
   });
 

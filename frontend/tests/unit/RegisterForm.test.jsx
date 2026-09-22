@@ -1,3 +1,6 @@
+/**
+ * @vitest-environment jsdom
+ */
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
@@ -13,8 +16,16 @@ import RegisterForm from '../../src/components/RegisterForm.jsx';
 describe('RegisterForm Component', () => {
   beforeEach(() => {
     mockApiFetch.mockReset();
-    delete window.location;
-    window.location = { href: '' };
+    try {
+      delete window.location;
+      window.location = { href: '' };
+    } catch {
+      Object.defineProperty(window, 'location', {
+        value: { href: '' },
+        writable: true,
+        configurable: true,
+      });
+    }
   });
 
   it('renders all registration fields and submit button', () => {
