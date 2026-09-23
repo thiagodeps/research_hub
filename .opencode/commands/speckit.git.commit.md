@@ -1,14 +1,10 @@
 ---
-name: speckit-git-commit
 description: Auto-commit changes after a Spec Kit command completes
-compatibility: Requires spec-kit project structure with .specify/ directory
-metadata:
-  author: spec-kit-core
-  source: extension:git
 ---
 
-# Git Commit Skill
 
+<!-- Extension: git -->
+<!-- Config: .specify/extensions/git/ -->
 # Auto-Commit Changes
 
 Automatically stage and commit all changes after a Spec Kit command completes.
