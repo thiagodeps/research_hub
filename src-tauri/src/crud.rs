@@ -26,6 +26,18 @@ fn escape_like(term: &str) -> String {
     term.replace('\\', r"\\").replace('%', r"\%").replace('_', r"\_")
 }
 
+/// A search term counts as an id only when it is purely ASCII digits and
+/// parses as i64 (030 research D1 / FR-002): `parse` alone would accept "-3"
+/// and "+7", and a 30-digit number overflows — every such term degrades to
+/// plain text search (FR-005). "007" normalizes to 7, as the spec assumes.
+fn parse_id_term(term: &str) -> Option<i64> {
+    if !term.is_empty() && term.chars().all(|c| c.is_ascii_digit()) {
+        term.parse::<i64>().ok()
+    } else {
+        None
+    }
+}
+
 fn to_json(v: SqlValue) -> Json {
     match v {
         SqlValue::Null => Json::Null,
@@ -82,53 +94,81 @@ pub fn list(
     let limit = limit.unwrap_or(DEFAULT_LIMIT).clamp(1, MAX_LIMIT);
     let offset = offset.unwrap_or(0).max(0);
 
-    // Search applies only when the entity has a searchable column (FR-007).
-    let term = match (search, def.search_column) {
-        (Some(t), Some(_)) if !t.is_empty() => Some(format!("%{}%", escape_like(t))),
-        _ => None,
-    };
-    let where_sql = match (&term, def.search_column) {
-        (Some(_), Some(col)) => format!(" WHERE {col} LIKE ?1 ESCAPE '\\'"),
-        _ => String::new(),
-    };
+    // Trimmed before classification (030 research D6); empty after trim means
+    // no filter at all, as before.
+    let term = search.map(str::trim).filter(|t| !t.is_empty());
+    // Numeric terms additionally match the exact id (FR-002/FR-003).
+    let id = term.and_then(parse_id_term);
+    // The LIKE pattern is byte-for-byte the old one (FR-005): %term% with
+    // wildcards escaped as literal text.
+    let like = term.map(|t| format!("%{}%", escape_like(t)));
 
+    // WHERE shapes per the 030 data-model grammar (T1–T4). Explicit `?N`
+    // numbering lets the relevance ORDER BY reuse `?1` (research D2/D3).
+    let (where_sql, bind): (String, Vec<SqlValue>) = match (id, &like, def.search_column) {
+        // Numeric in an entity with a searchable column: id OR text (FR-004).
+        (Some(id_val), Some(pattern), Some(col)) => (
+            format!(" WHERE (id = ?1 OR {col} LIKE ?2 ESCAPE '\\')"),
+            vec![SqlValue::Integer(id_val), SqlValue::Text(pattern.clone())],
+        ),
+        // Numeric in an entity without one: the id is all there is (FR-006).
+        (Some(id_val), _, None) => (
+            " WHERE id = ?1".to_string(),
+            vec![SqlValue::Integer(id_val)],
+        ),
+        // Text-only: exactly today's filter, unchanged (FR-005).
+        (None, Some(pattern), Some(col)) => (
+            format!(" WHERE {col} LIKE ?1 ESCAPE '\\'"),
+            vec![SqlValue::Text(pattern.clone())],
+        ),
+        // No usable term (also covers text terms on no-column entities,
+        // which stay ignored — FR-007 parity).
+        _ => (String::new(), Vec::new()),
+    };
     // Unknown sort columns are ignored, not rejected — parity with Python.
-    let order_sql = match sort.filter(|s| def.has_column(s)) {
-        Some(col) => {
-            let expr = EntityDef::sort_expr(col);
-            let dir = if order == Some("desc") { "DESC" } else { "ASC" };
-            // `expr IS NULL` first puts nulls last in both directions.
-            format!(" ORDER BY ({expr} IS NULL), {expr} {dir}")
-        }
-        None => String::new(),
+    // Relevance (when the term is numeric) leads; the user's sort applies to
+    // the remaining rows, nulls last in both directions.
+    let mut order_clauses: Vec<String> = Vec::new();
+    if id.is_some() {
+        order_clauses.push("(id = ?1) DESC".to_string());
+    }
+    if let Some(col) = sort.filter(|s| def.has_column(s)) {
+        let expr = EntityDef::sort_expr(col);
+        let dir = if order == Some("desc") { "DESC" } else { "ASC" };
+        // `expr IS NULL` first puts nulls last in both directions.
+        order_clauses.push(format!("({expr} IS NULL), {expr} {dir}"));
+    }
+    let order_sql = if order_clauses.is_empty() {
+        String::new()
+    } else {
+        format!(" ORDER BY {}", order_clauses.join(", "))
     };
 
     let table = def.table;
-    let total: i64 = match &term {
-        Some(t) => conn.query_row(
+    let total: i64 = if bind.is_empty() {
+        conn.query_row(&format!("SELECT COUNT(*) FROM {table}"), [], |r| r.get(0))?
+    } else {
+        conn.query_row(
             &format!("SELECT COUNT(*) FROM {table}{where_sql}"),
-            [t],
+            rusqlite::params_from_iter(bind.iter()),
             |r| r.get(0),
-        )?,
-        None => conn.query_row(&format!("SELECT COUNT(*) FROM {table}"), [], |r| r.get(0))?,
+        )?
     };
 
     let cols = def.columns.join(", ");
     let sql = format!("SELECT {cols} FROM {table}{where_sql}{order_sql} LIMIT ? OFFSET ?");
     let mut stmt = conn.prepare(&sql)?;
 
-    let items = match &term {
-        Some(t) => stmt
-            .query_map(rusqlite::params![t, limit, offset], |r| {
-                row_to_record(r, def.columns)
-            })?
-            .collect::<rusqlite::Result<Vec<_>>>()?,
-        None => stmt
-            .query_map(rusqlite::params![limit, offset], |r| {
-                row_to_record(r, def.columns)
-            })?
-            .collect::<rusqlite::Result<Vec<_>>>()?,
-    };
+    // Bare `?` in LIMIT/OFFSET take the next numbers after the highest
+    // explicit one, so the values simply follow the WHERE bindings.
+    let mut params: Vec<SqlValue> = bind.clone();
+    params.push(SqlValue::Integer(limit));
+    params.push(SqlValue::Integer(offset));
+    let items = stmt
+        .query_map(rusqlite::params_from_iter(params), |r| {
+            row_to_record(r, def.columns)
+        })?
+        .collect::<rusqlite::Result<Vec<_>>>()?;
 
     Ok(Page { items, total })
 }
@@ -312,6 +352,145 @@ mod tests {
         conn.execute("INSERT INTO proficiencies (reading) VALUES ('boa')", []).unwrap();
         let page = list(&conn, "proficiencies", None, None, Some("qualquer"), None, None).unwrap();
         assert_eq!(page.total, 1, "search must be ignored, not applied or failed");
+    }
+
+    /// US1/SC-003: a purely numeric term matches the exact id, and that record
+    /// leads the list. '3' occurs in no campus name, so only the id matches.
+    #[test]
+    fn search_by_exact_id_returns_record_first() {
+        let conn = seeded();
+        let page = list(&conn, "campuses", None, None, Some("3"), None, None).unwrap();
+        assert_eq!(page.total, 1, "the id match is exact, not a substring");
+        assert_eq!(page.items[0]["id"], json!(3));
+        assert_eq!(page.items[0]["name"], json!("Cariacica"));
+    }
+
+    /// Research D1: "003" is digits-only and parses to 3 — leading zeros
+    /// normalize through the i64 parse.
+    #[test]
+    fn search_by_id_with_leading_zeros_matches_same_record() {
+        let conn = seeded();
+        let page = list(&conn, "campuses", None, None, Some("003"), None, None).unwrap();
+        assert_eq!(page.total, 1);
+        assert_eq!(page.items[0]["id"], json!(3));
+    }
+
+    /// US1 scenario 3: an id with no record yields an empty page, not an error.
+    #[test]
+    fn search_by_missing_id_returns_empty_page_without_error() {
+        let conn = seeded();
+        let page = list(&conn, "campuses", None, None, Some("9999999"), None, None).unwrap();
+        assert!(page.items.is_empty());
+        assert_eq!(page.total, 0);
+    }
+
+    /// US1 scenario 2 + research D6: a whitespace-only paste must not become a
+    /// LIKE filter; empty-after-trim means no filter at all.
+    #[test]
+    fn empty_or_whitespace_search_lists_everything() {
+        let conn = seeded();
+        let none = list(&conn, "campuses", None, None, None, None, None).unwrap();
+        assert_eq!(none.total, 4);
+        let empty = list(&conn, "campuses", None, None, Some(""), None, None).unwrap();
+        assert_eq!(empty.total, 4);
+        let blanks = list(&conn, "campuses", None, None, Some("   "), None, None).unwrap();
+        assert_eq!(blanks.total, 4, "whitespace-only must list everything");
+    }
+
+    /// FR-004: numeric terms are additive — the exact-id match AND the textual
+    /// matches land in the same list, with the id row first (SC-003).
+    #[test]
+    fn numeric_search_returns_union_of_id_and_text_matches() {
+        let conn = seeded();
+        conn.execute("INSERT INTO campuses (id, name) VALUES (7, 'Campus Sete')", []).unwrap();
+        conn.execute("INSERT INTO campuses (id, name) VALUES (5, 'Bloco 7')", []).unwrap();
+
+        let page = list(&conn, "campuses", None, None, Some("7"), None, None).unwrap();
+        assert_eq!(page.total, 2, "id 7 plus the name containing '7'");
+        assert_eq!(page.items[0]["id"], json!(7), "the exact id match leads");
+        assert!(page.items.iter().any(|r| r["name"] == json!("Bloco 7")));
+    }
+
+    /// FR-002 / data-model T4: anything that is not pure digits stays
+    /// text-only — mixed terms, decimals, negatives and i64 overflow never
+    /// match an id.
+    #[test]
+    fn non_numeric_terms_use_text_search_only() {
+        let conn = seeded();
+        conn.execute("INSERT INTO campuses (id, name) VALUES (7, 'Bloco abc123')", []).unwrap();
+        conn.execute("INSERT INTO campuses (id, name) VALUES (8, 'Meta 12.5')", []).unwrap();
+        conn.execute("INSERT INTO campuses (id, name) VALUES (9, 'Débito -3')", []).unwrap();
+
+        let mixed = list(&conn, "campuses", None, None, Some("abc123"), None, None).unwrap();
+        assert_eq!(mixed.total, 1, "mixed terms never match an id");
+        assert_eq!(mixed.items[0]["name"], json!("Bloco abc123"));
+
+        let decimal = list(&conn, "campuses", None, None, Some("12.5"), None, None).unwrap();
+        assert_eq!(decimal.total, 1);
+        assert_eq!(decimal.items[0]["name"], json!("Meta 12.5"));
+
+        let negative = list(&conn, "campuses", None, None, Some("-3"), None, None).unwrap();
+        assert_eq!(negative.total, 1);
+        assert_eq!(negative.items[0]["name"], json!("Débito -3"));
+
+        let overflow = list(&conn, "campuses", None, None, Some("999999999999999999999999999999"), None, None).unwrap();
+        assert_eq!(overflow.total, 0, "overflow degrades to text, which matches nothing here");
+    }
+
+    /// Research D3: the id row leads even when the user chose a sort; the
+    /// remaining rows follow that sort (asc and desc).
+    #[test]
+    fn user_sort_still_applies_after_id_relevance() {
+        let conn = seeded();
+        conn.execute("INSERT INTO campuses (id, name) VALUES (7, 'Campus Sete')", []).unwrap();
+        conn.execute("INSERT INTO campuses (id, name) VALUES (5, 'Bloco 7')", []).unwrap();
+        conn.execute("INSERT INTO campuses (id, name) VALUES (6, 'Sala 7')", []).unwrap();
+
+        let asc = list(&conn, "campuses", None, None, Some("7"), Some("name"), Some("asc")).unwrap();
+        assert_eq!(asc.items[0]["id"], json!(7), "id match still leads");
+        let asc_names: Vec<&str> = asc.items[1..].iter().filter_map(|r| r["name"].as_str()).collect();
+        assert_eq!(asc_names, vec!["Bloco 7", "Sala 7"], "rest follows the user's sort");
+
+        let desc = list(&conn, "campuses", None, None, Some("7"), Some("name"), Some("desc")).unwrap();
+        assert_eq!(desc.items[0]["id"], json!(7));
+        let desc_names: Vec<&str> = desc.items[1..].iter().filter_map(|r| r["name"].as_str()).collect();
+        assert_eq!(desc_names, vec!["Sala 7", "Bloco 7"]);
+    }
+
+    /// FR-006 / research D4: entities without a searchable text column gain
+    /// id search; text-only terms remain fully ignored, so the existing
+    /// `search_is_ignored_for_entities_without_search_column` keeps passing.
+    #[test]
+    fn numeric_search_filters_by_id_for_entities_without_search_column() {
+        let conn = db::open_in_memory().unwrap();
+        conn.execute("INSERT INTO proficiencies (reading) VALUES ('boa')", []).unwrap();
+        let target = conn.last_insert_rowid();
+        conn.execute("INSERT INTO proficiencies (reading) VALUES ('otima')", []).unwrap();
+
+        let by_id = list(&conn, "proficiencies", None, None, Some(&target.to_string()), None, None).unwrap();
+        assert_eq!(by_id.total, 1, "the id filter applies even without a text column");
+        assert_eq!(by_id.items[0]["id"], json!(target));
+
+        let by_text = list(&conn, "proficiencies", None, None, Some("qualquer"), None, None).unwrap();
+        assert_eq!(by_text.total, 2, "textual terms stay ignored here");
+    }
+
+    /// SC-004 / US-3 scenario 2: the same rule everywhere in the registry —
+    /// every exported entity returns exactly its own record when searched by
+    /// its id.
+    #[test]
+    fn numeric_search_works_uniformly_across_all_entities() {
+        let conn = db::open_in_memory().unwrap();
+        for def in registry::exported() {
+            let created = create(&conn, def.route, &rec(json!({})))
+                .unwrap_or_else(|e| panic!("{}: create falhou: {e}", def.route));
+            let id = created["id"].as_i64().unwrap();
+
+            let page = list(&conn, def.route, None, None, Some(&id.to_string()), None, None)
+                .unwrap_or_else(|e| panic!("{}: list by id falhou: {e}", def.route));
+            assert_eq!(page.total, 1, "{}: id search returns exactly one record", def.route);
+            assert_eq!(page.items[0]["id"], json!(id), "{}: the record itself comes back", def.route);
+        }
     }
 
     #[test]
