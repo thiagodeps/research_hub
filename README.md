@@ -11,7 +11,7 @@ Aplicativo de processo único: sem servidor, sem navegador, sem Python, sem rede
 
 - **Rust + Tauri 2.0** — núcleo, janela e comunicação por IPC
 - **SQLite** (`rusqlite`, embarcado) — banco em arquivo único
-- **arrow-rs** — leitura e escrita dos `.parquet` canônicos
+- **serde_json** — leitura e escrita dos JSONs canônicos
 - **Astro + React + Tailwind** — interface, compilada estaticamente e embutida
   no binário
 

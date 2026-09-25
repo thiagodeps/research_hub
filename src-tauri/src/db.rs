@@ -142,6 +142,11 @@ mod tests {
     /// to one and forgotten in the other fails here rather than at runtime.
     #[test]
     fn registry_and_schema_agree() {
+        // SEP-032: the campuses `campus` column was an upstream export bug; the
+        // registry dropped it while the physical column stays dormant until the
+        // next import rewrites the base. Documented exception, not drift.
+        const DORMANT: &[(&str, &str)] = &[("campuses", "campus")];
+
         let conn = open_in_memory().unwrap();
         for def in registry::ENTITIES {
             let actual = table_columns(&conn, def.table);
@@ -157,7 +162,8 @@ mod tests {
             }
             for existing in &actual {
                 assert!(
-                    def.has_column(existing),
+                    def.has_column(existing)
+                        || DORMANT.contains(&(&def.table, existing.as_str())),
                     "{}: schema tem '{}', ausente no registry",
                     def.table,
                     existing

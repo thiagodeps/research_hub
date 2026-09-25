@@ -7,11 +7,10 @@ import EntityPage from '../../components/EntityPage.jsx';
   <EntityPage 
     client:load 
     entity="campuses" 
-    columns={['id', 'name', 'campus']} 
+    columns={['id', 'name']} 
     fields={[
       { name: 'id', label: 'ID', type: 'number' },
-      { name: 'name', label: 'Name', required: true },
-      { name: 'campus', label: 'Campus (Vínculos)', type: 'json_readonly' }
+      { name: 'name', label: 'Name', required: true }
     ]} 
   />
 </Dashboard>

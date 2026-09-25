@@ -19,7 +19,7 @@ Single-process application: no server, no browser, no Python, no network.
 
 - **Rust + Tauri 2.0** — core, window, and IPC communication
 - **SQLite** (`rusqlite`, embedded) — single-file database
-- **arrow-rs** — reading and writing canonical `.parquet` files
+- **serde_json** — reading and writing the canonical JSON files
 - **Astro + React + Tailwind** — UI, statically compiled and embedded in the binary
 
 ## Install

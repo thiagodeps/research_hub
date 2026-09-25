@@ -1,6 +1,11 @@
-//! Canonical archive ingestion (SEP-018).
+//! Canonical archive ingestion (SEP-018, adapted in SEP-032).
+//!
+//! The primary source is `{table}_canonical.json` at the archive root; the
+//! legacy `parquet/{table}_canonical.parquet` remains a fallback for old
+//! packages, and the JSON wins when both exist (research R1).
 
 use crate::error::AppError;
+use crate::json_io;
 use crate::parquet_io;
 use crate::registry;
 use rusqlite::Connection;
@@ -9,13 +14,13 @@ use std::path::{Path, PathBuf};
 
 pub const ORIGINAL_ARCHIVE: &str = "original.zip";
 
-#[derive(serde::Serialize, Clone)]
+#[derive(serde::Serialize, Clone, Debug)]
 pub struct TableLoaded {
     pub table: String,
     pub rows: usize,
 }
 
-#[derive(serde::Serialize)]
+#[derive(serde::Serialize, Debug)]
 pub struct ImportSummary {
     pub tables: Vec<TableLoaded>,
     pub total_rows: usize,
@@ -54,6 +59,11 @@ fn has_any_rows(conn: &Connection) -> Result<bool, AppError> {
 
 /// Read the archive and load every canonical table it carries.
 ///
+/// For each managed table the source is `{table}_canonical.json` at the root,
+/// falling back to the legacy `parquet/{table}_canonical.parquet`; when both
+/// exist the JSON wins (SEP-032, FR-006). A managed table with neither file
+/// aborts the import before anything destructive happens (FR-014).
+///
 /// `on_table` is called as each table finishes, so the caller can emit progress
 /// without this module knowing anything about Tauri.
 pub fn import_archive<F>(
@@ -68,17 +78,45 @@ where
     let mut zip = zip::ZipArchive::new(std::io::Cursor::new(archive_bytes))
         .map_err(|e| AppError::Internal(format!("arquivo .zip inválido: {e}")))?;
 
-    // Snapshot first: after this point rows start disappearing.
+    // Resolve the source of every managed table up front (research R1/R7).
+    let names: Vec<String> = (0..zip.len())
+        .filter_map(|i| zip.by_index(i).ok().map(|f| f.name().to_string()))
+        .collect();
+    let has = |n: &str| names.iter().any(|name| name == n);
+
+    enum Source {
+        Json(String),
+        Parquet(String),
+    }
+
+    let mut missing: Vec<&'static str> = Vec::new();
+    let mut sources: Vec<(&'static registry::EntityDef, Source)> = Vec::new();
+    for def in registry::exported() {
+        let base = format!("{}_canonical", def.table);
+        let json_path = format!("{base}.json");
+        let parquet_path = format!("parquet/{base}.parquet");
+        if has(&json_path) {
+            sources.push((def, Source::Json(json_path)));
+        } else if has(&parquet_path) {
+            sources.push((def, Source::Parquet(parquet_path)));
+        } else {
+            missing.push(def.table);
+        }
+    }
+    if !missing.is_empty() {
+        return Err(AppError::Validation(format!(
+            "pacote sem o arquivo canônico das tabelas: {}",
+            missing.join(", ")
+        )));
+    }
+
+    // Snapshot only after the package proved complete, and always before rows
+    // start disappearing (FR-011).
     let snapshot_path = if has_any_rows(conn)? {
         Some(snapshot(conn, data_dir)?.display().to_string())
     } else {
         None
     };
-
-    let parquet_entries: Vec<String> = (0..zip.len())
-        .filter_map(|i| zip.by_index(i).ok().map(|f| f.name().to_string()))
-        .filter(|n| n.ends_with(".parquet"))
-        .collect();
 
     // One transaction for the whole import: a failure halfway leaves the
     // previous state intact rather than a half-loaded base (FR-009).
@@ -91,19 +129,23 @@ where
     let mut loaded = Vec::new();
     let mut total = 0usize;
 
-    for entry in parquet_entries {
-        let table_name = parquet_io::table_name_from_path(&entry);
-        let Some(def) = registry::ENTITIES.iter().find(|e| e.table == table_name && e.exported)
-        else {
-            continue; // graphs, marts and other unmanaged parquet: preserved, never parsed
+    for (def, source) in sources {
+        let entry = match &source {
+            Source::Json(path) | Source::Parquet(path) => path,
         };
-
         let mut buf = Vec::new();
-        zip.by_name(&entry)
+        zip.by_name(entry)
             .map_err(|e| AppError::Internal(format!("entrada ilegível {entry}: {e}")))?
             .read_to_end(&mut buf)?;
 
-        let table = parquet_io::read_columns(bytes::Bytes::from(buf), def.columns)?;
+        let table = match &source {
+            Source::Json(_) => json_io::read_columns(&buf, def.columns)?,
+            Source::Parquet(_) => {
+                let pq = parquet_io::read_columns(bytes::Bytes::from(buf), def.columns)?;
+                // Both readers produce the same shape; unify on the JSON one.
+                json_io::Table { columns: pq.columns, rows: pq.rows }
+            }
+        };
         if table.columns.is_empty() {
             continue;
         }
@@ -146,6 +188,30 @@ mod tests {
     use crate::db;
     use std::io::Write;
 
+    /// Build a ZIP from raw name/bytes pairs (JSON fixtures and unmanaged entries).
+    fn zip_from(entries: &[(&str, Vec<u8>)]) -> Vec<u8> {
+        let mut zip_bytes = Vec::new();
+        {
+            let mut z = zip::ZipWriter::new(std::io::Cursor::new(&mut zip_bytes));
+            let opts: zip::write::FileOptions<()> = zip::write::FileOptions::default();
+            for (name, bytes) in entries {
+                z.start_file(*name, opts).unwrap();
+                z.write_all(bytes).unwrap();
+            }
+            z.finish().unwrap();
+        }
+        zip_bytes
+    }
+
+    /// A `{table}_canonical.json` body with id/name rows.
+    fn campuses_json(rows: &[(i64, &str)]) -> Vec<u8> {
+        let items: Vec<String> = rows
+            .iter()
+            .map(|(id, name)| format!(r#"{{"id": {id}, "name": "{name}"}}"#))
+            .collect();
+        format!("[{}]", items.join(", ")).into_bytes()
+    }
+
     /// Build a minimal archive with one canonical parquet, written through
     /// arrow so the bytes are real parquet rather than a fixture.
     fn archive_with_campuses(rows: &[(i64, &str)]) -> Vec<u8> {
@@ -175,18 +241,35 @@ mod tests {
             w.close().unwrap();
         }
 
-        let mut zip_bytes = Vec::new();
-        {
-            let mut z = zip::ZipWriter::new(std::io::Cursor::new(&mut zip_bytes));
-            let opts: zip::write::FileOptions<()> = zip::write::FileOptions::default();
-            z.start_file("parquet/campuses_canonical.parquet", opts).unwrap();
-            z.write_all(&parquet_bytes).unwrap();
-            // An unmanaged entry, to prove it is skipped rather than parsed.
-            z.start_file("people_relationship_graph.nodes.json", opts).unwrap();
-            z.write_all(b"[]").unwrap();
-            z.finish().unwrap();
+        // Complete package: the 14 tables this fixture does not exercise go as
+        // empty JSON lists so the FR-014 completeness check passes.
+        zip_from(&complete_package(vec![
+            ("parquet/campuses_canonical.parquet", parquet_bytes),
+            ("people_relationship_graph.nodes.json", b"[]".to_vec()),
+        ]))
+    }
+
+    /// FR-014 requires every managed table's file to be present. Fixtures add
+    /// the tables they do not exercise as empty JSON lists (empty tables load
+    /// as nothing and emit no progress, so old expectations keep holding).
+    fn complete_package(mut entries: Vec<(&'static str, Vec<u8>)>) -> Vec<(&'static str, Vec<u8>)> {
+        /// Leak a tiny fixture name so it can sit in the entries vec as 'static.
+        fn json_name(table: &str) -> &'static str {
+            Box::leak(format!("{table}_canonical.json").into_boxed_str())
         }
-        zip_bytes
+
+        let missing: Vec<&'static str> = registry::exported()
+            .filter(|def| {
+                let json = format!("{}_canonical.json", def.table);
+                let parquet = format!("parquet/{}_canonical.parquet", def.table);
+                !entries.iter().any(|(n, _)| *n == json || *n == parquet)
+            })
+            .map(|def| def.table)
+            .collect();
+        for table in missing {
+            entries.push((json_name(table), b"[]".to_vec()));
+        }
+        entries
     }
 
     fn fixture() -> (Connection, tempdir::Dir) {
@@ -331,11 +414,113 @@ mod tests {
         assert!(!looks_like_zip(Path::new("/tmp/exports.parquet")));
     }
 
-    /// SC-001: the criterion that matters. Imports the real archive and compares
-    /// every table against the counts the Python importer produces for the same
-    /// file (measured with pandas before the migration started).
+    /// SC-001 (shape), SEP-032 T004: JSON-only archives land in the right table.
     #[test]
-    fn reference_archive_matches_python_row_counts() {
+    fn loads_canonical_json_tables() {
+        let (mut conn, dir) = fixture();
+        let zip = zip_from(&complete_package(vec![
+            ("campuses_canonical.json", campuses_json(&[(77, "Serra"), (2, "Vitoria")])),
+            (
+                "languages_canonical.json",
+                br#"[{"id": 5, "name": "Portugues"}]"#.to_vec(),
+            ),
+            // Unmanaged entry, to prove it is skipped rather than parsed.
+            ("people_relationship_graph.json", b"[]".to_vec()),
+        ]));
+
+        let mut seen = Vec::new();
+        let summary = import_archive(&mut conn, &zip, dir.path(), |t| {
+            seen.push((t.table, t.rows))
+        })
+        .unwrap();
+
+        assert_eq!(summary.total_rows, 3);
+        assert_eq!(summary.tables.len(), 2);
+        assert_eq!(seen, vec![("campuses".to_string(), 2), ("languages".to_string(), 1)]);
+
+        let name: String = conn
+            .query_row("SELECT name FROM campuses WHERE id = 77", [], |r| r.get(0))
+            .unwrap();
+        assert_eq!(name, "Serra", "ids explícitos devem sobreviver");
+    }
+
+    /// FR-014 (T005, clarificação Q1): a package missing a managed table's
+    /// file aborts with a clear error and leaves the base untouched.
+    #[test]
+    fn aborts_when_managed_table_file_missing() {
+        let (mut conn, dir) = fixture();
+        conn.execute("INSERT INTO campuses (name) VALUES ('Intacto')", []).unwrap();
+
+        let zip = zip_from(&[("campuses_canonical.json", campuses_json(&[(1, "Serra")]))]);
+        let err = import_archive(&mut conn, &zip, dir.path(), |_| {}).unwrap_err();
+
+        assert!(
+            err.to_string().contains("languages"),
+            "o erro deve nomear a tabela faltante: {err}"
+        );
+
+        let name: String = conn.query_row("SELECT name FROM campuses", [], |r| r.get(0)).unwrap();
+        assert_eq!(name, "Intacto", "a base deve permanecer intacta");
+        assert!(
+            !dir.path().join("snapshots").exists(),
+            "nenhum snapshot para uma importação que falhou na validação"
+        );
+        assert!(
+            !dir.path().join(ORIGINAL_ARCHIVE).exists(),
+            "o original não pode ser substituído por um pacote incompleto"
+        );
+    }
+
+    /// FR-006 (T006): legacy packages keep working, and JSON wins when both
+    /// formats carry the same table.
+    #[test]
+    fn legacy_packages_still_load_with_json_precedence() {
+        let (mut conn, dir) = fixture();
+        // Legacy pair: the parquet says "Antigo", the JSON says "Novo".
+        let zip = zip_from(&complete_package(vec![
+            ("parquet/campuses_canonical.parquet", {
+                use arrow::array::{Int64Array, StringArray};
+                use arrow::datatypes::{DataType, Field, Schema};
+                use arrow::record_batch::RecordBatch;
+                use parquet::arrow::ArrowWriter;
+                use std::sync::Arc;
+                let schema = Arc::new(Schema::new(vec![
+                    Field::new("id", DataType::Int64, false),
+                    Field::new("name", DataType::Utf8, true),
+                ]));
+                let batch = RecordBatch::try_new(
+                    schema.clone(),
+                    vec![
+                        Arc::new(Int64Array::from(vec![1i64])),
+                        Arc::new(StringArray::from(vec![Some("Antigo")])),
+                    ],
+                )
+                .unwrap();
+                let mut pq = Vec::new();
+                {
+                    let mut w = ArrowWriter::try_new(&mut pq, schema, None).unwrap();
+                    w.write(&batch).unwrap();
+                    w.close().unwrap();
+                }
+                pq
+            }),
+            ("campuses_canonical.json", campuses_json(&[(1, "Novo")])),
+            // A table that only exists as JSON in this hypothetical package.
+            ("languages_canonical.json", br#"[{"id": 5, "name": "Portugues"}]"#.to_vec()),
+        ]));
+
+        import_archive(&mut conn, &zip, dir.path(), |_| {}).unwrap();
+
+        let name: String = conn.query_row("SELECT name FROM campuses", [], |r| r.get(0)).unwrap();
+        assert_eq!(name, "Novo", "quando JSON e parquet existem, o JSON vence");
+        let n: i64 = conn.query_row("SELECT COUNT(*) FROM languages", [], |r| r.get(0)).unwrap();
+        assert_eq!(n, 1, "tabela apenas-JSON carrega mesmo em pacote com parquet");
+    }
+
+    /// SC-001 (counts), SEP-032 T007: the reference archive is now JSON-only;
+    /// every managed table must load with the row count the file carries.
+    #[test]
+    fn reference_archive_matches_row_counts() {
         let archive = Path::new(env!("CARGO_MANIFEST_DIR"))
             .parent().unwrap()
             .join("exports_canonical.zip");
@@ -344,11 +529,11 @@ mod tests {
         }
 
         let expected: &[(&str, i64)] = &[
-            ("researchers", 4225), ("initiatives", 4122), ("students", 2625),
-            ("professional_activities", 2041), ("articles", 2027),
-            ("research_productions", 951), ("knowledge_areas", 415),
-            ("research_groups", 347), ("proficiencies", 209), ("advisorships", 183),
-            ("organizations", 123), ("awards", 51), ("campuses", 23),
+            ("researchers", 9694), ("students", 6282), ("articles", 2133),
+            ("initiatives", 4044), ("knowledge_areas", 1552),
+            ("professional_activities", 2099), ("research_productions", 975),
+            ("research_groups", 353), ("proficiencies", 220), ("advisorships", 188),
+            ("organizations", 139), ("awards", 52), ("campuses", 23),
             ("fellowships", 19), ("languages", 8),
         ];
 
@@ -360,12 +545,14 @@ mod tests {
             let got: i64 = conn
                 .query_row(&format!("SELECT COUNT(*) FROM {table}"), [], |r| r.get(0))
                 .unwrap();
-            assert_eq!(got, *want, "{table}: importado {got}, Python produz {want}");
+            assert_eq!(got, *want, "{table}: importado {got}, o arquivo tem {want}");
         }
 
         assert_eq!(summary.tables.len(), 15, "as 15 tabelas canonicas devem carregar");
         assert_eq!(summary.total_rows, expected.iter().map(|(_, n)| *n as usize).sum::<usize>());
     }
+
+    /// SC-001 (shape): declared rows land in the right table.
 
     /// Minimal scratch directory helper; avoids a dependency for four tests.
     mod tempdir {

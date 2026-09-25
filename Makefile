@@ -4,8 +4,10 @@ CARGO := $(HOME)/.cargo/bin/cargo
 # LD_LIBRARY_PATH pointing at /snap/core20 libraries, which collide with the
 # system glibc and make the binary die with:
 #   symbol lookup error: ... undefined symbol: __libc_pthread_init
-# Dropping the variable is enough; it is never needed to run this app.
-RUN := env -u LD_LIBRARY_PATH -u SNAP -u SNAP_NAME
+# Dropping the variables is enough; they are never needed to run this app.
+# The cargo→tauri→app chain *appends* whatever LD_LIBRARY_PATH it inherits,
+# so these must be gone before `cargo tauri dev` starts (SEP-032 debugging).
+RUN := env -u LD_LIBRARY_PATH -u LD_PRELOAD -u SNAP -u SNAP_NAME
 
 .PHONY: build dev run test bundle docker-bundle clean
 

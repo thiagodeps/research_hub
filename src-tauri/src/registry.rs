@@ -128,9 +128,11 @@ pub const ENTITIES: &[EntityDef] = &[
     EntityDef {
         route: "campuses",
         table: "campuses",
+        // SEP-032: no "campus" field — the nested copy of the row itself was
+        // an upstream export bug and the new package no longer carries it.
+        // The physical `campus TEXT` column stays dormant in 001_init.sql.
         columns: &[
             "id", "name", "description", "short_name", "organization_id", "parent_id",
-            "campus",
         ],
         search_column: Some("name"),
         exported: true,
