@@ -1,5 +1,8 @@
 //! Parquet reading via arrow-rs (SEP-018).
 //!
+//! Legacy fallback only: since SEP-032 the canonical package carries plain
+//! JSON (`json_io`), and this path is kept so old packages still import.
+//!
 //! Values become text on the way in; the canonical types live in the original
 //! archive and are restored on export (SEP-019), which is why nothing here
 //! tries to be clever about them.

@@ -3,6 +3,7 @@ pub mod commands;
 pub mod crud;
 pub mod export;
 pub mod import;
+pub mod json_io;
 pub mod parquet_io;
 pub mod db;
 pub mod error;

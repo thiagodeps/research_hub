@@ -548,13 +548,14 @@ mod tests {
     fn create_read_update_delete_roundtrip() {
         let conn = seeded();
 
-        let created = create(&conn, "campuses", &rec(json!({"name": "Novo", "campus": "x"}))).unwrap();
+        let created =
+            create(&conn, "campuses", &rec(json!({"name": "Novo", "short_name": "NVO"}))).unwrap();
         let id = created["id"].as_i64().unwrap();
         assert_eq!(created["name"], json!("Novo"));
 
         let updated = update(&conn, "campuses", id, &rec(json!({"name": "Renomeado"}))).unwrap();
         assert_eq!(updated["name"], json!("Renomeado"));
-        assert_eq!(updated["campus"], json!("x"), "unmentioned columns must survive");
+        assert_eq!(updated["short_name"], json!("NVO"), "unmentioned columns must survive");
 
         delete(&conn, "campuses", id).unwrap();
         assert!(matches!(get(&conn, "campuses", id), Err(AppError::NotFound)));
