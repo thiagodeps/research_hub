@@ -9,6 +9,7 @@ pub mod db;
 pub mod error;
 pub mod registry;
 pub mod special;
+pub mod src_domain;
 pub mod state;
 
 use tauri::Manager;
@@ -47,6 +48,19 @@ pub fn run() {
             commands::delete_entity,
             commands::import_canonical_zip,
             commands::export_canonical_zip,
+            commands::import_src_json,
+            commands::export_src_json,
+            commands::src_list_acoes,
+            commands::src_get_acao,
+            commands::src_create_acao,
+            commands::src_update_acao,
+            commands::src_delete_acao,
+            commands::src_list_participacoes,
+            commands::src_create_participacao,
+            commands::src_update_participacao,
+            commands::src_delete_participacao,
+            commands::src_get_meta,
+            commands::src_update_meta,
             commands::merge_entities,
             commands::link_entities,
         ])
@@ -56,11 +70,15 @@ pub fn run() {
 
 /// Rotas de navegacao do painel, na ordem em que aparecem no menu lateral.
 /// Fonte da verdade para o teste de roteamento; espelha `frontend/src/pages/`.
+/// SEP-033: `/projects` (nova pagina principal), `/src` e `/src/acoes` (area SRC).
 #[cfg(test)]
 pub(crate) const ROUTES: &[&str] = &[
     "/",
     "/login",
+    "/projects",
     "/dashboard",
+    "/src",
+    "/src/acoes",
     "/dashboard/researchers",
     "/dashboard/articles",
     "/dashboard/groups",
@@ -126,12 +144,13 @@ mod tests {
 
     /// Guarda contra regressao silenciosa: se uma pagina for adicionada em
     /// `frontend/src/pages/dashboard/` sem entrar em ROUTES, a contagem denuncia.
+    /// SEP-033: raiz + login + projects + dashboard + 15 entidades + area SRC (2).
     #[test]
     fn contagem_de_rotas_bate_com_o_menu_lateral() {
         assert_eq!(
             ROUTES.len(),
-            18,
-            "ROUTES deve cobrir raiz + login + dashboard + 15 entidades"
+            21,
+            "ROUTES deve cobrir raiz + login + projects + dashboard + 15 entidades + /src + /src/acoes"
         );
     }
 

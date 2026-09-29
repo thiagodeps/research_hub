@@ -6,7 +6,10 @@ use std::path::{Path, PathBuf};
 
 /// Ordered migrations. Index + 1 is the `user_version` reached by applying it.
 /// Append only — never edit a shipped entry.
-const MIGRATIONS: &[&str] = &[include_str!("../migrations/001_init.sql")];
+const MIGRATIONS: &[&str] = &[
+    include_str!("../migrations/001_init.sql"),
+    include_str!("../migrations/002_src_tables.sql"),
+];
 
 pub const DEFAULT_ADMIN_USERNAME: &str = "admin@admin.com";
 const DEFAULT_ADMIN_PASSWORD: &str = "admin123";
@@ -110,8 +113,9 @@ mod tests {
     }
 
     /// SC-001: the schema is verified by querying it, not by reading the file.
+    /// SEP-033: +3 tabelas do domínio SRC (src_meta, src_acoes, src_participacoes).
     #[test]
-    fn migration_creates_sixteen_tables() {
+    fn migration_creates_nineteen_tables() {
         let conn = open_in_memory().unwrap();
         let count: i64 = conn
             .query_row(
@@ -121,7 +125,74 @@ mod tests {
                 |r| r.get(0),
             )
             .unwrap();
-        assert_eq!(count, 16, "esperado 16 tabelas (15 exportadas + admins)");
+        assert_eq!(
+            count, 19,
+            "esperado 19 tabelas (15 exportadas + admins + 3 do domínio SRC)"
+        );
+    }
+
+    /// SEP-033 T004: o domínio SRC tem tabelas próprias no mesmo arquivo
+    /// (data-model.md), sem tocar nenhuma tabela do Horizon.
+    #[test]
+    fn migration_creates_src_domain_tables() {
+        let conn = open_in_memory().unwrap();
+
+        let acoes = table_columns(&conn, "src_acoes");
+        for col in [
+            "id", "acao_id", "raw_json", "processo", "titulo", "natureza", "tipo",
+            "coordenador", "acao_vinculante", "campus", "total_participacoes",
+        ] {
+            assert!(acoes.iter().any(|c| c == col), "src_acoes: coluna '{col}' ausente");
+        }
+
+        let part = table_columns(&conn, "src_participacoes");
+        for col in [
+            "id", "acao_row_id", "ord", "tipo", "atividade_num", "atividade_id",
+            "atividade", "nome", "raw_json",
+        ] {
+            assert!(
+                part.iter().any(|c| c == col),
+                "src_participacoes: coluna '{col}' ausente"
+            );
+        }
+
+        let meta = table_columns(&conn, "src_meta");
+        for col in ["campus", "imported_at"] {
+            assert!(meta.iter().any(|c| c == col), "src_meta: coluna '{col}' ausente");
+        }
+
+        // Um único registro, campus NULL antes do primeiro import.
+        let (count, campus): (i64, Option<String>) = conn
+            .query_row(
+                "SELECT COUNT(*), MAX(campus) FROM src_meta",
+                [],
+                |r| Ok((r.get(0)?, r.get(1)?)),
+            )
+            .unwrap();
+        assert_eq!(count, 1, "src_meta deve nascer com exatamente um registro");
+        assert!(campus.is_none());
+    }
+
+    /// A exclusão de ação leva as participações (FK ON DELETE CASCADE).
+    #[test]
+    fn src_participacoes_cascade_on_acao_delete() {
+        let conn = open_in_memory().unwrap();
+        conn.execute(
+            "INSERT INTO src_acoes (id, acao_id, raw_json) VALUES (1, '1001', '{}')",
+            [],
+        )
+        .unwrap();
+        conn.execute(
+            "INSERT INTO src_participacoes (acao_row_id, ord, tipo, raw_json) \
+             VALUES (1, 1, 'Público-alvo', '{}')",
+            [],
+        )
+        .unwrap();
+        conn.execute("DELETE FROM src_acoes WHERE id = 1", []).unwrap();
+        let count: i64 = conn
+            .query_row("SELECT COUNT(*) FROM src_participacoes", [], |r| r.get(0))
+            .unwrap();
+        assert_eq!(count, 0, "participações devem sumir com a ação (cascade)");
     }
 
     /// FR-005 / Q5: the orphan entity must not come along.

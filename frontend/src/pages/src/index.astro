@@ -1,0 +1,69 @@
+---
+// SEP-033 / US1+US2: área de trabalho do projeto SRC — resumo da base e
+// controle de import/export do JSON consolidado (FR-006..FR-009, FR-014).
+import SrcDashboard from '../../layouts/SrcDashboard.astro';
+import SrcDataControl from '../../components/SrcDataControl.jsx';
+---
+
+<SrcDashboard>
+  <h1 class="text-2xl font-bold text-slate-900 mb-2">Projeto SRC</h1>
+  <p class="text-slate-600 mb-8">
+    Curadoria dos dados do SRC/Ifes (ações de extensão e ensino), mantidos
+    separados dos dados do Horizon.
+  </p>
+
+  <div id="src-resumo" class="bg-white border border-slate-200 rounded-xl shadow-sm p-6 max-w-3xl">
+    <h2 class="text-lg font-semibold text-slate-800 mb-3">Base atual</h2>
+    <p id="src-resumo-empty" class="text-sm text-slate-500">
+      Nenhum dado carregado ainda — importe o arquivo JSON consolidado do SRC abaixo.
+      A base atual (se houver) será substituída, com snapshot de segurança.
+    </p>
+    <dl id="src-resumo-stats" class="hidden grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div class="bg-slate-50 rounded-lg p-3">
+        <dt class="text-xs text-slate-500">Campus</dt>
+        <dd id="src-stat-campus" class="text-lg font-bold text-slate-800">—</dd>
+      </div>
+      <div class="bg-slate-50 rounded-lg p-3">
+        <dt class="text-xs text-slate-500">Ações</dt>
+        <dd id="src-stat-acoes" class="text-lg font-bold text-slate-800">—</dd>
+      </div>
+      <div class="bg-slate-50 rounded-lg p-3">
+        <dt class="text-xs text-slate-500">Participações</dt>
+        <dd id="src-stat-participacoes" class="text-lg font-bold text-slate-800">—</dd>
+      </div>
+      <div class="bg-slate-50 rounded-lg p-3">
+        <dt class="text-xs text-slate-500">Ações c/ participações</dt>
+        <dd id="src-stat-compart" class="text-lg font-bold text-slate-800">—</dd>
+      </div>
+    </dl>
+  </div>
+
+  <SrcDataControl client:load />
+
+  <script>
+    // O resumo reage ao resultado do import (evento emitido por SrcDataControl,
+    // FR-009 — contagens sempre informadas, inclusive base vazia).
+    document.addEventListener('src:imported', (ev: Event) => {
+      const event = ev as CustomEvent<{
+        campus?: string | null;
+        total_acoes?: number;
+        total_participacoes?: number;
+        acoes_com_participacoes?: number;
+      }>;
+      const s = event.detail;
+      if (!s) return;
+      document.getElementById('src-resumo-empty')?.classList.add('hidden');
+      const stats = document.getElementById('src-resumo-stats');
+      stats?.classList.remove('hidden');
+      stats?.classList.add('grid');
+      const set = (id: string, v: string) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = v;
+      };
+      set('src-stat-campus', s.campus ?? '—');
+      set('src-stat-acoes', (s.total_acoes ?? 0).toLocaleString('pt-BR'));
+      set('src-stat-participacoes', (s.total_participacoes ?? 0).toLocaleString('pt-BR'));
+      set('src-stat-compart', (s.acoes_com_participacoes ?? 0).toLocaleString('pt-BR'));
+    });
+  </script>
+</SrcDashboard>

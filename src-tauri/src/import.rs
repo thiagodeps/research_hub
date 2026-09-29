@@ -32,19 +32,32 @@ pub struct ImportSummary {
 /// The import wipes every curated row by design, and the Python version offers
 /// no undo — hours of manual correction can be erased by one wrong file. Uses
 /// SQLite's own backup API so a live WAL is captured consistently.
-pub fn snapshot(conn: &Connection, data_dir: &Path) -> Result<PathBuf, AppError> {
+///
+/// SEP-033: `prefix` distinguishes the domain creating the snapshot — the
+/// Horizon import keeps `hub-`, the SRC import uses `src-` — so a snapshot
+/// from one domain never reads as the other's (FR-015).
+pub fn snapshot_with_prefix(
+    conn: &Connection,
+    data_dir: &Path,
+    prefix: &str,
+) -> Result<PathBuf, AppError> {
     let dir = data_dir.join("snapshots");
     std::fs::create_dir_all(&dir)?;
     let stamp = std::time::SystemTime::now()
         .duration_since(std::time::UNIX_EPOCH)
         .map(|d| d.as_secs())
         .unwrap_or(0);
-    let path = dir.join(format!("hub-{stamp}.db"));
+    let path = dir.join(format!("{prefix}-{stamp}.db"));
 
     let mut dest = Connection::open(&path)?;
     let backup = rusqlite::backup::Backup::new(conn, &mut dest)?;
     backup.run_to_completion(200, std::time::Duration::from_millis(0), None)?;
     Ok(path)
+}
+
+/// Horizon snapshot (kept name, same behavior as before SEP-033).
+pub fn snapshot(conn: &Connection, data_dir: &Path) -> Result<PathBuf, AppError> {
+    snapshot_with_prefix(conn, data_dir, "hub")
 }
 
 fn has_any_rows(conn: &Connection) -> Result<bool, AppError> {

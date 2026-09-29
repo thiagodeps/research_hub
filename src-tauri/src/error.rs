@@ -35,6 +35,12 @@ pub enum AppError {
     #[error("{0}")]
     Validation(String),
 
+    /// SEP-033 (FR-013): a request would leave dangling references — e.g.
+    /// deleting a ação still referenced as "Ação vinculante" — and the caller
+    /// must decide (message lists the children).
+    #[error("{0}")]
+    Conflict(String),
+
     #[error("{0}")]
     Internal(String),
 }
@@ -58,6 +64,7 @@ impl AppError {
             Self::Migration(_) => "migration",
             Self::Io(_) => "io",
             Self::Validation(_) => "validation",
+            Self::Conflict(_) => "conflict",
             Self::Internal(_) => "internal",
         }
     }

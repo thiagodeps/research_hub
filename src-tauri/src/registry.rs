@@ -211,6 +211,31 @@ pub fn by_route(route: &str) -> Result<&'static EntityDef, AppError> {
         .ok_or_else(|| AppError::UnknownEntity(route.to_string()))
 }
 
+/// SEP-033: seção SRC do registry. Propositalmente separada de `ENTITIES`:
+/// os comandos genéricos do Horizon (crud.rs) só enxergam `ENTITIES`, então
+/// `by_route("src_acoes")` falha por construção (FR-004).
+pub const SRC_ENTITIES: &[EntityDef] = &[EntityDef {
+    route: "src_acoes",
+    table: "src_acoes",
+    // Projeções + raw_json (data-model.md). As chaves de rótulo vivem DENTRO
+    // de raw_json; aqui ficam só as colunas físicas.
+    columns: &[
+        "id", "acao_id", "raw_json", "processo", "titulo", "natureza", "tipo",
+        "coordenador", "acao_vinculante", "campus", "total_participacoes",
+    ],
+    search_column: Some("titulo"),
+    exported: false,
+}];
+
+/// Resolve a route in the SRC section (SEP-033). The generic Horizon commands
+/// never call this — the domains stay separated at the registry level (FR-004).
+pub fn by_src_route(route: &str) -> Result<&'static EntityDef, AppError> {
+    SRC_ENTITIES
+        .iter()
+        .find(|e| e.route == route)
+        .ok_or_else(|| AppError::UnknownEntity(route.to_string()))
+}
+
 pub fn exported() -> impl Iterator<Item = &'static EntityDef> {
     ENTITIES.iter().filter(|e| e.exported)
 }
@@ -233,6 +258,30 @@ impl EntityDef {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    /// SEP-033 T005 (FR-004/FR-005): rotas SRC NUNCA resolvem no caminho
+    /// genérico do Horizon — a separação de projetos é estrutural.
+    #[test]
+    fn src_routes_never_resolve_on_the_generic_path() {
+        assert!(matches!(
+            by_route("src_acoes"),
+            Err(AppError::UnknownEntity(_))
+        ));
+        assert!(matches!(
+            by_route("src_meta"),
+            Err(AppError::UnknownEntity(_))
+        ));
+    }
+
+    /// A seção SRC resolve as próprias rotas, com a busca na projeção correta.
+    #[test]
+    fn src_registry_resolves_src_routes() {
+        let def = by_src_route("src_acoes").unwrap();
+        assert_eq!(def.table, "src_acoes");
+        assert_eq!(def.search_column, Some("titulo"));
+        assert!(!def.exported, "entidade SRC não entra no export canônico");
+        assert!(matches!(by_src_route("groups"), Err(AppError::UnknownEntity(_))));
+    }
 
     /// Guards against the class of bug that made `proficiencies` and
     /// `professional_activities` show an always-empty "name" column: the Astro

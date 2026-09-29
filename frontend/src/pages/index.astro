@@ -11,6 +11,8 @@
     // The session lives in the Rust process and does not survive a restart,
     // while localStorage does. Ask the backend instead of trusting the flag,
     // or the interface shows a dashboard where every command is refused.
+    // SEP-033: the authenticated landing is now the project selection page —
+    // no database loads until the curator picks a project (FR-002).
     import { invoke } from '@tauri-apps/api/core';
     (async () => {
       let authenticated = false;
@@ -18,7 +20,7 @@
         authenticated = (await invoke<{ authenticated: boolean }>('session_status')).authenticated;
       } catch {}
       if (!authenticated) localStorage.removeItem('token');
-      window.location.replace(authenticated ? '/dashboard' : '/login');
+      window.location.replace(authenticated ? '/projects' : '/login');
     })();
   </script>
 </head>

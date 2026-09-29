@@ -1,0 +1,84 @@
+{
+  "campus": "Serra",
+  "total_acoes": 3,
+  "acoes_com_participacoes": 1,
+  "total_atividades": 2,
+  "total_publico_alvo": 2,
+  "total_equipe": 1,
+  "acoes": [
+    {
+      "acao_id": "1001",
+      "url_detalhe": "https://src.ifes.edu.br/detalhe.jsf?id=1001",
+      "Campus": "Serra",
+      "Processo nº": "0123.456/2025",
+      "Natureza": "Extensão",
+      "Coordenador(a)": "Maria Aparecida Souza",
+      "Tipo ação": "Projeto",
+      "Título ação": "Alfabetização Digital no Campo",
+      "Fomento": "PROEX",
+      "Ação vinculante": "",
+      "Grande área conhecimento": "Ciências Exatas e da Terra",
+      "Área temática principal": "Educação",
+      "Relatório aprovado": "Sim",
+      "Data de cadastro": "10/03/2025",
+      "Resumo": "Projeto de extensão com acentuação: ação, coração, educação.",
+      "total_participacoes": 3,
+      "participacoes": [
+        {
+          "atividade_num": "1",
+          "atividade_id": "9001",
+          "atividade": "Turma da manhã",
+          "tipo": "Público-alvo",
+          "Nome": "João Pedro Alves",
+          "CPF": "123.456.789-00",
+          "E-mail": "joao@example.com",
+          "Situação": "APROVADO"
+        },
+        {
+          "atividade_num": "1",
+          "atividade_id": "9001",
+          "atividade": "Turma da manhã",
+          "tipo": "Público-alvo",
+          "Nome": "Ana Beatriz Lima",
+          "CPF": "987.654.321-00",
+          "E-mail": "ana@example.com",
+          "Situação": "CURSANDO"
+        },
+        {
+          "atividade_num": "2",
+          "atividade_id": "9002",
+          "atividade": "Turma da tarde",
+          "tipo": "Equipe de execução",
+          "Nome": "Carlos Eduardo Rocha",
+          "Função": "Bolsista",
+          "Vínculo": "Estudante"
+        }
+      ]
+    },
+    {
+      "acao_id": "1002",
+      "Campus": "Serra",
+      "Processo nº": "0123.789/2025",
+      "Natureza": "Ensino",
+      "Coordenador(a)": "Rafael Mendes",
+      "Tipo ação": "Curso",
+      "Título ação": "Curso de Robótica Básica",
+      "Relatório aprovado": "Não",
+      "Data de cadastro": "22/04/2025",
+      "total_participacoes": 0,
+      "participacoes": []
+    },
+    {
+      "acao_id": "1003",
+      "Campus": "Serra",
+      "Processo nº": "0123.999/2025",
+      "Natureza": "Extensão",
+      "Tipo ação": "Evento",
+      "Título ação": "Semana de Extensão Serra",
+      "Chave Extra Do Scraper": "valor não canônico preservado",
+      "Ação vinculante": "0123.456/2025",
+      "total_participacoes": 0,
+      "participacoes": []
+    }
+  ]
+}

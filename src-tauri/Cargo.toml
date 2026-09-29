@@ -18,7 +18,9 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 tauri-build = { version = "2.6.3", features = [] }
 
 [dependencies]
-serde_json = "1.0"
+# preserve_order: o export do consolidado SRC (SEP-033, contrato C9) precisa
+# emitir os objetos com a ordem de chaves do arquivo original.
+serde_json = { version = "1.0", features = ["preserve_order"] }
 serde = { version = "1.0", features = ["derive"] }
 log = "0.4"
 tauri = { version = "2.11.3", features = [] }

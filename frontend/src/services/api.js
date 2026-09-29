@@ -8,6 +8,56 @@ import { invoke } from '@tauri-apps/api/core';
 // `/link` must precede the generic `/{entity}` POST, or it would be read as a
 // request to create an entity named "link".
 const ROUTES = [
+  // SEP-033: dedicated SRC routes must precede the generic /{entity} patterns,
+  // or "/src/acoes" would be read as a request to list an entity named "src".
+  [/^\/src\/import$/, 'POST', (_m, b) =>
+    invoke('import_src_json', { path: b?.path ?? null })],
+
+  [/^\/src\/export$/, 'POST', () =>
+    invoke('export_src_json')],
+
+  [/^\/src\/meta$/, 'PUT', (_m, b) =>
+    invoke('src_update_meta', { campus: b.campus ?? null })],
+
+  [/^\/src\/meta$/, 'GET', () =>
+    invoke('src_get_meta')],
+
+  // SEP-033 / US3: curadoria das ações — mesmos parâmetros do genérico,
+  // porém nos comandos dedicados (R6: o caminho do Horizon fica invariante).
+  [/^\/src\/acoes$/, 'GET', (m, _b, q) =>
+    invoke('src_list_acoes', {
+      limit: q.has('limit') ? Number(q.get('limit')) : null,
+      offset: q.has('offset') ? Number(q.get('offset')) : null,
+      search: q.get('search'),
+      sort: q.get('sort'),
+      order: q.get('order'),
+    })],
+
+  [/^\/src\/acoes$/, 'POST', (_m, b) =>
+    invoke('src_create_acao', { payload: b ?? {} })],
+
+  // participações moram sob a ação; precisa vir antes de /src/acoes/:id.
+  [/^\/src\/acoes\/(\d+)\/participacoes$/, 'GET', (m) =>
+    invoke('src_list_participacoes', { acaoId: Number(m[1]) })],
+
+  [/^\/src\/acoes\/(\d+)\/participacoes$/, 'POST', (m, b) =>
+    invoke('src_create_participacao', { acaoId: Number(m[1]), payload: b ?? {} })],
+
+  [/^\/src\/acoes\/(\d+)$/, 'GET', (m) =>
+    invoke('src_get_acao', { id: Number(m[1]) })],
+
+  [/^\/src\/acoes\/(\d+)$/, 'PUT', (m, b) =>
+    invoke('src_update_acao', { id: Number(m[1]), payload: b ?? {} })],
+
+  [/^\/src\/acoes\/(\d+)$/, 'DELETE', (m, _b, q) =>
+    invoke('src_delete_acao', { id: Number(m[1]), force: q.get('force') === 'true' })],
+
+  [/^\/src\/participacoes\/(\d+)$/, 'PUT', (m, b) =>
+    invoke('src_update_participacao', { id: Number(m[1]), payload: b ?? {} })],
+
+  [/^\/src\/participacoes\/(\d+)$/, 'DELETE', (m) =>
+    invoke('src_delete_participacao', { id: Number(m[1]) })],
+
   [/^\/auth\/login$/, 'POST', (_m, b) =>
     invoke('login', { email: b.email, password: b.password })],
 

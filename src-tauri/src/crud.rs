@@ -22,7 +22,8 @@ const MAX_LIMIT: i64 = 1000;
 /// `%` and `_` are LIKE wildcards. Left unescaped, searching for "100%" matches
 /// every row — which is what the Python version does today. Declared correction
 /// (FR-006); `\` is the escape character, so it must be escaped first.
-fn escape_like(term: &str) -> String {
+/// SEP-033: shared with the SRC domain's own search (same rule there).
+pub(crate) fn escape_like(term: &str) -> String {
     term.replace('\\', r"\\").replace('%', r"\%").replace('_', r"\_")
 }
 
