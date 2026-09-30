@@ -67,8 +67,11 @@ front-end.
 
 - **Params**: `project`
 - **Retorna**: `{ repo, branch, path, branch_exists, file_exists, file_sha }`
-  (lê ref + contents; usado pela UI para confirmar sobrescrita — US2-2).
-- **Erros**: `network`, `github_api`, `not_found` (branch inexistente), `sync_config` (destino não configurado).
+  (lê ref + contents; flags `false` quando não existem — a UI usa isso para
+  avisar antes; quem falha com `not_found` é o `github_upload`, não esta
+  checagem — US2-2).
+- **Erros**: `network`, `github_api` (404 em nível de repositório =
+  "repositório não encontrado ou sem acesso"), `sync_config` (destino não configurado).
 
 ### `github_upload` → `Record`
 
