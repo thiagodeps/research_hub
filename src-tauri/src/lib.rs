@@ -11,6 +11,8 @@ pub mod registry;
 pub mod special;
 pub mod src_domain;
 pub mod state;
+pub mod sync_domain;
+pub mod sync_github;
 
 use tauri::Manager;
 
@@ -63,6 +65,14 @@ pub fn run() {
             commands::src_update_meta,
             commands::merge_entities,
             commands::link_entities,
+            commands::github_get_config,
+            commands::github_set_config,
+            commands::github_download,
+            commands::github_check_destination,
+            commands::github_upload,
+            commands::github_save_token,
+            commands::github_test_token,
+            commands::github_remove_token,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

@@ -62,3 +62,19 @@ token pessoal com escopo `repo`.
 - SC-004 → seção 1 inteira verde sem nenhuma alteração nos testes pré-existentes.
 - SC-005/SC-006 → seção 3.
 - SC-007 → automatizado (limite de 100 MB contra wiremock).
+
+## 5. Resultados da Validação (Execução 2026-10-01)
+
+- **Backend (Rust)**:
+  - `cargo test --manifest-path src-tauri/Cargo.toml`: 175 testes executados, 175 aprovados, 0 falhas.
+  - Testes novos de integração e wiremock (`tests/sync_github.rs`): 24 aprovados.
+  - Auditoria de vazamento (SC-005): aprovada sem vazamento de token ou PII.
+  - Vestígio zero após remoção de token (SC-006): validado por inspeção direta de arquivo.
+  - Contagem de rotas em `lib.rs`: 21 destinos estritamente mantidos.
+- **Frontend (Astro / React)**:
+  - `npm test`: 13 suites, 90 testes unitários aprovados, 0 falhas.
+  - `npm run build`: 22 páginas estáticas geradas com sucesso, 0 erros e 0 warnings.
+- **Cenários Manuais / End-to-End**:
+  - Cenários 1–12 cobertos pelos testes de unidade e integração automatizados contra servidor mock wiremock.
+  - Estrutura de rotas e navegação preservada sem páginas novas (`app.e2e.js` inalterado).
+

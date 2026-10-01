@@ -3,11 +3,16 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 // The bridge is a single mockable function, which makes this suite simpler
 // than it was against fetch: no response objects, no status codes, no bodies.
 const invoke = vi.fn();
+const listen = vi.fn();
 vi.mock('@tauri-apps/api/core', () => ({ invoke: (...args) => invoke(...args) }));
+vi.mock('@tauri-apps/api/event', () => ({ listen: (...args) => listen(...args) }));
 
-const { apiFetch } = await import('../../src/services/api.js');
+const { apiFetch, onSyncProgress } = await import('../../src/services/api.js');
 
-beforeEach(() => invoke.mockReset());
+beforeEach(() => {
+  invoke.mockReset();
+  listen.mockReset();
+});
 
 describe('apiFetch routing', () => {
   it('lists with pagination, search and sort', async () => {
@@ -198,3 +203,104 @@ describe('apiFetch SRC routing', () => {
     expect(invoke).toHaveBeenCalledWith('src_delete_participacao', { id: 9 });
   });
 });
+
+// SEP-034: GitHub sync routing
+describe('apiFetch GitHub routing', () => {
+  it('reads config for a project', async () => {
+    invoke.mockResolvedValue({ repo: 'owner/repo', branch: 'main', path: 'exp.zip', last_source_url: null, has_token: false, token_hint: null });
+    await apiFetch('/github/config?project=horizon');
+    expect(invoke).toHaveBeenCalledWith('github_get_config', { project: 'horizon' });
+  });
+
+  it('updates config for a project', async () => {
+    invoke.mockResolvedValue(null);
+    await apiFetch('/github/config', {
+      method: 'POST',
+      body: JSON.stringify({ project: 'horizon', repo: 'o/r', branch: 'main', path: 'exp.zip' }),
+    });
+    expect(invoke).toHaveBeenCalledWith('github_set_config', {
+      project: 'horizon', repo: 'o/r', branch: 'main', path: 'exp.zip',
+    });
+  });
+
+  it('triggers download with project and url', async () => {
+    invoke.mockResolvedValue({ total_rows: 10 });
+    await apiFetch('/github/download', {
+      method: 'POST',
+      body: JSON.stringify({ project: 'horizon', url: 'https://raw.githubusercontent.com/o/r/main/exp.zip' }),
+    });
+    expect(invoke).toHaveBeenCalledWith('github_download', {
+      project: 'horizon', url: 'https://raw.githubusercontent.com/o/r/main/exp.zip',
+    });
+  });
+
+  it('registers sync progress listener via onSyncProgress', async () => {
+    const handler = vi.fn();
+    listen.mockImplementation((event, cb) => {
+      cb({ payload: { phase: 'transferring', bytes_done: 50 } });
+      return Promise.resolve(() => {});
+    });
+
+    await onSyncProgress(handler);
+    expect(listen).toHaveBeenCalledWith('sync://progress', expect.any(Function));
+    expect(handler).toHaveBeenCalledWith({ phase: 'transferring', bytes_done: 50 });
+  });
+
+  it('checks destination for a project', async () => {
+    invoke.mockResolvedValue({
+      repo: 'owner/repo',
+      branch: 'main',
+      path: 'exp.zip',
+      branch_exists: true,
+      file_exists: false,
+      file_sha: null,
+    });
+    await apiFetch('/github/check?project=horizon');
+    expect(invoke).toHaveBeenCalledWith('github_check_destination', { project: 'horizon' });
+  });
+
+  it('triggers upload with project and confirmOverwrite', async () => {
+    invoke.mockResolvedValue({
+      commit_sha: 'c1',
+      html_url: 'https://github.com/o/r/commit/c1',
+      replaced: false,
+    });
+    await apiFetch('/github/upload', {
+      method: 'POST',
+      body: JSON.stringify({ project: 'horizon', confirmOverwrite: true }),
+    });
+    expect(invoke).toHaveBeenCalledWith('github_upload', {
+      project: 'horizon',
+      confirmOverwrite: true,
+    });
+  });
+
+  it('saves personal access token', async () => {
+    invoke.mockResolvedValue(null);
+    await apiFetch('/github/token', {
+      method: 'POST',
+      body: JSON.stringify({ token: 'ghp_secret123' }),
+    });
+    expect(invoke).toHaveBeenCalledWith('github_save_token', {
+      token: 'ghp_secret123',
+    });
+  });
+
+  it('removes personal access token', async () => {
+    invoke.mockResolvedValue(null);
+    await apiFetch('/github/token', {
+      method: 'DELETE',
+    });
+    expect(invoke).toHaveBeenCalledWith('github_remove_token');
+  });
+
+  it('tests personal access token', async () => {
+    invoke.mockResolvedValue({ login: 'octocat', scopes: 'repo', valid: true });
+    const result = await apiFetch('/github/token/test', {
+      method: 'POST',
+    });
+    expect(invoke).toHaveBeenCalledWith('github_test_token');
+    expect(result).toEqual({ login: 'octocat', scopes: 'repo', valid: true });
+  });
+});
+

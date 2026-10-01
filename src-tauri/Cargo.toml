@@ -36,6 +36,14 @@ parquet = { version = "53", default-features = false, features = ["arrow", "snap
 arrow = { version = "53", default-features = false }
 bytes = "1"
 zip = { version = "2", default-features = false, features = ["deflate", "bzip2", "zstd"] }
+# SEP-034: sincronização com o GitHub. rustls elimina a dependência de OpenSSL
+# (alvos Linux e Windows); "stream" permite baixar em chunks sem carregar 100 MB
+# na memória (research R1).
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "stream", "json"] }
+# Parsing de URLs do GitHub no domínio puro (research R2).
+url = "2"
+# Conteúdo dos blobs da Git Data API (research R3).
+base64 = "0.22"
 
 [features]
 # Ligada pelo CLI nos builds de producao. Com ela, generate_context! embute o
@@ -43,6 +51,12 @@ zip = { version = "2", default-features = false, features = ["deflate", "bzip2",
 custom-protocol = ["tauri/custom-protocol"]
 
 [dev-dependencies]
+# SEP-034: servidor HTTP de mentira para os testes de sincronização — a suíte
+# nunca depende de rede real (research R8, Princípio III).
+wiremock = "0.6"
+tempfile = "3"
+# runtime para os testes async do cliente GitHub
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 # "test" habilita tauri::test::mock_builder.
 # "custom-protocol" faz o `cargo test` embutir os assets, para que o teste de
 # roteamento exercite o mesmo resolvedor que o binario de producao usa.

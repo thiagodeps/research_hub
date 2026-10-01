@@ -88,7 +88,50 @@ pub fn import_archive<F>(
 where
     F: FnMut(TableLoaded),
 {
-    let mut zip = zip::ZipArchive::new(std::io::Cursor::new(archive_bytes))
+    // Support nested zip archives (e.g. an outer wrapper zip containing exports_canonical.zip).
+    let mut current_bytes = std::borrow::Cow::Borrowed(archive_bytes);
+    for _ in 0..5 {
+        let mut unwrapped = None;
+        if let Ok(mut z) = zip::ZipArchive::new(std::io::Cursor::new(current_bytes.as_ref())) {
+            let entries: Vec<String> = (0..z.len())
+                .filter_map(|i| z.by_index(i).ok().map(|f| f.name().to_string()))
+                .filter(|name| !name.ends_with('/'))
+                .collect();
+
+            let has_canonical = entries.iter().any(|e| {
+                e.ends_with("_canonical.json") || e.ends_with("_canonical.parquet")
+            });
+
+            if !has_canonical {
+                let zip_candidate = if entries.len() == 1 && entries[0].to_ascii_lowercase().ends_with(".zip") {
+                    Some(entries[0].clone())
+                } else if let Some(c) = entries.iter().find(|e| {
+                    let lower = e.to_ascii_lowercase();
+                    lower.ends_with(".zip") && lower.contains("canonical")
+                }) {
+                    Some(c.clone())
+                } else {
+                    entries.iter().find(|e| e.to_ascii_lowercase().ends_with(".zip")).cloned()
+                };
+
+                if let Some(inner_name) = zip_candidate {
+                    if let Ok(mut inner_file) = z.by_name(&inner_name) {
+                        let mut buf = Vec::new();
+                        if inner_file.read_to_end(&mut buf).is_ok() {
+                            unwrapped = Some(buf);
+                        }
+                    }
+                }
+            }
+        }
+        if let Some(bytes) = unwrapped {
+            current_bytes = std::borrow::Cow::Owned(bytes);
+        } else {
+            break;
+        }
+    }
+
+    let mut zip = zip::ZipArchive::new(std::io::Cursor::new(current_bytes.as_ref()))
         .map_err(|e| AppError::Internal(format!("arquivo .zip inválido: {e}")))?;
 
     // Resolve the source of every managed table up front (research R1/R7).
@@ -108,10 +151,22 @@ where
         let base = format!("{}_canonical", def.table);
         let json_path = format!("{base}.json");
         let parquet_path = format!("parquet/{base}.parquet");
-        if has(&json_path) {
-            sources.push((def, Source::Json(json_path)));
+        let parquet_file = format!("{base}.parquet");
+
+        let matched = if has(&json_path) {
+            Some(Source::Json(json_path))
         } else if has(&parquet_path) {
-            sources.push((def, Source::Parquet(parquet_path)));
+            Some(Source::Parquet(parquet_path))
+        } else if let Some(p) = names.iter().find(|n| n.ends_with(&format!("/{json_path}"))) {
+            Some(Source::Json(p.clone()))
+        } else if let Some(p) = names.iter().find(|n| n.ends_with(&format!("/{parquet_file}"))) {
+            Some(Source::Parquet(p.clone()))
+        } else {
+            None
+        };
+
+        if let Some(source) = matched {
+            sources.push((def, source));
         } else {
             missing.push(def.table);
         }
@@ -186,7 +241,7 @@ where
     tx.commit()?;
 
     // Only after a successful commit is the archive kept for export (FR-010).
-    std::fs::write(data_dir.join(ORIGINAL_ARCHIVE), archive_bytes)?;
+    std::fs::write(data_dir.join(ORIGINAL_ARCHIVE), current_bytes.as_ref())?;
 
     Ok(ImportSummary { tables: loaded, total_rows: total, snapshot: snapshot_path })
 }
@@ -308,6 +363,51 @@ mod tests {
 
         let n: i64 = conn.query_row("SELECT COUNT(*) FROM campuses", [], |r| r.get(0)).unwrap();
         assert_eq!(n, 2);
+    }
+
+    /// Tests that nested zip archives (e.g. exports_canonical.zip inside an outer zip)
+    /// are automatically unwrapped and imported.
+    #[test]
+    fn loads_nested_zip_archive() {
+        let (mut conn, dir) = fixture();
+        let inner_zip = archive_with_campuses(&[(1, "Serra"), (2, "Vitoria")]);
+        let outer_zip = zip_from(&[("exports_canonical.zip", inner_zip)]);
+
+        let summary = import_archive(&mut conn, &outer_zip, dir.path(), |_| {}).unwrap();
+
+        assert_eq!(summary.total_rows, 2);
+        assert_eq!(summary.tables.len(), 1);
+        assert_eq!(summary.tables[0].table, "campuses");
+
+        let n: i64 = conn.query_row("SELECT COUNT(*) FROM campuses", [], |r| r.get(0)).unwrap();
+        assert_eq!(n, 2);
+
+        // Verify that the unwrapped inner archive is stored in data_dir
+        let saved_bytes = std::fs::read(dir.path().join(ORIGINAL_ARCHIVE)).unwrap();
+        let mut saved_zip = zip::ZipArchive::new(std::io::Cursor::new(saved_bytes)).unwrap();
+        assert!(saved_zip.by_name("parquet/campuses_canonical.parquet").is_ok());
+    }
+
+    /// Tests that canonical files inside subdirectories (e.g. exports/campuses_canonical.json)
+    /// are discovered and imported.
+    #[test]
+    fn loads_archive_with_subdirectory_prefix() {
+        let (mut conn, dir) = fixture();
+        let mut entries = Vec::new();
+        for def in registry::exported() {
+            let name: &'static str = Box::leak(format!("exports/{}_canonical.json", def.table).into_boxed_str());
+            if def.table == "campuses" {
+                entries.push((name, campuses_json(&[(1, "Serra")])));
+            } else {
+                entries.push((name, b"[]".to_vec()));
+            }
+        }
+        let zip = zip_from(&entries);
+
+        let summary = import_archive(&mut conn, &zip, dir.path(), |_| {}).unwrap();
+        assert_eq!(summary.total_rows, 1);
+        let n: i64 = conn.query_row("SELECT COUNT(*) FROM campuses", [], |r| r.get(0)).unwrap();
+        assert_eq!(n, 1);
     }
 
     /// FR-007: relationship arrays reference these ids, so they must survive.

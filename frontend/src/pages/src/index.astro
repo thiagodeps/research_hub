@@ -3,6 +3,7 @@
 // controle de import/export do JSON consolidado (FR-006..FR-009, FR-014).
 import SrcDashboard from '../../layouts/SrcDashboard.astro';
 import SrcDataControl from '../../components/SrcDataControl.jsx';
+import SyncPanel from '../../components/SyncPanel.jsx';
 ---
 
 <SrcDashboard>
@@ -39,6 +40,7 @@ import SrcDataControl from '../../components/SrcDataControl.jsx';
   </div>
 
   <SrcDataControl client:load />
+  <SyncPanel client:load project="src" allowUpload={false} />
 
   <script>
     // O resumo reage ao resultado do import (evento emitido por SrcDataControl,

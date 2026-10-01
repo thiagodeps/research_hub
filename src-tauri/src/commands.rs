@@ -404,6 +404,199 @@ pub fn src_update_meta(
 
 // ----------------------------------------------------------- special ops (020)
 
+// ------------------------------------------------------- GitHub sync (034)
+//
+// Toda a conversa com github.com acontece no núcleo (Princípio VI); aqui só
+// orquestramos: sessão, config local (sync_domain), cliente HTTP
+// (sync_github) e os imports/exports já existentes — o ritual de segurança
+// do import manual é o MESMO, só muda a origem dos bytes (FR-003).
+
+#[tauri::command(async)]
+pub fn github_get_config(
+    app: tauri::AppHandle,
+    state: State<'_, AppState>,
+    project: String,
+) -> Result<crate::sync_domain::SyncConfigView, AppError> {
+    state.require_session()?;
+    let file = crate::sync_domain::load_config(&app_data_dir(&app)?)?;
+    crate::sync_domain::config_view(&project, &file)
+}
+
+#[tauri::command(async)]
+pub async fn github_download(
+    app: tauri::AppHandle,
+    state: State<'_, AppState>,
+    project: String,
+    url: String,
+) -> Result<serde_json::Value, AppError> {
+    use tauri::Emitter;
+    state.require_session()?;
+
+    let source = crate::sync_domain::normalize_url(&url)?;
+    let data_dir = app_data_dir(&app)?;
+    let config = crate::sync_domain::load_config(&data_dir)?;
+    let client = crate::sync_github::GitHubClient::new(
+        crate::sync_github::GITHUB_API,
+        config.token,
+    );
+    let mut conn = state.etl_connection()?;
+
+    let result = crate::sync_github::download_and_import(
+        &mut conn,
+        &data_dir,
+        &project,
+        &source,
+        &client,
+        &|p| {
+            let _ = app.emit("sync://progress", p);
+        },
+    )
+    .await;
+
+    let _ = app.emit(
+        "sync://progress",
+        crate::sync_domain::SyncProgress {
+            operation: "download",
+            project: project.clone(),
+            phase: if result.is_ok() { "done" } else { "failed" },
+            bytes_done: 0,
+            bytes_total: None,
+        },
+    );
+    result
+}
+
+#[tauri::command(async)]
+pub fn github_set_config(
+    app: tauri::AppHandle,
+    state: State<'_, AppState>,
+    project: String,
+    repo: String,
+    branch: String,
+    path: String,
+) -> Result<(), AppError> {
+    state.require_session()?;
+    crate::sync_domain::set_project_config(&app_data_dir(&app)?, &project, &repo, &branch, &path)?;
+    Ok(())
+}
+
+#[tauri::command(async)]
+pub async fn github_check_destination(
+    app: tauri::AppHandle,
+    state: State<'_, AppState>,
+    project: String,
+) -> Result<crate::sync_domain::CheckDestinationView, AppError> {
+    state.require_session()?;
+    let data_dir = app_data_dir(&app)?;
+    let config = crate::sync_domain::load_config(&data_dir)?;
+    let client = crate::sync_github::GitHubClient::new(
+        crate::sync_github::GITHUB_API,
+        config.token,
+    );
+    crate::sync_github::check_project_destination(&data_dir, &project, &client).await
+}
+
+#[tauri::command(async)]
+pub async fn github_upload(
+    app: tauri::AppHandle,
+    state: State<'_, AppState>,
+    project: String,
+    confirm_overwrite: Option<bool>,
+) -> Result<crate::sync_github::UploadResult, AppError> {
+    use tauri::Emitter;
+    state.require_session()?;
+    let data_dir = app_data_dir(&app)?;
+    let config = crate::sync_domain::load_config(&data_dir)?;
+    let client = crate::sync_github::GitHubClient::new(
+        crate::sync_github::GITHUB_API,
+        config.token,
+    );
+    let bytes = {
+        let conn = state.etl_connection()?;
+        let original = std::fs::read(data_dir.join(crate::import::ORIGINAL_ARCHIVE)).ok();
+        let (b, _tables, _preserved) =
+            crate::export::build_archive(&conn, original.as_deref(), |_| {})?;
+        b
+    };
+
+    let result = crate::sync_github::upload_horizon_export(
+        bytes,
+        &data_dir,
+        &project,
+        confirm_overwrite.unwrap_or(false),
+        &client,
+        &|p| {
+            let _ = app.emit("sync://progress", p);
+        },
+    )
+    .await;
+
+    let _ = app.emit(
+        "sync://progress",
+        crate::sync_domain::SyncProgress {
+            operation: "upload",
+            project: project.clone(),
+            phase: if result.is_ok() { "done" } else { "failed" },
+            bytes_done: 0,
+            bytes_total: None,
+        },
+    );
+
+    result
+}
+
+#[tauri::command(async)]
+pub fn github_save_token(
+    app: tauri::AppHandle,
+    state: State<'_, AppState>,
+    token: String,
+) -> Result<(), AppError> {
+    state.require_session()?;
+    let token = token.trim();
+    if token.is_empty() {
+        return Err(AppError::SyncConfig("Token de acesso não pode ficar vazio.".into()));
+    }
+    let data_dir = app_data_dir(&app)?;
+    let mut file = crate::sync_domain::load_config(&data_dir)?;
+    file.token = Some(token.to_string());
+    crate::sync_domain::save_config(&data_dir, &file)?;
+    Ok(())
+}
+
+#[tauri::command(async)]
+pub async fn github_test_token(
+    app: tauri::AppHandle,
+    state: State<'_, AppState>,
+) -> Result<crate::sync_github::TokenInfo, AppError> {
+    state.require_session()?;
+    let data_dir = app_data_dir(&app)?;
+    let file = crate::sync_domain::load_config(&data_dir)?;
+    let token = file.token.ok_or_else(|| {
+        AppError::SyncConfig("Nenhum token configurado.".into())
+    })?;
+    let client = crate::sync_github::GitHubClient::new(
+        crate::sync_github::GITHUB_API,
+        Some(token),
+    );
+    client.test_token().await
+}
+
+#[tauri::command(async)]
+pub fn github_remove_token(
+    app: tauri::AppHandle,
+    state: State<'_, AppState>,
+) -> Result<(), AppError> {
+    state.require_session()?;
+    let data_dir = app_data_dir(&app)?;
+    let mut file = crate::sync_domain::load_config(&data_dir)?;
+    file.token = None;
+    crate::sync_domain::save_config(&data_dir, &file)?;
+    Ok(())
+}
+
+
+// ----------------------------------------------------------- special ops (020)
+
 #[tauri::command(async)]
 pub fn merge_entities(
     state: State<'_, AppState>,
