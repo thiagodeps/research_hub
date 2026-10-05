@@ -4,7 +4,7 @@ Complete history of versions, enhancements, bug fixes, and new features in **Res
 
 ---
 
-## v1.3.4 (Current — GitHub Sync & Nested Archives)
+## v1.4.0 (Current — GitHub Sync & Nested Archives)
 *Source Branch: `034-github-sync`*
 
 ### GitHub Synchronization (SEP-034)

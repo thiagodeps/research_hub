@@ -4,7 +4,7 @@ Histórico completo de versões, melhorias, correções de bugs e novas funciona
 
 ---
 
-## v1.3.4 (Atual — Sincronização GitHub & Pacotes Aninhados)
+## v1.4.0 (Atual — Sincronização GitHub & Pacotes Aninhados)
 *Branch de Origem: `034-github-sync`*
 
 ### Sincronização com GitHub (SEP-034)
