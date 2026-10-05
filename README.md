@@ -278,7 +278,7 @@ chmod +x ResearchHub_*.AppImage
 
 ## Notas de Versão (Patch Notes / Changelog)
 
-### v1.3.4 (Atual — Feature 034: Sincronização GitHub & Pacotes Aninhados)
+### v1.4.0 (Atual — Feature 034: Sincronização GitHub & Pacotes Aninhados)
 - **Sincronização com GitHub (SEP-034)**:
   - Download e importação direta de arquivos canônicos a partir de URLs do GitHub (repositórios públicos ou privados com token).
   - Suporte a links raw e assets de release do GitHub.
