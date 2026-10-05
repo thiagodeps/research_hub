@@ -1,0 +1,76 @@
+---
+// SEP-033 / FR-001..FR-002: nova página principal pós-login. Nenhuma base é
+// carregada aqui — a escolha do projeto é que leva à área de trabalho dele.
+import ProjectSelector from '../components/ProjectSelector.jsx';
+
+const PROJECTS = [
+  {
+    id: 'horizon',
+    title: 'Horizon',
+    description: 'Tabelas canônicas do DataLake (15 abas de curadoria)',
+    href: '/dashboard',
+  },
+  {
+    id: 'src',
+    title: 'SRC',
+    description: 'JSON consolidado do SRC/Ifes (ações de extensão e ensino)',
+    href: '/src',
+  },
+];
+---
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seleção de Projeto - ResearchHub</title>
+  </head>
+  <body class="m-0 font-sans antialiased bg-slate-50 text-slate-900 min-h-screen flex flex-col items-center justify-center gap-8">
+    <script>
+      // Mesmo guard do dashboard: sem sessão, nenhuma área de trabalho (FR-002).
+      import { invoke } from '@tauri-apps/api/core';
+      (async () => {
+        try {
+          const { authenticated } = await invoke<{ authenticated: boolean }>('session_status');
+          if (!authenticated) {
+            localStorage.removeItem('token');
+            window.location.replace('/login');
+          }
+        } catch {}
+      })();
+
+      // US1-5 / FR-003: formulário SRC aberto confirma antes de trocar de
+      // projeto. A captura no container roda ANTES do onClick do cartão React;
+      // em recusa, a propagação é interrompida e nada navega.
+      let unsaved = false;
+      window.addEventListener('src:dirty', (ev: Event) => {
+        unsaved = !!(ev as CustomEvent).detail;
+      });
+      document.addEventListener(
+        'click',
+        (ev) => {
+          if (!unsaved) return;
+          const card = (ev.target as HTMLElement)?.closest('button');
+          if (!card) return;
+          if (
+            !window.confirm(
+              'Há alterações não salvas neste projeto. Trocar de projeto agora pode perder o trabalho em andamento. Continuar?'
+            )
+          ) {
+            ev.stopPropagation();
+            ev.preventDefault();
+          }
+        },
+        true
+      );
+    </script>
+    <header class="text-center px-4">
+      <h1 class="text-2xl font-bold tracking-tight text-slate-900">
+        Em qual projeto você quer trabalhar?
+      </h1>
+      <p class="mt-1 text-sm text-slate-500">
+        Os dados de cada projeto são mantidos separados.
+      </p>
+    </header>
+    <ProjectSelector client:load projects={PROJECTS} />
+  </body>
+</html>

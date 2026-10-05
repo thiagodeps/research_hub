@@ -1,143 +1,122 @@
 # Research Hub 🧬
 
-Ferramenta **desktop** de curadoria de dados acadêmicos. Recebe o pacote
-`exports_canonical.zip` do DataLake, permite corrigir, fundir e vincular os
-registros, e exporta o pacote de volta — preservando intactos todos os arquivos
-que ela não gerencia.
+Ferramenta **desktop de alta performance** de curadoria, higienização e vinculação de dados acadêmicos e extensionistas.
 
-Aplicativo de processo único: sem servidor, sem navegador, sem Python, sem rede.
+O Research Hub foi concebido como um aplicativo de processo único e arquitetura **offline-first**: sem servidor em segundo plano, sem portas de rede abertas, sem dependência de runtime Python e com banco de dados SQLite embarcado em arquivo único.
 
-## Capturas de Tela
+---
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 10px;">
-  <img width="100%" alt="Captura de tela 1" src="https://github.com/user-attachments/assets/cf25ce56-8ac7-44e6-b2c6-119faac088d9" />
-  <img width="100%" alt="Captura de tela 2" src="https://github.com/user-attachments/assets/d3e824c3-5f48-4d73-baa4-1430ba497f1a" />
-  <img width="100%" alt="Captura de tela 3" src="https://github.com/user-attachments/assets/cbc63fc3-f67c-4925-9f62-d1c3b825134c" />
-  <img width="100%" alt="Captura de tela 4" src="https://github.com/user-attachments/assets/3d0b22a5-f7f3-4a21-9140-8d9e58d856f2" />
-  <img width="100%" alt="Captura de tela 5" src="https://github.com/user-attachments/assets/df9658de-af86-43e6-9584-1ea0c01741c9" />
-  <img width="100%" alt="Captura de tela 6" src="https://github.com/user-attachments/assets/9a16f816-cf73-4cd1-8c13-8914197b665e" />
+## 📸 Demonstração e Capturas de Tela
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 12px; margin-bottom: 2rem;">
+  <img width="100%" alt="Listagem e Gestão de Entidades" src="https://github.com/user-attachments/assets/cf25ce56-8ac7-44e6-b2c6-119faac088d9" style="border-radius: 8px; border: 1px solid #e2e8f0;" />
+  <img width="100%" alt="Painel Geral de Curadoria" src="https://github.com/user-attachments/assets/d3e824c3-5f48-4d73-baa4-1430ba497f1a" style="border-radius: 8px; border: 1px solid #e2e8f0;" />
+  <img width="100%" alt="Visualização e Edição de Registros" src="https://github.com/user-attachments/assets/cbc63fc3-f67c-4925-9f62-d1c3b825134c" style="border-radius: 8px; border: 1px solid #e2e8f0;" />
+  <img width="100%" alt="Vínculos e Relacionamentos entre Entidades" src="https://github.com/user-attachments/assets/3d0b22a5-f7f3-4a21-9140-8d9e58d856f2" style="border-radius: 8px; border: 1px solid #e2e8f0;" />
+  <img width="100%" alt="Importação e Exportação com Backup Automático" src="https://github.com/user-attachments/assets/df9658de-af86-43e6-9584-1ea0c01741c9" style="border-radius: 8px; border: 1px solid #e2e8f0;" />
+  <img width="100%" alt="Resolução de Conflitos e Fusão de Registros" src="https://github.com/user-attachments/assets/9a16f816-cf73-4cd1-8c13-8914197b665e" style="border-radius: 8px; border: 1px solid #e2e8f0;" />
 </div>
 
-## Tecnologias
+---
 
-- **Rust + Tauri 2.0** — núcleo, janela e comunicação por IPC
-- **SQLite** (`rusqlite`, embarcado) — banco em arquivo único
-- **serde_json** — leitura e escrita dos JSONs canônicos
-- **Astro + React + Tailwind** — interface, compilada estaticamente e embutida
-  no binário
+## 🛠️ Tecnologias e Arquitetura
 
-## Instalar
+- **Núcleo do Aplicativo**: [Rust](https://www.rust-lang.org/) (edição 2021, rustc 1.77.2+)
+- **Shell Desktop e IPC**: [Tauri 2.0](https://v2.tauri.app/)
+- **Banco de Dados**: [SQLite](https://www.sqlite.org/) embarcado via crate `rusqlite` (bundled, arquivo único local)
+- **Frontend**: [Astro 4](https://astro.build/) + [React 18](https://react.dev/) + [Tailwind CSS 3](https://tailwindcss.com/) (compilado estaticamente e embutido no executável)
+- **Manipulação de Formatos**: `serde_json`, `zip-rs`, `arrow-rs` / `parquet-rs`
+- **Sincronização Remota**: `reqwest` com `rustls-tls` puro e integração com a Git Data API do GitHub
+- **Segurança e Criptografia**: `bcrypt` para autenticação local e permissão `0600` para armazenamento de tokens
 
-Baixe o instalador da [página de releases](https://github.com/RafaelDeps/research_hub/releases):
-`.deb`, `.rpm` ou `.AppImage` no Linux, `.exe` no Windows.
+---
 
-> **Windows:** na primeira execução o SmartScreen exibe "O Windows protegeu o
-> computador". Clique em *Mais informações* → *Executar assim mesmo*. O aviso
-> aparece porque o binário não é assinado — decisão consciente para uma
-> ferramenta de uso pessoal.
+## 📂 Domínios de Dados Suportados
 
-## Usar
+O Research Hub oferece um **seletor multi-projeto** (`/projects`) para alternar entre diferentes fluxos de curadoria com separação estrita:
 
-1. **Entrar** — `admin@admin.com` / `admin123`.
-2. **Importar** — no painel, escolha o `exports_canonical.zip` ou arraste-o
-   para a janela. Isso **substitui a base atual**; uma cópia de segurança é
-   gravada automaticamente antes, e o caminho dela aparece na tela.
-3. **Curar** — navegue pelas 15 entidades no menu lateral. Busque, ordene,
-   edite, funda duplicatas e crie vínculos.
-4. **Exportar** — gera o pacote canônico com os tipos originais restaurados e
-   os demais arquivos do ZIP preservados byte a byte.
+### 1. Projeto Horizon (Curadoria Acadêmica)
+Gerencia as 15 tabelas canônicas relacionais do DataLake:
+*Pesquisadores, Alunos, Grupos de Pesquisa, Iniciativas, Premiações, Produções Científicas, Áreas de Conhecimento, Orientações, Organizações, Atividades Profissionais, Campi, Proficiências, Bolsas, Idiomas e Artigos*.
 
-Os dados ficam em `~/.local/share/br.edu.ifes.researchhub/hub.db` no Linux e em
-`%APPDATA%\br.edu.ifes.researchhub\hub.db` no Windows. Fazer backup é copiar
-esse arquivo.
+As colunas relacionais guardam arrays JSON serializados, mantendo leitura direta nos pipelines analíticos sem exigir tabelas associativas intermediárias.
 
-## Desenvolver
+### 2. Projeto SRC (Extensão e Ensino)
+Gerencia o arquivo consolidado de Extensão e Ensino (`src_consolidado.json`):
+- **Ações**: Processo, título, natureza, tipo, coordenador, fomento e área temática.
+- **Participações Aninhadas**: Editor exclusivo para público-alvo e equipe de execução.
+- **Privacidade Rigorosa**: Dados pessoais de participantes (CPF, e-mail) mantidos 100% locais, com bloqueio arquitetural contra envio remoto.
 
-Pré-requisitos: [Rust](https://rustup.rs), Node 22+ e, no Linux:
+### 3. Sincronização com GitHub
+- **Download Remoto**: Importe pacotes canônicos diretamente via URLs do GitHub (links raw ou releases), em repositórios públicos ou privados com token.
+- **Upload Atômico**: Envio do pacote canônico do Horizon para o GitHub via Git Data API (criação direta de commits atômicos).
+- **Token Local Seguro**: Armazenamento do token de acesso pessoal em arquivo com permissão restrita `0600`.
 
+---
+
+## 📋 Requisitos para o Código e Execução
+
+### Sistemas Operacionais Suportados
+- **Linux**: Ubuntu 22.04+, Debian 12+, Fedora 39+, Arch Linux (x86_64 e aarch64).
+- **Windows**: Windows 10 (1809+) ou Windows 11 com WebView2 Runtime.
+- **macOS**: macOS 10.15+ (Catalina ou superior), Universal para Intel e Apple Silicon.
+
+### Dependências Nativas no Linux
 ```bash
-sudo apt install -y libwebkit2gtk-4.1-dev libxdo-dev libssl-dev \
-  libayatana-appindicator3-dev librsvg2-dev pkg-config
+# Ubuntu / Debian / Mint
+sudo apt update && sudo apt install -y build-essential curl wget pkg-config \
+  libwebkit2gtk-4.1-dev libxdo-dev libssl-dev \
+  libayatana-appindicator3-dev librsvg2-dev
+
+# Fedora / RHEL
+sudo dnf groupinstall "Development Tools" && sudo dnf install -y \
+  webkit2gtk4.1-devel openssl-devel libappindicator-gtk3-devel librsvg2-devel \
+  gcc-c++ pkgconf-pkg-config curl wget
+
+# Arch Linux / Manjaro
+sudo pacman -Syu --needed base-devel curl wget webkit2gtk-4.1 libappindicator-gtk3 openssl librsvg
 ```
 
-> Se o terminal foi aberto a partir de um snap (VS Code, alguns emuladores), ele
-> exporta um `LD_LIBRARY_PATH` para `/snap/core20` que colide com a glibc do
-> sistema e derruba o binário com `undefined symbol: __libc_pthread_init`. O
-> Makefile já remove a variável; para rodar o executável direto, use
-> `env -u LD_LIBRARY_PATH ./src-tauri/target/debug/research-hub`.
+### Requisitos de Ferramentas
+- **Rust**: 1.77.2+ com `cargo` e `rustc` (`rustup`).
+- **Node.js**: 22.x LTS e `npm` 10+.
+- **Tauri CLI**: `cargo-tauri` (`cargo install tauri-cli --version "^2.0.0"`).
+- **Python (Documentação)**: Python 3.10+ com `mkdocs`, `mkdocs-material`, `mkdocs-static-i18n`.
+
+### Armazenamento Local e Permissões
+- Banco SQLite: `~/.local/share/br.edu.ifes.researchhub/hub.db` (Linux) ou `%APPDATA%\br.edu.ifes.researchhub\hub.db` (Windows).
+- Token GitHub: `~/.local/share/br.edu.ifes.researchhub/github_token` (permissão POSIX `0600`).
+- Sem dependência de rede para curadoria local regular.
+
+---
+
+## 🚀 Como Instalar e Rodar
+
+Baixe o instalador compilado na [página de releases](https://github.com/thiagodeps/research_hub/releases):
+- `.deb`, `.rpm` ou `.AppImage` no Linux.
+- `.exe` (NSIS) ou `.msi` no Windows.
+- `.dmg` ou `.app` no macOS.
+
+### Credenciais Padrão
+- **Usuário**: `admin@admin.com`
+- **Senha**: `admin123`
+*(Novas contas de usuário podem ser criadas localmente em `/register`)*
+
+---
+
+## 💻 Guia do Desenvolvedor
 
 ```bash
-make build    # dependências do frontend
-make dev      # roda com hot reload
-make test     # cargo test + vitest
-make bundle   # instaladores nativos
+make build         # Instala dependências do frontend (npm install)
+make dev           # Executa com hot reload (Tauri + Astro)
+make test          # Suíte completa de testes: cargo test + vitest
+make bundle        # Gera os instaladores nativos para o sistema atual
+make docker-bundle # Gera instaladores Linux em contêiner Ubuntu 24.04 (em dist/)
 ```
 
-### Build em contêiner
+---
 
-Para gerar os instaladores Linux sem instalar Rust, Node e webkit na máquina:
+## 📜 Histórico e Notas de Versão
 
-```bash
-make docker-bundle    # resultado em dist/
-```
-
-A imagem usa Ubuntu 24.04 de propósito: compilar contra uma glibc mais antiga
-que a da máquina de desenvolvimento faz os binários rodarem em mais sistemas,
-nunca em menos.
-
-#### Executando os artefatos gerados
-
-Os arquivos gerados estarão na pasta `dist/` e pertencerão ao usuário `root`.
-Você tem 3 métodos para testar ou instalar o aplicativo no Linux:
-
-**1. AppImage (Roda sem instalar - Recomendado para teste rápido)**
-```bash
-cd dist/
-# Mude o dono para o seu usuário (evita rodar como root)
-sudo chown $USER:$USER ResearchHub_*.AppImage
-# Dê permissão de execução
-chmod +x ResearchHub_*.AppImage
-# Execute
-./ResearchHub_*.AppImage
-```
-
-**2. Instalador Debian/Ubuntu (.deb)**
-```bash
-cd dist/
-sudo apt install ./ResearchHub_*.deb
-```
-
-**3. Instalador Fedora/RHEL (.rpm)**
-```bash
-cd dist/
-sudo dnf install ./ResearchHub-*.rpm
-```
-
-> **O Docker aqui é ferramenta de build, não de execução.** Este é um aplicativo
-> desktop: rodá-lo dentro de um contêiner exigiria expor o socket X11 do host,
-> o que é pior do que simplesmente instalar o `.deb` que a imagem produz. Se
-> ainda assim precisar (uma máquina sem as bibliotecas do sistema, por exemplo),
-> o caminho é `-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix
-> --device /dev/dri`, com as ressalvas de aceleração gráfica e persistência do
-> banco que isso implica.
-
-## Domínios de dados
-
-Pesquisadores, Alunos, Grupos de Pesquisa, Iniciativas, Premiações, Produções
-Científicas, Áreas de Conhecimento, Orientações, Organizações, Atividades
-Profissionais, Campus, Proficiências, Bolsas, Idiomas e Artigos.
-
-Colunas de relacionamento guardam arrays JSON, evitando tabelas associativas e
-mantendo a leitura direta nos pipelines de Big Data.
-
-## Migrando da versão web
-
-Não há migração automática do `backend/test.db` antigo. O caminho suportado é
-reimportar o `exports_canonical.zip` no aplicativo — o resultado é equivalente,
-já que a base sempre foi derivada dele.
-
-## Documentação
-
-- `.specify/memory/constitution.md` — regras de arquitetura
-- `docs/estudo-migracao-rust-tauri.md` — o estudo que originou a reescrita
-- `specs/` — especificações por feature
+Consulte a página completa de notas de versão e changelog:
+- 👉 [Notas de Versão (Patch Notes)](patch-notes.md)

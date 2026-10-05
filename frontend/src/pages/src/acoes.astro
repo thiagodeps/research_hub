@@ -1,0 +1,10 @@
+---
+// SEP-033 / US3 (FR-010/FR-011): aba de curadoria das ações do SRC —
+// listagem com busca/ordenação/paginação, formulário e participações.
+import SrcDashboard from '../../layouts/SrcDashboard.astro';
+import SrcAcoesPage from '../../components/SrcAcoesPage.jsx';
+---
+
+<SrcDashboard>
+  <SrcAcoesPage client:load />
+</SrcDashboard>

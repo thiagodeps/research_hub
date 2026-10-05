@@ -42,4 +42,12 @@ describe('apiFetch error contract', () => {
     }
     expect(caught?.message).toMatch(/Rota não mapeada/);
   });
+
+  // SEP-034: além da mensagem, o kind tipado atravessa para a UI decidir
+  // comportamento (ex.: not_found → sugerir conferir a URL; conflict → pedir
+  // confirmação de sobrescrita).
+  it('preserves the typed kind for sync decisions', async () => {
+    const err = await failWith({ kind: 'sync_policy', message: 'não sobe' });
+    expect(err.kind).toBe('sync_policy');
+  });
 });

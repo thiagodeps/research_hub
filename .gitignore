@@ -27,3 +27,4 @@ src-tauri/target/
 src-tauri/gen/
 dist/
 site/
+src-tauri/tests/fixtures/src_consolidado_grande.json

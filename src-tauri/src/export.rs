@@ -183,12 +183,25 @@ where
                     .map_err(|e| AppError::Internal(format!("original.zip inválido: {e}")))?;
                 // Read the bytes out before inspecting them: the entry borrows
                 // the archive, and the borrow must end before `zip` is dropped.
-                let raw = if let Ok(mut f) = zip.by_name(&json_path) {
-                    let mut buf = Vec::new();
-                    f.read_to_end(&mut buf)?;
-                    Some(buf)
+                let target_entry = if zip.file_names().any(|n| n == json_path) {
+                    Some(json_path.clone())
                 } else {
-                    None
+                    zip.file_names()
+                        .find(|n| n.ends_with(&format!("/{json_path}")))
+                        .map(String::from)
+                };
+
+                let raw = match target_entry {
+                    Some(ref name) => {
+                        if let Ok(mut f) = zip.by_name(name) {
+                            let mut buf = Vec::new();
+                            f.read_to_end(&mut buf)?;
+                            Some(buf)
+                        } else {
+                            None
+                        }
+                    }
+                    None => None,
                 };
                 match raw {
                     Some(buf) => Some((
@@ -233,7 +246,12 @@ where
             for i in 0..src.len() {
                 let entry = src.by_index_raw(i).map_err(|e| AppError::Internal(e.to_string()))?;
                 let name = entry.name().to_string();
-                if generated.contains_key(&name) || dropped.contains(&name) {
+                let base_name = name.rsplit('/').next().unwrap_or(&name);
+                if generated.contains_key(&name)
+                    || generated.contains_key(base_name)
+                    || dropped.contains(&name)
+                    || dropped.contains(base_name)
+                {
                     continue;
                 }
                 writer

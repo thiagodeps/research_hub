@@ -1,0 +1,68 @@
+---
+// SEP-033: layout da área SRC — mesmo padrão visual do Dashboard do Horizon,
+// menu próprio (FR-004: nenhuma aba ou dado do Horizon aparece aqui).
+---
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ResearchHub — Projeto SRC</title>
+  </head>
+  <body class="m-0 font-sans antialiased bg-slate-50 text-slate-900 flex min-h-screen">
+    <div class="w-64 bg-slate-900 text-white flex flex-col min-h-screen">
+      <div class="p-6 border-b border-slate-800">
+        <h2 class="text-xl font-bold tracking-tight">ResearchHub</h2>
+        <p class="text-xs text-slate-400 mt-1">Projeto SRC</p>
+      </div>
+      <nav class="flex-1 px-4 py-6 overflow-y-auto">
+        <ul class="space-y-1">
+          <li><a href="/src" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800 hover:text-white transition-colors">Resumo</a></li>
+          <li><a href="/src/acoes" class="block px-3 py-2 rounded-md text-slate-200 hover:bg-slate-800 hover:text-white transition-colors">Ações</a></li>
+        </ul>
+      </nav>
+      <div class="p-4 border-t border-slate-800 space-y-1">
+        <a href="/projects" id="trocar-projeto" class="block px-3 py-2 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">↩ Trocar projeto</a>
+        <a href="#" id="logout" class="block px-3 py-2 rounded-md hover:bg-red-900/50 text-red-400 transition-colors">Sair</a>
+      </div>
+    </div>
+    <div class="flex-1 p-8 overflow-auto">
+      <div class="max-w-7xl mx-auto">
+        <slot />
+      </div>
+    </div>
+    <script>
+    import { invoke } from '@tauri-apps/api/core';
+    // Guard idêntico ao do dashboard: reload/deep link sem sessão volta ao login.
+    (async () => {
+      try {
+        const { authenticated } = await invoke<{ authenticated: boolean }>('session_status');
+        if (!authenticated) {
+          localStorage.removeItem('token');
+          window.location.replace('/login');
+        }
+      } catch {}
+    })();
+
+    document.getElementById('logout')?.addEventListener('click', async (e) => {
+      e.preventDefault();
+      try { await invoke('logout'); } catch {}
+      localStorage.removeItem('token');
+      window.location.href = '/login';
+    });
+
+    // US1-5 / FR-003: trocar de projeto com formulário aberto confirma antes —
+    // o estado vem do evento 'src:dirty' emitido pelas páginas SRC.
+    let unsaved = false;
+    window.addEventListener('src:dirty', (ev: Event) => {
+      unsaved = !!(ev as CustomEvent).detail;
+    });
+    document.getElementById('trocar-projeto')?.addEventListener('click', (e) => {
+      if (unsaved && !window.confirm(
+        'Há alterações não salvas neste projeto. Trocar de projeto agora pode perder o trabalho em andamento. Continuar?'
+      )) {
+        e.preventDefault();
+      }
+    });
+  </script>
+  </body>
+</html>

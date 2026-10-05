@@ -37,5 +37,6 @@ plugins:
 
 nav:
   - Início / Home: index.md
+  - Notas de Versão / Patch Notes: patch-notes.md
   - Migração / Migration: estudo-migracao-rust-tauri.md
   - Apresentação / Presentation: apresentacao_projeto.md
