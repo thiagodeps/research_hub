@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Outer Bezel Gradient -->
+    <linearGradient id="bezelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Rim Light Gradient -->
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#475569" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1E293B" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Red Pad Gradient (Top-Left) -->
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4343"/>
+      <stop offset="60%" stop-color="#E52427"/>
+      <stop offset="100%" stop-color="#B91C1C"/>
+    </linearGradient>
+
+    <!-- Green Pad Gradient TR -->
+    <linearGradient id="greenGradTR" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="60%" stop-color="#00A34A"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+
+    <!-- Green Pad Gradient BL -->
+    <linearGradient id="greenGradBL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="60%" stop-color="#00A34A"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+
+    <!-- White Pad Gradient BR -->
+    <linearGradient id="whiteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <!-- Center Hub Radial Gradient -->
+    <radialGradient id="hubGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0B0F19"/>
+    </radialGradient>
+
+    <!-- Center Nucleus Glow -->
+    <radialGradient id="nucleusGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="70%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </radialGradient>
+
+    <!-- Drop Shadow Filter for Pads -->
+    <filter id="padShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Subtle Bevel / Glow for White Pad -->
+    <filter id="whiteBevel" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <!-- Outer Ring Base -->
+  <circle cx="256" cy="256" r="236" fill="url(#bezelGrad)"/>
+  <circle cx="256" cy="256" r="234" fill="none" stroke="#475569" stroke-width="2" stroke-opacity="0.4"/>
+  <circle cx="256" cy="256" r="226" fill="#0B0F19"/>
+
+  <!-- Pads -->
+  <!-- Top-Left: Red -->
+  <path d="M 182.49 248.00 L 60.15 248.00 Q 44.15 248.00 45.36 232.00 A 212.00 212.00 0 0 1 232.00 45.36 Q 248.00 44.15 248.00 60.15 L 248.00 182.49 Q 248.00 190.49 240.00 191.97 A 66.00 66.00 0 0 0 191.97 240.00 Q 190.49 248.00 182.49 248.00 Z" fill="url(#redGrad)"/>
+  <path d="M 182.49 248.00 L 60.15 248.00 Q 44.15 248.00 45.36 232.00 A 212.00 212.00 0 0 1 232.00 45.36 Q 248.00 44.15 248.00 60.15 L 248.00 182.49 Q 248.00 190.49 240.00 191.97 A 66.00 66.00 0 0 0 191.97 240.00 Q 190.49 248.00 182.49 248.00 Z" fill="none" stroke="#FFA3A3" stroke-width="1.2" stroke-opacity="0.4"/>
+
+  <!-- Top-Right: Green -->
+  <path d="M 264.00 182.49 L 264.00 60.15 Q 264.00 44.15 280.00 45.36 A 212.00 212.00 0 0 1 466.64 232.00 Q 467.85 248.00 451.85 248.00 L 329.51 248.00 Q 321.51 248.00 320.03 240.00 A 66.00 66.00 0 0 0 272.00 191.97 Q 264.00 190.49 264.00 182.49 Z" fill="url(#greenGradTR)"/>
+  <path d="M 264.00 182.49 L 264.00 60.15 Q 264.00 44.15 280.00 45.36 A 212.00 212.00 0 0 1 466.64 232.00 Q 467.85 248.00 451.85 248.00 L 329.51 248.00 Q 321.51 248.00 320.03 240.00 A 66.00 66.00 0 0 0 272.00 191.97 Q 264.00 190.49 264.00 182.49 Z" fill="none" stroke="#86EFAC" stroke-width="1.2" stroke-opacity="0.4"/>
+
+  <!-- Bottom-Left: Green -->
+  <path d="M 248.00 329.51 L 248.00 451.85 Q 248.00 467.85 232.00 466.64 A 212.00 212.00 0 0 1 45.36 280.00 Q 44.15 264.00 60.15 264.00 L 182.49 264.00 Q 190.49 264.00 191.97 272.00 A 66.00 66.00 0 0 0 240.00 320.03 Q 248.00 321.51 248.00 329.51 Z" fill="url(#greenGradBL)"/>
+  <path d="M 248.00 329.51 L 248.00 451.85 Q 248.00 467.85 232.00 466.64 A 212.00 212.00 0 0 1 45.36 280.00 Q 44.15 264.00 60.15 264.00 L 182.49 264.00 Q 190.49 264.00 191.97 272.00 A 66.00 66.00 0 0 0 240.00 320.03 Q 248.00 321.51 248.00 329.51 Z" fill="none" stroke="#86EFAC" stroke-width="1.2" stroke-opacity="0.4"/>
+
+  <!-- Bottom-Right: White -->
+  <path d="M 329.51 264.00 L 451.85 264.00 Q 467.85 264.00 466.64 280.00 A 212.00 212.00 0 0 1 280.00 466.64 Q 264.00 467.85 264.00 451.85 L 264.00 329.51 Q 264.00 321.51 272.00 320.03 A 66.00 66.00 0 0 0 320.03 272.00 Q 321.51 264.00 329.51 264.00 Z" fill="url(#whiteGrad)"/>
+  <path d="M 329.51 264.00 L 451.85 264.00 Q 467.85 264.00 466.64 280.00 A 212.00 212.00 0 0 1 280.00 466.64 Q 264.00 467.85 264.00 451.85 L 264.00 329.51 Q 264.00 321.51 272.00 320.03 A 66.00 66.00 0 0 0 320.03 272.00 Q 321.51 264.00 329.51 264.00 Z" fill="none" stroke="#94A3B8" stroke-width="1.2" stroke-opacity="0.6"/>
+
+  <!-- Center Hub -->
+  <circle cx="256" cy="256" r="58" fill="url(#hubGrad)"/>
+  <circle cx="256" cy="256" r="57" fill="none" stroke="#475569" stroke-width="1.5"/>
+  <circle cx="256" cy="256" r="45" fill="#090D16" stroke="#1E293B" stroke-width="1.5"/>
+  <circle cx="256" cy="256" r="18" fill="url(#nucleusGrad)"/>
+  <circle cx="256" cy="256" r="18" fill="none" stroke="#BAE6FD" stroke-width="1" stroke-opacity="0.6"/>
+  <circle cx="256" cy="256" r="6" fill="#FFFFFF" opacity="0.85"/>
+</svg>

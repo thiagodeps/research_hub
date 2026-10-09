@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Red Pad Gradient -->
+    <linearGradient id="flatRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3838"/>
+      <stop offset="100%" stop-color="#D91E24"/>
+    </linearGradient>
+
+    <!-- Green Pad Gradient TR -->
+    <linearGradient id="flatGreenTR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C853"/>
+      <stop offset="100%" stop-color="#008833"/>
+    </linearGradient>
+
+    <!-- Green Pad Gradient BL -->
+    <linearGradient id="flatGreenBL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C853"/>
+      <stop offset="100%" stop-color="#008833"/>
+    </linearGradient>
+
+    <!-- White Pad Gradient -->
+    <linearGradient id="flatWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <!-- Center Hub Gradient -->
+    <linearGradient id="flatHub" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Pads -->
+  <!-- Top-Left: Vermelho IFES -->
+  <path d="M 186.68 247.00 L 46.18 247.00 Q 26.18 247.00 27.84 227.00 A 230.00 230.00 0 0 1 227.00 27.84 Q 247.00 26.18 247.00 46.18 L 247.00 186.68 Q 247.00 196.68 237.00 199.09 A 60.00 60.00 0 0 0 199.09 237.00 Q 196.68 247.00 186.68 247.00 Z" fill="url(#flatRed)"/>
+
+  <!-- Top-Right: Verde IFES -->
+  <path d="M 265.00 186.68 L 265.00 46.18 Q 265.00 26.18 285.00 27.84 A 230.00 230.00 0 0 1 484.16 227.00 Q 485.82 247.00 465.82 247.00 L 325.32 247.00 Q 315.32 247.00 312.91 237.00 A 60.00 60.00 0 0 0 275.00 199.09 Q 265.00 196.68 265.00 186.68 Z" fill="url(#flatGreenTR)"/>
+
+  <!-- Bottom-Left: Verde IFES -->
+  <path d="M 247.00 325.32 L 247.00 465.82 Q 247.00 485.82 227.00 484.16 A 230.00 230.00 0 0 1 27.84 285.00 Q 26.18 265.00 46.18 265.00 L 186.68 265.00 Q 196.68 265.00 199.09 275.00 A 60.00 60.00 0 0 0 237.00 312.91 Q 247.00 315.32 247.00 325.32 Z" fill="url(#flatGreenBL)"/>
+
+  <!-- Bottom-Right: Branco (com suave borda para contraste em fundo claro) -->
+  <path d="M 325.32 265.00 L 465.82 265.00 Q 485.82 265.00 484.16 285.00 A 230.00 230.00 0 0 1 285.00 484.16 Q 265.00 485.82 265.00 465.82 L 265.00 325.32 Q 265.00 315.32 275.00 312.91 A 60.00 60.00 0 0 0 312.91 275.00 Q 315.32 265.00 325.32 265.00 Z" fill="url(#flatWhite)" stroke="#CBD5E1" stroke-width="2"/>
+
+  <!-- Center Hub Disc -->
+  <circle cx="256" cy="256" r="48" fill="url(#flatHub)" stroke="#334155" stroke-width="3"/>
+  <circle cx="256" cy="256" r="16" fill="#38BDF8"/>
+  <circle cx="256" cy="256" r="6" fill="#FFFFFF"/>
+</svg>
