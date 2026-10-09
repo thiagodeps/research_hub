@@ -1,0 +1,1156 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Desktop tool for academic data curation.">
+      
+      
+      
+        <link rel="canonical" href="https://thiagodeps.github.io/research_hub/patch-notes/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../estudo-migracao-rust-tauri/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="pt">
+        
+          <link rel="alternate" href="../en/patch-notes/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Notas de Versão / Patch Notes - Research Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#notas-de-versao-patch-notes" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Research Hub" class="md-header__button md-logo" aria-label="Research Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Research Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Notas de Versão / Patch Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para modo escuro / Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro / Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para modo claro / Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro / Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../en/patch-notes/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início / Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Notas de Versão / Patch Notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../estudo-migracao-rust-tauri/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Migração / Migration
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Research Hub" class="md-nav__button md-logo" aria-label="Research Hub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Research Hub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início / Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas de Versão / Patch Notes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas de Versão / Patch Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v140-atual-sincronizacao-github-pacotes-aninhados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.4.0 (Atual — Sincronização GitHub &amp; Pacotes Aninhados)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.4.0 (Atual — Sincronização GitHub &amp; Pacotes Aninhados)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sincronizacao-com-github-sep-034" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sincronização com GitHub (SEP-034)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pacotes-canonicos-aninhados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pacotes Canônicos Aninhados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v133-curadoria-src-seletor-de-projetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.3.3 (Curadoria SRC &amp; Seletor de Projetos)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.3.3 (Curadoria SRC &amp; Seletor de Projetos)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seletor-multi-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seletor Multi-Projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dominio-de-extensao-e-ensino-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domínio de Extensão e Ensino (SRC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v130-novo-formato-canonico-somente-json-aba-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.3.0 (Novo Formato Canônico Somente JSON &amp; Aba Campus)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.3.0 (Novo Formato Canônico Somente JSON &amp; Aba Campus)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingestao-de-pacote-somente-json-sep-032" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingestão de Pacote Somente JSON (SEP-032)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcao-da-aba-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correção da Aba Campus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v120-estabilidade-do-fluxo-de-curadoria-desduplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.2.0 (Estabilidade do Fluxo de Curadoria &amp; Desduplicação)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.2.0 (Estabilidade do Fluxo de Curadoria &amp; Desduplicação)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#busca-por-identificador-sep-030" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Busca por Identificador (SEP-030)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcoes-criticas-do-fluxo-de-curadoria-sep-031" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correções Críticas do Fluxo de Curadoria (SEP-031)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v110-v113-autenticacao-registro-de-usuarios-acessibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.1.0 – v1.1.3 (Autenticação, Registro de Usuários &amp; Acessibilidade)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.1.0 – v1.1.3 (Autenticação, Registro de Usuários &amp; Acessibilidade)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cadastro-de-usuarios-sep-029" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cadastro de Usuários (SEP-029)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acessibilidade-e-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acessibilidade e Qualidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v109-paginacao-com-salto-direto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.0.9 (Paginação com Salto Direto)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.0.9 (Paginação com Salto Direto)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navegacao-de-paginas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegação de Páginas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v100-v107-migracao-rust-tauri-20-decomissionamento-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.0.0 – v1.0.7 (Migração Rust + Tauri 2.0 &amp; Decomissionamento Python)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.0.0 – v1.0.7 (Migração Rust + Tauri 2.0 &amp; Decomissionamento Python)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reescrita-arquitetural-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reescrita Arquitetural Completa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estudo-migracao-rust-tauri/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migração / Migration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v140-atual-sincronizacao-github-pacotes-aninhados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.4.0 (Atual — Sincronização GitHub &amp; Pacotes Aninhados)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.4.0 (Atual — Sincronização GitHub &amp; Pacotes Aninhados)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sincronizacao-com-github-sep-034" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sincronização com GitHub (SEP-034)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pacotes-canonicos-aninhados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pacotes Canônicos Aninhados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v133-curadoria-src-seletor-de-projetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.3.3 (Curadoria SRC &amp; Seletor de Projetos)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.3.3 (Curadoria SRC &amp; Seletor de Projetos)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seletor-multi-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seletor Multi-Projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dominio-de-extensao-e-ensino-src" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Domínio de Extensão e Ensino (SRC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v130-novo-formato-canonico-somente-json-aba-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.3.0 (Novo Formato Canônico Somente JSON &amp; Aba Campus)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.3.0 (Novo Formato Canônico Somente JSON &amp; Aba Campus)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingestao-de-pacote-somente-json-sep-032" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingestão de Pacote Somente JSON (SEP-032)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcao-da-aba-campus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correção da Aba Campus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v120-estabilidade-do-fluxo-de-curadoria-desduplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.2.0 (Estabilidade do Fluxo de Curadoria &amp; Desduplicação)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.2.0 (Estabilidade do Fluxo de Curadoria &amp; Desduplicação)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#busca-por-identificador-sep-030" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Busca por Identificador (SEP-030)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correcoes-criticas-do-fluxo-de-curadoria-sep-031" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correções Críticas do Fluxo de Curadoria (SEP-031)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v110-v113-autenticacao-registro-de-usuarios-acessibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.1.0 – v1.1.3 (Autenticação, Registro de Usuários &amp; Acessibilidade)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.1.0 – v1.1.3 (Autenticação, Registro de Usuários &amp; Acessibilidade)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cadastro-de-usuarios-sep-029" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cadastro de Usuários (SEP-029)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acessibilidade-e-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acessibilidade e Qualidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v109-paginacao-com-salto-direto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.0.9 (Paginação com Salto Direto)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.0.9 (Paginação com Salto Direto)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navegacao-de-paginas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegação de Páginas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v100-v107-migracao-rust-tauri-20-decomissionamento-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v1.0.0 – v1.0.7 (Migração Rust + Tauri 2.0 &amp; Decomissionamento Python)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.0.0 – v1.0.7 (Migração Rust + Tauri 2.0 &amp; Decomissionamento Python)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reescrita-arquitetural-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reescrita Arquitetural Completa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="notas-de-versao-patch-notes">Notas de Versão (Patch Notes) 📜</h1>
+<p>Histórico completo de versões, melhorias, correções de bugs e novas funcionalidades do <strong>Research Hub</strong>.</p>
+<hr />
+<h2 id="v140-atual-sincronizacao-github-pacotes-aninhados">v1.4.0 (Atual — Sincronização GitHub &amp; Pacotes Aninhados)</h2>
+<p><em>Branch de Origem: <code>034-github-sync</code></em></p>
+<h3 id="sincronizacao-com-github-sep-034">Sincronização com GitHub (SEP-034)</h3>
+<ul>
+<li><strong>Download Remoto de Exports</strong>: Importação direta de pacotes canônicos a partir de URLs do GitHub (repositórios públicos ou privados com token configurado). Suporte a URLs diretas de arquivos (<code>raw.githubusercontent.com</code>) e assets de releases do GitHub.</li>
+<li><strong>Upload Atômico de Exports</strong>: Envio do pacote canônico do Horizon diretamente para branches do GitHub via Git Data API (criação direta de commits atômicos sem necessidade de clonar o repositório).</li>
+<li><strong>Gerenciamento Seguro de Token</strong>: Armazenamento local de Personal Access Token (PAT) do GitHub em arquivo com permissão POSIX restrita <code>0600</code>. Modal interativo com teste de validade e escopos, mascaramento do token e remoção completa com zero vestígios.</li>
+<li><strong>Proteção de Privacidade (LGPD / PII)</strong>: Bloqueio estrito de envio de dados do projeto SRC para repositórios remotos, garantindo que CPFs e e-mails de participantes nunca sejam expostos na nuvem.</li>
+<li><strong>Limite Operacional e Segurança</strong>: Suporte a transferências de pacotes de até 100 MB com validação prévia de tamanho e criação de snapshots automáticos antes de qualquer substituição de base.</li>
+<li><strong>Auditoria de Não-Vazamento</strong>: 100% dos fluxos de erro auditados — tokens e dados pessoais nunca são emitidos em logs, mensagens de erro ou telemetria.</li>
+</ul>
+<h3 id="pacotes-canonicos-aninhados">Pacotes Canônicos Aninhados</h3>
+<ul>
+<li>Suporte para ingestão transparente de arquivos ZIP aninhados ou pastas com subdiretórios no pacote canônico.</li>
+</ul>
+<hr />
+<h2 id="v133-curadoria-src-seletor-de-projetos">v1.3.3 (Curadoria SRC &amp; Seletor de Projetos)</h2>
+<p><em>Branch de Origem: <code>033-src-data-tab</code></em></p>
+<h3 id="seletor-multi-projeto">Seletor Multi-Projeto</h3>
+<ul>
+<li>Nova página inicial <code>/projects</code> pós-autenticação para alternar entre os projetos <strong>Horizon</strong> (15 tabelas canônicas) e <strong>SRC</strong> (Extensão e Ensino).</li>
+<li>Isolamento estrito de bases de dados, tabelas, formulários e snapshots de segurança entre os dois projetos.</li>
+</ul>
+<h3 id="dominio-de-extensao-e-ensino-src">Domínio de Extensão e Ensino (SRC)</h3>
+<ul>
+<li>Tabela dedicada <code>src_acoes</code> e migração relacional <code>002_src_tables.sql</code>.</li>
+<li>Importação e exportação de arquivo JSON consolidado do SRC (<code>src_consolidado.json</code>), preservando chaves e ordem original dos objetos.</li>
+<li>Editor visual especializado de <strong>Participações</strong> aninhadas às ações (Público-alvo e Equipe de execução).</li>
+<li>Vínculo textual com programas guarda-chuva e proteção contra exclusão de programas com ações dependentes.</li>
+</ul>
+<hr />
+<h2 id="v130-novo-formato-canonico-somente-json-aba-campus">v1.3.0 (Novo Formato Canônico Somente JSON &amp; Aba Campus)</h2>
+<p><em>Branch de Origem: <code>032-canonical-export-json</code></em></p>
+<h3 id="ingestao-de-pacote-somente-json-sep-032">Ingestão de Pacote Somente JSON (SEP-032)</h3>
+<ul>
+<li>Adaptação completa da importação e exportação para o novo padrão do DataLake (arquivos <code>{tabela}_canonical.json</code> na raiz do ZIP, dispensando arquivos Parquet).</li>
+<li>Compatibilidade retroativa mantida para pacotes legados contendo Parquet.</li>
+<li>Módulo de inferência e fidelidade de tipos JSON para round-trip perfeito (preserva tipos originais booleanos, inteiros, decimais, nulls e listas de relacionamentos).</li>
+</ul>
+<h3 id="correcao-da-aba-campus">Correção da Aba Campus</h3>
+<ul>
+<li>Remoção do campo aninhado fantasma "Campus (Vínculos)" herdado do bug upstream do DataLake.</li>
+</ul>
+<hr />
+<h2 id="v120-estabilidade-do-fluxo-de-curadoria-desduplicacao">v1.2.0 (Estabilidade do Fluxo de Curadoria &amp; Desduplicação)</h2>
+<p><em>Branches de Origem: <code>030-search-by-id</code> e <code>031-bugfixes-curation-workflow</code></em></p>
+<h3 id="busca-por-identificador-sep-030">Busca por Identificador (SEP-030)</h3>
+<ul>
+<li>Campo de busca com suporte a busca direta por ID numérico em todas as entidades do Horizon.</li>
+</ul>
+<h3 id="correcoes-criticas-do-fluxo-de-curadoria-sep-031">Correções Críticas do Fluxo de Curadoria (SEP-031)</h3>
+<ul>
+<li><strong>B-01</strong>: Correção do formulário de edição para evitar estado obsoleto de registros anteriores ao alternar alvos de visualização.</li>
+<li><strong>B-02</strong>: Reposicionamento automático da paginação para a última página válida após exclusão de registros da última página.</li>
+<li><strong>B-03</strong>: Limpeza automática da seleção de fusão após deleções, buscas ou troca de página, impedindo fusões de IDs inexistentes.</li>
+<li><strong>B-04</strong>: Fusão aprimorada com suporte a campo de identificação por "título" (artigos, produções e premiações) além de "nome".</li>
+<li><strong>B-04b</strong>: União transacional de listas de relacionamentos durante a fusão de registros, evitando perda de vínculos.</li>
+<li><strong>B-05</strong>: Proteção contra condições de corrida (<em>race conditions</em>) nas requisições assíncronas de busca com debounce.</li>
+<li><strong>B-06</strong>: Normalização canônica do nome de usuário em minúsculas na sessão.</li>
+<li><strong>B-07</strong>: Verificação antecipada de autenticação da sessão antes da abertura de diálogos de arquivos no import/export.</li>
+<li><strong>B-08</strong>: Validação atômica de pacote ZIP na importação, rejeitando pacotes sem nenhuma tabela canônica sem apagar dados existentes.</li>
+</ul>
+<hr />
+<h2 id="v110-v113-autenticacao-registro-de-usuarios-acessibilidade">v1.1.0 – v1.1.3 (Autenticação, Registro de Usuários &amp; Acessibilidade)</h2>
+<p><em>Branch de Origem: <code>029-user-registration</code></em></p>
+<h3 id="cadastro-de-usuarios-sep-029">Cadastro de Usuários (SEP-029)</h3>
+<ul>
+<li>Nova tela <code>/register</code> para criação de contas de administrador.</li>
+<li>Hashing seguro de senhas com algoritmo <code>bcrypt</code> no núcleo Rust.</li>
+</ul>
+<h3 id="acessibilidade-e-qualidade">Acessibilidade e Qualidade</h3>
+<ul>
+<li>Melhorias de acessibilidade (<code>htmlFor</code>, associação de labels com inputs no formulário de autenticação).</li>
+<li>Suíte de testes unitários com ambiente JSDOM e cleanup de formulários.</li>
+</ul>
+<hr />
+<h2 id="v109-paginacao-com-salto-direto">v1.0.9 (Paginação com Salto Direto)</h2>
+<p><em>Branch de Origem: <code>028-table-page-nav</code></em></p>
+<h3 id="navegacao-de-paginas">Navegação de Páginas</h3>
+<ul>
+<li>Campo numérico interativo de navegação direta para qualquer página da listagem, com validação e clamping de limites.</li>
+</ul>
+<hr />
+<h2 id="v100-v107-migracao-rust-tauri-20-decomissionamento-python">v1.0.0 – v1.0.7 (Migração Rust + Tauri 2.0 &amp; Decomissionamento Python)</h2>
+<p><em>Branches de Origem: <code>rust-tauri-migration</code> (SEP-015 a SEP-026)</em></p>
+<h3 id="reescrita-arquitetural-completa">Reescrita Arquitetural Completa</h3>
+<ul>
+<li>Decomissionamento definitivo do antigo backend em Python FastAPI e banco PostgreSQL.</li>
+<li>Criação da arquitetura desktop Tauri 2.0 em Rust com banco de dados SQLite embarcado de arquivo único.</li>
+<li>Eliminação de processos em segundo plano, portas de rede e serviços dependentes de servidor.</li>
+<li>Frontend em Astro + React + Tailwind compilado estaticamente e embutido no executável final.</li>
+<li>Pipelines de CI/CD para geração de binários nativos multiplataforma (Linux <code>.deb</code>, <code>.rpm</code>, <code>.AppImage</code>; Windows <code>.exe</code>, <code>.msi</code>; macOS <code>.dmg</code>, <code>.app</code>).</li>
+<li>Suporte a compilação conteinerizada com Docker base Ubuntu 24.04.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
